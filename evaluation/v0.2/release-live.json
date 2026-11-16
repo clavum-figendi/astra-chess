@@ -1,0 +1,46 @@
+{
+  "url": "https://clavum-figendi.github.io/astra-chess/",
+  "assets": [
+    {
+      "path": "models/pocket.bin",
+      "status": 200,
+      "bytes": 4423376,
+      "sha256": "77365eb86c5176255e06784592f9022a36ca6730c0dd3e4ce552cbf480762737"
+    },
+    {
+      "path": "models/pocket-plus.bin",
+      "status": 200,
+      "bytes": 8465724,
+      "sha256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f"
+    },
+    {
+      "path": "models/atlas.bin",
+      "status": 200,
+      "bytes": 38397700,
+      "sha256": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85"
+    },
+    {
+      "path": "models/atlas-plus.bin",
+      "status": 200,
+      "bytes": 41074220,
+      "sha256": "30313d65ec8b74007a546576b5234aa00a521b63ade9159f1b2ec7f30b05c4a6"
+    },
+    {
+      "path": "downloads/astra-chess-laptop.zip",
+      "status": 200,
+      "bytes": 15219033,
+      "sha256": "9dbab628be9f3874940e6d717eb119f27ddcbd4e6bf37b5bf52017afc5e00a4f"
+    }
+  ],
+  "deployment": {
+    "version": "0.2.0",
+    "sourceCommit": "ddb65f3bcd94347a256da7d18767561fb2e3cf70",
+    "sourceTag": "v0.2.0",
+    "deploymentTag": "deploy-20261116-032153",
+    "authorship": "Astra-authored expansion of Astra-directed, Sol-assisted base",
+    "strength": "Targeted gains; mixed broader results; no established Elo",
+    "laptopArchiveSHA256": "9dbab628be9f3874940e6d717eb119f27ddcbd4e6bf37b5bf52017afc5e00a4f"
+  },
+  "proposalsVerified": true,
+  "documentStatus": 200
+}
