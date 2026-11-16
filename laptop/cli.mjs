@@ -7,9 +7,16 @@ import { chooseMove } from '../src/engine.mjs';
 import { createProtocol } from './protocol.mjs';
 
 const args = process.argv.slice(2);
+const modelDirectory = existsSync(new URL('../models/manifest.json', import.meta.url)) ? new URL('../models/', import.meta.url) : new URL('../public/models/', import.meta.url);
+if (args.includes('--list-models')) {
+  const manifest = JSON.parse(readFileSync(new URL('manifest.json', modelDirectory), 'utf8'));
+  const sizing = JSON.parse(readFileSync(new URL('sizing-proposals.json', modelDirectory), 'utf8'));
+  console.log(JSON.stringify({models: manifest.models, proposals: sizing.proposals, memoryEstimate: sizing.memoryEstimate}, null, 2));
+  process.exit(0);
+}
 const modelAt = args.indexOf('--model');
 const modelId = modelAt >= 0 ? args[modelAt + 1] : 'atlas';
-if (!['atlas','pocket'].includes(modelId)) { console.error('Model must be pocket or atlas'); process.exit(1); }
+if (!['atlas','pocket','pocket-plus','atlas-plus'].includes(modelId)) { console.error('Model must be pocket, pocket-plus, atlas or atlas-plus. Use --list-models.'); process.exit(1); }
 const local = new URL(`../models/${modelId}.bin`, import.meta.url);
 const development = new URL(`../public/models/${modelId}.bin`, import.meta.url);
 const bytes = readFileSync(existsSync(fileURLToPath(local)) ? local : development);

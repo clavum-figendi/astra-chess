@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "units": "decimal MB of complete sparse binary, including topology",
+  "memoryEstimate": "Planning allowance only: 3 x file size + 128 MB for parser copies, values and runtime overhead. Not a measured device requirement or guarantee.",
+  "proposals": [
+    {
+      "id": "browser-max",
+      "name": "Browser Max",
+      "status": "proposal-not-built",
+      "target": "Desktop browser; opt-in download, not default on phones",
+      "fileMB": [64, 96],
+      "planningMemoryMB": [320, 416],
+      "addedCircuits": "Pin-aware attack/support masks, overloaded-defender warnings, broader fixed mating-net patterns",
+      "promotionGate": "Beat Atlas+ on a new disjoint puzzle sample and paired matches; measure peak memory and p95 latency on real target devices before release. No zero-padding or hidden search."
+    },
+    {
+      "id": "laptop-pro",
+      "name": "Laptop Pro",
+      "status": "proposal-not-built",
+      "target": "Consumer laptop, 8 GB RAM or more; native optimized sparse evaluator preferred",
+      "fileMB": [128, 256],
+      "planningMemoryMB": [512, 896],
+      "addedCircuits": "More candidate-conditioned tactical relationships, pawn races/opposition and additional narrowly validated endgame specialists",
+      "promotionGate": "Substantive held-out improvement over Browser Max, measured CPU/memory on a laptop, and reproducible no-search computation. May require a more memory-efficient compiler."
+    },
+    {
+      "id": "laptop-lab",
+      "name": "Laptop Lab",
+      "status": "proposal-not-built",
+      "target": "Research option for laptops with 16 GB RAM or more; not recommended until Pro earns its size",
+      "fileMB": [256, 512],
+      "planningMemoryMB": [896, 1664],
+      "addedCircuits": "Wider compositional tactical circuits rather than repeated copies of existing heuristics",
+      "promotionGate": "Proceed only if gains per added megabyte justify latency. Requires chunked assets/compiler, raised validated format bounds and a hosted distribution strategy; no strength claim in advance."
+    }
+  ]
+}

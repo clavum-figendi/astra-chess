@@ -8,7 +8,7 @@ from playwright.sync_api import sync_playwright
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--url', default='http://127.0.0.1:4187/')
-parser.add_argument('--output', default='evaluation/browser-local.json')
+parser.add_argument('--output', default='evaluation/v0.2/browser-local.json')
 args = parser.parse_args()
 root = Path(__file__).resolve().parent.parent
 binary = os.environ.get('ASTRA_CHROMIUM')
@@ -28,9 +28,14 @@ with sync_playwright() as p:
     assert page.title() == 'Astra — Chess workspace'
     page.wait_for_selector('#model-downloads a')
     assert page.locator('#board button').count() == 64
+    ids=[model['id'] for model in json.loads((root/'public/models/manifest.json').read_text())['models']]
+    assert page.locator('#model option').evaluate_all('(options)=>options.map(o=>o.value)') == ids
+    assert 'proposed, not built' in page.locator('#size-proposals').inner_text()
+    assert page.evaluate("[...document.querySelectorAll('[aria-labelledby]')].every(el=>el.getAttribute('aria-labelledby').split(/\\s+/).every(id=>document.getElementById(id)))")
+    checks.append('four actual models exposed; future size proposals not selectable')
     checks.append('64-square board and manifest loaded')
     # Cross-runtime agreement exercises the actual worker, binary parsing and engine.
-    for model in ('pocket','atlas'):
+    for model in ids:
         expected = json.loads(subprocess.check_output(['node','laptop/cli.mjs','--model',model,'--fen',start_fen], cwd=root))
         result = page.evaluate('''async ({model,fen}) => {
           const worker=new Worker(new URL('./worker.mjs',location.href),{type:'module'});
@@ -55,16 +60,22 @@ with sync_playwright() as p:
         page.wait_for_function("document.querySelectorAll('.move-san').length === 2 && document.querySelector('#status').textContent === 'Your move'")
         assert page.locator('#candidates .candidate').count() > 0
         checks.append(f'{model}: human e4 and real-weight reply')
-    page.screenshot(path=str(root/'evaluation/desktop.png'),full_page=True)
+    page.screenshot(path=str(root/'evaluation/v0.2/desktop.png'),full_page=True)
     page.select_option('#color','b'); page.click('#new-game')
     page.wait_for_function("document.querySelectorAll('.move-san').length === 1 && document.querySelector('#status').textContent === 'Your move'")
     assert page.locator('#board button').first.get_attribute('data-square') == 'h1'
     checks.append('human Black, real-weight opening, flipped board')
-    page.select_option('#color','w'); page.select_option('#model','pocket')
+    page.select_option('#color','w'); page.select_option('#model','pocket-plus')
 
     def load_fen(fen, status='Your move'):
         page.fill('#fen',fen); page.click('#fen-form button')
         page.wait_for_function('(text)=>document.querySelector("#status").textContent.includes(text)',arg=status)
+
+    for model in ('pocket-plus','atlas-plus'):
+        page.select_option('#model',model);page.select_option('#color','b')
+        load_fen('7k/5K2/6Q1/8/8/8/8/8 w - - 0 1','Checkmate')
+        checks.append(f'{model}: actual neural mating choice finishes game')
+    page.select_option('#color','w');page.select_option('#model','pocket-plus')
 
     load_fen('7k/P7/8/8/8/8/8/6K1 w - - 0 1')
     page.click('[data-square="a7"]'); page.click('[data-square="a8"]')
@@ -104,7 +115,7 @@ with sync_playwright() as p:
     page.click('[data-square="d2"]'); page.click('[data-square="d4"]')
     page.wait_for_function("document.querySelectorAll('.move-san').length === 2")
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
-    page.screenshot(path=str(root/'evaluation/mobile.png'),full_page=True)
+    page.screenshot(path=str(root/'evaluation/v0.2/mobile.png'),full_page=True)
     checks.append('390px mobile board play without horizontal overflow')
     assert not errors, errors
     receipt={'url':args.url,'browser':browser.version,'checks':checks,'pageErrors':errors}

@@ -1,0 +1,11 @@
+# v0.2 improvement experiment
+
+Preserve v0.1 Pocket and Atlas bytes as classic controls. Parent Astra authors expanded numerical circuitry directly; no training, optimizer, sample-fitting, pretrained policy or tree search. Existing inherited Sol assistance remains attributed.
+
+New playable tiers: pocket-plus (classic Pocket + selective pawn/knight threat/fork circuitry + major-vs-bare-king terminal circuits) and atlas-plus (classic Atlas + same terminal circuits). Count actual weights/topology; no size padding. Both remain available on browser and laptop. Propose, do not claim to have built, future ~64–96 MB browser and ~128–256 MB laptop circuits, with memory estimates, added reasoning targets and performance/strength gates.
+
+Primary new capability: compile exact king escape/check conditions *only in gated KQK/KRK positions* into affine/ReLU weights, for moving either the king or the sole major piece. Avoid stalemate, prioritize mating, prefer reductions of king mobility. Static raw-input relationships; no runtime successor-board evaluation, legal oracle or search in score computation. Legality of the chosen player move remains chess.js masking. Exclude castling and all other material configurations from this specialist gate. Test against independently enumerated chess.js successor outcomes in development fixtures (oracle only in tests).
+
+Fix sample independence before evaluating: original 256 public puzzles now development/history; choose next 256 IDs in the same predeclared hash ordering, disjoint from first 256. Freeze all four model files before evaluating. Compare all four on exactly the same new sample. No coefficient revisions after viewing new sample results; any subsequent tuning needs a new holdout. Save full protocols, hashes, records and failed/negative results. Also run paired-color games vs classics and deterministic weak baselines, with explicit draw/ply cap reasons, not invented Elo.
+
+Release gates: TDD circuits; deterministic unchanged classic hashes; generic runtime boundary maintained; four-model actual browser/Node parity and gameplay; laptop allowlist updated and all four extracted UCI checks; fresh source tests and review. Publish v0.2 as experimental with precise improvements/regressions and any proposed-only sizes visibly separated from downloadable models.

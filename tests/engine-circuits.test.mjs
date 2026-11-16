@@ -5,6 +5,7 @@ import { encodePosition } from '../src/engine.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { parseModel, forward } from '../src/network.mjs';
+import { MODEL_IDS } from '../tools/compile-models.mjs';
 
 let pocket, atlas;
 const compiled = {};
@@ -108,7 +109,7 @@ test('all stored neurons contribute to policy outputs rather than size padding',
 test('downloaded artifacts reproduce byte-for-byte, with topology-inclusive manifest accounting', () => {
   const manifest = JSON.parse(readFileSync(new URL('../public/models/manifest.json', import.meta.url), 'utf8'));
   assert.equal(manifest.formatVersion, 1);
-  assert.equal(manifest.models.length, 2);
+  assert.deepEqual(manifest.models.map(model => model.id), MODEL_IDS);
   for (const model of [pocket, atlas]) {
     const entry = manifest.models.find(m => m.id === model.metadata.id);
     const bytes = readFileSync(new URL(`../public/models/${entry.file}`, import.meta.url));

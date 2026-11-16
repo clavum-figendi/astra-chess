@@ -2,6 +2,9 @@ import { checksum, parseModel } from '../src/network.mjs';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
+import { buildKingEndgames } from './endgame-circuits.mjs';
+
+export const MODEL_IDS = ['pocket', 'pocket-plus', 'atlas', 'atlas-plus'];
 
 const VALUES = [1, 3.2, 3.35, 5, 9, 0];
 const file = square => square % 8;
@@ -10,7 +13,7 @@ const inside = (f, r) => f >= 0 && f < 8 && r >= 0 && r < 8;
 const piece = (side, type, square) => (side * 6 + type) * 64 + square;
 
 // Hash-consing shares identical arithmetic, including the many unchanged rays.
-class Graph {
+export class Graph {
   constructor() {
     this.nodes = [];
     this.memo = new Map();
@@ -112,7 +115,7 @@ function makeCircuits(g) {
   return { occupancy, attacks, riskTerms };
 }
 
-function atlasCircuits(g, c) {
+function atlasCircuits(g, c, light = false) {
   const directions = [[1, 0], [-1, 0], [0, 1], [0, -1], [1, 1], [-1, -1], [1, -1], [-1, 1]];
   const ray = (from, df, dr) => {
     const squares = [];
@@ -167,10 +170,11 @@ function atlasCircuits(g, c) {
     return all;
   }
   return (from, to, types, danger, support) => {
-    const terms = shields(from, to);
+    const terms = light ? [] : shields(from, to);
     const safe = g.any([g.node([[danger.all, -1]], 1), g.and(support.all, danger.tiers[4])]);
     for (const type of types) {
       if (type === 5) continue;
+      if (light && type !== 0 && type !== 1) continue;
       const hits = [];
       for (let target = 0; target < 64; target++) {
         const attack = movedAttack(type, from, to, target);
@@ -281,11 +285,13 @@ function compact(nodes, outputs) {
 }
 
 export function compileModel(id) {
-  if (id !== 'pocket' && id !== 'atlas') throw new Error(`Unknown model ${id}`);
+  if (!MODEL_IDS.includes(id)) throw new Error(`Unknown model ${id}`);
+  const plus = id.endsWith('-plus'), baseId = id.replace('-plus', '');
   const g = new Graph();
   const c = makeCircuits(g);
-  const extra = id === 'atlas' ? atlasCircuits(g, c) : null;
+  const extra = baseId === 'atlas' ? atlasCircuits(g, c) : plus ? atlasCircuits(g, c, true) : null;
   const strategy = astraStrategicCircuits(g);
+  const endings = plus ? buildKingEndgames(g) : null;
   const outputs = Array(64 * 64 * 5).fill(g.zero);
   const homeMinors = g.node([1, 6].map(sq => [piece(0, 1, sq), 1]).concat([2, 5].map(sq => [piece(0, 2, sq), 1])), 0, 0);
   for (let from = 0; from < 64; from++) {
@@ -317,6 +323,7 @@ export function compileModel(id) {
       }
       if (extra) terms.push(...extra(from, to, types, danger, support));
       terms.push(...strategy(from, to, types));
+      if (endings) terms.push(...endings(from, to, types));
       const base = g.node(terms, 0, 0);
       outputs[(from * 64 + to) * 5] = base;
       if (rank(from) === 6 && rank(to) === 7 && Math.abs(file(to) - file(from)) <= 1) {
@@ -333,12 +340,12 @@ export function compileModel(id) {
   }
   const graph = compact(g.nodes, outputs);
   return encodeModel({ inputCount: 768, ...graph, metadata: {
-    id, name: id === 'pocket' ? 'Astra Pocket' : 'Astra Atlas',
+    id, name: (baseId === 'pocket' ? 'Astra Pocket' : 'Astra Atlas') + (plus ? '+' : ''),
     input: '12x64 own/enemy pnbrqk; a1=0; black rank-reflected',
     output: '(from*64+to)*5 + [none,q,r,b,n]',
     authored: true, trained: false, search: false,
-    circuitVersion: 2,
-    authorship: 'Astra-directed, Sol-assisted; Astra strategic revision',
+    circuitVersion: plus ? 3 : 2,
+    authorship: plus ? 'Astra-authored expansion of Astra-directed, Sol-assisted base' : 'Astra-directed, Sol-assisted; Astra strategic revision',
   } });
 }
 
@@ -373,7 +380,7 @@ export const LIMITATIONS = [
   'Authored neural heuristics, not learned weights; grandmaster strength and any Elo are not established.',
   'No game-tree search, successor-position scoring, rollout, opening book, tablebase or pretrained network.',
   'Static attack circuits are pseudo-attacks: pins, overloaded defenders and multi-recapture sequences are not solved.',
-  'Check and boxed-king patterns are bonuses, not guaranteed mate detection; stalemate avoidance is not encoded.',
+  'General check patterns are not mate proofs. Only Plus models encode explicit terminal tests in gated KQK/KRK positions; general stalemate avoidance is absent.',
   'Raw input omits history, castling rights, en-passant rights and move counters; those affect only legal/game-end masking.',
   'En-passant material is encoded, but secondary opened lines after removing the captured pawn are not fully modeled.',
   'Promotion material and destination safety are encoded; Atlas threat circuits still use the pre-promotion pawn attack shape.',
@@ -384,13 +391,15 @@ export function compileAll() {
   const directory = new URL('../public/models/', import.meta.url);
   mkdirSync(directory, { recursive: true });
   const models = [];
-  for (const id of ['pocket', 'atlas']) {
+  for (const id of MODEL_IDS) {
     const bytes = compileModel(id);
     const model = parseModel(bytes.buffer);
     const tensorBytes = 4 * (model.nodeCount + model.edgeCount);
     const topologyBytes = 4 * (model.nodeCount * 2 + 1 + model.edgeCount + model.outputCount);
     const features = ['pawn/knight/king attacks', 'blocked bishop/rook/queen rays', 'origin-vacating destination risk', 'approximate defended exchanges', 'hanging-piece escape', 'capture/en-passant reward', 'promotion material', 'development/centralization/castling', 'Astra phase-gated king activity', 'Astra open and semi-open rook files'];
-    if (id === 'atlas') features.push('new threats and checking forks', 'vacated shields of valuable pieces', 'defense of loose attacked pieces', 'protected queen checks', 'pawn-boxed back-rank checks', 'passed-pawn advance', 'castled pawn shield');
+    if (id.startsWith('atlas')) features.push('new threats and checking forks', 'vacated shields of valuable pieces', 'defense of loose attacked pieces', 'protected queen checks', 'pawn-boxed back-rank checks', 'passed-pawn advance', 'castled pawn shield');
+    if (id === 'pocket-plus') features.push('pawn and knight threats/checking forks', 'pawn and knight defense of loose pieces', 'passed-pawn advance');
+    if (id.endsWith('-plus')) features.push('Astra KQK/KRK mate and stalemate circuits', 'gated enemy king mobility reduction');
     const entry = {
       id, name: model.metadata.name, file: `${id}.bin`, bytes: bytes.length,
       sha256: createHash('sha256').update(bytes).digest('hex'),
@@ -401,7 +410,7 @@ export function compileAll() {
       sparseEdges: model.edgeCount, inputs: model.inputCount, outputs: model.outputCount,
       tensorBytes, topologyBytes, headerMetadataBytes: bytes.length - tensorBytes - topologyBytes,
       forwardWorkingBytes: 8 * (model.inputCount + model.nodeCount + model.outputCount),
-      description: id === 'pocket' ? 'Compact authored safety and development circuit.' : 'Expanded authored tactical relationships; not a strength guarantee.',
+      description: id.endsWith('-plus') ? 'Expanded authored circuits with a three-man endgame specialist; compare measured results.' : 'Original v0.1 comparison model; preserved weights.',
       features,
     };
     writeFileSync(new URL(entry.file, directory), bytes);

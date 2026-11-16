@@ -1,0 +1,43 @@
+{
+  "url": "http://127.0.0.1:4187/",
+  "browser": "145.0.7632.6",
+  "checks": [
+    "four actual models exposed; future size proposals not selectable",
+    "64-square board and manifest loaded",
+    {
+      "workerNodeParity": "pocket",
+      "move": "b1c3",
+      "browserInferenceMs": 74.5
+    },
+    "pocket: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "pocket-plus",
+      "move": "b1c3",
+      "browserInferenceMs": 69.89999999850988
+    },
+    "pocket-plus: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "atlas",
+      "move": "b1c3",
+      "browserInferenceMs": 103.60000000149012
+    },
+    "atlas: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "atlas-plus",
+      "move": "b1c3",
+      "browserInferenceMs": 188.10000000149012
+    },
+    "atlas-plus: human e4 and real-weight reply",
+    "human Black, real-weight opening, flipped board",
+    "pocket-plus: actual neural mating choice finishes game",
+    "atlas-plus: actual neural mating choice finishes game",
+    "human underpromotion and insufficient-material draw",
+    "downloaded PGN contains promotion and result",
+    "castling moves king and rook",
+    "en passant removes captured pawn",
+    "terminal FEN stops game without policy move",
+    "real three-second clock flag fall",
+    "390px mobile board play without horizontal overflow"
+  ],
+  "pageErrors": []
+}
