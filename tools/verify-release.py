@@ -49,13 +49,13 @@ with tempfile.TemporaryDirectory(prefix='astra-release-') as tmp:
         receipt['modelHashes'][model['id']]=digest
         command=['node','laptop/cli.mjs','--model',model['id']]
         result=subprocess.run(command,cwd=extracted,text=True,input='uci\nisready\nposition startpos moves e2e4\ngo\nquit\n',capture_output=True,check=True,timeout=30)
-        assert 'id author Astra-directed, Sol-assisted' in result.stdout
+        assert 'id author Chess Lab contributors' in result.stdout
         assert 'readyok' in result.stdout and 'bestmove ' in result.stdout
         receipt['steps'].append({'command':command,'environment':'isolated extracted zip without node_modules','stdout':result.stdout,'exitCode':result.returncode})
         print(result.stdout,flush=True)
     receipt['archiveBytes']=archive.stat().st_size
     receipt['archiveSHA256']=hashlib.sha256(archive.read_bytes()).hexdigest()
 receipt['note']='Clean-candidate archive tested; timestamps may differ from delivery ZIP. Runtime and model inputs are bound above. Later documentation-only repacks require rechecking delivered models and executing extracted runtime.'
-(root/'evaluation/v0.3').mkdir(parents=True,exist_ok=True)
-(root/'evaluation/v0.3/release-clean.json').write_text(json.dumps(receipt,indent=2)+'\n')
+(root/'evaluation/v0.4').mkdir(parents=True,exist_ok=True)
+(root/'evaluation/v0.4/release-clean.json').write_text(json.dumps(receipt,indent=2)+'\n')
 print(json.dumps({key:value for key,value in receipt.items() if key not in ['steps','sourceHashes']},indent=2))

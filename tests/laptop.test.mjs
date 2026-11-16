@@ -7,7 +7,7 @@ test('UCI applies full move history and returns one supplied legal policy move',
   const protocol = createProtocol({ send: x => out.push(x), select: fen => { evaluated = fen; return { move: 'g1f3' }; } });
   protocol('uci'); protocol('isready'); protocol('position startpos moves e2e4 e7e5'); protocol('go wtime 10000 btime 10000');
   assert.ok(out.includes('uciok')); assert.ok(out.includes('readyok'));
-  assert.match(out.find(line => line.startsWith('id author ')), /Astra.*Sol/);
+  assert.match(out.find(line => line.startsWith('id author ')), /Chess Lab contributors/);
   assert.match(evaluated, / w KQkq - 0 2$/);
   assert.equal(out.at(-1), 'bestmove g1f3');
 });

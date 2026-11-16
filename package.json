@@ -1,12 +1,13 @@
 {
-  "name": "astra-chess",
-  "version": "0.3.0",
+  "name": "chess-lab",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
-  "description": "Authored and experimentally engine-tuned sparse chess policies, without inference-time search",
+  "description": "Local neural chess with Stockfish policy distillation and seeded opening variety",
   "scripts": {
     "test": "node --test --test-concurrency=1 tests/*.test.mjs",
-    "weights": "node tools/compile-models.mjs && node tools/rebuild-engine-tuned.mjs",
+    "weights": "node tools/compile-models.mjs && node tools/rebuild-engine-tuned.mjs && node tools/rebuild-policy-models.mjs",
+    "book": "node tools/build-opening-book.mjs",
     "build": "node tools/build.mjs",
     "serve": "node tools/serve.mjs",
     "bench": "node tools/benchmark.mjs",

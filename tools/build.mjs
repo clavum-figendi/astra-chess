@@ -21,9 +21,10 @@ export async function buildSite(root) {
   await cp(join(dist,'src'),join(laptop,'src'),{recursive:true});
   await cp(join(root,'laptop'),join(laptop,'laptop'),{recursive:true});
   await cp(join(root,'public/models'),join(laptop,'models'),{recursive:true});
+  await cp(join(root,'public/openings.json'),join(laptop,'openings.json'));
   for (const name of ['README.md','LICENSE','CHESS-JS-LICENSE.txt']) await cp(join(dist,name),join(laptop,name));
   await cp(join(root,'docs'),join(laptop,'docs'),{recursive:true});
-  await writeFile(join(laptop,'package.json'),JSON.stringify({name:'astra-chess-laptop',version:'0.3.0',type:'module',private:true}));
+  await writeFile(join(laptop,'package.json'),JSON.stringify({name:'chess-lab-laptop',version:'0.4.0',type:'module',private:true}));
   try {
     await access(join(root,'evaluation/results.json'));
     await cp(join(root,'evaluation'),join(dist,'evaluation'),{recursive:true});

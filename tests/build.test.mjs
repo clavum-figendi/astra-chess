@@ -10,10 +10,12 @@ test('build produces standalone browser and laptop ESM trees and binaries', asyn
   try {
     for (const dir of ['public/models','src','laptop','docs','evaluation','node_modules/chess.js/dist/esm']) await mkdir(join(root,dir), {recursive:true});
     await writeFile(join(root,'evaluation/results.json'),'{"protocol":"test"}');
+    await writeFile(join(root,'public/openings.json'),'{"version":1,"positions":{}}');
     for (const [file,text] of Object.entries({'public/index.html':'<h1>Chess</h1>','public/models/pocket.bin':'POCKET','public/models/atlas.bin':'ATLAS','src/chess.mjs':"export {Chess} from 'chess.js'",'src/network.mjs':'export const x=1;','laptop/cli.mjs':'console.log(1)','node_modules/chess.js/dist/esm/chess.js':'export class Chess {}','node_modules/chess.js/LICENSE':'BSD-2-Clause','README.md':'Readme','LICENSE':'MIT','docs/ARCHITECTURE.md':'Architecture'})) await writeFile(join(root,file),text);
     await buildSite(root);
     assert.equal(await readFile(join(root,'dist/src/chess.mjs'),'utf8'), 'export class Chess {}');
     assert.equal(await readFile(join(root,'build/laptop/models/atlas.bin'),'utf8'), 'ATLAS');
+    assert.equal(JSON.parse(await readFile(join(root,'build/laptop/openings.json'),'utf8')).version,1);
     assert.equal(await readFile(join(root,'dist/index.html'),'utf8'), '<h1>Chess</h1>');
     assert.equal(await readFile(join(root,'dist/.nojekyll'),'utf8'), '');
     assert.equal(JSON.parse(await readFile(join(root,'dist/evaluation/results.json'),'utf8')).protocol, 'test');

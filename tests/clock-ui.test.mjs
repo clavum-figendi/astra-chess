@@ -24,20 +24,22 @@ with sync_playwright() as p:
  page.route('**/models/manifest.json', lambda route: route.fulfill(json={'models':[{'id':'pocket','name':'Pocket','file':'pocket.bin','bytes':1000,'parameters':100,'neurons':20}]}))
  page.route('**/worker.mjs', lambda route: route.fulfill(content_type='text/javascript', body="onmessage=({data:d})=>{if(d.type==='load')postMessage({type:'loaded',id:d.id,modelId:d.modelId});else postMessage({type:'move',id:d.id,move:'e7e5',candidates:[{move:'e7e5',score:2}],elapsedMs:1.5})}"))
  page.goto('http://127.0.0.1:'+str(server.server_port))
+ page.uncheck('#book')
 `;
 function browserContract(script) {
   const result = spawnSync(process.env.PYTHON || 'python', ['-c', setup + script], { encoding: 'utf8', timeout: 60000 });
   assert.equal(result.status, 0, result.stdout + result.stderr);
 }
 
-test('workspace renders 64 accessible squares, experimental disclosure, and starts only on request', { skip: !process.env.ASTRA_BROWSER_TESTS }, () => {
+test('workspace renders 64 accessible squares, neutral identity, and starts only on request', { skip: !process.env.ASTRA_BROWSER_TESTS }, () => {
   browserContract(String.raw`
  page.wait_for_selector('button[data-square="e2"]')
  assert page.locator('button[data-square]').count() == 64
- assert 'unrated' in page.locator('body').inner_text().lower()
- assert 'Sol-assisted' in page.locator('.experiment-note').inner_text()
- assert 'Sol-assisted' in page.locator('meta[name="description"]').get_attribute('content')
- assert page.locator('#status').inner_text() == 'Ready to play'
+ assert page.title() == 'Chess Lab — Chess workspace'
+ assert 'Sol-assisted' not in page.locator('body').inner_text()
+ assert page.locator('#book').count() == 1
+ assert page.locator('a[href="./docs/OPTIMIZATION-V3.md"]').count() == 1
+ assert page.locator('#status').inner_text() == 'Settings changed · start a new game'
  page.locator('#new-game').click()
  page.wait_for_function("document.querySelector('#status').textContent.includes('Your move')")
  page.locator('[data-square="e2"]').press('Enter')

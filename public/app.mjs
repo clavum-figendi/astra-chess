@@ -35,6 +35,9 @@ let focusSquare = 'e2';
 let promotion = null;
 let result = '*';
 let startFen = null;
+let gameSeed = '';
+let gameBook = true;
+const neutralName = name => name.replace(/\b(?:Astra|Sol)\b[\s·:—/-]*/gi, '').trim();
 
 function status(message, error = false) { $('status').textContent = message; $('status').classList.toggle('error', error); }
 function setNode(tag, text, className) {
@@ -43,9 +46,9 @@ function setNode(tag, text, className) {
   return node;
 }
 function currentModel() { return manifest?.models.find((m) => m.id === $('model').value); }
-function modelName() { return currentModel()?.name || $('model').selectedOptions[0]?.textContent || 'Policy'; }
+function modelName() { return neutralName(currentModel()?.name || $('model').selectedOptions[0]?.textContent || 'Policy'); }
 function updatePlayers() {
-  $('opponent-name').textContent = `Astra · ${modelName()}`;
+  $('opponent-name').textContent = modelName();
   $('human-color').textContent = colors[human];
   $('opponent-color').textContent = colors[human === 'w' ? 'b' : 'w'];
   $('human-clock').setAttribute('aria-label', `${colors[human]} clock`);
@@ -152,12 +155,16 @@ function readTimeControl() {
 }
 function clearReadout() {
   $('latency').textContent = '— ms';
-  $('candidates').replaceChildren(setNode('li', 'Awaiting an Astra move.', 'empty-state'));
+  $('move-source').textContent = '—';
+  $('score-label').textContent = 'Raw score';
+  $('candidates').replaceChildren(setNode('li', 'Awaiting a move.', 'empty-state'));
 }
 function resetPosition(fen = null) {
   const next = fen ? new Chess(fen) : new Chess();
   const config = readTimeControl();
   active = false; loading = false; cancelRequests(); closeDialogs();
+  gameSeed = Array.from(crypto.getRandomValues(new Uint32Array(4)), n => n.toString(16).padStart(8, '0')).join('');
+  gameBook = $('book').checked;
   game = next; startFen = fen; result = '*'; lastMove = null; selected = null;
   human = $('color').value; flipped = human === 'b'; focusSquare = human === 'w' ? 'e2' : 'e7';
   clock.reset(config); $('resign').disabled = true; $('new-game').disabled = false;
@@ -178,7 +185,7 @@ function createEngineWorker() {
   instance.onerror = (event) => {
     event.preventDefault();
     if (instance !== worker) return;
-    finish('Policy worker failed. No fallback engine is used; start a new game to retry.');
+    finish('Policy worker failed; start a new game to retry.');
   };
   instance.onmessageerror = () => { if (instance === worker) finish('Could not decode the policy response. Start a new game to retry.'); };
 }
@@ -202,7 +209,7 @@ async function newGame(fen = null) {
     if (generation !== token) return;
     if (!currentModel()) throw new Error('Selected policy is not available in the manifest.');
     createEngineWorker();
-    const loaded = await request('load', { modelId: $('model').value });
+    const loaded = await request('load', { modelId: $('model').value, book: {enabled:gameBook,seed:gameSeed} });
     if (generation !== token) return;
     if (loaded.modelId !== $('model').value) throw new Error('Loaded policy does not match the selection.');
     loading = false; active = true;
@@ -212,7 +219,7 @@ async function newGame(fen = null) {
     clock.start(game.turn()); updateClocks(); takeTurn();
   } catch (error) {
     if (generation !== token) return;
-    finish(`Unable to play: ${error.message} No fallback engine is used.`);
+    finish(`Unable to play: ${error.message}`);
   }
 }
 function takeTurn() {
@@ -221,22 +228,24 @@ function takeTurn() {
   status(`${modelName()} is thinking…`);
   const token = generation;
   const fen = game.fen();
-  request('move', { fen }).then((answer) => {
+  request('move', { fen: startFen && !game.history().length ? startFen : fen }).then((answer) => {
     if (token !== generation || !active || game.fen() !== fen) return;
     if (updateClocks().flagged || !active) return;
     if (typeof answer.move !== 'string' || !/^[a-h][1-8][a-h][1-8][qrbn]?$/.test(answer.move)) throw new Error('Policy returned no legal move.');
     const legal = game.moves({ verbose: true }).find((m) => m.from + m.to + (m.promotion || '') === answer.move);
     if (!legal) throw new Error('Policy returned an illegal move.');
     $('latency').textContent = `${Number(answer.elapsedMs).toFixed(2)} ms`;
+    $('move-source').textContent = answer.source === 'book' ? 'book' : 'policy';
+    $('score-label').textContent = answer.source === 'book' ? 'Weight' : 'Raw score';
     $('candidates').replaceChildren();
     for (const [index, item] of (Array.isArray(answer.candidates) ? answer.candidates : []).slice(0, 5).entries()) {
-      if (typeof item.move !== 'string' || !Number.isFinite(item.score)) continue;
+      if (typeof item.move !== 'string' || !Number.isFinite(answer.source === 'book' ? item.weight : item.score)) continue;
       const row = setNode('li', '', 'candidate');
-      row.append(setNode('span', String(index + 1).padStart(2, '0'), 'candidate-rank'), setNode('span', item.move), setNode('span', item.score.toFixed(3), 'candidate-score'));
+      row.append(setNode('span', String(index + 1).padStart(2, '0'), 'candidate-rank'), setNode('span', item.move), setNode('span', answer.source === 'book' ? String(item.weight) : item.score.toFixed(3), answer.source === 'book' ? 'candidate-weight' : 'candidate-score'));
       $('candidates').append(row);
     }
     commitMove(legal);
-  }).catch((error) => { if (token === generation && active) finish(`Policy error: ${error.message} No fallback engine is used.`); });
+  }).catch((error) => { if (token === generation && active) finish(`Policy error: ${error.message}`); });
 }
 function commitMove(move) {
   if (!active || updateClocks().flagged) return;
@@ -291,7 +300,7 @@ $('cancel-resign').onclick = () => $('resign-dialog').close();
 $('confirm-resign').onclick = () => {
   if (active && !updateClocks().flagged) finish(`${colors[human]} resigned · ${colors[human === 'w' ? 'b' : 'w']} wins`, human === 'w' ? '0-1' : '1-0');
 };
-for (const id of ['color', 'model', 'time-control', 'custom-minutes', 'custom-increment']) {
+for (const id of ['color', 'model', 'time-control', 'custom-minutes', 'custom-increment', 'book']) {
   $(id).addEventListener('change', () => {
     $('custom-time').hidden = $('time-control').value !== 'custom';
     try { resetPosition(); status('Settings changed · start a new game'); } catch (error) { status(error.message, true); }
@@ -299,10 +308,10 @@ for (const id of ['color', 'model', 'time-control', 'custom-minutes', 'custom-in
 }
 $('fen-form').onsubmit = (event) => { event.preventDefault(); const fen = $('fen').value.trim(); if (!fen) { status('Paste a FEN position first.', true); return; } newGame(fen); };
 $('download-pgn').onclick = () => {
-  game.header('Event', 'Astra experimental policy game', 'White', human === 'w' ? 'Human' : `Astra ${modelName()}`, 'Black', human === 'b' ? 'Human' : `Astra ${modelName()}`, 'Result', result);
+  game.header('Event', 'Chess Lab game', 'White', human === 'w' ? 'Human' : modelName(), 'Black', human === 'b' ? 'Human' : modelName(), 'Result', result, 'Seed', gameSeed, 'Book', gameBook ? 'on' : 'off');
   if (startFen) game.header('SetUp', '1', 'FEN', startFen);
   const url = URL.createObjectURL(new Blob([game.pgn() + '\n'], { type: 'application/x-chess-pgn' }));
-  const link = document.createElement('a'); link.href = url; link.download = 'astra-game.pgn'; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+  const link = document.createElement('a'); link.href = url; link.download = 'chess-lab-game.pgn'; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
 };
 async function loadManifest() {
   const response = await fetch(new URL('./models/manifest.json', import.meta.url));
@@ -313,9 +322,9 @@ async function loadManifest() {
   const selectedModel = $('model').value;
   $('model').replaceChildren(); $('model-downloads').replaceChildren();
   for (const model of data.models) {
-    const option = setNode('option', model.name); option.value = model.id; $('model').append(option);
+    const option = setNode('option', neutralName(model.name)); option.value = model.id; $('model').append(option);
     const row = setNode('div', '', 'model-download');
-    const info = setNode('div', model.name);
+    const info = setNode('div', neutralName(model.name));
     const count = (n) => Number.isFinite(n) ? n.toLocaleString('en-US') : '—';
     info.append(setNode('small', `${count(model.parameters)} parameters · ${count(model.neurons)} neurons`));
     const url = new URL(model.file, new URL('./models/', import.meta.url));
