@@ -1,0 +1,18 @@
+{
+  "deployment": {
+    "version": "0.3.0",
+    "sourceCommit": "5bbec0ad901b53f89456888166b369541f9b0ade",
+    "tag": "deploy-20261116-141542",
+    "note": "Experimental fitted policies; no strength upgrade or full optimization claim"
+  },
+  "verifiedModels": {
+    "pocket": "77365eb86c5176255e06784592f9022a36ca6730c0dd3e4ce552cbf480762737",
+    "pocket-plus": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+    "pocket-tuned": "6fc188f3dd52fab34cfe454e25be761bf61125faf852c8bcf17dc285c83c0e3d",
+    "atlas": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85",
+    "atlas-plus": "30313d65ec8b74007a546576b5234aa00a521b63ade9159f1b2ec7f30b05c4a6",
+    "atlas-tuned": "ca09975465cd379b96203a52d80db817cc898bc60ae6743f0e778c6efa50de12"
+  },
+  "archiveSHA256": "07326b6985c7aa0fd0012c834382ef0a431199dde6da6423462f08d40cd1cd49",
+  "archiveBytes": 23932984
+}

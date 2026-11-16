@@ -1,0 +1,98 @@
+
+> chess-lab@0.4.0 test
+> node --test --test-concurrency=1 tests/*.test.mjs
+
+✔ puzzle scoring first applies the opponents prelude, then tests policy rather than solution replay (37.106233ms)
+✔ seeded random and capture baselines choose legal repeatable moves (69.795882ms)
+✔ CLI defaults to book, seed reproduces, and no-book selects actual policy (1909.836158ms)
+✔ UCI reports neutral identity and honest source; repetition never selects book (725.083935ms)
+✔ actual browser book works under subpath, neutral UI, fresh seeds, PGN, toggle and policy fallback (10768.121177ms)
+✔ build produces standalone browser and laptop ESM trees and binaries (120.154735ms)
+✔ workspace renders 64 accessible squares, neutral identity, and starts only on request (3787.679981ms)
+✔ black-side play, keyboard navigation, and reset cancel an outstanding decision (5318.111054ms)
+✔ FEN imports allow explicit underpromotions for either color and PGN contains the result (6190.893765ms)
+✔ clock loading is untimed, AI thinking is timed, and flag fall rejects a late worker reply (6280.601689ms)
+✔ mobile workspace fits without horizontal overflow (5598.239181ms)
+✔ worker returns request-correlated errors without falling back, and survives subsequent requests (350.476686ms)
+✔ a completed legal turn charges thinking time, credits increment, and starts the opponent (6.372373ms)
+✔ flagging is irreversible and a late move cannot gain increment or restart time (0.777593ms)
+✔ stopping freezes a settled clock and reset starts a fresh inactive game (3.155415ms)
+✔ unlimited clocks preserve null through turns, stop, and resetting a timed clock (0.736257ms)
+✔ only the active side loses actual monotonic elapsed time, even without ticks (0.717582ms)
+✔ Pocket scores free material above quiet play without entering a losing queen exchange (26756.361577ms)
+✔ Pocket attack rays respect blockers and the vacating source (56.06634ms)
+✔ Atlas adds genuine checking-fork and vacated-shield relationships (183.55367ms)
+✔ Atlas encodes protected adjacent queen checks without treating king pseudo-attacks as a free capture (137.892688ms)
+✔ en passant capture reward is encoded from raw pawn relationships (16.252873ms)
+✔ authored phase gate activates the king in pawn endings but not against enemy major pieces (165.833515ms)
+✔ authored rook-file weights distinguish open, semi-open and own-pawn files (171.653324ms)
+✔ both colors promote to a legal queen and castling has encoded value (249.409605ms)
+✔ all stored neurons contribute to policy outputs rather than size padding (162.847477ms)
+✔ downloaded artifacts reproduce byte-for-byte, with topology-inclusive manifest accounting (674.284916ms)
+✔ legal mask, black perspective and deterministic candidate ordering are preserved (51.841765ms)
+✔ specialist distinguishes queen mate, rook mate, and stalemate (170.972386ms)
+✔ specialist is inactive outside exactly own king plus one major versus bare king (24.788776ms)
+✔ specialist terminal signs agree with independent rules over seeded three-man positions (5497.449036ms)
+✔ labels require complete exact same-depth coverage and preserve side-to-move scores (60.6081ms)
+✔ mate targets use an explicitly separate surrogate and reject ambiguous scores (11.396918ms)
+✔ move selection is only network logits plus a legal mask, including lexical ties (176.770579ms)
+✔ parser rejects cycles, invalid sparse rows, nonfinite tensors and invalid outputs (2.925738ms)
+✔ binary network executes affine and ReLU nodes, retaining signed outputs (3.820429ms)
+✔ larger Plus variants carry three-man terminal knowledge and choose legal mating moves (43355.920025ms)
+✔ canonical encoding preserves files and swaps arbitrary piece colors by rank reflection (18.073306ms)
+✔ raw board encoding is twelve canonical one-hot planes for either side (3.278413ms)
+✔ direct engine-regret coordinate passes change bounded weights without touching protected values (7.078377ms)
+✔ bounded engine-label fitting improves validation regret and preserves fixed coefficients (28.592854ms)
+✔ rejects overlap between fitting and validation position identifiers (1.668832ms)
+✔ laptop runner exposes and executes every installed model including larger variants (9454.108549ms)
+✔ UCI applies full move history and returns one supplied legal policy move (38.719606ms)
+✔ UCI history detects repetition and does not ask the policy to move (27.386182ms)
+✔ invalid UCI position cannot leave a stale playable board (5.947176ms)
+✔ curated artifact has at least 30 fully validated branches with exact position boundaries (679.14641ms)
+✔ weighted book validates complete lines and samples reproducibly without neural scores (486.229396ms)
+✔ policy labels preserve actual bestmove and MultiPV ranks, rejecting incomplete or inconsistent responses (74.2689ms)
+✔ SMOKE ONLY: v3 scalar data exercises new sparse fitting and binary roundtrip, not policy evidence (1730.875702ms)
+✔ rejects impossible MultiPV rank beyond legal move count (12.250163ms)
+✔ rejects malformed sparse rows, teacher labels, nonfinite values and leakage (187.022355ms)
+✔ cold baseline is eligible and no-progress early stopping honors patience (17.228587ms)
+✔ rank distribution contributes a quarter of the direct stable cross entropy (15.343258ms)
+✔ direct bestmove/rank target overrides contrary numerical cp, selects validation and records bounded rounds (48.882097ms)
+✔ frozen policy artifacts reconstruct exactly without fitting or reading final test (6499.783224ms)
+✔ sparse features match float32 serialization for both models, colors and promotions (15230.713262ms)
+✔ shared heads use canonical output while internally used outputs remain untouched (98.072621ms)
+✔ geometry unties actual terminal edges into substantial deterministic capacity (9872.526005ms)
+✔ rebuilds a tuned artifact from pinned base/scales and labels its provenance (38.423301ms)
+✔ static server serves modules, 404 and confines paths to its root (143.68847ms)
+✔ UI keeps fitted models available and links factual evidence without repeated playing disclaimers (3.379174ms)
+✔ FIXTURE: uses latest complete same-depth MultiPV, not mixed iterations/bounds (170.697047ms)
+{"receipt":"stockfish-multipv","depth":4,"lines":20,"bestmove":"c2c4"}
+{"receipt":"stockfish-history-multipv","depth":6,"lines":29,"bestmove":"b8c6"}
+✔ REAL Stockfish: all legal moves scored at one complete depth-4 iteration (1328.948513ms)
+✔ FIXTURE: malformed or missing scores are never fabricated (102.235402ms)
+✔ FIXTURE: unexpected exit and illegal/null moves reject without fallback (284.602113ms)
+✔ FIXTURE: timeout poisons session and bounds stderr (402.528349ms)
+✔ FIXTURE: concurrent analysis is rejected, later sequential analysis works (296.377625ms)
+✔ FIXTURE: validates FEN, limits and complete standard-start history before sending (122.44969ms)
+✔ FIXTURE: handshake timeout and stale bestmove drainage (440.881461ms)
+✔ HARNESS UNIT: terminal history wins over ply cap; no material adjudication (32.106674ms)
+✔ HARNESS UNIT: engine illegal/null moves are errors, never fallback or a result (3.296505ms)
+{"receipt":"gnuchess-node-budget","limitMode":"reported-nodes-stop","observedNodes":10000,"bestmove":"b1c3"}
+✔ REAL GNU Chess: node budget is bounded explicitly rather than ignored by its adapter (330.055475ms)
+{"receipt":"classic-pocket-game","result":"1/2-1/2","termination":"ply-cap","plies":12,"pgn":"[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"Astra Pocket\"]\n[Black \"GNU Chess 6.2.9\"]\n[Result \"1/2-1/2\"]\n[Termination \"ply-cap\"]\n\n1. e4 e5 2. Nc3 Nc6 3. Nge2 Nf6 4. d4 Bb4 5. Be3 Nxe4 6. d5 Na5 1/2-1/2","modelDecisions":[{"ply":3,"move":"b1c3"},{"ply":5,"move":"g1e2"},{"ply":7,"move":"d2d4"},{"ply":9,"move":"c1e3"},{"ply":11,"move":"d4d5"}],"engineIdentity":{"kind":"gnuchess","path":"/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess","name":"GNU Chess 6.2.9","author":"GNU Chess team"}}
+✔ REAL classic Pocket versus GNU Chess: legal short game and PGN (1033.464534ms)
+{"receipt":"stockfish","identity":{"kind":"stockfish","path":"/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish","name":"Stockfish 17.1","author":"the Stockfish developers (see AUTHORS file)"},"options":[{"name":"Threads","type":"spin","raw":"option name Threads type spin default 1 min 1 max 1024","default":1,"min":1,"max":1024,"value":1},{"name":"Hash","type":"spin","raw":"option name Hash type spin default 16 min 1 max 33554432","default":16,"min":1,"max":33554432,"value":16},{"name":"Ponder","type":"check","raw":"option name Ponder type check default false","default":false,"value":false},{"name":"MultiPV","type":"spin","raw":"option name MultiPV type spin default 1 min 1 max 256","default":1,"min":1,"max":256,"value":1}],"result":{"bestmove":"b8c6","lines":[{"move":"b8c6","depth":3,"pv":["b8c6","f1b5"],"multipv":1,"nodes":168,"cp":-23}],"depth":3,"complete":true,"expectedLines":1,"positionSource":"history","limitMode":"native-uci","observedNodes":168}}
+✔ REAL stockfish: handshake and legal moves with standard-start history (956.622482ms)
+{"receipt":"gnuchess","identity":{"kind":"gnuchess","path":"/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess","name":"GNU Chess 6.2.9","author":"GNU Chess team"},"options":[{"name":"Hash","type":"spin","raw":"option name Hash type spin default 16 min 4 max 1024","default":16,"min":4,"max":1024,"value":16},{"name":"Ponder","type":"check","raw":"option name Ponder type check default false","default":false,"value":false},{"name":"OwnBook","type":"check","raw":"option name OwnBook type check default true","default":true,"value":false}],"result":{"bestmove":"b8c6","lines":[{"move":"b8c6","depth":3,"pv":["b8c6","b1c3","g8f6"],"multipv":1,"nodes":356,"cp":0}],"depth":3,"complete":true,"expectedLines":1,"positionSource":"history","limitMode":"native-uci","observedNodes":448}}
+✔ REAL gnuchess: handshake and legal moves with standard-start history (308.936474ms)
+✔ promotion-sized pawn contributions are not tied to small pawn-placement coefficients (6.099123ms)
+✔ rewrites actual stored head weights, preserving backbone and protected capture coefficients (3.047948ms)
+✔ rejects invalid multipliers and changes to protected groups (3.39278ms)
+✔ cached legal-move features reproduce real serialized inference for both colors (1926.490139ms)
+ℹ tests 80
+ℹ suites 0
+ℹ pass 80
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 181123.171066

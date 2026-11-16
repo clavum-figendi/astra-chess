@@ -1,6 +1,6 @@
 {
-  "version": "0.3.0",
-  "sourceCommit": "5bbec0ad901b53f89456888166b369541f9b0ade",
-  "tag": "deploy-20261116-141542",
-  "note": "Experimental fitted policies; no strength upgrade or full optimization claim"
+  "version": "0.4.0",
+  "sourceCommit": "3d21e280f92fcf0608c77746febf78eb434dd079",
+  "tag": "deploy-20261116-151003",
+  "product": "Chess Lab"
 }
