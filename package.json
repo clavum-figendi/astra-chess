@@ -1,0 +1,16 @@
+{
+  "name": "astra-chess",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Directly authored sparse neural chess policies, without training or tree search",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "weights": "node tools/compile-models.mjs",
+    "build": "node tools/build.mjs",
+    "serve": "node tools/serve.mjs",
+    "bench": "node tools/benchmark.mjs"
+  },
+  "dependencies": {"chess.js": "1.4.0"},
+  "devDependencies": {}
+}
