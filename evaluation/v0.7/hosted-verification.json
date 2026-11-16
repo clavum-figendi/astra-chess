@@ -1,0 +1,105 @@
+{
+  "url": "https://clavum-figendi.github.io/chesslab/",
+  "sourceCommit": "e0cf989186ba5c9424756d8fb75870233c14e061",
+  "pagesCommit": "1870429bb6506dab93ed9da26f7ef18576dbc603",
+  "run": 43972430396,
+  "assets": [
+    {
+      "path": "index.html",
+      "bytes": 9103,
+      "sha256": "15dcd48f2d482e3fef4d7a527a033085ffdb19c69de57252b545d06eba188037"
+    },
+    {
+      "path": "style.css",
+      "bytes": 14831,
+      "sha256": "f702029c951934e481a5c8f8648b9fba286f62dd66d760528b97f4e3ef88c41a"
+    },
+    {
+      "path": "app.mjs",
+      "bytes": 22536,
+      "sha256": "e8562e57bfcdb189080c467db21e1a4f3fa09c274d6befd874b8fc2264a82625"
+    },
+    {
+      "path": "worker.mjs",
+      "bytes": 3926,
+      "sha256": "8da5554a89d2e50e4787f8874e03e4cb5fa29bfedfcc6c69bd5238e029e16819"
+    },
+    {
+      "path": "src/premove.mjs",
+      "bytes": 1186,
+      "sha256": "2544bd78176f6b1192646e6eff0b59ec7b5c73988d4fba7ff746e2315bf0fdc8"
+    },
+    {
+      "path": "src/sound.mjs",
+      "bytes": 1858,
+      "sha256": "aef70e82fbd96404fd689d586f0a177ae8309b925b5b0f57aa389fbd37a85c65"
+    },
+    {
+      "path": "src/opening-book.mjs",
+      "bytes": 4302,
+      "sha256": "691d5802ed8b30ce5572c0f6b3a7bab7d246ca2c545ff38fb48a61a391076e62"
+    },
+    {
+      "path": "src/transformer.mjs",
+      "bytes": 8980,
+      "sha256": "dc7ee006e1eb6448d186ea645ca40cf21f51f9db558366b8483e587a1ff1c0ab"
+    },
+    {
+      "path": "models/manifest.json",
+      "bytes": 4429,
+      "sha256": "62e2ce6c00d8215f592c805ecf7cdcf40d1015346e8302db769eaf582523bede"
+    },
+    {
+      "path": "openings.json",
+      "bytes": 1013432,
+      "sha256": "dc6398f617d58dc5e7697eea46452a465326cac808bc60f34d2439f5deef5d3d"
+    },
+    {
+      "path": "docs/RELEASE-V7.md",
+      "bytes": 5506,
+      "sha256": "849059dfc0701e829081de5b0d2533bc8cd983065a75101b1cf0b5392e0ac911"
+    },
+    {
+      "path": "vendor/ort/ort-wasm-simd-threaded.wasm",
+      "bytes": 12361745,
+      "sha256": "be0e129949062ad50290ef94683fac8be5bb6156f709e030b7a5f1661a2f6c17"
+    },
+    {
+      "path": "downloads/astra-chess-laptop.zip",
+      "bytes": 13049524,
+      "sha256": "f4af2bae2f99d39eab95e9dfea26a023a3192e8ecc1d3a2b40a0bb16eb03ddc9"
+    },
+    {
+      "path": "models/pocket-plus.bin",
+      "bytes": 8465724,
+      "sha256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f"
+    },
+    {
+      "path": "models/atlas.bin",
+      "bytes": 38397700,
+      "sha256": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85"
+    },
+    {
+      "path": "models/deepmind-9m-v7.onnx",
+      "bytes": 17991221,
+      "sha256": "b2a643b1bb910e0035e514ef7efecc62b69dbd3740af6cc18abaddf75471d8ee"
+    }
+  ],
+  "removedAssets": {
+    "pocket.bin": 404,
+    "pocket-tuned.bin": 404,
+    "pocket-policy.bin": 404,
+    "atlas-plus.bin": 404,
+    "atlas-tuned.bin": 404,
+    "atlas-policy.bin": 404
+  },
+  "deepmindLaptop": {
+    "sha256": "4756c52b59d693612ebaabba08c3d2d296a7d1f105ecafa8c969691fe46aaa1e",
+    "bytes": 33268150,
+    "stdout": "id name Chess Lab 9M\nid author Chess Lab contributors; pretrained weights Google DeepMind\nuciok\nreadyok\nbestmove c7c5\n",
+    "exitCode": 0,
+    "manifestVerified": true
+  },
+  "uiLiveReceiptSHA256": "4e00aa1220a3a2cfa605506ef39beb4d82303e606ff39e44e98a5874663b09d2",
+  "browserLiveReceiptSHA256": "78b9b06b44924d6ece5f1a475f09d5e6e7811912b2e1e5af9452720a3233bbed"
+}

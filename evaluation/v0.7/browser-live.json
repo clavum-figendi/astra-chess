@@ -1,0 +1,102 @@
+{
+  "url": "https://clavum-figendi.github.io/chesslab/",
+  "metadata": {
+    "architecture": "deepmind-9m-action-value",
+    "config": {
+      "vocab_size": 1968,
+      "output_size": 128,
+      "embedding_dim": 256,
+      "num_layers": 8,
+      "num_heads": 8,
+      "max_sequence_length": 79,
+      "layer_norm_eps": 1e-05,
+      "embedding_scale": 16
+    },
+    "runtimeOptions": {
+      "type": "onnx",
+      "batchSize": 4
+    },
+    "id": "deepmind-9m",
+    "name": "DeepMind 9M",
+    "variant": "fp16-storage",
+    "file": "deepmind-9m-v7.onnx",
+    "runtime": "onnx",
+    "bytes": 17991221,
+    "sha256": "b2a643b1bb910e0035e514ef7efecc62b69dbd3740af6cc18abaddf75471d8ee",
+    "parameters": 8954240,
+    "scoreType": "expected-return",
+    "description": "DeepMind 9M with a bounded v7 output-head adjustment, stored in FP16 and executed as float32 in CPU WASM. Unchanged encoder; no demonstrated match-strength gain.",
+    "features": [
+      "legal-move-ranking",
+      "128-bucket-expected-return",
+      "cpu-wasm",
+      "no-tree-search"
+    ],
+    "measurement": {
+      "validationPositions": 96,
+      "referenceTopMoveAgreementRate": 1,
+      "teacherHits": 55,
+      "teacherDelta": 0,
+      "batchSize": 4,
+      "threads": 1
+    },
+    "selection": {
+      "policy": "evaluation/v0.7/selection.json",
+      "reason": "Frozen fresh-validation head selection; FP16 preserves 96/96 selected-model validation choices."
+    }
+  },
+  "ui": {
+    "notation": "1.\ne4",
+    "latency": "3980.00 ms"
+  },
+  "positions": [
+    {
+      "id": "97c3b26399b613ad2b3f3ee16bd879f2aaf9e406d7b9b9c9fadd1e3adb4fa68d",
+      "move": "f3g4",
+      "referenceMove": "f3g4",
+      "teacher": "f3g4",
+      "elapsedMs": 5523.5
+    },
+    {
+      "id": "8b1b278b4912803e7f745270c62fcaa0005448b5609af1ec0916e932e3b70cab",
+      "move": "a1a4",
+      "referenceMove": "a1a4",
+      "teacher": "e1g1",
+      "elapsedMs": 4992.70000000298
+    },
+    {
+      "id": "1a7c087f4a3bf9eed6758e78167bbcae6f82b94bb4fe1a40e370960ce9a05c1b",
+      "move": "d2f4",
+      "referenceMove": "d2f4",
+      "teacher": "d2f4",
+      "elapsedMs": 5820.5
+    }
+  ],
+  "referenceAgreements": 3,
+  "teacherHits": 2,
+  "positionsCount": 3,
+  "medianMs": 5523.5,
+  "maxMs": 5820.5,
+  "bookMove": "e2e4",
+  "pageErrors": [],
+  "runtimeRequests": [
+    "https://clavum-figendi.github.io/chesslab/vendor/ort/ort-wasm-simd-threaded.mjs",
+    "https://clavum-figendi.github.io/chesslab/vendor/ort/ort-wasm-simd-threaded.wasm",
+    "https://clavum-figendi.github.io/chesslab/vendor/ort/ort.wasm.bundle.min.mjs"
+  ],
+  "browser": "Chromium headless, CPU WASM, one thread",
+  "sources": {
+    "public/app.mjs": "e8562e57bfcdb189080c467db21e1a4f3fa09c274d6befd874b8fc2264a82625",
+    "public/worker.mjs": "8da5554a89d2e50e4787f8874e03e4cb5fa29bfedfcc6c69bd5238e029e16819",
+    "src/transformer.mjs": "dc7ee006e1eb6448d186ea645ca40cf21f51f9db558366b8483e587a1ff1c0ab",
+    "src/model-resource.mjs": "1da6611174aceb2322ee8b534f0969bbd43a7c770163fd5bd1370f99f801d417",
+    "tools/build.mjs": "e859436b030793a8b49e5911acd31596016cfab8a501473c1f05a0b6f96f7f00"
+  },
+  "cancelDuringInference": true,
+  "memory": {
+    "baselineBrowserRssSumBytes": 495230976,
+    "peakSampledBrowserRssSumBytes": 712896512,
+    "note": "Sum of sampled Chrome process RSS, including shared pages; not exclusive model RAM or a universal peak bound."
+  },
+  "runnerSHA256": "9e482267de3df70c5faccc18da0d957faeba1fc0772e0e48004e3bfd89e3db97"
+}
