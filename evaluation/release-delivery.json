@@ -1,0 +1,12 @@
+{
+  "archiveSHA256": "a89d264c3039f259e5349aa4995c6e6792654340e3581d0a1b740999e48a3ff8",
+  "archiveBytes": 7042014,
+  "models": {
+    "pocket": "77365eb86c5176255e06784592f9022a36ca6730c0dd3e4ce552cbf480762737",
+    "atlas": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85"
+  },
+  "uci": {
+    "pocket": "id name Astra Authored Chess\nid author Astra-directed, Sol-assisted\nuciok\nreadyok\nbestmove b8c6\n",
+    "atlas": "id name Astra Authored Chess\nid author Astra-directed, Sol-assisted\nuciok\nreadyok\nbestmove g8f6\n"
+  }
+}

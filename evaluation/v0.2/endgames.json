@@ -1,0 +1,2103 @@
+{
+  "protocol": "post-freeze three-man diagnostic: seed 903180; first 32 legal positions with mate in one and first 32 non-mating positions with an avoidable stalemate; no tuning",
+  "attempts": 4127,
+  "positions": {
+    "mate": [
+      {
+        "fen": "8/8/5Q2/7k/5K2/8/8/8 w - - 0 1",
+        "mates": [
+          "f6g5"
+        ],
+        "stalemates": [
+          "f4f5",
+          "f4g3",
+          "f4f3"
+        ]
+      },
+      {
+        "fen": "8/8/k1K5/8/8/8/8/7Q w - - 0 1",
+        "mates": [
+          "h1a1"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "8/8/8/8/8/3K3R/8/3k4 w - - 0 1",
+        "mates": [
+          "h3h1"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "3k4/8/3K4/8/R7/8/8/8 w - - 0 1",
+        "mates": [
+          "a4a8"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "8/8/8/2Q5/8/5K2/8/5k2 w - - 0 1",
+        "mates": [
+          "c5f2",
+          "c5c1"
+        ],
+        "stalemates": [
+          "c5e3"
+        ]
+      },
+      {
+        "fen": "5R2/8/8/8/8/8/8/k1K5 w - - 0 1",
+        "mates": [
+          "f8a8"
+        ],
+        "stalemates": [
+          "f8f2"
+        ]
+      },
+      {
+        "fen": "1Q6/8/8/8/8/4K3/8/4k3 w - - 0 1",
+        "mates": [
+          "b8b1"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "8/1Q3K1k/8/8/8/8/8/8 w - - 0 1",
+        "mates": [
+          "b7h1"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "k7/8/1K6/5R2/8/8/8/8 w - - 0 1",
+        "mates": [
+          "f5f8"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "k7/8/1K6/8/8/2R5/8/8 w - - 0 1",
+        "mates": [
+          "c3c8"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "8/8/8/8/8/R3K3/8/4k3 w - - 0 1",
+        "mates": [
+          "a3a1"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "4Q3/8/8/8/8/1K6/8/2k5 w - - 0 1",
+        "mates": [
+          "e8e1"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "8/k1K5/8/8/8/3Q4/8/8 w - - 0 1",
+        "mates": [
+          "d3a3"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "8/8/8/8/8/K7/3Q4/1k6 w - - 0 1",
+        "mates": [
+          "d2d1",
+          "d2b2"
+        ],
+        "stalemates": [
+          "d2c3"
+        ]
+      },
+      {
+        "fen": "8/8/8/8/7R/5K2/8/5k2 w - - 0 1",
+        "mates": [
+          "h4h1"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "8/8/8/Q7/8/K7/8/k7 w - - 0 1",
+        "mates": [
+          "a5e1"
+        ],
+        "stalemates": [
+          "a5b6",
+          "a5b5",
+          "a5f5",
+          "a5b4"
+        ]
+      },
+      {
+        "fen": "4k3/8/4K3/Q7/8/8/8/8 w - - 0 1",
+        "mates": [
+          "a5a8"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "8/8/3R4/8/8/8/8/k1K5 w - - 0 1",
+        "mates": [
+          "d6a6"
+        ],
+        "stalemates": [
+          "d6d2"
+        ]
+      },
+      {
+        "fen": "8/1Q6/8/8/8/4K3/8/4k3 w - - 0 1",
+        "mates": [
+          "b7h1",
+          "b7b1"
+        ],
+        "stalemates": [
+          "b7f3"
+        ]
+      },
+      {
+        "fen": "8/8/8/8/8/4K3/6Q1/4k3 w - - 0 1",
+        "mates": [
+          "g2h1",
+          "g2g1",
+          "g2e2"
+        ],
+        "stalemates": [
+          "g2f3"
+        ]
+      },
+      {
+        "fen": "5k2/3Q4/5K2/8/8/8/8/8 w - - 0 1",
+        "mates": [
+          "d7c8",
+          "d7d8",
+          "d7f7"
+        ],
+        "stalemates": [
+          "d7e6"
+        ]
+      },
+      {
+        "fen": "5R2/8/8/8/5K1k/8/8/8 w - - 0 1",
+        "mates": [
+          "f8h8"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "8/8/7Q/8/8/8/k1K5/8 w - - 0 1",
+        "mates": [
+          "h6a6"
+        ],
+        "stalemates": [
+          "h6c1"
+        ]
+      },
+      {
+        "fen": "8/8/8/8/2Q5/6K1/8/7k w - - 0 1",
+        "mates": [
+          "c4f1",
+          "c4c1"
+        ],
+        "stalemates": [
+          "c4c5",
+          "c4d4"
+        ]
+      },
+      {
+        "fen": "8/8/8/5K1k/8/1Q6/8/8 w - - 0 1",
+        "mates": [
+          "b3h3"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "8/8/k1K5/8/5R2/8/8/8 w - - 0 1",
+        "mates": [
+          "f4a4"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "6k1/2Q5/5K2/8/8/8/8/8 w - - 0 1",
+        "mates": [
+          "c7g7"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "5k2/8/5K2/1R6/8/8/8/8 w - - 0 1",
+        "mates": [
+          "b5b8"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "6k1/8/Q5K1/8/8/8/8/8 w - - 0 1",
+        "mates": [
+          "a6a8",
+          "a6c8"
+        ],
+        "stalemates": [
+          "a6f6"
+        ]
+      },
+      {
+        "fen": "8/8/8/2R5/8/5K2/8/5k2 w - - 0 1",
+        "mates": [
+          "c5c1"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "8/1Q6/8/8/k7/2K5/8/8 w - - 0 1",
+        "mates": [
+          "b7b4",
+          "b7a6"
+        ],
+        "stalemates": []
+      },
+      {
+        "fen": "8/5Q2/8/8/8/8/8/5K1k w - - 0 1",
+        "mates": [
+          "f7h7",
+          "f7h5"
+        ],
+        "stalemates": [
+          "f7f4",
+          "f7f2",
+          "f7a2",
+          "f7c7"
+        ]
+      }
+    ],
+    "stalemate": [
+      {
+        "fen": "k7/6K1/8/4Q3/8/8/8/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "e5c7"
+        ]
+      },
+      {
+        "fen": "5Q2/8/8/8/8/6K1/8/6k1 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "f8f3"
+        ]
+      },
+      {
+        "fen": "K1k5/8/8/8/8/8/8/4Q3 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "e1e7"
+        ]
+      },
+      {
+        "fen": "k7/2Q5/8/8/8/8/8/5K2 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "c7b6",
+          "f1e2",
+          "f1f2",
+          "f1g2",
+          "f1g1",
+          "f1e1"
+        ]
+      },
+      {
+        "fen": "K6k/8/6Q1/8/8/8/8/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "a8b8",
+          "a8b7",
+          "a8a7",
+          "g6f7"
+        ]
+      },
+      {
+        "fen": "7k/2Q5/1K6/8/8/8/8/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "c7f7"
+        ]
+      },
+      {
+        "fen": "4Q3/8/8/8/8/6K1/8/5k2 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "e8e3"
+        ]
+      },
+      {
+        "fen": "7k/5Q2/4K3/8/8/8/8/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "f7g6",
+          "e6d7",
+          "e6e7",
+          "e6f6",
+          "e6f5",
+          "e6e5",
+          "e6d5",
+          "e6d6"
+        ]
+      },
+      {
+        "fen": "8/8/8/3Q4/8/8/8/4k1K1 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "d5d3"
+        ]
+      },
+      {
+        "fen": "8/8/8/4K3/4Q3/8/8/k7 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "e4c2"
+        ]
+      },
+      {
+        "fen": "3Q4/8/7k/8/6K1/8/8/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "d8g8"
+        ]
+      },
+      {
+        "fen": "8/8/8/3Q4/8/7K/8/k7 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "d5b3"
+        ]
+      },
+      {
+        "fen": "7k/8/8/8/8/3Q4/8/7K w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "d3g6"
+        ]
+      },
+      {
+        "fen": "8/8/8/Q7/8/8/4K3/2k5 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "a5a2"
+        ]
+      },
+      {
+        "fen": "2Q2K2/8/7k/8/8/8/8/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "c8f5"
+        ]
+      },
+      {
+        "fen": "2k5/8/4K3/8/8/8/1Q6/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "b2b6"
+        ]
+      },
+      {
+        "fen": "k7/8/3Q4/8/4K3/8/8/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "d6c7",
+          "d6b6"
+        ]
+      },
+      {
+        "fen": "7k/1K6/8/8/8/8/2Q5/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "c2g6"
+        ]
+      },
+      {
+        "fen": "8/8/2K5/8/k7/3Q4/8/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "d3c3"
+        ]
+      },
+      {
+        "fen": "4k3/8/5K2/8/8/8/3Q4/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "d2d6"
+        ]
+      },
+      {
+        "fen": "k7/8/8/8/8/4K3/8/1Q6 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "b1b6"
+        ]
+      },
+      {
+        "fen": "8/8/5QK1/8/8/8/8/7k w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "f6f2"
+        ]
+      },
+      {
+        "fen": "K1k5/8/5Q2/8/8/8/8/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "f6e7",
+          "f6d6"
+        ]
+      },
+      {
+        "fen": "8/8/8/6K1/8/2Q5/8/7k w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "c3g3"
+        ]
+      },
+      {
+        "fen": "8/2Q5/8/8/1K6/8/8/k7 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "c7c2"
+        ]
+      },
+      {
+        "fen": "6k1/8/7K/8/8/5Q2/8/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "f3f6"
+        ]
+      },
+      {
+        "fen": "6K1/8/8/8/8/3Q4/8/k7 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "d3c2",
+          "d3b3"
+        ]
+      },
+      {
+        "fen": "7k/4Q3/8/8/2K5/8/8/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "e7f7"
+        ]
+      },
+      {
+        "fen": "8/8/8/8/2K5/8/3Q4/k7 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "d2c2"
+        ]
+      },
+      {
+        "fen": "k7/8/8/8/8/4K3/7Q/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "h2c7"
+        ]
+      },
+      {
+        "fen": "1k6/4K3/Q7/8/8/8/8/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "e7d8",
+          "e7d6",
+          "e7d7"
+        ]
+      },
+      {
+        "fen": "7k/8/8/5QK1/8/8/8/8 w - - 0 1",
+        "mates": [],
+        "stalemates": [
+          "f5f7",
+          "f5g6"
+        ]
+      }
+    ]
+  },
+  "models": [
+    {
+      "id": "pocket",
+      "sha256": "77365eb86c5176255e06784592f9022a36ca6730c0dd3e4ce552cbf480762737",
+      "mateFound": 0,
+      "mateTotal": 32,
+      "stalemateAvoided": 28,
+      "stalemateTotal": 32,
+      "choices": [
+        {
+          "kind": "mate",
+          "fen": "8/8/5Q2/7k/5K2/8/8/8 w - - 0 1",
+          "move": "f4e4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/k1K5/8/8/8/8/7Q w - - 0 1",
+          "move": "c6d5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/3K3R/8/3k4 w - - 0 1",
+          "move": "h3h7",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "3k4/8/3K4/8/R7/8/8/8 w - - 0 1",
+          "move": "a4a7",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/2Q5/8/5K2/8/5k2 w - - 0 1",
+          "move": "f3e4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "5R2/8/8/8/8/8/8/k1K5 w - - 0 1",
+          "move": "c1d2",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "1Q6/8/8/8/8/4K3/8/4k3 w - - 0 1",
+          "move": "e3d4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/1Q3K1k/8/8/8/8/8/8 w - - 0 1",
+          "move": "f7e6",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "k7/8/1K6/5R2/8/8/8/8 w - - 0 1",
+          "move": "b6c5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "k7/8/1K6/8/8/2R5/8/8 w - - 0 1",
+          "move": "b6c5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/R3K3/8/4k3 w - - 0 1",
+          "move": "a3a7",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "4Q3/8/8/8/8/1K6/8/2k5 w - - 0 1",
+          "move": "b3c4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/k1K5/8/8/8/3Q4/8/8 w - - 0 1",
+          "move": "c7d6",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/K7/3Q4/1k6 w - - 0 1",
+          "move": "a3b4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/7R/5K2/8/5k2 w - - 0 1",
+          "move": "f3e4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/Q7/8/K7/8/k7 w - - 0 1",
+          "move": "a3b4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "4k3/8/4K3/Q7/8/8/8/8 w - - 0 1",
+          "move": "e6d5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/3R4/8/8/8/8/k1K5 w - - 0 1",
+          "move": "c1d2",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/1Q6/8/8/8/4K3/8/4k3 w - - 0 1",
+          "move": "e3d4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/4K3/6Q1/4k3 w - - 0 1",
+          "move": "e3d4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "5k2/3Q4/5K2/8/8/8/8/8 w - - 0 1",
+          "move": "f6e5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "5R2/8/8/8/5K1k/8/8/8 w - - 0 1",
+          "move": "f8f7",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/7Q/8/8/8/k1K5/8 w - - 0 1",
+          "move": "c2d3",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/2Q5/6K1/8/7k w - - 0 1",
+          "move": "g3f4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/5K1k/8/1Q6/8/8 w - - 0 1",
+          "move": "f5e4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/k1K5/8/5R2/8/8/8 w - - 0 1",
+          "move": "c6d5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "6k1/2Q5/5K2/8/8/8/8/8 w - - 0 1",
+          "move": "f6e5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "5k2/8/5K2/1R6/8/8/8/8 w - - 0 1",
+          "move": "f6e5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "6k1/8/Q5K1/8/8/8/8/8 w - - 0 1",
+          "move": "g6f5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/2R5/8/5K2/8/5k2 w - - 0 1",
+          "move": "f3e4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/1Q6/8/8/k7/2K5/8/8 w - - 0 1",
+          "move": "c3d4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/5Q2/8/8/8/8/8/5K1k w - - 0 1",
+          "move": "f1e2",
+          "correct": false
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/6K1/8/4Q3/8/8/8/8 w - - 0 1",
+          "move": "g7f6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "5Q2/8/8/8/8/6K1/8/6k1 w - - 0 1",
+          "move": "g3f4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "K1k5/8/8/8/8/8/8/4Q3 w - - 0 1",
+          "move": "a8a7",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/2Q5/8/8/8/8/8/5K2 w - - 0 1",
+          "move": "f1e2",
+          "correct": false
+        },
+        {
+          "kind": "stalemate",
+          "fen": "K6k/8/6Q1/8/8/8/8/8 w - - 0 1",
+          "move": "a8b7",
+          "correct": false
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/2Q5/1K6/8/8/8/8/8 w - - 0 1",
+          "move": "b6c5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "4Q3/8/8/8/8/6K1/8/5k2 w - - 0 1",
+          "move": "g3f4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/5Q2/4K3/8/8/8/8/8 w - - 0 1",
+          "move": "e6e5",
+          "correct": false
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/3Q4/8/8/8/4k1K1 w - - 0 1",
+          "move": "g1g2",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/4K3/4Q3/8/8/k7 w - - 0 1",
+          "move": "e5d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "3Q4/8/7k/8/6K1/8/8/8 w - - 0 1",
+          "move": "g4f4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/3Q4/8/7K/8/k7 w - - 0 1",
+          "move": "h3g4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/8/8/8/8/3Q4/8/7K w - - 0 1",
+          "move": "h1g2",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/Q7/8/8/4K3/2k5 w - - 0 1",
+          "move": "e2d3",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "2Q2K2/8/7k/8/8/8/8/8 w - - 0 1",
+          "move": "f8e7",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "2k5/8/4K3/8/8/8/1Q6/8 w - - 0 1",
+          "move": "e6d5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/8/3Q4/8/4K3/8/8/8 w - - 0 1",
+          "move": "e4d5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/1K6/8/8/8/8/2Q5/8 w - - 0 1",
+          "move": "b7c6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/2K5/8/k7/3Q4/8/8 w - - 0 1",
+          "move": "c6d5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "4k3/8/5K2/8/8/8/3Q4/8 w - - 0 1",
+          "move": "f6e5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/8/8/8/8/4K3/8/1Q6 w - - 0 1",
+          "move": "e3d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/5QK1/8/8/8/8/7k w - - 0 1",
+          "move": "g6f5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "K1k5/8/5Q2/8/8/8/8/8 w - - 0 1",
+          "move": "a8a7",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/6K1/8/2Q5/8/7k w - - 0 1",
+          "move": "g5f4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/2Q5/8/8/1K6/8/8/k7 w - - 0 1",
+          "move": "b4c4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "6k1/8/7K/8/8/5Q2/8/8 w - - 0 1",
+          "move": "h6g5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "6K1/8/8/8/8/3Q4/8/k7 w - - 0 1",
+          "move": "g8f7",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/4Q3/8/8/2K5/8/8/8 w - - 0 1",
+          "move": "c4d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/8/2K5/8/3Q4/k7 w - - 0 1",
+          "move": "c4d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/8/8/8/8/4K3/7Q/8 w - - 0 1",
+          "move": "e3d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "1k6/4K3/Q7/8/8/8/8/8 w - - 0 1",
+          "move": "e7d6",
+          "correct": false
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/8/8/5QK1/8/8/8/8 w - - 0 1",
+          "move": "g5f6",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "pocket-plus",
+      "sha256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+      "mateFound": 32,
+      "mateTotal": 32,
+      "stalemateAvoided": 32,
+      "stalemateTotal": 32,
+      "choices": [
+        {
+          "kind": "mate",
+          "fen": "8/8/5Q2/7k/5K2/8/8/8 w - - 0 1",
+          "move": "f6g5",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/k1K5/8/8/8/8/7Q w - - 0 1",
+          "move": "h1a1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/3K3R/8/3k4 w - - 0 1",
+          "move": "h3h1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "3k4/8/3K4/8/R7/8/8/8 w - - 0 1",
+          "move": "a4a8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/2Q5/8/5K2/8/5k2 w - - 0 1",
+          "move": "c5f2",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "5R2/8/8/8/8/8/8/k1K5 w - - 0 1",
+          "move": "f8a8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "1Q6/8/8/8/8/4K3/8/4k3 w - - 0 1",
+          "move": "b8b1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/1Q3K1k/8/8/8/8/8/8 w - - 0 1",
+          "move": "b7h1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "k7/8/1K6/5R2/8/8/8/8 w - - 0 1",
+          "move": "f5f8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "k7/8/1K6/8/8/2R5/8/8 w - - 0 1",
+          "move": "c3c8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/R3K3/8/4k3 w - - 0 1",
+          "move": "a3a1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "4Q3/8/8/8/8/1K6/8/2k5 w - - 0 1",
+          "move": "e8e1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/k1K5/8/8/8/3Q4/8/8 w - - 0 1",
+          "move": "d3a3",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/K7/3Q4/1k6 w - - 0 1",
+          "move": "d2d1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/7R/5K2/8/5k2 w - - 0 1",
+          "move": "h4h1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/Q7/8/K7/8/k7 w - - 0 1",
+          "move": "a5e1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "4k3/8/4K3/Q7/8/8/8/8 w - - 0 1",
+          "move": "a5a8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/3R4/8/8/8/8/k1K5 w - - 0 1",
+          "move": "d6a6",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/1Q6/8/8/8/4K3/8/4k3 w - - 0 1",
+          "move": "b7b1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/4K3/6Q1/4k3 w - - 0 1",
+          "move": "g2e2",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "5k2/3Q4/5K2/8/8/8/8/8 w - - 0 1",
+          "move": "d7d8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "5R2/8/8/8/5K1k/8/8/8 w - - 0 1",
+          "move": "f8h8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/7Q/8/8/8/k1K5/8 w - - 0 1",
+          "move": "h6a6",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/2Q5/6K1/8/7k w - - 0 1",
+          "move": "c4c1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/5K1k/8/1Q6/8/8 w - - 0 1",
+          "move": "b3h3",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/k1K5/8/5R2/8/8/8 w - - 0 1",
+          "move": "f4a4",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "6k1/2Q5/5K2/8/8/8/8/8 w - - 0 1",
+          "move": "c7g7",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "5k2/8/5K2/1R6/8/8/8/8 w - - 0 1",
+          "move": "b5b8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "6k1/8/Q5K1/8/8/8/8/8 w - - 0 1",
+          "move": "a6c8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/2R5/8/5K2/8/5k2 w - - 0 1",
+          "move": "c5c1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/1Q6/8/8/k7/2K5/8/8 w - - 0 1",
+          "move": "b7b4",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/5Q2/8/8/8/8/8/5K1k w - - 0 1",
+          "move": "f7h5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/6K1/8/4Q3/8/8/8/8 w - - 0 1",
+          "move": "g7f6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "5Q2/8/8/8/8/6K1/8/6k1 w - - 0 1",
+          "move": "f8f4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "K1k5/8/8/8/8/8/8/4Q3 w - - 0 1",
+          "move": "e1d2",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/2Q5/8/8/8/8/8/5K2 w - - 0 1",
+          "move": "c7d7",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "K6k/8/6Q1/8/8/8/8/8 w - - 0 1",
+          "move": "g6g4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/2Q5/1K6/8/8/8/8/8 w - - 0 1",
+          "move": "b6c5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "4Q3/8/8/8/8/6K1/8/5k2 w - - 0 1",
+          "move": "g3f3",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/5Q2/4K3/8/8/8/8/8 w - - 0 1",
+          "move": "f7d7",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/3Q4/8/8/8/4k1K1 w - - 0 1",
+          "move": "g1g2",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/4K3/4Q3/8/8/k7 w - - 0 1",
+          "move": "e5d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "3Q4/8/7k/8/6K1/8/8/8 w - - 0 1",
+          "move": "d8d3",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/3Q4/8/7K/8/k7 w - - 0 1",
+          "move": "h3g4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/8/8/8/8/3Q4/8/7K w - - 0 1",
+          "move": "h1g2",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/Q7/8/8/4K3/2k5 w - - 0 1",
+          "move": "a5f5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "2Q2K2/8/7k/8/8/8/8/8 w - - 0 1",
+          "move": "c8g4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "2k5/8/4K3/8/8/8/1Q6/8 w - - 0 1",
+          "move": "e6d6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/8/3Q4/8/4K3/8/8/8 w - - 0 1",
+          "move": "e4d5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/1K6/8/8/8/8/2Q5/8 w - - 0 1",
+          "move": "b7c6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/2K5/8/k7/3Q4/8/8 w - - 0 1",
+          "move": "c6c5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "4k3/8/5K2/8/8/8/3Q4/8 w - - 0 1",
+          "move": "f6e6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/8/8/8/8/4K3/8/1Q6 w - - 0 1",
+          "move": "e3d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/5QK1/8/8/8/8/7k w - - 0 1",
+          "move": "g6f5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "K1k5/8/5Q2/8/8/8/8/8 w - - 0 1",
+          "move": "a8a7",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/6K1/8/2Q5/8/7k w - - 0 1",
+          "move": "g5f4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/2Q5/8/8/1K6/8/8/k7 w - - 0 1",
+          "move": "b4c3",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "6k1/8/7K/8/8/5Q2/8/8 w - - 0 1",
+          "move": "h6g6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "6K1/8/8/8/8/3Q4/8/k7 w - - 0 1",
+          "move": "g8f7",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/4Q3/8/8/2K5/8/8/8 w - - 0 1",
+          "move": "c4d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/8/2K5/8/3Q4/k7 w - - 0 1",
+          "move": "c4d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/8/8/8/8/4K3/7Q/8 w - - 0 1",
+          "move": "e3d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "1k6/4K3/Q7/8/8/8/8/8 w - - 0 1",
+          "move": "e7e6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/8/8/5QK1/8/8/8/8 w - - 0 1",
+          "move": "g5f6",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "atlas",
+      "sha256": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85",
+      "mateFound": 8,
+      "mateTotal": 32,
+      "stalemateAvoided": 30,
+      "stalemateTotal": 32,
+      "choices": [
+        {
+          "kind": "mate",
+          "fen": "8/8/5Q2/7k/5K2/8/8/8 w - - 0 1",
+          "move": "f6g5",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/k1K5/8/8/8/8/7Q w - - 0 1",
+          "move": "h1f1",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/3K3R/8/3k4 w - - 0 1",
+          "move": "h3h1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "3k4/8/3K4/8/R7/8/8/8 w - - 0 1",
+          "move": "a4a8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/2Q5/8/5K2/8/5k2 w - - 0 1",
+          "move": "c5f2",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "5R2/8/8/8/8/8/8/k1K5 w - - 0 1",
+          "move": "c1d2",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "1Q6/8/8/8/8/4K3/8/4k3 w - - 0 1",
+          "move": "b8b4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/1Q3K1k/8/8/8/8/8/8 w - - 0 1",
+          "move": "b7e4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "k7/8/1K6/5R2/8/8/8/8 w - - 0 1",
+          "move": "f5a5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "k7/8/1K6/8/8/2R5/8/8 w - - 0 1",
+          "move": "b6c5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/R3K3/8/4k3 w - - 0 1",
+          "move": "a3a1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "4Q3/8/8/8/8/1K6/8/2k5 w - - 0 1",
+          "move": "e8e3",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/k1K5/8/8/8/3Q4/8/8 w - - 0 1",
+          "move": "d3d4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/K7/3Q4/1k6 w - - 0 1",
+          "move": "d2b2",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/7R/5K2/8/5k2 w - - 0 1",
+          "move": "f3e4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/Q7/8/K7/8/k7 w - - 0 1",
+          "move": "a5e5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "4k3/8/4K3/Q7/8/8/8/8 w - - 0 1",
+          "move": "a5b5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/3R4/8/8/8/8/k1K5 w - - 0 1",
+          "move": "c1d2",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/1Q6/8/8/8/4K3/8/4k3 w - - 0 1",
+          "move": "b7b4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/4K3/6Q1/4k3 w - - 0 1",
+          "move": "g2d2",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "5k2/3Q4/5K2/8/8/8/8/8 w - - 0 1",
+          "move": "d7e7",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "5R2/8/8/8/5K1k/8/8/8 w - - 0 1",
+          "move": "f8h8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/7Q/8/8/8/k1K5/8 w - - 0 1",
+          "move": "h6e6",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/2Q5/6K1/8/7k w - - 0 1",
+          "move": "c4h4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/5K1k/8/1Q6/8/8 w - - 0 1",
+          "move": "b3f3",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/k1K5/8/5R2/8/8/8 w - - 0 1",
+          "move": "c6d5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "6k1/2Q5/5K2/8/8/8/8/8 w - - 0 1",
+          "move": "c7f7",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "5k2/8/5K2/1R6/8/8/8/8 w - - 0 1",
+          "move": "f6e5",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "6k1/8/Q5K1/8/8/8/8/8 w - - 0 1",
+          "move": "a6c4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/2R5/8/5K2/8/5k2 w - - 0 1",
+          "move": "f3e4",
+          "correct": false
+        },
+        {
+          "kind": "mate",
+          "fen": "8/1Q6/8/8/k7/2K5/8/8 w - - 0 1",
+          "move": "b7b4",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/5Q2/8/8/8/8/8/5K1k w - - 0 1",
+          "move": "f7d5",
+          "correct": false
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/6K1/8/4Q3/8/8/8/8 w - - 0 1",
+          "move": "g7f6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "5Q2/8/8/8/8/6K1/8/6k1 w - - 0 1",
+          "move": "f8f2",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "K1k5/8/8/8/8/8/8/4Q3 w - - 0 1",
+          "move": "e1e6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/2Q5/8/8/8/8/8/5K2 w - - 0 1",
+          "move": "f1e2",
+          "correct": false
+        },
+        {
+          "kind": "stalemate",
+          "fen": "K6k/8/6Q1/8/8/8/8/8 w - - 0 1",
+          "move": "a8b7",
+          "correct": false
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/2Q5/1K6/8/8/8/8/8 w - - 0 1",
+          "move": "b6c5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "4Q3/8/8/8/8/6K1/8/5k2 w - - 0 1",
+          "move": "e8b5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/5Q2/4K3/8/8/8/8/8 w - - 0 1",
+          "move": "f7f6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/3Q4/8/8/8/4k1K1 w - - 0 1",
+          "move": "d5e4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/4K3/4Q3/8/8/k7 w - - 0 1",
+          "move": "e4d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "3Q4/8/7k/8/6K1/8/8/8 w - - 0 1",
+          "move": "d8g5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/3Q4/8/7K/8/k7 w - - 0 1",
+          "move": "h3g4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/8/8/8/8/3Q4/8/7K w - - 0 1",
+          "move": "h1g2",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/Q7/8/8/4K3/2k5 w - - 0 1",
+          "move": "a5d2",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "2Q2K2/8/7k/8/8/8/8/8 w - - 0 1",
+          "move": "c8e6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "2k5/8/4K3/8/8/8/1Q6/8 w - - 0 1",
+          "move": "b2c3",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/8/3Q4/8/4K3/8/8/8 w - - 0 1",
+          "move": "d6d5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/1K6/8/8/8/8/2Q5/8 w - - 0 1",
+          "move": "b7c6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/2K5/8/k7/3Q4/8/8 w - - 0 1",
+          "move": "d3b5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "4k3/8/5K2/8/8/8/3Q4/8 w - - 0 1",
+          "move": "d2e3",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/8/8/8/8/4K3/8/1Q6 w - - 0 1",
+          "move": "b1e4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/5QK1/8/8/8/8/7k w - - 0 1",
+          "move": "g6f5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "K1k5/8/5Q2/8/8/8/8/8 w - - 0 1",
+          "move": "f6e6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/6K1/8/2Q5/8/7k w - - 0 1",
+          "move": "g5f4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/2Q5/8/8/1K6/8/8/k7 w - - 0 1",
+          "move": "c7c3",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "6k1/8/7K/8/8/5Q2/8/8 w - - 0 1",
+          "move": "f3d5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "6K1/8/8/8/8/3Q4/8/k7 w - - 0 1",
+          "move": "g8f7",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/4Q3/8/8/2K5/8/8/8 w - - 0 1",
+          "move": "c4d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/8/2K5/8/3Q4/k7 w - - 0 1",
+          "move": "d2d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/8/8/8/8/4K3/7Q/8 w - - 0 1",
+          "move": "e3d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "1k6/4K3/Q7/8/8/8/8/8 w - - 0 1",
+          "move": "a6d6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/8/8/5QK1/8/8/8/8 w - - 0 1",
+          "move": "f5f6",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "atlas-plus",
+      "sha256": "30313d65ec8b74007a546576b5234aa00a521b63ade9159f1b2ec7f30b05c4a6",
+      "mateFound": 32,
+      "mateTotal": 32,
+      "stalemateAvoided": 32,
+      "stalemateTotal": 32,
+      "choices": [
+        {
+          "kind": "mate",
+          "fen": "8/8/5Q2/7k/5K2/8/8/8 w - - 0 1",
+          "move": "f6g5",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/k1K5/8/8/8/8/7Q w - - 0 1",
+          "move": "h1a1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/3K3R/8/3k4 w - - 0 1",
+          "move": "h3h1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "3k4/8/3K4/8/R7/8/8/8 w - - 0 1",
+          "move": "a4a8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/2Q5/8/5K2/8/5k2 w - - 0 1",
+          "move": "c5f2",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "5R2/8/8/8/8/8/8/k1K5 w - - 0 1",
+          "move": "f8a8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "1Q6/8/8/8/8/4K3/8/4k3 w - - 0 1",
+          "move": "b8b1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/1Q3K1k/8/8/8/8/8/8 w - - 0 1",
+          "move": "b7h1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "k7/8/1K6/5R2/8/8/8/8 w - - 0 1",
+          "move": "f5f8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "k7/8/1K6/8/8/2R5/8/8 w - - 0 1",
+          "move": "c3c8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/R3K3/8/4k3 w - - 0 1",
+          "move": "a3a1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "4Q3/8/8/8/8/1K6/8/2k5 w - - 0 1",
+          "move": "e8e1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/k1K5/8/8/8/3Q4/8/8 w - - 0 1",
+          "move": "d3a3",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/K7/3Q4/1k6 w - - 0 1",
+          "move": "d2b2",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/7R/5K2/8/5k2 w - - 0 1",
+          "move": "h4h1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/Q7/8/K7/8/k7 w - - 0 1",
+          "move": "a5e1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "4k3/8/4K3/Q7/8/8/8/8 w - - 0 1",
+          "move": "a5a8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/3R4/8/8/8/8/k1K5 w - - 0 1",
+          "move": "d6a6",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/1Q6/8/8/8/4K3/8/4k3 w - - 0 1",
+          "move": "b7b1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/8/4K3/6Q1/4k3 w - - 0 1",
+          "move": "g2e2",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "5k2/3Q4/5K2/8/8/8/8/8 w - - 0 1",
+          "move": "d7f7",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "5R2/8/8/8/5K1k/8/8/8 w - - 0 1",
+          "move": "f8h8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/7Q/8/8/8/k1K5/8 w - - 0 1",
+          "move": "h6a6",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/8/2Q5/6K1/8/7k w - - 0 1",
+          "move": "c4c1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/5K1k/8/1Q6/8/8 w - - 0 1",
+          "move": "b3h3",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/k1K5/8/5R2/8/8/8 w - - 0 1",
+          "move": "f4a4",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "6k1/2Q5/5K2/8/8/8/8/8 w - - 0 1",
+          "move": "c7g7",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "5k2/8/5K2/1R6/8/8/8/8 w - - 0 1",
+          "move": "b5b8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "6k1/8/Q5K1/8/8/8/8/8 w - - 0 1",
+          "move": "a6c8",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/8/8/2R5/8/5K2/8/5k2 w - - 0 1",
+          "move": "c5c1",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/1Q6/8/8/k7/2K5/8/8 w - - 0 1",
+          "move": "b7b4",
+          "correct": true
+        },
+        {
+          "kind": "mate",
+          "fen": "8/5Q2/8/8/8/8/8/5K1k w - - 0 1",
+          "move": "f7h5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/6K1/8/4Q3/8/8/8/8 w - - 0 1",
+          "move": "g7f6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "5Q2/8/8/8/8/6K1/8/6k1 w - - 0 1",
+          "move": "f8f2",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "K1k5/8/8/8/8/8/8/4Q3 w - - 0 1",
+          "move": "e1e8",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/2Q5/8/8/8/8/8/5K2 w - - 0 1",
+          "move": "c7c8",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "K6k/8/6Q1/8/8/8/8/8 w - - 0 1",
+          "move": "g6h6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/2Q5/1K6/8/8/8/8/8 w - - 0 1",
+          "move": "b6c5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "4Q3/8/8/8/8/6K1/8/5k2 w - - 0 1",
+          "move": "g3f3",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/5Q2/4K3/8/8/8/8/8 w - - 0 1",
+          "move": "f7f6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/3Q4/8/8/8/4k1K1 w - - 0 1",
+          "move": "g1g2",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/4K3/4Q3/8/8/k7 w - - 0 1",
+          "move": "e4d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "3Q4/8/7k/8/6K1/8/8/8 w - - 0 1",
+          "move": "d8g5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/3Q4/8/7K/8/k7 w - - 0 1",
+          "move": "h3g4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/8/8/8/8/3Q4/8/7K w - - 0 1",
+          "move": "h1g2",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/Q7/8/8/4K3/2k5 w - - 0 1",
+          "move": "a5d2",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "2Q2K2/8/7k/8/8/8/8/8 w - - 0 1",
+          "move": "c8h3",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "2k5/8/4K3/8/8/8/1Q6/8 w - - 0 1",
+          "move": "b2h8",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/8/3Q4/8/4K3/8/8/8 w - - 0 1",
+          "move": "d6d5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/1K6/8/8/8/8/2Q5/8 w - - 0 1",
+          "move": "b7c6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/2K5/8/k7/3Q4/8/8 w - - 0 1",
+          "move": "d3b5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "4k3/8/5K2/8/8/8/3Q4/8 w - - 0 1",
+          "move": "f6e6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/8/8/8/8/4K3/8/1Q6 w - - 0 1",
+          "move": "b1e4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/5QK1/8/8/8/8/7k w - - 0 1",
+          "move": "g6f5",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "K1k5/8/5Q2/8/8/8/8/8 w - - 0 1",
+          "move": "f6c6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/6K1/8/2Q5/8/7k w - - 0 1",
+          "move": "c3h3",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/2Q5/8/8/1K6/8/8/k7 w - - 0 1",
+          "move": "c7c3",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "6k1/8/7K/8/8/5Q2/8/8 w - - 0 1",
+          "move": "f3a8",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "6K1/8/8/8/8/3Q4/8/k7 w - - 0 1",
+          "move": "g8f7",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/4Q3/8/8/2K5/8/8/8 w - - 0 1",
+          "move": "c4d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "8/8/8/8/2K5/8/3Q4/k7 w - - 0 1",
+          "move": "d2d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "k7/8/8/8/8/4K3/7Q/8 w - - 0 1",
+          "move": "e3d4",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "1k6/4K3/Q7/8/8/8/8/8 w - - 0 1",
+          "move": "e7e6",
+          "correct": true
+        },
+        {
+          "kind": "stalemate",
+          "fen": "7k/8/8/5QK1/8/8/8/8 w - - 0 1",
+          "move": "f5f6",
+          "correct": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "url": "https://clavum-figendi.github.io/astra-chess/",
+  "browser": "145.0.7632.6",
+  "checks": [
+    "64-square board and manifest loaded",
+    {
+      "workerNodeParity": "pocket",
+      "move": "b1c3",
+      "browserInferenceMs": 45
+    },
+    "pocket: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "atlas",
+      "move": "b1c3",
+      "browserInferenceMs": 176.19999999552965
+    },
+    "atlas: human e4 and real-weight reply",
+    "human Black, real-weight opening, flipped board",
+    "human underpromotion and insufficient-material draw",
+    "downloaded PGN contains promotion and result",
+    "castling moves king and rook",
+    "en passant removes captured pawn",
+    "terminal FEN stops game without policy move",
+    "real three-second clock flag fall",
+    "390px mobile board play without horizontal overflow"
+  ],
+  "pageErrors": []
+}
