@@ -1,0 +1,783 @@
+{
+  "protocol": {
+    "id": "astra-engine-data-v3",
+    "openings": [
+      [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6"
+      ],
+      [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6"
+      ],
+      [
+        "e2e4",
+        "c7c5",
+        "g1f3",
+        "d7d6"
+      ],
+      [
+        "d2d4",
+        "g8f6",
+        "c2c4",
+        "g7g6"
+      ],
+      [
+        "c2c4",
+        "e7e5",
+        "b1c3",
+        "g8f6"
+      ],
+      [
+        "g1f3",
+        "d7d5",
+        "g2g3",
+        "g8f6"
+      ],
+      [
+        "e2e4",
+        "e7e6",
+        "d2d4",
+        "d7d5"
+      ],
+      [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5"
+      ],
+      [
+        "b2b3",
+        "d7d5",
+        "c1b2",
+        "g8f6"
+      ],
+      [
+        "g2g3",
+        "d7d5",
+        "f1g2",
+        "e7e5"
+      ],
+      [
+        "f2f4",
+        "d7d5",
+        "g1f3",
+        "g8f6"
+      ],
+      [
+        "b1c3",
+        "d7d5",
+        "e2e4",
+        "d5d4"
+      ],
+      [
+        "e2e4",
+        "d7d5",
+        "e4d5",
+        "d8d5"
+      ],
+      [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6"
+      ],
+      [
+        "c2c4",
+        "c7c5",
+        "g1f3",
+        "g8f6"
+      ],
+      [
+        "g1f3",
+        "g8f6",
+        "c2c4",
+        "g7g6"
+      ]
+    ],
+    "modelHashes": {
+      "pocket-plus": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+      "atlas-plus": "30313d65ec8b74007a546576b5234aa00a521b63ade9159f1b2ec7f30b05c4a6"
+    },
+    "stockfishGameNodes": 128,
+    "gnuGameDepth": 1,
+    "teacherDepth": 4,
+    "maxPlies": 120,
+    "hashReset": "fresh engine process per game and teacher position",
+    "split": "opening group mod4: 0/1 train,2 validation,3 test; both trajectories stay together",
+    "samplePerGame": {
+      "train": 12,
+      "validation": 8,
+      "test": 16
+    },
+    "boardIdentity": "piece placement and side to move (first two FEN fields)",
+    "seed": "engine-tune-v3"
+  },
+  "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+  "engines": {
+    "stockfish": {
+      "identity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "executableSHA256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8",
+      "settings": [
+        {
+          "name": "Threads",
+          "type": "spin",
+          "raw": "option name Threads type spin default 1 min 1 max 1024",
+          "default": 1,
+          "min": 1,
+          "max": 1024,
+          "value": 1
+        },
+        {
+          "name": "Hash",
+          "type": "spin",
+          "raw": "option name Hash type spin default 16 min 1 max 33554432",
+          "default": 16,
+          "min": 1,
+          "max": 33554432,
+          "value": 16
+        },
+        {
+          "name": "Ponder",
+          "type": "check",
+          "raw": "option name Ponder type check default false",
+          "default": false,
+          "value": false
+        }
+      ]
+    },
+    "gnuchess": {
+      "identity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      },
+      "executableSHA256": "c20685cb4d8176182b58db1d6ad8bf6b90e0d269bfa4d29d053918a80799fe8f",
+      "settings": [
+        {
+          "name": "Hash",
+          "type": "spin",
+          "raw": "option name Hash type spin default 16 min 4 max 1024",
+          "default": 16,
+          "min": 4,
+          "max": 1024,
+          "value": 16
+        },
+        {
+          "name": "Ponder",
+          "type": "check",
+          "raw": "option name Ponder type check default false",
+          "default": false,
+          "value": false
+        },
+        {
+          "name": "OwnBook",
+          "type": "check",
+          "raw": "option name OwnBook type check default true",
+          "default": true,
+          "value": false
+        }
+      ]
+    }
+  },
+  "counts": {
+    "train": 192,
+    "validation": 64,
+    "test": 128
+  },
+  "games": [
+    {
+      "id": "g0-0",
+      "group": 0,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 98,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g0-1",
+      "group": 0,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 31,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g1-0",
+      "group": 1,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 38,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g1-1",
+      "group": 1,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 65,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g2-0",
+      "group": 2,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 66,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g2-1",
+      "group": 2,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 49,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g3-0",
+      "group": 3,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 92,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g3-1",
+      "group": 3,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 41,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g4-0",
+      "group": 4,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 76,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g4-1",
+      "group": 4,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 55,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g5-0",
+      "group": 5,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 72,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g5-1",
+      "group": 5,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 59,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g6-0",
+      "group": 6,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 90,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g6-1",
+      "group": 6,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 29,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g7-0",
+      "group": 7,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 48,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g7-1",
+      "group": 7,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 71,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g8-0",
+      "group": 8,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 46,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g8-1",
+      "group": 8,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 105,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g9-0",
+      "group": 9,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 118,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g9-1",
+      "group": 9,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 78,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g10-0",
+      "group": 10,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 90,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g10-1",
+      "group": 10,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 25,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g11-0",
+      "group": 11,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 64,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g11-1",
+      "group": 11,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 59,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g12-0",
+      "group": 12,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 98,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g12-1",
+      "group": 12,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 47,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g13-0",
+      "group": 13,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 84,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g13-1",
+      "group": 13,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 33,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g14-0",
+      "group": 14,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 84,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g14-1",
+      "group": 14,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 23,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    },
+    {
+      "id": "g15-0",
+      "group": 15,
+      "variant": 0,
+      "kind": "stockfish",
+      "modelId": "pocket-plus",
+      "modelColor": "w",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1/2-1/2",
+      "termination": "ply-cap",
+      "plies": 120,
+      "engineIdentity": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      }
+    },
+    {
+      "id": "g15-1",
+      "group": 15,
+      "variant": 1,
+      "kind": "gnuchess",
+      "modelId": "atlas-plus",
+      "modelColor": "b",
+      "protocolSHA": "a8b710b34648a413fc3cdb127eb94b856ef420ac3fc5d074442bfadc52b63018",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 41,
+      "engineIdentity": {
+        "kind": "gnuchess",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess",
+        "name": "GNU Chess 6.2.9",
+        "author": "GNU Chess team"
+      }
+    }
+  ],
+  "splitSHA256": {
+    "train": "d47d8dda9070859416d1bb5bc6a238bf896b617876848a5749d0dfab415de7b5",
+    "validation": "a44efa00febce9b1165a3737e72873a2e8d4368bcbf895e4156ae07bc2a6f2ca",
+    "test": "397d644ceb7e890262e0e83064fe3d9c0d06441143f6d3ce29b4c33eb1b66012"
+  },
+  "finishedAt": "2026-11-16T07:17:44.399Z",
+  "durationMs": 656039.0238089999
+}

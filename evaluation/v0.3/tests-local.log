@@ -1,0 +1,82 @@
+
+> astra-chess@0.3.0 test
+> node --test --test-concurrency=1 tests/*.test.mjs
+
+✔ puzzle scoring first applies the opponents prelude, then tests policy rather than solution replay (31.915649ms)
+✔ seeded random and capture baselines choose legal repeatable moves (83.128199ms)
+✔ build produces standalone browser and laptop ESM trees and binaries (149.643953ms)
+✔ workspace renders 64 accessible squares, experimental disclosure, and starts only on request (4965.184502ms)
+✔ black-side play, keyboard navigation, and reset cancel an outstanding decision (4977.874551ms)
+✔ FEN imports allow explicit underpromotions for either color and PGN contains the result (4197.728183ms)
+✔ clock loading is untimed, AI thinking is timed, and flag fall rejects a late worker reply (4183.148922ms)
+✔ mobile workspace fits without horizontal overflow (3525.342457ms)
+✔ worker returns request-correlated errors without falling back, and survives subsequent requests (136.070917ms)
+✔ a completed legal turn charges thinking time, credits increment, and starts the opponent (9.934574ms)
+✔ flagging is irreversible and a late move cannot gain increment or restart time (0.961572ms)
+✔ stopping freezes a settled clock and reset starts a fresh inactive game (5.708658ms)
+✔ unlimited clocks preserve null through turns, stop, and resetting a timed clock (1.565991ms)
+✔ only the active side loses actual monotonic elapsed time, even without ticks (0.908813ms)
+✔ Pocket scores free material above quiet play without entering a losing queen exchange (32056.162783ms)
+✔ Pocket attack rays respect blockers and the vacating source (74.909536ms)
+✔ Atlas adds genuine checking-fork and vacated-shield relationships (231.043982ms)
+✔ Atlas encodes protected adjacent queen checks without treating king pseudo-attacks as a free capture (164.417004ms)
+✔ en passant capture reward is encoded from raw pawn relationships (74.92806ms)
+✔ authored phase gate activates the king in pawn endings but not against enemy major pieces (463.89369ms)
+✔ authored rook-file weights distinguish open, semi-open and own-pawn files (354.632513ms)
+✔ both colors promote to a legal queen and castling has encoded value (484.92013ms)
+✔ all stored neurons contribute to policy outputs rather than size padding (334.742799ms)
+✔ downloaded artifacts reproduce byte-for-byte, with topology-inclusive manifest accounting (1074.855053ms)
+✔ legal mask, black perspective and deterministic candidate ordering are preserved (118.856446ms)
+✔ specialist distinguishes queen mate, rook mate, and stalemate (156.516806ms)
+✔ specialist is inactive outside exactly own king plus one major versus bare king (25.824208ms)
+✔ specialist terminal signs agree with independent rules over seeded three-man positions (9489.264126ms)
+✔ labels require complete exact same-depth coverage and preserve side-to-move scores (95.213283ms)
+✔ mate targets use an explicitly separate surrogate and reject ambiguous scores (21.883045ms)
+✔ move selection is only network logits plus a legal mask, including lexical ties (195.469627ms)
+✔ parser rejects cycles, invalid sparse rows, nonfinite tensors and invalid outputs (7.516368ms)
+✔ binary network executes affine and ReLU nodes, retaining signed outputs (7.563998ms)
+✔ larger Plus variants carry three-man terminal knowledge and choose legal mating moves (57328.13374ms)
+✔ canonical encoding preserves files and swaps arbitrary piece colors by rank reflection (36.608166ms)
+✔ raw board encoding is twelve canonical one-hot planes for either side (3.605481ms)
+✔ direct engine-regret coordinate passes change bounded weights without touching protected values (47.044493ms)
+✔ bounded engine-label fitting improves validation regret and preserves fixed coefficients (45.76163ms)
+✔ rejects overlap between fitting and validation position identifiers (8.371904ms)
+✔ laptop runner exposes and executes every installed model including larger variants (13958.260651ms)
+✔ UCI applies full move history and returns one supplied legal policy move (40.643072ms)
+✔ UCI history detects repetition and does not ask the policy to move (37.020454ms)
+✔ invalid UCI position cannot leave a stale playable board (12.853691ms)
+✔ rebuilds a tuned artifact from pinned base/scales and labels its provenance (85.671152ms)
+✔ static server serves modules, 404 and confines paths to its root (274.865413ms)
+✔ UI exposes experimental fitted policies without promoting defaults or implying training-free provenance (5.865929ms)
+✔ FIXTURE: uses latest complete same-depth MultiPV, not mixed iterations/bounds (226.210717ms)
+{"receipt":"stockfish-multipv","depth":4,"lines":20,"bestmove":"c2c4"}
+{"receipt":"stockfish-history-multipv","depth":6,"lines":29,"bestmove":"b8c6"}
+✔ REAL Stockfish: all legal moves scored at one complete depth-4 iteration (2291.970026ms)
+✔ FIXTURE: malformed or missing scores are never fabricated (112.814024ms)
+✔ FIXTURE: unexpected exit and illegal/null moves reject without fallback (365.172302ms)
+✔ FIXTURE: timeout poisons session and bounds stderr (411.413218ms)
+✔ FIXTURE: concurrent analysis is rejected, later sequential analysis works (307.557586ms)
+✔ FIXTURE: validates FEN, limits and complete standard-start history before sending (141.256369ms)
+✔ FIXTURE: handshake timeout and stale bestmove drainage (454.694784ms)
+✔ HARNESS UNIT: terminal history wins over ply cap; no material adjudication (65.077502ms)
+✔ HARNESS UNIT: engine illegal/null moves are errors, never fallback or a result (7.963553ms)
+{"receipt":"gnuchess-node-budget","limitMode":"reported-nodes-stop","observedNodes":10000,"bestmove":"b1c3"}
+✔ REAL GNU Chess: node budget is bounded explicitly rather than ignored by its adapter (439.315247ms)
+{"receipt":"classic-pocket-game","result":"1/2-1/2","termination":"ply-cap","plies":12,"pgn":"[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"Astra Pocket\"]\n[Black \"GNU Chess 6.2.9\"]\n[Result \"1/2-1/2\"]\n[Termination \"ply-cap\"]\n\n1. e4 e5 2. Nc3 Nc6 3. Nge2 Nf6 4. d4 Bb4 5. Be3 Nxe4 6. d5 Na5 1/2-1/2","modelDecisions":[{"ply":3,"move":"b1c3"},{"ply":5,"move":"g1e2"},{"ply":7,"move":"d2d4"},{"ply":9,"move":"c1e3"},{"ply":11,"move":"d4d5"}],"engineIdentity":{"kind":"gnuchess","path":"/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess","name":"GNU Chess 6.2.9","author":"GNU Chess team"}}
+✔ REAL classic Pocket versus GNU Chess: legal short game and PGN (1362.256863ms)
+{"receipt":"stockfish","identity":{"kind":"stockfish","path":"/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish","name":"Stockfish 17.1","author":"the Stockfish developers (see AUTHORS file)"},"options":[{"name":"Threads","type":"spin","raw":"option name Threads type spin default 1 min 1 max 1024","default":1,"min":1,"max":1024,"value":1},{"name":"Hash","type":"spin","raw":"option name Hash type spin default 16 min 1 max 33554432","default":16,"min":1,"max":33554432,"value":16},{"name":"Ponder","type":"check","raw":"option name Ponder type check default false","default":false,"value":false},{"name":"MultiPV","type":"spin","raw":"option name MultiPV type spin default 1 min 1 max 256","default":1,"min":1,"max":256,"value":1}],"result":{"bestmove":"b8c6","lines":[{"move":"b8c6","depth":3,"pv":["b8c6","f1b5"],"multipv":1,"nodes":168,"cp":-23}],"depth":3,"complete":true,"expectedLines":1,"positionSource":"history","limitMode":"native-uci","observedNodes":168}}
+✔ REAL stockfish: handshake and legal moves with standard-start history (1982.630508ms)
+{"receipt":"gnuchess","identity":{"kind":"gnuchess","path":"/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess","name":"GNU Chess 6.2.9","author":"GNU Chess team"},"options":[{"name":"Hash","type":"spin","raw":"option name Hash type spin default 16 min 4 max 1024","default":16,"min":4,"max":1024,"value":16},{"name":"Ponder","type":"check","raw":"option name Ponder type check default false","default":false,"value":false},{"name":"OwnBook","type":"check","raw":"option name OwnBook type check default true","default":true,"value":false}],"result":{"bestmove":"b8c6","lines":[{"move":"b8c6","depth":3,"pv":["b8c6","b1c3","g8f6"],"multipv":1,"nodes":356,"cp":0}],"depth":3,"complete":true,"expectedLines":1,"positionSource":"history","limitMode":"native-uci","observedNodes":448}}
+✔ REAL gnuchess: handshake and legal moves with standard-start history (361.77193ms)
+✔ promotion-sized pawn contributions are not tied to small pawn-placement coefficients (8.812655ms)
+✔ rewrites actual stored head weights, preserving backbone and protected capture coefficients (3.475762ms)
+✔ rejects invalid multipliers and changes to protected groups (1.848475ms)
+✔ cached legal-move features reproduce real serialized inference for both colors (2329.429334ms)
+ℹ tests 64
+ℹ suites 0
+ℹ pass 64
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 165961.581691

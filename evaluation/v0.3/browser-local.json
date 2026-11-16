@@ -1,0 +1,68 @@
+{
+  "url": "http://127.0.0.1:4187/",
+  "browser": "145.0.7632.6",
+  "checks": [
+    "6 actual models exposed; future size proposals not selectable",
+    "64-square board and manifest loaded",
+    {
+      "workerNodeParity": "pocket",
+      "move": "b1c3",
+      "browserInferenceMs": 140
+    },
+    "pocket: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "pocket-plus",
+      "move": "b1c3",
+      "browserInferenceMs": 106.20000000298023
+    },
+    "pocket-plus: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "pocket-tuned",
+      "move": "d2d4",
+      "browserInferenceMs": 113.80000001192093
+    },
+    "pocket-tuned: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "atlas",
+      "move": "b1c3",
+      "browserInferenceMs": 350.20000000298023
+    },
+    "atlas: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "atlas-plus",
+      "move": "b1c3",
+      "browserInferenceMs": 188.70000000298023
+    },
+    "atlas-plus: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "atlas-tuned",
+      "move": "b1c3",
+      "browserInferenceMs": 299.20000000298023
+    },
+    "atlas-tuned: human e4 and real-weight reply",
+    "human Black, real-weight opening, flipped board",
+    "pocket-plus: actual neural mating choice finishes game",
+    "atlas-plus: actual neural mating choice finishes game",
+    "pocket-tuned: actual neural mating choice finishes game",
+    "atlas-tuned: actual neural mating choice finishes game",
+    "human underpromotion and insufficient-material draw",
+    "downloaded PGN contains promotion and result",
+    "castling moves king and rook",
+    "en passant removes captured pawn",
+    "terminal FEN stops game without policy move",
+    "real three-second clock flag fall",
+    "390px mobile board play without horizontal overflow"
+  ],
+  "pageErrors": [],
+  "sourceHashes": {
+    "public/index.html": "087d04fd00b270737517ef515134abcfc561eaa7bf15336b3fa78063642aaff6",
+    "public/app.mjs": "192f94c97e467b1f19ff16af1938ac79eab96006f34cc31df8b2a1a98bf2b4af",
+    "public/worker.mjs": "3d25905ad766295c42370f5ebc90ad2b7c754d6119216ee393bebab12649bcec",
+    "public/style.css": "4dd0f3bb43bec77224d1bd0852dd754095834b9d1275d6d9370439bb9a3e9f8d",
+    "public/models/manifest.json": "6c2e61f0f6e489ffa58eb4e44713ee4c3d8d98d18678208f64ae0167aec56bb3",
+    "src/engine.mjs": "5a381f2ca3b0c4a0d99115b6fef616ae8a6239cc3e802d27e7f26d0edbfe57b7",
+    "src/network.mjs": "f46d3a8fe19809c8780d69bc323707f3287de90582b66eba0ece30c4cbc5fd28",
+    "laptop/cli.mjs": "ea1b323b56e238cb02e6ba688a63e848755f9a3240cf614910abc1de26b10104",
+    "tools/browser-e2e.py": "21ce62a45a53e6343289ef77b2c86055ea7ca1ab90e59285732a8edddb3aadf0"
+  }
+}

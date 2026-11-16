@@ -1,0 +1,102 @@
+{
+  "positionResults": [
+    {
+      "id": "pocket",
+      "sha256": "77365eb86c5176255e06784592f9022a36ca6730c0dd3e4ce552cbf480762737",
+      "positions": 128,
+      "meanRegret": 167.5625,
+      "within20cp": 0.28125,
+      "blunder200cp": 0.1875
+    },
+    {
+      "id": "pocket-plus",
+      "sha256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+      "positions": 128,
+      "meanRegret": 177.7734375,
+      "within20cp": 0.2578125,
+      "blunder200cp": 0.1953125
+    },
+    {
+      "id": "pocket-tuned",
+      "sha256": "6fc188f3dd52fab34cfe454e25be761bf61125faf852c8bcf17dc285c83c0e3d",
+      "positions": 128,
+      "meanRegret": 177.25,
+      "within20cp": 0.3046875,
+      "blunder200cp": 0.1796875
+    },
+    {
+      "id": "atlas",
+      "sha256": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85",
+      "positions": 128,
+      "meanRegret": 145.3515625,
+      "within20cp": 0.3203125,
+      "blunder200cp": 0.1640625
+    },
+    {
+      "id": "atlas-plus",
+      "sha256": "30313d65ec8b74007a546576b5234aa00a521b63ade9159f1b2ec7f30b05c4a6",
+      "positions": 128,
+      "meanRegret": 145.3515625,
+      "within20cp": 0.3203125,
+      "blunder200cp": 0.1640625
+    },
+    {
+      "id": "atlas-tuned",
+      "sha256": "ca09975465cd379b96203a52d80db817cc898bc60ae6743f0e778c6efa50de12",
+      "positions": 128,
+      "meanRegret": 144.796875,
+      "within20cp": 0.296875,
+      "blunder200cp": 0.1640625
+    }
+  ],
+  "matches": [
+    {
+      "id": "pocket",
+      "games": 20,
+      "wins": 0,
+      "losses": 19,
+      "ruleDraws": 0,
+      "unfinishedAtPlyCap": 1
+    },
+    {
+      "id": "pocket-plus",
+      "games": 20,
+      "wins": 0,
+      "losses": 18,
+      "ruleDraws": 0,
+      "unfinishedAtPlyCap": 2
+    },
+    {
+      "id": "pocket-tuned",
+      "games": 20,
+      "wins": 0,
+      "losses": 19,
+      "ruleDraws": 1,
+      "unfinishedAtPlyCap": 0
+    },
+    {
+      "id": "atlas",
+      "games": 20,
+      "wins": 0,
+      "losses": 19,
+      "ruleDraws": 0,
+      "unfinishedAtPlyCap": 1
+    },
+    {
+      "id": "atlas-plus",
+      "games": 20,
+      "wins": 0,
+      "losses": 19,
+      "ruleDraws": 0,
+      "unfinishedAtPlyCap": 1
+    },
+    {
+      "id": "atlas-tuned",
+      "games": 20,
+      "wins": 0,
+      "losses": 15,
+      "ruleDraws": 0,
+      "unfinishedAtPlyCap": 5
+    }
+  ]
+}

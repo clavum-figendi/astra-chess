@@ -1,9 +1,6 @@
 {
-  "version": "0.2.0",
-  "sourceCommit": "ddb65f3bcd94347a256da7d18767561fb2e3cf70",
-  "sourceTag": "v0.2.0",
-  "deploymentTag": "deploy-20261116-032153",
-  "authorship": "Astra-authored expansion of Astra-directed, Sol-assisted base",
-  "strength": "Targeted gains; mixed broader results; no established Elo",
-  "laptopArchiveSHA256": "9dbab628be9f3874940e6d717eb119f27ddcbd4e6bf37b5bf52017afc5e00a4f"
+  "version": "0.3.0",
+  "sourceCommit": "5bbec0ad901b53f89456888166b369541f9b0ade",
+  "tag": "deploy-20261116-141542",
+  "note": "Experimental fitted policies; no strength upgrade or full optimization claim"
 }
