@@ -331,6 +331,52 @@
       "baseId": "atlas-plus",
       "freeGroups": 1965,
       "authorship": "Chess Lab contributors"
+    },
+    {
+      "architecture": "deepmind-9m-action-value",
+      "config": {
+        "vocab_size": 1968,
+        "output_size": 128,
+        "embedding_dim": 256,
+        "num_layers": 8,
+        "num_heads": 8,
+        "max_sequence_length": 79,
+        "layer_norm_eps": 0.00001,
+        "embedding_scale": 16
+      },
+      "runtimeOptions": {
+        "type": "onnx",
+        "batchSize": 4
+      },
+      "id": "deepmind-9m",
+      "name": "DeepMind 9M",
+      "variant": "fp16-storage",
+      "file": "deepmind-9m-fp16.onnx",
+      "runtime": "onnx",
+      "bytes": 17991221,
+      "sha256": "4faa374e93c82e92f4f443cf36d9d2fdc98e22d69991cdc6d0d6a3ecdbe3957e",
+      "parameters": 8954240,
+      "scoreType": "expected-return",
+      "description": "Adapted DeepMind 9M action-value transformer, stored in FP16 and executed as float32 in ORT-Web WASM.",
+      "features": [
+        "legal-move-ranking",
+        "128-bucket-expected-return",
+        "cpu-wasm",
+        "no-tree-search"
+      ],
+      "measurement": {
+        "validationPositions": 207,
+        "referenceTopMoveAgreementRate": 1,
+        "teacherHits": 126,
+        "teacherDelta": 0,
+        "pythonInferenceSeconds": 240.2947758359951,
+        "batchSize": 4,
+        "threads": 1
+      },
+      "selection": {
+        "policy": "spikes/browser-9m/selection-policy.json",
+        "reason": "smallest eligible candidate satisfying the predeclared validation rule"
+      }
     }
   ]
 }

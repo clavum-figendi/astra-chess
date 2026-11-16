@@ -6,9 +6,11 @@ Local neural chess with browser play, a portable laptop player, configurable clo
 
 ## Play
 
+**New browser policy: DeepMind 9M.** Select it in the Policy menu. The adapted transformer runs locally through ONNX Runtime Web/WASM with 17,991,221-byte FP16-stored weights. It preserves all 207 validation move choices of the original float32 model; the smaller INT8 candidate was rejected for loss of accuracy. Rapid or Unlimited is recommended on CPUs. See [browser conversion and verification](docs/BROWSER-V6.md).
+
 Choose a model, colour and time control. The opening book is on by default: 42 curated branches cover 340 exact positions through the first 12 plies. New games receive fresh random seeds; a fixed seed reproduces book choices. PGNs record the seed and whether the book was enabled. Switch the book off for deterministic neural-only play.
 
-Book choices and neural choices are labelled separately in the readout. After the book ends, each move uses one sparse neural forward pass plus legal masking. The book does not search; no remote engine is called during play. All positions stay on your device.
+Book choices and neural choices are labelled separately in the readout. Pocket/Atlas use a sparse neural forward pass plus legal masking; DeepMind 9M evaluates legal state/action pairs in batches. Neither performs game-tree search. No remote engine is called during play, and all positions stay on your device.
 
 Available families: Pocket and Atlas; expanded Plus variants; score-fitted Tuned variants; and new Policy variants fitted to Stockfish's chosen moves and MultiPV rankings. Only the selected binary is loaded. Exact sizes, parameters and hashes are in `models/manifest.json`.
 
@@ -52,4 +54,4 @@ Historical versioned reports and binaries retain their original identities for r
 - [chess.js](https://github.com/jhlywa/chess.js) 1.4.0, BSD-2-Clause, for rules and notation.
 - Stockfish and GNU Chess, used offline as teachers/opponents; acquisition and licensing are recorded in `docs/ENGINE-PROTOCOL.md`.
 
-Project code and generated weights use the included MIT license. Third-party licenses are included separately.
+Original sparse-policy project code and generated sparse weights use the included MIT license. DeepMind-derived weights are CC-BY-4.0; the transformer conversion/runtime code is Apache-2.0. ONNX Runtime is MIT with third-party notices under public/vendor/ort. These third-party weights are not relicensed under the project MIT license.

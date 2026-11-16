@@ -1,0 +1,103 @@
+{
+  "url": "http://127.0.0.1:4194/dist/",
+  "metadata": {
+    "architecture": "deepmind-9m-action-value",
+    "config": {
+      "vocab_size": 1968,
+      "output_size": 128,
+      "embedding_dim": 256,
+      "num_layers": 8,
+      "num_heads": 8,
+      "max_sequence_length": 79,
+      "layer_norm_eps": 1e-05,
+      "embedding_scale": 16
+    },
+    "runtimeOptions": {
+      "type": "onnx",
+      "batchSize": 4
+    },
+    "id": "deepmind-9m",
+    "name": "DeepMind 9M",
+    "variant": "fp16-storage",
+    "file": "deepmind-9m-fp16.onnx",
+    "runtime": "onnx",
+    "bytes": 17991221,
+    "sha256": "4faa374e93c82e92f4f443cf36d9d2fdc98e22d69991cdc6d0d6a3ecdbe3957e",
+    "parameters": 8954240,
+    "scoreType": "expected-return",
+    "description": "Adapted DeepMind 9M action-value transformer, stored in FP16 and executed as float32 in ORT-Web WASM.",
+    "features": [
+      "legal-move-ranking",
+      "128-bucket-expected-return",
+      "cpu-wasm",
+      "no-tree-search"
+    ],
+    "measurement": {
+      "validationPositions": 207,
+      "referenceTopMoveAgreementRate": 1,
+      "teacherHits": 126,
+      "teacherDelta": 0,
+      "pythonInferenceSeconds": 240.2947758359951,
+      "batchSize": 4,
+      "threads": 1
+    },
+    "selection": {
+      "policy": "spikes/browser-9m/selection-policy.json",
+      "reason": "smallest eligible candidate satisfying the predeclared validation rule"
+    }
+  },
+  "ui": {
+    "notation": "1.\ne4",
+    "latency": "4062.40 ms"
+  },
+  "positions": [
+    {
+      "id": "7829c1f116fbb077c1c80a304febe1456f43ac311ff710c618e12692008b1bd8",
+      "move": "f1e2",
+      "referenceMove": "f1e2",
+      "teacher": "f1d3",
+      "elapsedMs": 5880.100000008941
+    },
+    {
+      "id": "f727cbea5728f89b204f35b57336b17a3eb22ba10eef3ebf851bb8d9776ecde5",
+      "move": "g2g3",
+      "referenceMove": "g2g3",
+      "teacher": "g2g3",
+      "elapsedMs": 873
+    },
+    {
+      "id": "3e3db4674789f658ff906b12f90feaf188a9abe9330ee47a3354c88ff5518019",
+      "move": "e1g1",
+      "referenceMove": "e1g1",
+      "teacher": "e1g1",
+      "elapsedMs": 5944.4000000059605
+    }
+  ],
+  "referenceAgreements": 3,
+  "teacherHits": 2,
+  "positionsCount": 3,
+  "medianMs": 5880.100000008941,
+  "maxMs": 5944.4000000059605,
+  "bookMove": "e2e4",
+  "pageErrors": [],
+  "runtimeRequests": [
+    "http://127.0.0.1:4194/dist/vendor/ort/ort-wasm-simd-threaded.mjs",
+    "http://127.0.0.1:4194/dist/vendor/ort/ort-wasm-simd-threaded.wasm",
+    "http://127.0.0.1:4194/dist/vendor/ort/ort.wasm.bundle.min.mjs"
+  ],
+  "browser": "Chromium headless, CPU WASM, one thread",
+  "sources": {
+    "public/app.mjs": "2877388aabb19c89132017d39e41af678a517cee7dd3065d2db0dc775a88b74d",
+    "public/worker.mjs": "8da5554a89d2e50e4787f8874e03e4cb5fa29bfedfcc6c69bd5238e029e16819",
+    "src/transformer.mjs": "dc7ee006e1eb6448d186ea645ca40cf21f51f9db558366b8483e587a1ff1c0ab",
+    "src/model-resource.mjs": "1da6611174aceb2322ee8b534f0969bbd43a7c770163fd5bd1370f99f801d417",
+    "tools/build.mjs": "68119aa1d5a7428e8b3ccbf14e2ae0313a0a5fc790ab11a17a9a0327ad4c2587"
+  },
+  "cancelDuringInference": true,
+  "memory": {
+    "baselineBrowserRssSumBytes": 461225984,
+    "peakSampledBrowserRssSumBytes": 617410560,
+    "note": "Sum of sampled Chrome process RSS, including shared pages; not exclusive model RAM or a universal peak bound."
+  },
+  "runnerSHA256": "d86165fc2e4c0a48defcdaeac10fac2bf78f4ec9081f26be84a01e560e788b57"
+}

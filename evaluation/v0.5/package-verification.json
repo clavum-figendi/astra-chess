@@ -1,0 +1,19 @@
+{
+  "archiveSHA256": "e21f0358a3ea9ca5652517e3ad5bead1782f07be37d18128e1c7edd876318227",
+  "bytes": 66536830,
+  "verifiedFiles": 17,
+  "extractedRuntime": [
+    {
+      "model": "pretrained",
+      "move": "c7c5",
+      "returncode": 0
+    },
+    {
+      "model": "adapted",
+      "move": "c7c5",
+      "returncode": 0
+    }
+  ],
+  "dependencyEnvironment": "/home/hermes/projects/astra-chess/.cache/learning-venv/bin/python",
+  "standaloneInterpreterBundled": false
+}

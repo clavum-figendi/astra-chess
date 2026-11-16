@@ -1,0 +1,37 @@
+{
+  "url": "http://127.0.0.1:4193/",
+  "staging": "/home/hermes/.hermes/cache/scratch/astra-browser/staging",
+  "chromium": "/home/hermes/.cache/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell",
+  "status": "Move: h2h3, latency: 1833.1 ms",
+  "result": {
+    "move": "h2h3",
+    "candidates": [
+      {
+        "move": "h2h3",
+        "score": 0.618583531885303
+      },
+      {
+        "move": "f2f4",
+        "score": 0.6027791399189415
+      },
+      {
+        "move": "a2a3",
+        "score": 0.584468725950145
+      },
+      {
+        "move": "g2g4",
+        "score": 0.5259636454994547
+      },
+      {
+        "move": "a2a4",
+        "score": 0.5103803686831493
+      }
+    ],
+    "elapsedMs": 1833.1000000089407
+  },
+  "error": null,
+  "pageErrors": [
+    "wasm streaming compile failed: TypeError: Failed to execute 'compile' on 'WebAssembly': Incorrect response MIME type. Expected 'application/wasm'.",
+    "falling back to ArrayBuffer instantiation"
+  ]
+}

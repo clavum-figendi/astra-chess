@@ -1,0 +1,21 @@
+{
+  "deployment": {
+    "version": "0.4.0",
+    "sourceCommit": "3d21e280f92fcf0608c77746febf78eb434dd079",
+    "tag": "deploy-20261116-151003",
+    "product": "Chess Lab"
+  },
+  "models": {
+    "pocket": "77365eb86c5176255e06784592f9022a36ca6730c0dd3e4ce552cbf480762737",
+    "pocket-plus": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+    "pocket-tuned": "6fc188f3dd52fab34cfe454e25be761bf61125faf852c8bcf17dc285c83c0e3d",
+    "pocket-policy": "edb593e01268f21e35fe70279a1d07b96c1db2818be90c4a37b0f1a938bfe3d5",
+    "atlas": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85",
+    "atlas-plus": "30313d65ec8b74007a546576b5234aa00a521b63ade9159f1b2ec7f30b05c4a6",
+    "atlas-tuned": "ca09975465cd379b96203a52d80db817cc898bc60ae6743f0e778c6efa50de12",
+    "atlas-policy": "3f4ff0cb68a3156758a1e48aac3e7d0bf27fcad8363a596c3f3181cb5626d252"
+  },
+  "bookSHA256": "eda61fb60b4baff9b7831259fdd52c291343598c73d13a6d3501e804283e64b1",
+  "archiveSHA256": "da8a7f76c0ad606057eca3161a34f607e69c7134def9bf829a6c24a232fd8005",
+  "archiveBytes": 32823165
+}
