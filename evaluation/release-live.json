@@ -1,0 +1,33 @@
+{
+  "url": "https://clavum-figendi.github.io/astra-chess/",
+  "assets": [
+    {
+      "path": "models/pocket.bin",
+      "status": 200,
+      "bytes": 4423376,
+      "sha256": "77365eb86c5176255e06784592f9022a36ca6730c0dd3e4ce552cbf480762737"
+    },
+    {
+      "path": "models/atlas.bin",
+      "status": 200,
+      "bytes": 38397700,
+      "sha256": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85"
+    },
+    {
+      "path": "downloads/astra-chess-laptop.zip",
+      "status": 200,
+      "bytes": 7042014,
+      "sha256": "a89d264c3039f259e5349aa4995c6e6792654340e3581d0a1b740999e48a3ff8"
+    }
+  ],
+  "documentStatus": 200,
+  "deployment": {
+    "version": "0.1.0",
+    "sourceCommit": "921ed461b56aa2970b1ee0b76f89b8f1bc73c04c",
+    "sourceTag": "v0.1.0",
+    "deploymentTag": "deploy-20261116-023554",
+    "authorship": "Astra-directed, Sol-assisted",
+    "grandmasterGoal": "not achieved or demonstrated",
+    "laptopArchiveSHA256": "a89d264c3039f259e5349aa4995c6e6792654340e3581d0a1b740999e48a3ff8"
+  }
+}

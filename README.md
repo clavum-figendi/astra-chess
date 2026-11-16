@@ -2,6 +2,8 @@
 
 An experiment in **directly authored neural-network weights**. No pretrained chess model, optimizer, training corpus, opening book, tablebase, or game-tree search is used to choose moves.
 
+[Play on GitHub Pages](https://clavum-figendi.github.io/astra-chess/) · [Download laptop package](https://clavum-figendi.github.io/astra-chess/downloads/astra-chess-laptop.zip) · [Measured results](docs/RESULTS.md) · [Release verification](docs/RELEASE.md)
+
 **Experimental and unrated. Grandmaster strength has not been established.** These are sparse neural circuits encoding authored chess heuristics, not a reproduction of DeepMind's trained transformer and not evidence of general intelligence. Larger does not automatically mean stronger.
 
 ## Play

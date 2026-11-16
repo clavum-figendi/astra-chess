@@ -31,3 +31,7 @@ Engine API (same browser and Node):
 
 ## Research caveat
 No amount of packaging establishes the original grandmaster-strength target. Explicitly report whether evidence establishes it (expected unknown/not established). Never describe partial strength success as complete acceptance of that target.
+
+## Delivered v0.1.0 checkpoint
+
+All software/reproduction/browser/laptop/Pages gates above were executed; see docs/RELEASE.md and the independent reviews. The original grandmaster-strength target remains unmet. Exclusive Astra authorship was also not delivered: the worker router selected Sol; the release consistently discloses Astra-directed, Sol-assisted work and Astra's strategic revision. Neither limitation is silently waived as a successful scientific result.
