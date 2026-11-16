@@ -1,0 +1,13 @@
+{
+  "resultsSHA256": "fd8acbd5fff80c2dd70f9683998a6352611b68d692c56bd96e01082020afe685",
+  "selectionSHA256": "2b12a3175a39a7abfddf2d2b2f3a79daadce2b41db5e0001fa14b3ca1fb16015",
+  "freshPositionIdentities": 189,
+  "gamesReplayed": 16,
+  "decisionsReplayed": 569,
+  "changedTensors": {
+    "head.weight": 32768,
+    "head.bias": 128
+  },
+  "unchangedBackbone": true,
+  "verifierSHA256": "27e1448071b605aabf1a7b79fb1eba210e9c1af31710762e0307481e7c5d7811"
+}

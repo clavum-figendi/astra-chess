@@ -1,0 +1,136 @@
+{
+  "reviewedAt": "2026-11-16T22:05:49.631538+00:00",
+  "baseCommit": "9bbf15bc2bd44d246b00227c7204c0a3e1a951f2",
+  "sourceSHA256": {
+    "tools/build.mjs": "bcb54bdb5c7e30ddb1723fbc8ce5f722107ec1628a92c89492b88af9b84b2c8c",
+    "public/models/active.json": "5be75ab4ae3311e8a135ef4ab43ddfcc64d9b1989630a317732a370a16d20b2a",
+    "laptop/cli.mjs": "6362e70da8440f408268447e38ae791d9d96698ec6ddc11140f37a8a3291f222",
+    "public/app.mjs": "e8562e57bfcdb189080c467db21e1a4f3fa09c274d6befd874b8fc2264a82625",
+    "public/index.html": "f84c48d6bf647bc1cfdc669eb55b44ef9bf58309219e04f69de5221ff4cec675",
+    "public/style.css": "f702029c951934e481a5c8f8648b9fba286f62dd66d760528b97f4e3ef88c41a",
+    "src/premove.mjs": "2544bd78176f6b1192646e6eff0b59ec7b5c73988d4fba7ff746e2315bf0fdc8",
+    "src/sound.mjs": "aef70e82fbd96404fd689d586f0a177ae8309b925b5b0f57aa389fbd37a85c65",
+    "src/opening-book.mjs": "691d5802ed8b30ce5572c0f6b3a7bab7d246ca2c545ff38fb48a61a391076e62",
+    "tools/build-opening-book.mjs": "a438a401e40da1b043b811b506c4eefd6142f57e3f3016839f39713b9ad47a64",
+    "tools/generate-v7-data.mjs": "0bee3f94d75988e03148167be5a26d8bc88fdd789a10f39ad80d1b52135c34e4",
+    "tools/v7_head_candidates.py": "3ef40e6f75284963eb4a6e508bc8b56a94326146e37919afc0c509703caa3dd4",
+    "tools/v7_select_head.py": "d40c21eb037a621ae6da15096b277c5b4549008524d0f6c126d0fc6087ceb9c0",
+    "tools/v7-sparse-candidates.mjs": "0e921fc6065192a8939a45fa344337dec2929de961fb0ea08780287d1457e396",
+    "tools/v7-select-sparse.mjs": "b79d97453bd4e20f347171c544fb2da15c19ce80cbbec11c5e779992670d5879",
+    "tools/v7_evaluate.py": "cfebe99c58ee831e878e6a17c1bdcb0f3500590a806d763d8d24af50f17c3c46",
+    "evaluation/v0.7/PROTOCOL.md": "f020040e902bfdeefbf835c699c3295a2c13e1c8060ee57025f7bdfeb4f9898d",
+    "evaluation/v0.7/selection.json": "2b12a3175a39a7abfddf2d2b2f3a79daadce2b41db5e0001fa14b3ca1fb16015",
+    "evaluation/v0.7/data-protocol.json": "87f31f45047aad1aa8e26bdb64fa65cba5d05854cd58c69bf91946194a2399de",
+    "docs/UX-V7.md": "137bdf7a0efcada67a91c0464500968f8bdd3098a8821f777c0c5e4389b5c0f6",
+    "docs/OPENING-BOOK-V7.md": "f68fdbdc15eaedef844501409a6b565c43829ee285af9ac7923193727ef34e4a",
+    "docs/OPENING-BOOK-V7-REVIEW.json": "0737c0cea5abbf77557db6ab89402bb32b0a693c8d8f72295378a1bfd1e4a04f",
+    "docs/OPENING-BOOK-V7-SOURCE-RECEIPT.json": "9665191a16141ee6ad5877d9c88506f437dd4c28c9bb685348067d65e1af8aca"
+  },
+  "priorUIBindings": {
+    "public/index.html": true,
+    "public/style.css": true,
+    "public/app.mjs": true,
+    "src/premove.mjs": true,
+    "src/sound.mjs": true,
+    "src/clock.mjs": true,
+    "tools/browser-v7-ui.py": true
+  },
+  "temporalGate": {
+    "frozenAt": "2026-11-16T21:53:24Z",
+    "exposedAt": "2026-11-16T21:56:03.576113+00:00",
+    "selectionMatchesExposureLock": true,
+    "evaluatorMatchesExposureLock": true
+  },
+  "isolatedBuild": {
+    "exitCode": 0,
+    "stdout": "{\"dist\":\"/home/hermes/.hermes/cache/scratch/v7-review-28vzvbq2/dist\",\"laptop\":\"/home/hermes/.hermes/cache/scratch/v7-review-28vzvbq2/build/laptop\"}\n",
+    "stderr": ""
+  },
+  "dist": {
+    "models": [
+      [
+        "pocket-plus",
+        "Pocket"
+      ],
+      [
+        "atlas",
+        "Atlas"
+      ],
+      [
+        "deepmind-9m",
+        "DeepMind 9M"
+      ]
+    ],
+    "binaries": [
+      "atlas.bin",
+      "pocket-plus.bin"
+    ],
+    "onnx": [
+      "deepmind-9m-fp16.onnx"
+    ],
+    "cc0Matches": true,
+    "rootBookNoticeExists": true
+  },
+  "build/laptop": {
+    "models": [
+      [
+        "pocket-plus",
+        "Pocket"
+      ],
+      [
+        "atlas",
+        "Atlas"
+      ]
+    ],
+    "binaries": [
+      "atlas.bin",
+      "pocket-plus.bin"
+    ],
+    "onnx": [],
+    "cc0Matches": true,
+    "rootBookNoticeExists": false
+  },
+  "cliProbes": {
+    "default": {
+      "exitCode": 0,
+      "stdout": "{\n  \"move\": \"d2d4\",\n  \"source\": \"book\",\n  \"candidates\": [\n    {\n      \"move\": \"g1h3\",\n      \"weight\": 1\n    },\n    {\n      \"move\": \"e2e3\",\n      \"weight\": 5\n    },\n    {\n      \"move\": \"a2a3\",\n      \"weight\": 4\n    },\n    {\n      \"move\": \"f2f3\",\n      \"weight\": 5\n    },\n    {\n      \"move\": \"h2h3\",\n  ",
+      "stderr": ""
+    },
+    "--model pocket": {
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:fs:779\n  return binding.open(\n                 ^\n\nError: ENOENT: no such file or directory, open '/home/hermes/.hermes/cache/scratch/v7-review-28vzvbq2/build/laptop/public/models/pocket.bin'\n    at Object.openSync (node:fs:779:18)\n    at readFileSync (node:fs:625:35)\n    at file:///home/hermes/.hermes/cache/scratch/v7-review-28vzvbq2/build/laptop/laptop/cli.mjs:24:15\n    at ModuleJob.run (node:internal/modules/esm/module_job:569:25)\n    at async node:internal/modules/esm/loader:650:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: '/home/hermes/.hermes/cache/scratch/v7-review-28vzvbq2/build/laptop/public/models/pocket.bin'\n}\n\nNode.js v26.8.2\n"
+    },
+    "--model pocket-plus": {
+      "exitCode": 0,
+      "stdout": "{\n  \"move\": \"d2d4\",\n  \"source\": \"book\",\n  \"candidates\": [\n    {\n      \"move\": \"g1h3\",\n      \"weight\": 1\n    },\n    {\n      \"move\": \"e2e3\",\n      \"weight\": 5\n    },\n    {\n      \"move\": \"a2a3\",\n      \"weight\": 4\n    },\n    {\n      \"move\": \"f2f3\",\n      \"weight\": 5\n    },\n    {\n      \"move\": \"h2h3\",\n  ",
+      "stderr": ""
+    }
+  },
+  "zipCC0Verbatim": true,
+  "sourceDrift": {
+    "tools/build.mjs": false,
+    "public/models/active.json": false,
+    "laptop/cli.mjs": false,
+    "public/app.mjs": false,
+    "public/index.html": false,
+    "public/style.css": false,
+    "src/premove.mjs": false,
+    "src/sound.mjs": false,
+    "src/opening-book.mjs": false,
+    "tools/build-opening-book.mjs": false,
+    "tools/generate-v7-data.mjs": false,
+    "tools/v7_head_candidates.py": false,
+    "tools/v7_select_head.py": false,
+    "tools/v7-sparse-candidates.mjs": false,
+    "tools/v7-select-sparse.mjs": false,
+    "tools/v7_evaluate.py": false,
+    "evaluation/v0.7/PROTOCOL.md": false,
+    "evaluation/v0.7/selection.json": false,
+    "evaluation/v0.7/data-protocol.json": false,
+    "docs/UX-V7.md": false,
+    "docs/OPENING-BOOK-V7.md": false,
+    "docs/OPENING-BOOK-V7-REVIEW.json": false,
+    "docs/OPENING-BOOK-V7-SOURCE-RECEIPT.json": false
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "site": "https://clavum-figendi.github.io/astra-chess/",
+  "sourceCommit": "21969f545c2431505895537c978adcd6e5f12f10",
+  "pagesCommit": "fd4031c76683bed8a64d72279e033b152a5a6cbe",
+  "run": 43955897335,
+  "assets": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 8923,
+      "sha256": "811707f1c55351f39b9b6a1d4d5102f7c71239eec371f38ba5fc8f953b7dae62"
+    },
+    {
+      "path": "app.mjs",
+      "status": 200,
+      "bytes": 20553,
+      "sha256": "2877388aabb19c89132017d39e41af678a517cee7dd3065d2db0dc775a88b74d"
+    },
+    {
+      "path": "worker.mjs",
+      "status": 200,
+      "bytes": 3926,
+      "sha256": "8da5554a89d2e50e4787f8874e03e4cb5fa29bfedfcc6c69bd5238e029e16819"
+    },
+    {
+      "path": "src/transformer.mjs",
+      "status": 200,
+      "bytes": 8980,
+      "sha256": "dc7ee006e1eb6448d186ea645ca40cf21f51f9db558366b8483e587a1ff1c0ab"
+    },
+    {
+      "path": "src/model-resource.mjs",
+      "status": 200,
+      "bytes": 1096,
+      "sha256": "1da6611174aceb2322ee8b534f0969bbd43a7c770163fd5bd1370f99f801d417"
+    },
+    {
+      "path": "models/manifest.json",
+      "status": 200,
+      "bytes": 13157,
+      "sha256": "6178a79d9d210822182caab3e44a2a3c7f8cc046d2c0c652bb0fe71e652a4741"
+    },
+    {
+      "path": "models/deepmind-9m-fp16.onnx",
+      "status": 200,
+      "bytes": 17991221,
+      "sha256": "4faa374e93c82e92f4f443cf36d9d2fdc98e22d69991cdc6d0d6a3ecdbe3957e"
+    },
+    {
+      "path": "vendor/ort/ort.wasm.bundle.min.mjs",
+      "status": 200,
+      "bytes": 72812,
+      "sha256": "9f716d6e3c4280dcced6f0fcb9814c1d7630de83d8177880a2ef445fe48ca913"
+    },
+    {
+      "path": "vendor/ort/ort-wasm-simd-threaded.wasm",
+      "status": 200,
+      "bytes": 12361745,
+      "sha256": "be0e129949062ad50290ef94683fac8be5bb6156f709e030b7a5f1661a2f6c17"
+    },
+    {
+      "path": "docs/BROWSER-V6.md",
+      "status": 200,
+      "bytes": 4352,
+      "sha256": "47fae96c8bf1fca9e424ea5e63e8fe0ce17444c25dadd283a963b1d7eaf62041"
+    },
+    {
+      "path": "DEEPMIND-CODE-LICENSE.txt",
+      "status": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    }
+  ],
+  "laptop": {
+    "url": "https://github.com/clavum-figendi/astra-chess/releases/download/v0.6.0/chess-lab-9m-laptop.zip",
+    "bytes": 66536830,
+    "sha256": "e21f0358a3ea9ca5652517e3ad5bead1782f07be37d18128e1c7edd876318227"
+  }
+}

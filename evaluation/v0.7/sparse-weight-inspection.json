@@ -1,0 +1,1132 @@
+{
+  "pocket-plus": {
+    "baseSHA256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+    "groups": [
+      {
+        "key": "input:3:small",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 816
+      },
+      {
+        "key": "input:4:small",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1216
+      },
+      {
+        "key": "input:6:small",
+        "fixed": true,
+        "lower": 1,
+        "upper": 1,
+        "edges": 1880
+      },
+      {
+        "key": "input:7:large",
+        "fixed": true,
+        "lower": 1,
+        "upper": 1,
+        "edges": 1880
+      },
+      {
+        "key": "input:8:large",
+        "fixed": true,
+        "lower": 1,
+        "upper": 1,
+        "edges": 1880
+      },
+      {
+        "key": "input:9:large",
+        "fixed": true,
+        "lower": 1,
+        "upper": 1,
+        "edges": 1880
+      },
+      {
+        "key": "input:10:large",
+        "fixed": true,
+        "lower": 1,
+        "upper": 1,
+        "edges": 1880
+      },
+      {
+        "key": "relu:-5.9",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 950
+      },
+      {
+        "key": "relu:1.18",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 3674
+      },
+      {
+        "key": "relu:2.596",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 3512
+      },
+      {
+        "key": "relu:2.124",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 2516
+      },
+      {
+        "key": "relu:5.5",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 928
+      },
+      {
+        "key": "relu:-1.1",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 3674
+      },
+      {
+        "key": "relu:-2.42",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 3424
+      },
+      {
+        "key": "relu:-1.98",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 2472
+      },
+      {
+        "key": "relu:-10.62",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1566
+      },
+      {
+        "key": "relu:4.72",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1566
+      },
+      {
+        "key": "relu:9.9",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1544
+      },
+      {
+        "key": "relu:-4.4",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1544
+      },
+      {
+        "key": "relu:0.22",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1974
+      },
+      {
+        "key": "relu:-0.12",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 15925
+      },
+      {
+        "key": "relu:0.12",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 12873
+      },
+      {
+        "key": "relu:0.18",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 448
+      },
+      {
+        "key": "relu:-0.18",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 448
+      },
+      {
+        "key": "relu:0.3",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 448
+      },
+      {
+        "key": "relu:-0.3",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 448
+      },
+      {
+        "key": "relu:100",
+        "fixed": true,
+        "lower": 1,
+        "upper": 1,
+        "edges": 2980
+      },
+      {
+        "key": "relu:-100",
+        "fixed": true,
+        "lower": 1,
+        "upper": 1,
+        "edges": 2980
+      },
+      {
+        "key": "input:0:small",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 162
+      },
+      {
+        "key": "input:5:small",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 398
+      },
+      {
+        "key": "relu:0.31",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 36
+      },
+      {
+        "key": "relu:-1.18",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 162
+      },
+      {
+        "key": "relu:1.1",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 250
+      },
+      {
+        "key": "relu:-0.13",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1452
+      },
+      {
+        "key": "relu:0.105",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1926
+      },
+      {
+        "key": "relu:0.336",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1926
+      },
+      {
+        "key": "relu:0.35175",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1926
+      },
+      {
+        "key": "relu:0.525",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1926
+      },
+      {
+        "key": "relu:0.945",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1926
+      },
+      {
+        "key": "relu:0.32",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1926
+      },
+      {
+        "key": "relu:0.64",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1926
+      },
+      {
+        "key": "relu:0.67",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1926
+      },
+      {
+        "key": "relu:1",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1940
+      },
+      {
+        "key": "relu:1.8",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1926
+      },
+      {
+        "key": "relu:0.65",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 586
+      },
+      {
+        "key": "input:2:small",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 456
+      },
+      {
+        "key": "relu:0.53",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 18
+      },
+      {
+        "key": "relu:-3.953",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 638
+      },
+      {
+        "key": "relu:0.177",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 638
+      },
+      {
+        "key": "relu:3.685",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 616
+      },
+      {
+        "key": "relu:-0.165",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 616
+      },
+      {
+        "key": "input:1:small",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 300
+      },
+      {
+        "key": "relu:-3.776",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 358
+      },
+      {
+        "key": "relu:3.52",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 336
+      },
+      {
+        "key": "relu:-0.22",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 49
+      },
+      {
+        "key": "relu:0.09",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 70
+      },
+      {
+        "key": "relu:0.24",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 9
+      },
+      {
+        "key": "relu:-0.24",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 25
+      },
+      {
+        "key": "relu:-0.44",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1
+      },
+      {
+        "key": "relu:-0.31",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 36
+      },
+      {
+        "key": "relu:-0.09",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 46
+      },
+      {
+        "key": "relu:0.035",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 30
+      },
+      {
+        "key": "relu:-0.53",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 18
+      },
+      {
+        "key": "relu:-0.26",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 23
+      },
+      {
+        "key": "relu:0.14",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 22
+      },
+      {
+        "key": "relu:0.13",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 36
+      },
+      {
+        "key": "relu:0.315",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 22
+      },
+      {
+        "key": "relu:-0.35",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 42
+      },
+      {
+        "key": "relu:0.35",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 18
+      },
+      {
+        "key": "relu:0.56",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 22
+      },
+      {
+        "key": "input:0:large",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 88
+      }
+    ]
+  },
+  "atlas-plus": {
+    "baseSHA256": "30313d65ec8b74007a546576b5234aa00a521b63ade9159f1b2ec7f30b05c4a6",
+    "groups": [
+      {
+        "key": "input:3:small",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 816
+      },
+      {
+        "key": "input:4:small",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1216
+      },
+      {
+        "key": "input:6:small",
+        "fixed": true,
+        "lower": 1,
+        "upper": 1,
+        "edges": 1880
+      },
+      {
+        "key": "input:7:large",
+        "fixed": true,
+        "lower": 1,
+        "upper": 1,
+        "edges": 1880
+      },
+      {
+        "key": "input:8:large",
+        "fixed": true,
+        "lower": 1,
+        "upper": 1,
+        "edges": 1880
+      },
+      {
+        "key": "input:9:large",
+        "fixed": true,
+        "lower": 1,
+        "upper": 1,
+        "edges": 1880
+      },
+      {
+        "key": "input:10:large",
+        "fixed": true,
+        "lower": 1,
+        "upper": 1,
+        "edges": 1880
+      },
+      {
+        "key": "relu:-5.9",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 950
+      },
+      {
+        "key": "relu:1.18",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 3674
+      },
+      {
+        "key": "relu:2.596",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 3512
+      },
+      {
+        "key": "relu:2.124",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 2516
+      },
+      {
+        "key": "relu:5.5",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 928
+      },
+      {
+        "key": "relu:-1.1",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 3674
+      },
+      {
+        "key": "relu:-2.42",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 3424
+      },
+      {
+        "key": "relu:-1.98",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 2472
+      },
+      {
+        "key": "relu:-10.62",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1566
+      },
+      {
+        "key": "relu:4.72",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1566
+      },
+      {
+        "key": "relu:9.9",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1544
+      },
+      {
+        "key": "relu:-4.4",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1544
+      },
+      {
+        "key": "relu:0.105",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 49070
+      },
+      {
+        "key": "relu:0.336",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 49070
+      },
+      {
+        "key": "relu:0.35175",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 49070
+      },
+      {
+        "key": "relu:0.525",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 49070
+      },
+      {
+        "key": "relu:0.945",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 49070
+      },
+      {
+        "key": "relu:0.32",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 49070
+      },
+      {
+        "key": "relu:0.22",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 39838
+      },
+      {
+        "key": "relu:0.64",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 50802
+      },
+      {
+        "key": "relu:0.67",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 49070
+      },
+      {
+        "key": "relu:1",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 49084
+      },
+      {
+        "key": "relu:1.8",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 49070
+      },
+      {
+        "key": "relu:2.4",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 5700
+      },
+      {
+        "key": "relu:0.65",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 3674
+      },
+      {
+        "key": "relu:1.92",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 9280
+      },
+      {
+        "key": "relu:-0.12",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 15925
+      },
+      {
+        "key": "relu:0.12",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 12873
+      },
+      {
+        "key": "relu:0.18",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 448
+      },
+      {
+        "key": "relu:-0.18",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 448
+      },
+      {
+        "key": "relu:0.3",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 448
+      },
+      {
+        "key": "relu:-0.3",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 448
+      },
+      {
+        "key": "relu:100",
+        "fixed": true,
+        "lower": 1,
+        "upper": 1,
+        "edges": 2980
+      },
+      {
+        "key": "relu:-100",
+        "fixed": true,
+        "lower": 1,
+        "upper": 1,
+        "edges": 2980
+      },
+      {
+        "key": "relu:0.21",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1732
+      },
+      {
+        "key": "relu:0.672",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1732
+      },
+      {
+        "key": "relu:0.7035",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1732
+      },
+      {
+        "key": "relu:1.05",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1732
+      },
+      {
+        "key": "relu:1.89",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1732
+      },
+      {
+        "key": "relu:2.14",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 336
+      },
+      {
+        "key": "relu:1.28",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1732
+      },
+      {
+        "key": "relu:1.34",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1732
+      },
+      {
+        "key": "relu:2",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1732
+      },
+      {
+        "key": "relu:3.6",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1732
+      },
+      {
+        "key": "input:0:small",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 162
+      },
+      {
+        "key": "input:5:small",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 398
+      },
+      {
+        "key": "relu:0.31",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 36
+      },
+      {
+        "key": "relu:-1.18",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 162
+      },
+      {
+        "key": "relu:1.1",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 250
+      },
+      {
+        "key": "relu:-0.13",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1452
+      },
+      {
+        "key": "input:2:small",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 456
+      },
+      {
+        "key": "relu:0.53",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 18
+      },
+      {
+        "key": "relu:-3.953",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 638
+      },
+      {
+        "key": "relu:0.177",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 638
+      },
+      {
+        "key": "relu:3.685",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 616
+      },
+      {
+        "key": "relu:-0.165",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 616
+      },
+      {
+        "key": "input:1:small",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 300
+      },
+      {
+        "key": "relu:-3.776",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 358
+      },
+      {
+        "key": "relu:3.52",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 336
+      },
+      {
+        "key": "relu:0.44",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1396
+      },
+      {
+        "key": "relu:-0.22",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 49
+      },
+      {
+        "key": "relu:-2.72",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 69664
+      },
+      {
+        "key": "relu:-2.8475",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 69664
+      },
+      {
+        "key": "relu:-4.25",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 69664
+      },
+      {
+        "key": "relu:-7.65",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 69664
+      },
+      {
+        "key": "relu:0.09",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 70
+      },
+      {
+        "key": "relu:0.24",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 9
+      },
+      {
+        "key": "relu:-0.24",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 25
+      },
+      {
+        "key": "relu:-0.44",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 1
+      },
+      {
+        "key": "relu:4.8",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 102
+      },
+      {
+        "key": "relu:-0.31",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 36
+      },
+      {
+        "key": "relu:-0.09",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 46
+      },
+      {
+        "key": "relu:0.035",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 30
+      },
+      {
+        "key": "relu:-0.53",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 18
+      },
+      {
+        "key": "relu:-0.26",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 23
+      },
+      {
+        "key": "relu:0.14",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 22
+      },
+      {
+        "key": "relu:0.13",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 36
+      },
+      {
+        "key": "relu:0.315",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 22
+      },
+      {
+        "key": "relu:-0.35",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 42
+      },
+      {
+        "key": "relu:0.35",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 18
+      },
+      {
+        "key": "relu:0.56",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 22
+      },
+      {
+        "key": "input:0:large",
+        "fixed": false,
+        "lower": 0.05,
+        "upper": 4,
+        "edges": 88
+      }
+    ]
+  }
+}

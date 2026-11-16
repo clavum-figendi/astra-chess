@@ -1,0 +1,12 @@
+✔ single premove is immutable, replaced, consumed once and legally rechecked after reply (61.239293ms)
+✔ invalid, stale, terminal and flagged premoves are discarded without clock increment (40.430328ms)
+✔ technical details are collapsed and premove and audio have explicit accessible controls (4.113724ms)
+✔ sound is silent by default, persists only explicit preference and immediately stops active voices (5.549878ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 551.3608

@@ -17,26 +17,26 @@
       "id": "deepmind-9m",
       "name": "DeepMind 9M",
       "variant": "fp16-storage",
-      "file": "deepmind-9m-fp16.onnx",
+      "file": "deepmind-9m-v7.onnx",
       "runtime": "onnx",
       "bytes": 17991221,
-      "sha256": "4faa374e93c82e92f4f443cf36d9d2fdc98e22d69991cdc6d0d6a3ecdbe3957e",
+      "sha256": "b2a643b1bb910e0035e514ef7efecc62b69dbd3740af6cc18abaddf75471d8ee",
       "parameters": 8954240,
       "scoreType": "expected-return",
-      "description": "Adapted DeepMind 9M action-value transformer, stored in FP16 and executed as float32 in ORT-Web WASM.",
+      "description": "DeepMind 9M with a bounded v7 output-head adjustment, stored in FP16 and executed as float32 in CPU WASM. Unchanged encoder; no demonstrated match-strength gain.",
       "features": ["legal-move-ranking", "128-bucket-expected-return", "cpu-wasm", "no-tree-search"],
       "measurement": {
-        "validationPositions": 207,
+        "validationPositions": 96,
         "referenceTopMoveAgreementRate": 1.0,
-        "teacherHits": 126,
+        "teacherHits": 55,
         "teacherDelta": 0,
-        "pythonInferenceSeconds": 240.2947758359951,
+
         "batchSize": 4,
         "threads": 1
       },
       "selection": {
-        "policy": "spikes/browser-9m/selection-policy.json",
-        "reason": "smallest eligible candidate satisfying the predeclared validation rule"
+        "policy": "evaluation/v0.7/selection.json",
+        "reason": "Frozen fresh-validation head selection; FP16 preserves 96/96 selected-model validation choices."
       }
     }
   ]
