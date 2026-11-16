@@ -1,0 +1,28 @@
+{
+  "url": "http://127.0.0.1:4187/",
+  "browser": "145.0.7632.6",
+  "checks": [
+    "64-square board and manifest loaded",
+    {
+      "workerNodeParity": "pocket",
+      "move": "b1c3",
+      "browserInferenceMs": 81.59999999403954
+    },
+    "pocket: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "atlas",
+      "move": "b1c3",
+      "browserInferenceMs": 179
+    },
+    "atlas: human e4 and real-weight reply",
+    "human Black, real-weight opening, flipped board",
+    "human underpromotion and insufficient-material draw",
+    "downloaded PGN contains promotion and result",
+    "castling moves king and rook",
+    "en passant removes captured pawn",
+    "terminal FEN stops game without policy move",
+    "real three-second clock flag fall",
+    "390px mobile board play without horizontal overflow"
+  ],
+  "pageErrors": []
+}
