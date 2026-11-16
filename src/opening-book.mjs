@@ -21,21 +21,50 @@ export function seededRandom(seed) {
 export function compileBook(lines, { maxPlies = 12 } = {}) {
   const positions = {};
   if (!Array.isArray(lines) || !lines.length || !Number.isInteger(maxPlies) || maxPlies < 1) throw new Error('Invalid opening lines or maxPlies');
+  // Replay each distinct SAN prefix once. No serialized position is trusted:
+  // every edge, even beyond maxPlies, still passes strict chess.js validation.
+  const root = { children: new Map() };
+  const paths = [];
   for (const line of lines) {
     const weight = line.weight ?? 1;
     if (!Number.isFinite(weight) || weight <= 0) throw new Error('Invalid opening weight');
-    const chess = new Chess();
     const moves = typeof line.moves === 'string' ? line.moves.trim().split(/\s+/) : line.moves;
     if (!Array.isArray(moves) || !moves.length) throw new Error('Invalid opening moves');
-    for (let ply=0; ply<moves.length; ply++) {
-      const fen = chess.fen();
-      const move = chess.move(moves[ply], { strict: true });
-      if (!move) throw new Error(`Illegal opening move ${moves[ply]}`);
-      if (ply >= maxPlies) continue;
-      const entries = positions[positionKey(fen)] ||= [];
-      const existing = entries.find(e => e.move===uci(move) && e.ply===ply);
+    let node = root;
+    const path = [];
+    for (const san of moves) {
+      if (typeof san !== 'string' || !san) throw new Error('Invalid opening move');
+      if (!node.children.has(san)) node.children.set(san, { children: new Map() });
+      node = node.children.get(san);
+      path.push(node);
+    }
+    paths.push({ path, weight });
+  }
+  const chess = new Chess();
+  function validate(node) {
+    const fen = chess.fen();
+    const key = positionKey(fen);
+    for (const [san, child] of node.children) {
+      child.key = key;
+      const move = chess.move(san, { strict: true });
+      if (!move) throw new Error(`Illegal opening move ${san}`);
+      child.move = uci(move);
+      validate(child);
+      // Only board state is needed for SAN legality, not repetition history.
+      // load() avoids undo() constructing an unused verbose SAN move.
+      chess.load(fen);
+    }
+  }
+  validate(root);
+  // Retain the original line-order accumulation (including floating weights)
+  // and candidate ordering, so this is API/output compatible with v1 books.
+  for (const { path, weight } of paths) {
+    for (let ply=0; ply<Math.min(path.length,maxPlies); ply++) {
+      const node = path[ply];
+      const entries = positions[node.key] ||= [];
+      const existing = entries.find(e => e.move===node.move && e.ply===ply);
       if (existing) existing.weight += weight;
-      else entries.push({move:uci(move), weight, ply});
+      else entries.push({move:node.move, weight, ply});
     }
   }
   return { version:1, maxPlies, lines, positions };

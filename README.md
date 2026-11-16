@@ -2,25 +2,25 @@
 
 Local neural chess with browser play, a portable laptop player, configurable clocks and a weighted opening book.
 
-[Play](https://clavum-figendi.github.io/astra-chess/) · [Laptop download](https://clavum-figendi.github.io/astra-chess/downloads/astra-chess-laptop.zip) · [Policy training and results](docs/POLICY-V4.md)
+[Play](https://clavum-figendi.github.io/chesslab/) · [Pocket/Atlas laptop download](https://clavum-figendi.github.io/chesslab/downloads/astra-chess-laptop.zip) · [Current changes and results](docs/RELEASE-V7.md)
 
 ## Play
 
-**New browser policy: DeepMind 9M.** Select it in the Policy menu. The adapted transformer runs locally through ONNX Runtime Web/WASM with 17,991,221-byte FP16-stored weights. It preserves all 207 validation move choices of the original float32 model; the smaller INT8 candidate was rejected for loss of accuracy. Rapid or Unlimited is recommended on CPUs. See [browser conversion and verification](docs/BROWSER-V6.md).
+Choose **Pocket**, **Atlas**, or **DeepMind 9M**. The board-first interface supports one premove, optional local sound effects, and an initially collapsed technical panel. Sound defaults off and remembers an explicit preference. Premoves are rechecked after the opponent replies; queued promotions become queens, while ordinary promotions retain all four choices.
 
-Choose a model, colour and time control. The opening book is on by default: 42 curated branches cover 340 exact positions through the first 12 plies. New games receive fresh random seeds; a fixed seed reproduces book choices. PGNs record the seed and whether the book was enabled. Switch the book off for deterministic neural-only play.
+Choose a colour and time control. The opening book is on by default: the pinned CC0 Lichess corpus provides 5,575 positions and 8,190 continuations through 32 plies, covering all 500 ECO codes. New games receive fresh random seeds; a fixed seed reproduces choices. PGNs record seed and book status. The weights reflect named-line coverage, not observed game popularity. See [book provenance](docs/OPENING-BOOK-V7.md).
 
 Book choices and neural choices are labelled separately in the readout. Pocket/Atlas use a sparse neural forward pass plus legal masking; DeepMind 9M evaluates legal state/action pairs in batches. Neither performs game-tree search. No remote engine is called during play, and all positions stay on your device.
 
-Available families: Pocket and Atlas; expanded Plus variants; score-fitted Tuned variants; and new Policy variants fitted to Stockfish's chosen moves and MultiPV rankings. Only the selected binary is loaded. Exact sizes, parameters and hashes are in `models/manifest.json`.
+The active catalogue retains one Pocket (underlying Pocket+ variant) and one Atlas (original variant), selected on fresh validation. Other variants remain in source/history for reproducibility but are excluded from playing choices and packaged weights. DeepMind uses 17,991,221-byte FP16-stored transformer weights and CPU WASM; Rapid or Unlimited is recommended. Exact active artifacts and hashes are in the built `models/manifest.json`.
 
 ## Laptop
 
 Extract the download and install Node.js 22+. No npm installation, Python, GPU or API key is needed for play.
 
 ```
-node laptop/cli.mjs --model atlas-policy --book --seed my-game
-node laptop/cli.mjs --model pocket-policy --no-book
+node laptop/cli.mjs --model atlas --book --seed my-game
+node laptop/cli.mjs --model pocket-plus --no-book
 node laptop/cli.mjs --list-models
 ```
 
@@ -39,11 +39,11 @@ npm run build
 npm run serve
 ```
 
-The local server uses port 4173, configurable with `PORT`. Model reconstruction uses the authored compiler and pinned fitted multiplier configurations; it does not rerun training. Build output includes the portable player, all available models, opening book and technical evidence.
+The local server uses port 4173, configurable with `PORT`. Sparse model reconstruction uses the authored compiler and pinned fitted multiplier configurations; it does not rerun training. `public/models/active.json` controls the reduced distribution catalogue. Build output includes the selected portable player models, opening book and technical evidence. Historical unselected binaries are not copied into the distribution.
 
 ## Training and evidence
 
-Policy fitting uses direct Stockfish best-move targets mixed with ranked alternatives, not raw-score regression. Geometry-specific coefficients expand the fitted degrees of freedom while preserving the sparse backbone and single-pass runtime. Stockfish depth-6 self-play produces fresh training/validation/test data, split by opening family and excluding earlier measured positions. See `docs/POLICY-TOOLS.md` and `evaluation/v0.4/` for objectives, frozen hashes, measured agreement and engine matches. Neural-only evaluations disable the opening book.
+The v7 study inspected real tensors/coefficient groups, generated and fitted bounded weight candidates, and selected against 96 fresh Stockfish-labelled validation positions before exposing 93 final positions. The new sparse fits did not beat the retained variants. A small DeepMind head adjustment reduced validation policy loss while retaining the same 55/93 final bestmove matches and 3W/1D engine-match score as its control; it does not establish stronger play. See `docs/RELEASE-V7.md` and `evaluation/v0.7/`. Neural-only evaluations disable the book.
 
 Historical versioned reports and binaries retain their original identities for reproducibility. The product and current model display names are neutral; existing repository and download URLs remain compatible.
 

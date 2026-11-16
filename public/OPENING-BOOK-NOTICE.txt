@@ -1,0 +1,12 @@
+Opening book data: Lichess chess opening names contributors
+Source: https://github.com/lichess-org/chess-openings
+Pinned revision: 3ba6b20d31b2e6125cb0e6a2e792f400717d9d39
+Dedication: CC0 1.0 Universal (CC0-1.0)
+Full upstream legal text: docs/OPENING-BOOK-COPYING.txt
+Provenance, transformation and reproduction: docs/OPENING-BOOK-V7.md
+
+The upstream collection of facts is public domain; qualifying copyright
+is released under CC0. This is a provenance notice, not an endorsement or
+an additional license restriction. Imported opening data is separate from
+the application's code and model licenses. Continuation weights count
+maximal curated paths, not game frequency, outcomes or neural scores.

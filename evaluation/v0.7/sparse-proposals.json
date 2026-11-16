@@ -1,0 +1,2006 @@
+{
+  "sources": {
+    "tools/v7-sparse-candidates.mjs": "0e921fc6065192a8939a45fa344337dec2929de961fb0ea08780287d1457e396",
+    "tools/weight-tuning.mjs": "cd29b6a81235e619b8ddb2b3e42f189a9047e5f8b6720d324d243e7beb11b3a4",
+    "tools/policy-tuning.mjs": "a6cac7e246fdbac52a7ca14e25de960e4d1d0db6a943956deb99802eeb8bb19d",
+    "tools/policy-optimizer.mjs": "8012f5f3c7a74937596bd5f77ec9b09136cae3542b89b768f55f18a1dfe29438"
+  },
+  "proposals": [
+    {
+      "id": "pocket-coarse",
+      "base": "pocket-plus",
+      "baseSHA256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+      "file": ".cache/v7/pocket-coarse.bin",
+      "sha256": "09e1f53f308e1bfe0937883be731ea1ff9456a8cbeb801bd2684ccef8aea6af2",
+      "bytes": 8465992,
+      "groups": [
+        {
+          "key": "input:3:small",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 816
+        },
+        {
+          "key": "input:4:small",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1216
+        },
+        {
+          "key": "input:6:small",
+          "fixed": true,
+          "lower": 1,
+          "upper": 1,
+          "edges": 1880
+        },
+        {
+          "key": "input:7:large",
+          "fixed": true,
+          "lower": 1,
+          "upper": 1,
+          "edges": 1880
+        },
+        {
+          "key": "input:8:large",
+          "fixed": true,
+          "lower": 1,
+          "upper": 1,
+          "edges": 1880
+        },
+        {
+          "key": "input:9:large",
+          "fixed": true,
+          "lower": 1,
+          "upper": 1,
+          "edges": 1880
+        },
+        {
+          "key": "input:10:large",
+          "fixed": true,
+          "lower": 1,
+          "upper": 1,
+          "edges": 1880
+        },
+        {
+          "key": "relu:-5.9",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 950
+        },
+        {
+          "key": "relu:1.18",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 3674
+        },
+        {
+          "key": "relu:2.596",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 3512
+        },
+        {
+          "key": "relu:2.124",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 2516
+        },
+        {
+          "key": "relu:5.5",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 928
+        },
+        {
+          "key": "relu:-1.1",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 3674
+        },
+        {
+          "key": "relu:-2.42",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 3424
+        },
+        {
+          "key": "relu:-1.98",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 2472
+        },
+        {
+          "key": "relu:-10.62",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1566
+        },
+        {
+          "key": "relu:4.72",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1566
+        },
+        {
+          "key": "relu:9.9",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1544
+        },
+        {
+          "key": "relu:-4.4",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1544
+        },
+        {
+          "key": "relu:0.22",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1974
+        },
+        {
+          "key": "relu:-0.12",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 15925
+        },
+        {
+          "key": "relu:0.12",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 12873
+        },
+        {
+          "key": "relu:0.18",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 448
+        },
+        {
+          "key": "relu:-0.18",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 448
+        },
+        {
+          "key": "relu:0.3",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 448
+        },
+        {
+          "key": "relu:-0.3",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 448
+        },
+        {
+          "key": "relu:100",
+          "fixed": true,
+          "lower": 1,
+          "upper": 1,
+          "edges": 2980
+        },
+        {
+          "key": "relu:-100",
+          "fixed": true,
+          "lower": 1,
+          "upper": 1,
+          "edges": 2980
+        },
+        {
+          "key": "input:0:small",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 162
+        },
+        {
+          "key": "input:5:small",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 398
+        },
+        {
+          "key": "relu:0.31",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 36
+        },
+        {
+          "key": "relu:-1.18",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 162
+        },
+        {
+          "key": "relu:1.1",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 250
+        },
+        {
+          "key": "relu:-0.13",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1452
+        },
+        {
+          "key": "relu:0.105",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1926
+        },
+        {
+          "key": "relu:0.336",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1926
+        },
+        {
+          "key": "relu:0.35175",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1926
+        },
+        {
+          "key": "relu:0.525",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1926
+        },
+        {
+          "key": "relu:0.945",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1926
+        },
+        {
+          "key": "relu:0.32",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1926
+        },
+        {
+          "key": "relu:0.64",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1926
+        },
+        {
+          "key": "relu:0.67",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1926
+        },
+        {
+          "key": "relu:1",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1940
+        },
+        {
+          "key": "relu:1.8",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1926
+        },
+        {
+          "key": "relu:0.65",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 586
+        },
+        {
+          "key": "input:2:small",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 456
+        },
+        {
+          "key": "relu:0.53",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 18
+        },
+        {
+          "key": "relu:-3.953",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 638
+        },
+        {
+          "key": "relu:0.177",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 638
+        },
+        {
+          "key": "relu:3.685",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 616
+        },
+        {
+          "key": "relu:-0.165",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 616
+        },
+        {
+          "key": "input:1:small",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 300
+        },
+        {
+          "key": "relu:-3.776",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 358
+        },
+        {
+          "key": "relu:3.52",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 336
+        },
+        {
+          "key": "relu:-0.22",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 49
+        },
+        {
+          "key": "relu:0.09",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 70
+        },
+        {
+          "key": "relu:0.24",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 9
+        },
+        {
+          "key": "relu:-0.24",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 25
+        },
+        {
+          "key": "relu:-0.44",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1
+        },
+        {
+          "key": "relu:-0.31",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 36
+        },
+        {
+          "key": "relu:-0.09",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 46
+        },
+        {
+          "key": "relu:0.035",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 30
+        },
+        {
+          "key": "relu:-0.53",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 18
+        },
+        {
+          "key": "relu:-0.26",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 23
+        },
+        {
+          "key": "relu:0.14",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 22
+        },
+        {
+          "key": "relu:0.13",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 36
+        },
+        {
+          "key": "relu:0.315",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 22
+        },
+        {
+          "key": "relu:-0.35",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 42
+        },
+        {
+          "key": "relu:0.35",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 18
+        },
+        {
+          "key": "relu:0.56",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 22
+        },
+        {
+          "key": "input:0:large",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 88
+        }
+      ],
+      "freeGroups": 64,
+      "selectedRound": 2,
+      "scales": [
+        2.6402280173874453,
+        2.811075270836728,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.6641831571209912,
+        0.3310759923497584,
+        0.7062959739962448,
+        0.49346844288414765,
+        0.9700526182620532,
+        0.38038817735397457,
+        0.6199405888686335,
+        0.22449280812300873,
+        0.6201174078203845,
+        0.7783422239978827,
+        0.5353807172548228,
+        0.48643165539549377,
+        1,
+        1,
+        1,
+        2.4266122514274087,
+        2.6255930086735266,
+        2.4225823449203108,
+        0.8348773163159793,
+        1,
+        1,
+        0.2559857735021402,
+        2.667555253223392,
+        1,
+        0.13468552291695993,
+        1.0426493915425343,
+        0.8472313915875197,
+        0.05,
+        0.14658165257426176,
+        2.5294028936103237,
+        0.05,
+        1.6802145307398648,
+        1,
+        0.05,
+        0.05,
+        0.05,
+        0.5669641571807462,
+        0.05,
+        2.591019345906576,
+        1,
+        0.5388721184850385,
+        1.9384057592635213,
+        0.811988921562004,
+        0.05,
+        2.3509926762260283,
+        0.5261166169972314,
+        0.7348532318406732,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.05,
+        1,
+        1.7459013767296478,
+        0.05,
+        1,
+        0.05,
+        1,
+        1,
+        2.069020383649349,
+        1
+      ],
+      "baseline": {
+        "train": {
+          "count": 458,
+          "crossEntropy": 3.0618470037841385,
+          "top1": 0.21615720524017468,
+          "meanTeacherRank": 9.480349344978166,
+          "meanSelectedCP": null
+        },
+        "validation": {
+          "count": 219,
+          "crossEntropy": 3.113904627427572,
+          "top1": 0.2237442922374429,
+          "meanTeacherRank": 8.292237442922374,
+          "meanSelectedCP": null
+        }
+      },
+      "metrics": {
+        "train": {
+          "count": 458,
+          "crossEntropy": 2.823927089966222,
+          "top1": 0.2794759825327511,
+          "meanTeacherRank": 8.703056768558952,
+          "meanSelectedCP": null
+        },
+        "validation": {
+          "count": 219,
+          "crossEntropy": 2.9054231005546303,
+          "top1": 0.2420091324200913,
+          "meanTeacherRank": 9.150684931506849,
+          "meanSelectedCP": null
+        }
+      },
+      "history": [
+        {
+          "round": 1,
+          "epochs": 60,
+          "scales": [
+            1.8751519647322683,
+            1.9028462247215074,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.6618752407756752,
+            0.5641820688629414,
+            0.6087222135032149,
+            0.545371728057875,
+            1.044215682110013,
+            0.575761000955347,
+            0.6383194518264491,
+            0.41066443442497846,
+            0.6128025239591395,
+            0.7298474573313072,
+            0.5701743993929731,
+            0.44353114594624005,
+            1,
+            1,
+            1,
+            1.8740990651183456,
+            1.8834988860950128,
+            1.8653496597293902,
+            1.0328254763232503,
+            1,
+            1,
+            0.5273720031101091,
+            1.882445384295002,
+            1,
+            0.42968976184616253,
+            1.3043599540074902,
+            0.9534957362048031,
+            0.2837238741775822,
+            0.1645553024426528,
+            1.9075549427084102,
+            0.1585931516320803,
+            1.670160146729475,
+            1,
+            0.11586883775548278,
+            0.05,
+            0.46699724593471775,
+            1.200769663761702,
+            0.17564441341231912,
+            1.8606627802113604,
+            1,
+            0.5436669676696415,
+            1.1837900417459528,
+            0.8451717675198466,
+            0.2330776637984269,
+            1.815094534611563,
+            0.5303928158478377,
+            0.7847674150681734,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.09555574852248973,
+            1,
+            1.6900528094085343,
+            0.05,
+            1,
+            0.05,
+            1,
+            1,
+            1.6263725993505935,
+            1
+          ],
+          "metrics": {
+            "train": {
+              "count": 458,
+              "crossEntropy": 2.853975419034924,
+              "top1": 0.2663755458515284,
+              "meanTeacherRank": 9.050218340611353,
+              "meanSelectedCP": null
+            },
+            "validation": {
+              "count": 219,
+              "crossEntropy": 2.926197273927999,
+              "top1": 0.2328767123287671,
+              "meanTeacherRank": 9.118721461187215,
+              "meanSelectedCP": null
+            }
+          },
+          "selected": true
+        },
+        {
+          "round": 2,
+          "epochs": 120,
+          "scales": [
+            2.6402280173874453,
+            2.811075270836728,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.6641831571209912,
+            0.3310759923497584,
+            0.7062959739962448,
+            0.49346844288414765,
+            0.9700526182620532,
+            0.38038817735397457,
+            0.6199405888686335,
+            0.22449280812300873,
+            0.6201174078203845,
+            0.7783422239978827,
+            0.5353807172548228,
+            0.48643165539549377,
+            1,
+            1,
+            1,
+            2.4266122514274087,
+            2.6255930086735266,
+            2.4225823449203108,
+            0.8348773163159793,
+            1,
+            1,
+            0.2559857735021402,
+            2.667555253223392,
+            1,
+            0.13468552291695993,
+            1.0426493915425343,
+            0.8472313915875197,
+            0.05,
+            0.14658165257426176,
+            2.5294028936103237,
+            0.05,
+            1.6802145307398648,
+            1,
+            0.05,
+            0.05,
+            0.05,
+            0.5669641571807462,
+            0.05,
+            2.591019345906576,
+            1,
+            0.5388721184850385,
+            1.9384057592635213,
+            0.811988921562004,
+            0.05,
+            2.3509926762260283,
+            0.5261166169972314,
+            0.7348532318406732,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.05,
+            1,
+            1.7459013767296478,
+            0.05,
+            1,
+            0.05,
+            1,
+            1,
+            2.069020383649349,
+            1
+          ],
+          "metrics": {
+            "train": {
+              "count": 458,
+              "crossEntropy": 2.823927089966222,
+              "top1": 0.2794759825327511,
+              "meanTeacherRank": 8.703056768558952,
+              "meanSelectedCP": null
+            },
+            "validation": {
+              "count": 219,
+              "crossEntropy": 2.9054231005546303,
+              "top1": 0.2420091324200913,
+              "meanTeacherRank": 9.150684931506849,
+              "meanSelectedCP": null
+            }
+          },
+          "selected": true
+        },
+        {
+          "round": 3,
+          "epochs": 180,
+          "scales": [
+            3.330156297329766,
+            3.6915996579050665,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.6635546078811574,
+            0.2761065338139877,
+            0.7221282046148652,
+            0.4576703569177265,
+            0.962950547362548,
+            0.1951065744834466,
+            0.6829250439614987,
+            0.16243108402494524,
+            0.6197294298610712,
+            0.8001752429263566,
+            0.5306974314098347,
+            0.518444147707431,
+            1,
+            1,
+            1,
+            2.6847048718700153,
+            3.222837612175521,
+            2.6666859430520193,
+            0.5986183126453027,
+            1,
+            1,
+            0.35685955109706496,
+            3.292832791904676,
+            1,
+            0.06072527770777953,
+            0.8481996509376845,
+            0.5141612074084303,
+            0.05,
+            0.37309529323830154,
+            2.7177260642236165,
+            0.05,
+            1.6960316166495826,
+            1,
+            0.05,
+            0.05,
+            0.05,
+            0.4904814048972101,
+            0.05,
+            3.1917992205252377,
+            1,
+            0.5370655585224152,
+            2.2278055626738946,
+            0.8087123877377922,
+            0.05,
+            2.6602010256424737,
+            0.5219656510308381,
+            0.7300451289569333,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.05,
+            1,
+            1.7461305476532591,
+            0.05,
+            1,
+            0.05,
+            1,
+            1,
+            2.3700266660902125,
+            1
+          ],
+          "metrics": {
+            "train": {
+              "count": 458,
+              "crossEntropy": 2.8099629724746316,
+              "top1": 0.27292576419213976,
+              "meanTeacherRank": 8.467248908296943,
+              "meanSelectedCP": null
+            },
+            "validation": {
+              "count": 219,
+              "crossEntropy": 2.8993709183285086,
+              "top1": 0.2328767123287671,
+              "meanTeacherRank": 8.876712328767123,
+              "meanSelectedCP": null
+            }
+          },
+          "selected": true
+        }
+      ],
+      "v7LabelsRead": false
+    },
+    {
+      "id": "atlas-coarse",
+      "base": "atlas-plus",
+      "baseSHA256": "30313d65ec8b74007a546576b5234aa00a521b63ade9159f1b2ec7f30b05c4a6",
+      "file": ".cache/v7/atlas-coarse.bin",
+      "sha256": "fc491cdfaf82e5155765b002ffdb62062423ae61c30035f0deb26ec8b9c68c50",
+      "bytes": 41074492,
+      "groups": [
+        {
+          "key": "input:3:small",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 816
+        },
+        {
+          "key": "input:4:small",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1216
+        },
+        {
+          "key": "input:6:small",
+          "fixed": true,
+          "lower": 1,
+          "upper": 1,
+          "edges": 1880
+        },
+        {
+          "key": "input:7:large",
+          "fixed": true,
+          "lower": 1,
+          "upper": 1,
+          "edges": 1880
+        },
+        {
+          "key": "input:8:large",
+          "fixed": true,
+          "lower": 1,
+          "upper": 1,
+          "edges": 1880
+        },
+        {
+          "key": "input:9:large",
+          "fixed": true,
+          "lower": 1,
+          "upper": 1,
+          "edges": 1880
+        },
+        {
+          "key": "input:10:large",
+          "fixed": true,
+          "lower": 1,
+          "upper": 1,
+          "edges": 1880
+        },
+        {
+          "key": "relu:-5.9",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 950
+        },
+        {
+          "key": "relu:1.18",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 3674
+        },
+        {
+          "key": "relu:2.596",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 3512
+        },
+        {
+          "key": "relu:2.124",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 2516
+        },
+        {
+          "key": "relu:5.5",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 928
+        },
+        {
+          "key": "relu:-1.1",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 3674
+        },
+        {
+          "key": "relu:-2.42",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 3424
+        },
+        {
+          "key": "relu:-1.98",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 2472
+        },
+        {
+          "key": "relu:-10.62",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1566
+        },
+        {
+          "key": "relu:4.72",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1566
+        },
+        {
+          "key": "relu:9.9",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1544
+        },
+        {
+          "key": "relu:-4.4",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1544
+        },
+        {
+          "key": "relu:0.105",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 49070
+        },
+        {
+          "key": "relu:0.336",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 49070
+        },
+        {
+          "key": "relu:0.35175",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 49070
+        },
+        {
+          "key": "relu:0.525",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 49070
+        },
+        {
+          "key": "relu:0.945",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 49070
+        },
+        {
+          "key": "relu:0.32",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 49070
+        },
+        {
+          "key": "relu:0.22",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 39838
+        },
+        {
+          "key": "relu:0.64",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 50802
+        },
+        {
+          "key": "relu:0.67",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 49070
+        },
+        {
+          "key": "relu:1",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 49084
+        },
+        {
+          "key": "relu:1.8",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 49070
+        },
+        {
+          "key": "relu:2.4",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 5700
+        },
+        {
+          "key": "relu:0.65",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 3674
+        },
+        {
+          "key": "relu:1.92",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 9280
+        },
+        {
+          "key": "relu:-0.12",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 15925
+        },
+        {
+          "key": "relu:0.12",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 12873
+        },
+        {
+          "key": "relu:0.18",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 448
+        },
+        {
+          "key": "relu:-0.18",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 448
+        },
+        {
+          "key": "relu:0.3",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 448
+        },
+        {
+          "key": "relu:-0.3",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 448
+        },
+        {
+          "key": "relu:100",
+          "fixed": true,
+          "lower": 1,
+          "upper": 1,
+          "edges": 2980
+        },
+        {
+          "key": "relu:-100",
+          "fixed": true,
+          "lower": 1,
+          "upper": 1,
+          "edges": 2980
+        },
+        {
+          "key": "relu:0.21",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1732
+        },
+        {
+          "key": "relu:0.672",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1732
+        },
+        {
+          "key": "relu:0.7035",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1732
+        },
+        {
+          "key": "relu:1.05",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1732
+        },
+        {
+          "key": "relu:1.89",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1732
+        },
+        {
+          "key": "relu:2.14",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 336
+        },
+        {
+          "key": "relu:1.28",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1732
+        },
+        {
+          "key": "relu:1.34",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1732
+        },
+        {
+          "key": "relu:2",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1732
+        },
+        {
+          "key": "relu:3.6",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1732
+        },
+        {
+          "key": "input:0:small",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 162
+        },
+        {
+          "key": "input:5:small",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 398
+        },
+        {
+          "key": "relu:0.31",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 36
+        },
+        {
+          "key": "relu:-1.18",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 162
+        },
+        {
+          "key": "relu:1.1",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 250
+        },
+        {
+          "key": "relu:-0.13",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1452
+        },
+        {
+          "key": "input:2:small",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 456
+        },
+        {
+          "key": "relu:0.53",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 18
+        },
+        {
+          "key": "relu:-3.953",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 638
+        },
+        {
+          "key": "relu:0.177",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 638
+        },
+        {
+          "key": "relu:3.685",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 616
+        },
+        {
+          "key": "relu:-0.165",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 616
+        },
+        {
+          "key": "input:1:small",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 300
+        },
+        {
+          "key": "relu:-3.776",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 358
+        },
+        {
+          "key": "relu:3.52",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 336
+        },
+        {
+          "key": "relu:0.44",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1396
+        },
+        {
+          "key": "relu:-0.22",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 49
+        },
+        {
+          "key": "relu:-2.72",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 69664
+        },
+        {
+          "key": "relu:-2.8475",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 69664
+        },
+        {
+          "key": "relu:-4.25",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 69664
+        },
+        {
+          "key": "relu:-7.65",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 69664
+        },
+        {
+          "key": "relu:0.09",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 70
+        },
+        {
+          "key": "relu:0.24",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 9
+        },
+        {
+          "key": "relu:-0.24",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 25
+        },
+        {
+          "key": "relu:-0.44",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 1
+        },
+        {
+          "key": "relu:4.8",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 102
+        },
+        {
+          "key": "relu:-0.31",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 36
+        },
+        {
+          "key": "relu:-0.09",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 46
+        },
+        {
+          "key": "relu:0.035",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 30
+        },
+        {
+          "key": "relu:-0.53",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 18
+        },
+        {
+          "key": "relu:-0.26",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 23
+        },
+        {
+          "key": "relu:0.14",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 22
+        },
+        {
+          "key": "relu:0.13",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 36
+        },
+        {
+          "key": "relu:0.315",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 22
+        },
+        {
+          "key": "relu:-0.35",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 42
+        },
+        {
+          "key": "relu:0.35",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 18
+        },
+        {
+          "key": "relu:0.56",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 22
+        },
+        {
+          "key": "input:0:large",
+          "fixed": false,
+          "lower": 0.05,
+          "upper": 4,
+          "edges": 88
+        }
+      ],
+      "freeGroups": 82,
+      "selectedRound": 3,
+      "scales": [
+        3.288990284147642,
+        3.6454287514288386,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.6487377912201271,
+        0.2944112893656775,
+        0.7301727421927171,
+        0.4778537985164055,
+        1.0433544452196786,
+        0.318242253273664,
+        0.7477918766763858,
+        0.2034898995784947,
+        0.5952921925873625,
+        0.7622875966118129,
+        0.507734720594509,
+        0.36277601452093533,
+        1.2879592725145885,
+        1.3214566563576426,
+        2.182106564832739,
+        2.122753441450929,
+        1.7299634391605192,
+        1.0148687141590598,
+        3.2956142712361935,
+        0.05,
+        2.3254943345472707,
+        2.6820174200716513,
+        0.05,
+        1,
+        0.05,
+        1,
+        1,
+        1,
+        2.5746968721880625,
+        3.188073541563501,
+        2.3764636743229914,
+        0.5342611681505932,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.6879644991714741,
+        3.3314686013437296,
+        1,
+        0.05,
+        0.9830860488220531,
+        1.5950372444405936,
+        3.1514417716747896,
+        1,
+        0.5205102203267522,
+        2.2786942796858094,
+        0.894859329597667,
+        0.05,
+        2.629595567521193,
+        0.50787210154461,
+        0.8434763814979864,
+        1,
+        1,
+        0.10076378250077468,
+        0.3463122932383848,
+        0.05,
+        0.05,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.05,
+        1,
+        1.6720674532689435,
+        0.05,
+        1,
+        0.05,
+        1,
+        1,
+        1.1792848430857183,
+        1
+      ],
+      "baseline": {
+        "train": {
+          "count": 458,
+          "crossEntropy": 3.1179173178409005,
+          "top1": 0.2183406113537118,
+          "meanTeacherRank": 8.851528384279476,
+          "meanSelectedCP": null
+        },
+        "validation": {
+          "count": 219,
+          "crossEntropy": 3.186060071372941,
+          "top1": 0.2054794520547945,
+          "meanTeacherRank": 7.712328767123288,
+          "meanSelectedCP": null
+        }
+      },
+      "metrics": {
+        "train": {
+          "count": 458,
+          "crossEntropy": 2.782824742716992,
+          "top1": 0.2794759825327511,
+          "meanTeacherRank": 7.506550218340611,
+          "meanSelectedCP": null
+        },
+        "validation": {
+          "count": 219,
+          "crossEntropy": 2.901159281279784,
+          "top1": 0.2374429223744292,
+          "meanTeacherRank": 8.520547945205479,
+          "meanSelectedCP": null
+        }
+      },
+      "history": [
+        {
+          "round": 1,
+          "epochs": 60,
+          "scales": [
+            1.8794355701383372,
+            1.9139532476012695,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.6586960895008245,
+            0.6075122321007583,
+            0.6247945503990715,
+            0.537746122367512,
+            1.0912671936754887,
+            0.6246544677056598,
+            0.7508608550640626,
+            0.34692836163028407,
+            0.5919745340919329,
+            0.6913260508888612,
+            0.5541629717757587,
+            0.3545950228773475,
+            1.1982467079159833,
+            1.1068236035641583,
+            1.782100320899366,
+            1.7710081359890457,
+            1.577570242644468,
+            1.3220911044635508,
+            1.8744828385782233,
+            0.3242996205217919,
+            1.934678166042403,
+            1.9244615882977731,
+            0.30490354652900437,
+            1,
+            0.23974303267559954,
+            1,
+            1,
+            1,
+            1.8776299420601865,
+            1.8640745403850276,
+            1.856011934044958,
+            1.0243163011557417,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.7268332360205151,
+            1.885062358921283,
+            1,
+            0.4260603715230586,
+            1.3617885121455795,
+            1.5419732686007188,
+            1.8628169706665125,
+            1,
+            0.5442542699515218,
+            1.152964461943793,
+            0.9333071771944221,
+            0.35577986420338237,
+            1.8302925225214315,
+            0.5445561356532976,
+            0.9327878886900801,
+            1,
+            1,
+            0.23697010425108408,
+            0.3846926777070285,
+            0.14220413329710682,
+            0.11588407171979503,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.11252640650883017,
+            1,
+            1.7036616003864216,
+            0.05,
+            1,
+            0.05,
+            1,
+            1,
+            1.0020502021478515,
+            1
+          ],
+          "metrics": {
+            "train": {
+              "count": 458,
+              "crossEntropy": 2.830617658592752,
+              "top1": 0.259825327510917,
+              "meanTeacherRank": 8.796943231441048,
+              "meanSelectedCP": null
+            },
+            "validation": {
+              "count": 219,
+              "crossEntropy": 2.919243735664591,
+              "top1": 0.2100456621004566,
+              "meanTeacherRank": 9.105022831050228,
+              "meanSelectedCP": null
+            }
+          },
+          "selected": true
+        },
+        {
+          "round": 2,
+          "epochs": 120,
+          "scales": [
+            2.624566639032035,
+            2.7997763935662365,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.6501733026041747,
+            0.34472381358956344,
+            0.7134726057547535,
+            0.5050721570701463,
+            1.0305171258899852,
+            0.475099245423317,
+            0.6862540396820469,
+            0.1942246449077644,
+            0.5950895485953633,
+            0.7457813364962835,
+            0.5067970863926198,
+            0.3584079677174347,
+            1.2975629157140307,
+            1.3652690013025939,
+            2.1896792194653814,
+            2.096610709658311,
+            1.7114267296324839,
+            1.2133447756097988,
+            2.632457951046942,
+            0.05,
+            2.3140621890246695,
+            2.4867241331924683,
+            0.08403874817588132,
+            1,
+            0.05,
+            1,
+            1,
+            1,
+            2.358122252255095,
+            2.6013967664490827,
+            2.278195364332173,
+            0.818403120010172,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.5093615192104071,
+            2.68350262739812,
+            1,
+            0.0879262829149038,
+            1.1316027628934808,
+            1.8572901548975405,
+            2.576317124709432,
+            1,
+            0.5201731248703206,
+            1.9467651531758834,
+            0.8951777087633996,
+            0.05,
+            2.3434831647590575,
+            0.5102625621557005,
+            0.8423457285100714,
+            1,
+            1,
+            0.11902174833093217,
+            0.3355656472333447,
+            0.05,
+            0.05,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.05,
+            1,
+            1.6893182399794857,
+            0.05,
+            1,
+            0.05,
+            1,
+            1,
+            0.9415600883330885,
+            1
+          ],
+          "metrics": {
+            "train": {
+              "count": 458,
+              "crossEntropy": 2.796616720427901,
+              "top1": 0.27074235807860264,
+              "meanTeacherRank": 7.796943231441048,
+              "meanSelectedCP": null
+            },
+            "validation": {
+              "count": 219,
+              "crossEntropy": 2.904130840792118,
+              "top1": 0.2374429223744292,
+              "meanTeacherRank": 8.71689497716895,
+              "meanSelectedCP": null
+            }
+          },
+          "selected": true
+        },
+        {
+          "round": 3,
+          "epochs": 180,
+          "scales": [
+            3.288990284147642,
+            3.6454287514288386,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.6487377912201271,
+            0.2944112893656775,
+            0.7301727421927171,
+            0.4778537985164055,
+            1.0433544452196786,
+            0.318242253273664,
+            0.7477918766763858,
+            0.2034898995784947,
+            0.5952921925873625,
+            0.7622875966118129,
+            0.507734720594509,
+            0.36277601452093533,
+            1.2879592725145885,
+            1.3214566563576426,
+            2.182106564832739,
+            2.122753441450929,
+            1.7299634391605192,
+            1.0148687141590598,
+            3.2956142712361935,
+            0.05,
+            2.3254943345472707,
+            2.6820174200716513,
+            0.05,
+            1,
+            0.05,
+            1,
+            1,
+            1,
+            2.5746968721880625,
+            3.188073541563501,
+            2.3764636743229914,
+            0.5342611681505932,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.6879644991714741,
+            3.3314686013437296,
+            1,
+            0.05,
+            0.9830860488220531,
+            1.5950372444405936,
+            3.1514417716747896,
+            1,
+            0.5205102203267522,
+            2.2786942796858094,
+            0.894859329597667,
+            0.05,
+            2.629595567521193,
+            0.50787210154461,
+            0.8434763814979864,
+            1,
+            1,
+            0.10076378250077468,
+            0.3463122932383848,
+            0.05,
+            0.05,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.05,
+            1,
+            1.6720674532689435,
+            0.05,
+            1,
+            0.05,
+            1,
+            1,
+            1.1792848430857183,
+            1
+          ],
+          "metrics": {
+            "train": {
+              "count": 458,
+              "crossEntropy": 2.782824742716992,
+              "top1": 0.2794759825327511,
+              "meanTeacherRank": 7.506550218340611,
+              "meanSelectedCP": null
+            },
+            "validation": {
+              "count": 219,
+              "crossEntropy": 2.901159281279784,
+              "top1": 0.2374429223744292,
+              "meanTeacherRank": 8.520547945205479,
+              "meanSelectedCP": null
+            }
+          },
+          "selected": true
+        }
+      ],
+      "v7LabelsRead": false
+    }
+  ]
+}

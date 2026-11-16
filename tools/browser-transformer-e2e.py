@@ -10,15 +10,15 @@ def browser_rss():
   return sum(p.memory_info().rss for p in psutil.Process().children(recursive=True) if 'chrome' in p.name().lower())
  except (ImportError,OSError):return None
 def main():
- p=argparse.ArgumentParser();p.add_argument('--url');p.add_argument('--count',type=int,default=147);p.add_argument('--output',default='evaluation/v0.6/browser-integrated.json');args=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--url');p.add_argument('--count',type=int,default=93);p.add_argument('--experiment',choices=['v6','v7'],default='v7');p.add_argument('--output',default='evaluation/v0.7/browser-transformer.json');args=p.parse_args()
  server=None
  if not args.url:
   class Handler(http.server.SimpleHTTPRequestHandler):
    def __init__(self,*a,**kw):super().__init__(*a,directory=str(ROOT),**kw)
    def log_message(self,*a):pass
   server=http.server.ThreadingHTTPServer(('127.0.0.1',4194),Handler);threading.Thread(target=server.serve_forever,daemon=True).start();args.url='http://127.0.0.1:4194/dist/'
- rows=json.loads((ROOT/'.cache/deepmind-v5/test.json').read_text())[:args.count]
- reference={x['id']:x for x in json.loads((ROOT/'evaluation/v0.5/final-results.json').read_text())['positions']['adapted']}
+ rows=json.loads((ROOT/('.cache/v7/test.json' if args.experiment=='v7' else '.cache/deepmind-v5/test.json')).read_text())[:args.count]
+ reference={x['id']:x for x in json.loads((ROOT/('evaluation/v0.7/final-results.json' if args.experiment=='v7' else 'evaluation/v0.5/final-results.json')).read_text())['positions']['deepmind-v7' if args.experiment=='v7' else 'adapted']}
  errors=[];answers=[];requests=[]
  with sync_playwright() as pw:
   browser=pw.chromium.launch(executable_path=CHROME,headless=True,args=['--no-sandbox'])
@@ -27,11 +27,13 @@ def main():
   baseline_rss=browser_rss();rss_samples=[]
   page.select_option('#model','deepmind-9m');page.select_option('#color','b');page.select_option('#time-control','unlimited');page.uncheck('#book');page.click('#new-game')
   page.wait_for_function("document.getElementById('status').textContent.startsWith('Your move')",timeout=120000)
+  if page.locator('#technical-panel').count() and not page.locator('#technical-panel').evaluate('(e)=>e.open'):page.locator('#technical-panel>summary').click()
   assert page.locator('#move-source').inner_text()=='policy';assert page.locator('#score-label').inner_text()=='Expected return'
   ui={'notation':page.locator('#moves').inner_text(),'latency':page.locator('#latency').inner_text()}
   rss_samples.append(browser_rss())
   page.click('#new-game');page.wait_for_function("document.getElementById('status').textContent.includes('is thinking')",timeout=120000)
-  page.select_option('#model','pocket');assert 'Settings changed' in page.locator('#status').inner_text()
+  pocket_id=page.locator('#model option').evaluate_all("items=>items.find(x=>x.value.startsWith('pocket')).value")
+  page.select_option('#model',pocket_id);assert 'Settings changed' in page.locator('#status').inner_text()
   # Actual worker protocol, book-off: no Node/Python inference substitution.
   page.evaluate('''() => {window.probeWorker=new Worker(new URL('worker.mjs',location.href),{type:'module'});window.probeSequence=0;window.probePending=new Map();window.probeWorker.onmessage=({data})=>{const p=window.probePending.get(data.id);if(p){window.probePending.delete(data.id);data.type==='error'?p.reject(new Error(data.error)):p.resolve(data);}};window.callProbe=(data)=>new Promise((resolve,reject)=>{const id='probe:'+ ++window.probeSequence;window.probePending.set(id,{resolve,reject});window.probeWorker.postMessage({...data,id});});}''')
   metadata=page.evaluate("() => window.callProbe({type:'load',modelId:'deepmind-9m',book:{enabled:false,seed:'verification'}})")['metadata']
@@ -49,7 +51,7 @@ def main():
   page.evaluate('window.probeWorker.terminate()')
   assert page.locator('#moves .move-row').count()==0
   assert 'Settings changed' in page.locator('#status').inner_text()
-  page.screenshot(path=str(ROOT/'evaluation/v0.6/browser-integrated.png'),full_page=True)
+  page.screenshot(path=str((ROOT/args.output).with_suffix('.png')),full_page=True)
   browser.close()
  if server:server.shutdown()
  assert not errors,errors

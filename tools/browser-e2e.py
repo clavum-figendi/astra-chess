@@ -32,10 +32,12 @@ with sync_playwright() as p:
     assert page.title() == 'Chess Lab — Chess workspace'
     assert page.locator('#book').is_checked()
     page.uncheck('#book')
+    if page.locator('#technical-panel').count():page.locator('#technical-panel>summary').click()
     page.wait_for_selector('#model-downloads a')
     assert page.locator('#board button').count() == 64
-    ids=[model['id'] for model in json.loads((root/'public/models/manifest.json').read_text())['models']]
-    browser_ids = ids + [m['id'] for m in json.loads((root/'public/models/deepmind-browser.json').read_text())['models']]
+    built=json.loads((root/'dist/models/manifest.json').read_text())['models']
+    ids=[model['id'] for model in built if model.get('runtime')!='onnx']
+    browser_ids = [m['id'] for m in built]
     assert page.locator('#model option').evaluate_all('(options)=>options.map(o=>o.value)') == browser_ids
     assert 'proposed, not built' in page.locator('#size-proposals').inner_text()
     assert page.evaluate("[...document.querySelectorAll('[aria-labelledby]')].every(el=>el.getAttribute('aria-labelledby').split(/\\s+/).every(id=>document.getElementById(id)))")
@@ -43,8 +45,8 @@ with sync_playwright() as p:
     checks.append('64-square board and manifest loaded')
     # A seeded book response must agree with the laptop path, without invented scores.
     for seed in ('browser-book', 'second-branch', 'third-branch'):
-        expected = json.loads(subprocess.check_output(['node','laptop/cli.mjs','--model','pocket','--book','--seed',seed,'--fen',start_fen],cwd=root))
-        actual = page.evaluate('''async ({seed,fen}) => {
+        expected = json.loads(subprocess.check_output(['node','laptop/cli.mjs','--model',ids[0],'--book','--seed',seed,'--fen',start_fen],cwd=root))
+        actual = page.evaluate('''async ({seed,fen,model}) => {
           const worker=new Worker(new URL('./worker.mjs',location.href),{type:'module'});
           return await new Promise((resolve,reject)=>{
             const timeout=setTimeout(()=>{worker.terminate();reject(new Error('book timeout'))},60000);
@@ -53,9 +55,9 @@ with sync_playwright() as p:
               if(data.type==='error'){clearTimeout(timeout);worker.terminate();reject(new Error(data.error));}
               else if(data.type==='loaded')worker.postMessage({type:'move',id:'book-move',fen});
               else if(data.type==='move'){clearTimeout(timeout);worker.terminate();resolve(data);}
-            };worker.postMessage({type:'load',id:'book-load',modelId:'pocket',book:{enabled:true,seed}});
+            };worker.postMessage({type:'load',id:'book-load',modelId:model,book:{enabled:true,seed}});
           });
-        }''', {'seed':seed,'fen':start_fen})
+        }''', {'seed':seed,'fen':start_fen,'model':ids[0]})
         assert actual['source']==expected['source']=='book'
         assert actual['move']==expected['move'] and actual['candidates']==expected['candidates']
         assert all('score' not in candidate for candidate in actual['candidates'])
@@ -97,7 +99,7 @@ with sync_playwright() as p:
         page.fill('#fen',fen); page.click('#fen-form button')
         page.wait_for_function('(text)=>document.querySelector("#status").textContent.includes(text)',arg=status)
 
-    for model in ('pocket-plus','atlas-plus','pocket-tuned','atlas-tuned','pocket-policy','atlas-policy'):
+    for model in [m for m in ('pocket-plus','atlas-plus','pocket-tuned','atlas-tuned','pocket-policy','atlas-policy') if m in ids]:
         page.select_option('#model',model);page.select_option('#color','b')
         load_fen('7k/5K2/6Q1/8/8/8/8/8 w - - 0 1','Checkmate')
         checks.append(f'{model}: actual neural mating choice finishes game')

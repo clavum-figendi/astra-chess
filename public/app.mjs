@@ -1,6 +1,8 @@
 import { Chess } from './src/chess.mjs';
 import { createClock } from './src/clock.mjs';
 import { modelResourceURL } from './src/model-resource.mjs';
+import { createPremove } from './src/premove.mjs';
+import { createSound } from './src/sound.mjs';
 
 const $ = (id) => document.getElementById(id);
 const names = { p: 'pawn', n: 'knight', b: 'bishop', r: 'rook', q: 'queen', k: 'king' };
@@ -38,6 +40,14 @@ let result = '*';
 let startFen = null;
 let gameSeed = '';
 let gameBook = true;
+const premove = createPremove();
+const sound = createSound();
+function renderPremove(message) {
+  const queued = premove.peek();
+  $('cancel-premove').disabled = !queued;
+  $('premove-status').textContent = message || (queued ? `Queued: ${queued.from} → ${queued.to}${queued.promotion ? ' = Queen' : ''}` : $('premove').checked ? 'Premoves ready' : 'Premoves off');
+}
+function clearPremove() { premove.clear(); selected = null; renderPremove(); }
 const neutralName = name => name.replace(/\b(?:Astra|Sol)\b[\s·:—/-]*/gi, '').trim();
 
 function status(message, error = false) { $('status').textContent = message; $('status').classList.toggle('error', error); }
@@ -75,7 +85,7 @@ function drawBoard(rebuild = false) {
     const piece = game.get(square);
     const dark = (square.charCodeAt(0) - 97 + Number(square[1])) % 2 === 1;
     const checked = piece?.type === 'k' && piece.color === game.turn() && game.isCheck();
-    button.className = ['square', dark && 'dark', piece && 'occupied', selected === square && 'selected', legal.has(square) && 'legal', (lastMove?.from === square || lastMove?.to === square) && 'last', checked && 'in-check'].filter(Boolean).join(' ');
+    button.className = ['square', dark && 'dark', piece && 'occupied', selected === square && 'selected', legal.has(square) && 'legal', (premove.peek()?.from === square || premove.peek()?.to === square) && 'premove', (lastMove?.from === square || lastMove?.to === square) && 'last', checked && 'in-check'].filter(Boolean).join(' ');
     button.tabIndex = square === focusSquare ? 0 : -1;
     button.setAttribute('aria-pressed', String(selected === square));
     button.setAttribute('aria-label', `${square}, ${piece ? `${colors[piece.color]} ${names[piece.type]}` : 'empty'}${legal.has(square) ? ', legal destination' : ''}${checked ? ', in check' : ''}${lastMove?.to === square ? ', last move' : ''}`);
@@ -120,6 +130,7 @@ function updateClocks() {
   return state;
 }
 function cancelRequests() {
+  clearPremove();
   generation++;
   worker?.terminate(); worker = null;
   for (const request of pending.values()) { clearTimeout(request.timeout); request.reject(new Error('Game superseded')); }
@@ -130,6 +141,7 @@ function closeDialogs() {
   for (const id of ['promotion-dialog', 'resign-dialog']) if ($(id).open) $(id).close();
 }
 function finish(message, finalResult = '*') {
+  if (active) sound.play('end');
   active = false; loading = false; result = finalResult;
   clock.stop(); selected = null; closeDialogs(); cancelRequests();
   $('resign').disabled = true; $('new-game').disabled = false;
@@ -225,7 +237,14 @@ async function newGame(fen = null) {
 }
 function takeTurn() {
   if (!active || updateClocks().flagged || checkEnd()) return;
-  if (game.turn() === human) { status(`Your move${game.isCheck() ? ' · check' : ''}`); return; }
+  if (game.turn() === human) {
+    const hadPremove = Boolean(premove.peek());
+    const queued = premove.take(game, {human, token:generation, active});
+    renderPremove(hadPremove && !queued ? 'Premove cancelled · not legal after reply' : undefined);
+    if (queued) { commitMove(queued); return; }
+    if (hadPremove) drawBoard();
+    status(`Your move${game.isCheck() ? ' · check' : ''}`); return;
+  }
   status(`${modelName()} is thinking…`);
   const token = generation;
   const fen = game.fen();
@@ -254,11 +273,18 @@ function commitMove(move) {
   if (!clock.completeMove(color)) { updateClocks(); return; }
   try { lastMove = game.move({ from: move.from, to: move.to, ...(move.promotion ? { promotion: move.promotion } : {}) }); }
   catch { finish('Game stopped: the move could not be applied.'); return; }
+  sound.play(game.isCheck() ? 'check' : lastMove.captured ? 'capture' : 'move');
   selected = null; drawBoard(); renderMoves(); updateClocks(); takeTurn();
 }
 function selectSquare(square) {
   focusSquare = square;
-  if (!active || loading || promotion || game.turn() !== human || updateClocks().flagged) return;
+  if (!active || loading || promotion || updateClocks().flagged) return;
+  if (game.turn() !== human) {
+    if (!$('premove').checked) return;
+    if (selected && premove.set(game, human, selected, square, generation)) { selected = null; renderPremove(); drawBoard(); return; }
+    selected = game.get(square)?.color === human && selected !== square ? square : null;
+    drawBoard(); return;
+  }
   const possible = selected ? game.moves({ square: selected, verbose: true }).filter((m) => m.to === square) : [];
   if (possible.length) {
     if (possible.some((m) => m.promotion)) {
@@ -281,7 +307,7 @@ function selectSquare(square) {
   drawBoard();
 }
 $('board').addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') { selected = null; drawBoard(); return; }
+  if (event.key === 'Escape') { clearPremove(); drawBoard(); return; }
   const delta = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -8, ArrowDown: 8 }[event.key];
   if (delta === undefined) return;
   event.preventDefault();
@@ -293,6 +319,14 @@ $('board').addEventListener('keydown', (event) => {
   buttons.forEach((b) => { b.tabIndex = b.dataset.square === focusSquare ? 0 : -1; }); buttons[next].focus();
 });
 $('new-game').onclick = () => newGame();
+document.addEventListener('keydown', event => { if (event.key === 'Escape') { clearPremove(); drawBoard(); } });
+$('board').addEventListener('contextmenu', event => { event.preventDefault(); clearPremove(); drawBoard(); });
+$('cancel-premove').onclick = () => { clearPremove(); drawBoard(); };
+$('premove').onchange = () => { clearPremove(); drawBoard(); };
+$('sound').checked = sound.enabled;
+$('sound').onchange = () => sound.setEnabled($('sound').checked);
+document.addEventListener('pointerdown', () => sound.unlock(), {capture:true});
+document.addEventListener('keydown', () => sound.unlock(), {capture:true});
 $('flip').onclick = () => { flipped = !flipped; drawBoard(true); };
 $('cancel-promotion').onclick = () => { promotion = null; $('promotion-dialog').close(); };
 $('promotion-dialog').addEventListener('cancel', () => { promotion = null; });

@@ -12,7 +12,22 @@ export async function buildSite(root) {
   let browserDescriptor;
   try { browserDescriptor = JSON.parse(await readFile(join(root,'public/models/deepmind-browser.json'),'utf8')); }
   catch (error) { if (error.code !== 'ENOENT') throw error; }
-  await cp(join(root,'public'),dist,{recursive:true,filter:path=>!path.endsWith('.onnx')||browserDescriptor?.models?.some(m=>path===join(root,'public/models',m.file))});
+  const sparseManifest = JSON.parse(await readFile(join(root,'public/models/manifest.json'),'utf8'));
+  let active;
+  try { active = JSON.parse(await readFile(join(root,'public/models/active.json'),'utf8')); }
+  catch (error) { if (error.code !== 'ENOENT') throw error; }
+  if (active) {
+    if (!Array.isArray(active.sparse) || !active.sparse.length || new Set(active.sparse.map(m=>m.id)).size !== active.sparse.length) throw new Error('Invalid active catalogue');
+    sparseManifest.models = active.sparse.map(entry=>{
+      const model = sparseManifest.models.find(m=>m.id===entry.id);
+      if (!model) throw new Error('Unknown active model');
+      return {...model,name:entry.name || model.name};
+    });
+  }
+  const allowedSparse = new Set(sparseManifest.models.map(m=>join(root,'public/models',m.file)));
+  const include = path => path.endsWith('.bin') ? !active || allowedSparse.has(path) : !path.endsWith('.onnx') || browserDescriptor?.models?.some(m=>path===join(root,'public/models',m.file));
+  await cp(join(root,'public'),dist,{recursive:true,filter:include});
+  await writeFile(join(dist,'models/manifest.json'),JSON.stringify(sparseManifest,null,2)+'\n');
   if (browserDescriptor) {
     const manifest = JSON.parse(await readFile(join(dist,'models/manifest.json'),'utf8'));
     if (!Array.isArray(browserDescriptor.models)) throw new Error('Invalid browser model descriptor');
@@ -25,16 +40,21 @@ export async function buildSite(root) {
   await cp(join(vendor,'dist/esm/chess.js'),join(dist,'src/chess.mjs'));
   await cp(join(vendor,'LICENSE'),join(dist,'CHESS-JS-LICENSE.txt'));
   await writeFile(join(dist,'.nojekyll'),'');
-  await cp(join(root,'docs'),join(dist,'docs'),{recursive:true});
+  await cp(join(root,'docs'),join(dist,'docs'),{recursive:true,filter:path=>!path.endsWith('REPOSITORY-REMOVAL.md')});
   await cp(join(root,'README.md'),join(dist,'README.md'));
   await cp(join(root,'LICENSE'),join(dist,'LICENSE'));
   await cp(join(dist,'src'),join(laptop,'src'),{recursive:true});
   await cp(join(root,'laptop'),join(laptop,'laptop'),{recursive:true});
-  await cp(join(root,'public/models'),join(laptop,'models'),{recursive:true,filter:path=>!path.endsWith('.onnx')&&!path.endsWith('deepmind-browser.json')});
+  await cp(join(root,'public/models'),join(laptop,'models'),{recursive:true,filter:path=>include(path)&&!path.endsWith('.onnx')&&!path.endsWith('deepmind-browser.json')});
+  await writeFile(join(laptop,'models/manifest.json'),JSON.stringify(sparseManifest,null,2)+'\n');
   await cp(join(root,'public/openings.json'),join(laptop,'openings.json'));
   for (const name of ['README.md','LICENSE','CHESS-JS-LICENSE.txt']) await cp(join(dist,name),join(laptop,name));
-  await cp(join(root,'docs'),join(laptop,'docs'),{recursive:true});
+  await cp(join(dist,'docs'),join(laptop,'docs'),{recursive:true});
+  try { await cp(join(root,'public/DEEPMIND-CODE-LICENSE.txt'),join(laptop,'DEEPMIND-CODE-LICENSE.txt')); }
+  catch (error) { if (error.code !== 'ENOENT') throw error; }
   await writeFile(join(laptop,'package.json'),JSON.stringify({name:'chess-lab-laptop',version:'0.4.0',type:'module',private:true}));
+  try { await cp(join(root,'public/OPENING-BOOK-NOTICE.txt'),join(laptop,'OPENING-BOOK-NOTICE.txt')); }
+  catch (error) { if (error.code !== 'ENOENT') throw error; }
   try {
     await access(join(root,'evaluation/results.json'));
     await cp(join(root,'evaluation'),join(dist,'evaluation'),{recursive:true});

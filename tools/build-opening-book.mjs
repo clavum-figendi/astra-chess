@@ -1,52 +1,82 @@
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { fileURLToPath } from 'node:url';
 import { compileBook } from '../src/opening-book.mjs';
 
-// Small original curation of standard opening moves, not imported game data.
-// Branch weights bias common continuations without forcing identical games.
-const lines = [
-  ['Ruy Lopez',4,'e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5'],
-  ['Berlin',2,'e4 e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4 d4 Nd6 Bxc6 dxc6'],
-  ['Italian quiet',4,'e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d3 d6 O-O O-O'],
-  ['Italian open',2,'e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4+'],
-  ['Two knights',2,'e4 e5 Nf3 Nc6 Bc4 Nf6 d3 Bc5 O-O d6 c3 O-O'],
-  ['Scotch',2,'e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nf6 Nc3 Bb4 Nxc6 bxc6'],
-  ['Four knights',1,'e4 e5 Nf3 Nc6 Nc3 Nf6 Bb5 Bb4 O-O O-O d3 d6'],
-  ['Vienna',1,'e4 e5 Nc3 Nf6 f4 d5 fxe5 Nxe4 Nf3 Be7 d3 Nxc3'],
-  ['Kings gambit',1,'e4 e5 f4 exf4 Nf3 d5 exd5 Nf6 Bc4 Nxd5 O-O Be7'],
-  ['Petrov',2,'e4 e5 Nf3 Nf6 Nxe5 d6 Nf3 Nxe4 d4 d5 Bd3 Be7'],
-  ['Philidor',1,'e4 e5 Nf3 d6 d4 Nf6 Nc3 Nbd7 Bc4 Be7 O-O O-O'],
-  ['Sicilian Najdorf',4,'e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 e5'],
-  ['Sicilian dragon',2,'e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7'],
-  ['Sicilian classical',2,'e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 Bg5 e6'],
-  ['Sicilian accelerated',2,'e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 g6 c4 Bg7 Be3 Nf6'],
-  ['Sicilian Alapin',2,'e4 c5 c3 d5 exd5 Qxd5 d4 Nf6 Nf3 e6 Be2 Nc6'],
-  ['Sicilian closed',1,'e4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7 d3 d6 Be3 e6'],
-  ['French advance',2,'e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Bd3 Bd7'],
-  ['French classical',2,'e4 e6 d4 d5 Nc3 Nf6 Bg5 Be7 e5 Nfd7 Bxe7 Qxe7'],
-  ['French Tarrasch',1,'e4 e6 d4 d5 Nd2 c5 exd5 exd5 Ngf3 Nc6 Bb5 Bd6'],
-  ['French exchange',1,'e4 e6 d4 d5 exd5 exd5 Nf3 Nf6 Bd3 Bd6 O-O O-O'],
-  ['Caro Kann classical',2,'e4 c6 d4 d5 Nc3 dxe4 Nxe4 Bf5 Ng3 Bg6 h4 h6'],
-  ['Caro Kann advance',2,'e4 c6 d4 d5 e5 Bf5 Nf3 e6 Be2 c5 O-O Nc6'],
-  ['Caro Kann Panov',1,'e4 c6 d4 d5 exd5 cxd5 c4 Nf6 Nc3 e6 Nf3 Bb4'],
-  ['Scandinavian',1,'e4 d5 exd5 Qxd5 Nc3 Qa5 d4 Nf6 Nf3 c6 Bc4 Bf5'],
-  ['Pirc',1,'e4 d6 d4 Nf6 Nc3 g6 Nf3 Bg7 Be2 O-O O-O c6'],
-  ['Alekhine',1,'e4 Nf6 e5 Nd5 d4 d6 Nf3 Bg4 Be2 e6 O-O Be7'],
-  ['Queens gambit declined',4,'d4 d5 c4 e6 Nc3 Nf6 Bg5 Be7 e3 O-O Nf3 h6'],
-  ['Queens gambit accepted',2,'d4 d5 c4 dxc4 Nf3 Nf6 e3 e6 Bxc4 c5 O-O a6'],
-  ['Slav',3,'d4 d5 c4 c6 Nf3 Nf6 Nc3 dxc4 a4 Bf5 e3 e6'],
-  ['Semi Slav',2,'d4 d5 c4 c6 Nf3 Nf6 Nc3 e6 e3 Nbd7 Bd3 dxc4'],
-  ['Kings Indian',3,'d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5'],
-  ['Nimzo Indian',3,'d4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 d5 Nf3 c5'],
-  ['Queens Indian',2,'d4 Nf6 c4 e6 Nf3 b6 g3 Bb7 Bg2 Be7 O-O O-O'],
-  ['Grunfeld',2,'d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7'],
-  ['Benoni',1,'d4 Nf6 c4 c5 d5 e6 Nc3 exd5 cxd5 d6 Nf3 g6'],
-  ['Dutch',1,'d4 f5 g3 Nf6 Bg2 e6 Nf3 Be7 O-O O-O c4 d6'],
-  ['London',2,'d4 d5 Nf3 Nf6 Bf4 e6 e3 c5 c3 Nc6 Nbd2 Bd6'],
-  ['English symmetric',2,'c4 c5 Nc3 Nc6 g3 g6 Bg2 Bg7 Nf3 Nf6 O-O O-O'],
-  ['English reversed Sicilian',2,'c4 e5 Nc3 Nf6 g3 d5 cxd5 Nxd5 Bg2 Nb6 Nf3 Nc6'],
-  ['Reti',2,'Nf3 d5 g3 Nf6 Bg2 e6 O-O Be7 d3 O-O Nbd2 c5'],
-  ['Larsen',1,'b3 d5 Bb2 Nf6 e3 e6 Nf3 Be7 c4 O-O Be2 c5'],
-].map(([name,weight,moves])=>({name,weight,moves}));
-const book = compileBook(lines, {maxPlies:12});
-writeFileSync(new URL('../public/openings.json',import.meta.url),JSON.stringify(book,null,2)+'\n');
-console.log(`Validated ${lines.length} opening branches; ${Object.keys(book.positions).length} exact positions.`);
+const directory = new URL('../data/openings/', import.meta.url);
+export const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
+
+/** Local, pinned inputs only: rebuilding never fetches moving network data. */
+export function importOpeningLines() {
+  const source = JSON.parse(readFileSync(new URL('SOURCE.json', directory)));
+  for (const [name, expected] of Object.entries(source.sha256)) {
+    if (sha256(readFileSync(new URL(name, directory))) !== expected) throw new Error(`Source checksum mismatch: ${name}`);
+  }
+  const unique = new Map();
+  const rowsByVolume = {};
+  const ecoCodes = new Set();
+  let rows = 0;
+  for (const volume of ['a','b','c','d','e']) {
+    const text = readFileSync(new URL(`${volume}.tsv`, directory), 'utf8');
+    const [header, ...records] = text.trimEnd().split('\n');
+    if (header !== 'eco\tname\tpgn') throw new Error('Unexpected TSV header');
+    rowsByVolume[volume.toUpperCase()] = records.length;
+    for (const record of records) {
+      const fields = record.split('\t');
+      if (fields.length !== 3) throw new Error('Unexpected TSV fields');
+      const [eco, name, pgn] = fields;
+      if (!new RegExp(`^${volume.toUpperCase()}[0-9]{2}$`).test(eco) || !name) throw new Error('Invalid opening identity');
+      // This source is a single mainline: reject comments, variations or results.
+      const tokens = pgn.trim().split(/\s+/).filter(token => !/^\d+\.(?:\.\.)?$/.test(token));
+      if (!tokens.length || tokens.some(token => !/^[a-zA-Z0-9=+#-]+$/.test(token))) throw new Error(`Unexpected PGN: ${pgn}`);
+      const moves = tokens.join(' ');
+      ecoCodes.add(eco);
+      rows++;
+      const existing = unique.get(moves);
+      if (existing) existing.aliases.push({eco,name});
+      else unique.set(moves, { eco, name, weight:1, moves, aliases:[] });
+    }
+  }
+  // A parent named position is not another independent continuation vote.
+  // Keep only maximal unique SAN paths; every removed row is still a fully
+  // validated prefix of a retained path. Exact duplicate paths count once.
+  const prefixes = new Set();
+  for (const moves of unique.keys()) {
+    const tokens = moves.split(' ');
+    for (let n=1; n<tokens.length; n++) prefixes.add(tokens.slice(0,n).join(' '));
+  }
+  const lines = [...unique.values()].filter(line => !prefixes.has(line.moves));
+  return { lines, source, importStats:{ rows, rowsByVolume, sourceEcoCodes:ecoCodes.size,
+    retainedTerminalEcoCodes:new Set(lines.map(line=>line.eco)).size, uniquePaths:unique.size,
+    duplicateRows:rows-unique.size, prefixOnlyPaths:unique.size-lines.length, retainedLines:lines.length } };
+}
+
+export function buildOpeningBook() {
+  const { lines, source, importStats } = importOpeningLines();
+  const started = performance.now();
+  const book = compileBook(lines, {maxPlies:32});
+  const compileMs = performance.now()-started;
+  const text = JSON.stringify(book)+'\n';
+  const entries = Object.values(book.positions).flat();
+  const lengths = lines.map(line => line.moves.split(' ').length);
+  const uniquePrefixes = new Set();
+  for (const line of lines) {
+    const moves = line.moves.split(' ');
+    for (let n=1; n<=moves.length; n++) uniquePrefixes.add(moves.slice(0,n).join(' '));
+  }
+  const stats = { sourceRevision:source.revision, license:source.license, ...importStats,
+    maxPlies:book.maxPlies, longestValidatedLine:Math.max(...lengths),
+    totalLinePlies:lengths.reduce((a,b)=>a+b,0), validatedUniquePrefixes:uniquePrefixes.size,
+    positions:Object.keys(book.positions).length, continuations:entries.length,
+    deepestSelectionPly:Math.max(...entries.map(entry=>entry.ply)),
+    artifactBytes:Buffer.byteLength(text), artifactSha256:sha256(text),
+    weighting:'One vote per maximal unique SAN path; not game popularity, outcomes, or neural scores.' };
+  return {book,text,stats,compileMs};
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const {text,stats,compileMs} = buildOpeningBook();
+  writeFileSync(new URL('../public/openings.json',import.meta.url),text);
+  writeFileSync(new URL('STATS.json',directory),JSON.stringify(stats,null,2)+'\n');
+  console.log(JSON.stringify({...stats,compileMs},null,2));
+}

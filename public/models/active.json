@@ -1,0 +1,8 @@
+{
+  "sparse": [
+    {"id":"pocket-plus","name":"Pocket"},
+    {"id":"atlas","name":"Atlas"}
+  ],
+  "selectionReport":"evaluation/v0.7/selection.json",
+  "reason":"Highest fresh-validation bestmove agreement in each family; controls and smaller models win ties. Historical variants remain in source/history, not the playing catalogue."
+}

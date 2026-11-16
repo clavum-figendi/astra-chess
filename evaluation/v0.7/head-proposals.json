@@ -1,0 +1,342 @@
+{
+  "sourceSHA256": "3ef40e6f75284963eb4a6e508bc8b56a94326146e37919afc0c509703caa3dd4",
+  "baseSHA256": "05a434c6925312fc02323c3015d187d78016cef6ecc6485bbc9da0fcc4d3d264",
+  "v7LabelsRead": false,
+  "proposals": [
+    {
+      "id": "scale-0.95-draw--0.05",
+      "file": ".cache/v7/heads/scale-0.95-draw--0.05.pt",
+      "sha256": "1441b8e7d3815016e450eb54744df6799960e401b47afa1c92b1469e43d7e092",
+      "settings": {
+        "type": "structured-inspection-edit",
+        "scale": 0.95,
+        "drawBucket63Bias": -0.05
+      },
+      "developmentValidation": {
+        "count": 207,
+        "crossEntropy": 1.8485890547722434,
+        "top1": 0.6086956521739131
+      },
+      "changedHeadScalars": 32896
+    },
+    {
+      "id": "scale-0.95-draw-0.0",
+      "file": ".cache/v7/heads/scale-0.95-draw-0.0.pt",
+      "sha256": "db4a0eb42d305cfbbd774366d4b1d29b9b85aade3e0e8004036b6b7199a222ce",
+      "settings": {
+        "type": "structured-inspection-edit",
+        "scale": 0.95,
+        "drawBucket63Bias": 0.0
+      },
+      "developmentValidation": {
+        "count": 207,
+        "crossEntropy": 1.848664940699287,
+        "top1": 0.6086956521739131
+      },
+      "changedHeadScalars": 32896
+    },
+    {
+      "id": "scale-0.95-draw-0.05",
+      "file": ".cache/v7/heads/scale-0.95-draw-0.05.pt",
+      "sha256": "879dece33d1ed2743814939ead749c69ac497e9d6c7ae4b87c3ac972e464a1c5",
+      "settings": {
+        "type": "structured-inspection-edit",
+        "scale": 0.95,
+        "drawBucket63Bias": 0.05
+      },
+      "developmentValidation": {
+        "count": 207,
+        "crossEntropy": 1.8487452097273103,
+        "top1": 0.6086956521739131
+      },
+      "changedHeadScalars": 32896
+    },
+    {
+      "id": "scale-1.0-draw--0.05",
+      "file": ".cache/v7/heads/scale-1.0-draw--0.05.pt",
+      "sha256": "b5365854fd2269139a3d1aeb62098efbf90faba811fae493cc078bd534b61974",
+      "settings": {
+        "type": "structured-inspection-edit",
+        "scale": 1.0,
+        "drawBucket63Bias": -0.05
+      },
+      "developmentValidation": {
+        "count": 207,
+        "crossEntropy": 1.8504029847861487,
+        "top1": 0.6086956521739131
+      },
+      "changedHeadScalars": 1
+    },
+    {
+      "id": "scale-1.0-draw-0.0",
+      "file": ".cache/v7/heads/scale-1.0-draw-0.0.pt",
+      "sha256": "050b087f733db9d361999390da4b28051943ebb46ffcdb3d77b4cf3054f91791",
+      "settings": {
+        "type": "structured-inspection-edit",
+        "scale": 1.0,
+        "drawBucket63Bias": 0.0
+      },
+      "developmentValidation": {
+        "count": 207,
+        "crossEntropy": 1.8504750146957987,
+        "top1": 0.6086956521739131
+      },
+      "changedHeadScalars": 0
+    },
+    {
+      "id": "scale-1.0-draw-0.05",
+      "file": ".cache/v7/heads/scale-1.0-draw-0.05.pt",
+      "sha256": "5cfb55c890dc23461033bafe3efc846b4ee36367b10439b6fd9e48ce96fab901",
+      "settings": {
+        "type": "structured-inspection-edit",
+        "scale": 1.0,
+        "drawBucket63Bias": 0.05
+      },
+      "developmentValidation": {
+        "count": 207,
+        "crossEntropy": 1.8505512334874288,
+        "top1": 0.6086956521739131
+      },
+      "changedHeadScalars": 1
+    },
+    {
+      "id": "scale-1.05-draw--0.05",
+      "file": ".cache/v7/heads/scale-1.05-draw--0.05.pt",
+      "sha256": "19bf718e9491c57af13175c7dee3d7090079333c01eba6c969b418ac20ea3f88",
+      "settings": {
+        "type": "structured-inspection-edit",
+        "scale": 1.05,
+        "drawBucket63Bias": -0.05
+      },
+      "developmentValidation": {
+        "count": 207,
+        "crossEntropy": 1.8521353963780518,
+        "top1": 0.6086956521739131
+      },
+      "changedHeadScalars": 32896
+    },
+    {
+      "id": "scale-1.05-draw-0.0",
+      "file": ".cache/v7/heads/scale-1.05-draw-0.0.pt",
+      "sha256": "19ac8f8a45c9e3936a1510c9ef49b0309cd3cc5f29444afb73f00ccb330d493e",
+      "settings": {
+        "type": "structured-inspection-edit",
+        "scale": 1.05,
+        "drawBucket63Bias": 0.0
+      },
+      "developmentValidation": {
+        "count": 207,
+        "crossEntropy": 1.8522040383251392,
+        "top1": 0.6086956521739131
+      },
+      "changedHeadScalars": 32896
+    },
+    {
+      "id": "scale-1.05-draw-0.05",
+      "file": ".cache/v7/heads/scale-1.05-draw-0.05.pt",
+      "sha256": "3eeebaad844e449ba6ba93730a49001ee03926fb859be55e453bff50bb62b109",
+      "settings": {
+        "type": "structured-inspection-edit",
+        "scale": 1.05,
+        "drawBucket63Bias": 0.05
+      },
+      "developmentValidation": {
+        "count": 207,
+        "crossEntropy": 1.8522765655160527,
+        "top1": 0.6086956521739131
+      },
+      "changedHeadScalars": 32896
+    },
+    {
+      "id": "policy-lr-2e-05",
+      "file": ".cache/v7/heads/policy-lr-2e-05.pt",
+      "sha256": "aa355287ee754539e2b024ba00e9a5153a3e40e26ae60f04318747cb3d9ead19",
+      "settings": {
+        "type": "policy-head-fit",
+        "lr": 2e-05
+      },
+      "developmentValidation": {
+        "count": 207,
+        "crossEntropy": 1.8480451646922291,
+        "top1": 0.6086956521739131
+      },
+      "changedHeadScalars": 32896,
+      "fitting": {
+        "baseline": {
+          "count": 207,
+          "crossEntropy": 1.8504750146957987,
+          "top1": 0.6086956521739131
+        },
+        "selected": {
+          "count": 207,
+          "crossEntropy": 1.8480451646922291,
+          "top1": 0.6086956521739131
+        },
+        "selected_epoch": 4,
+        "history": [
+          {
+            "epoch": 1,
+            "validation": {
+              "count": 207,
+              "crossEntropy": 1.8497513361311189,
+              "top1": 0.6086956521739131
+            },
+            "selected": true
+          },
+          {
+            "epoch": 2,
+            "validation": {
+              "count": 207,
+              "crossEntropy": 1.8492086427511225,
+              "top1": 0.6086956521739131
+            },
+            "selected": true
+          },
+          {
+            "epoch": 3,
+            "validation": {
+              "count": 207,
+              "crossEntropy": 1.848641974626532,
+              "top1": 0.6086956521739131
+            },
+            "selected": true
+          },
+          {
+            "epoch": 4,
+            "validation": {
+              "count": 207,
+              "crossEntropy": 1.8480451646922291,
+              "top1": 0.6086956521739131
+            },
+            "selected": true
+          },
+          {
+            "epoch": 5,
+            "validation": {
+              "count": 207,
+              "crossEntropy": 1.847409237842053,
+              "top1": 0.6038647342995169
+            },
+            "selected": false
+          },
+          {
+            "epoch": 6,
+            "validation": {
+              "count": 207,
+              "crossEntropy": 1.8468743279072397,
+              "top1": 0.6038647342995169
+            },
+            "selected": false
+          },
+          {
+            "epoch": 7,
+            "validation": {
+              "count": 207,
+              "crossEntropy": 1.8462824108807936,
+              "top1": 0.6038647342995169
+            },
+            "selected": false
+          },
+          {
+            "epoch": 8,
+            "validation": {
+              "count": 207,
+              "crossEntropy": 1.8456993179332808,
+              "top1": 0.6038647342995169
+            },
+            "selected": false
+          }
+        ],
+        "settings": {
+          "epochs": 12,
+          "lr": 2e-05,
+          "patience": 4,
+          "temperature": 0.05,
+          "bucketPriorKL": 0.05
+        }
+      }
+    },
+    {
+      "id": "policy-lr-5e-05",
+      "file": ".cache/v7/heads/policy-lr-5e-05.pt",
+      "sha256": "986bac3e96c644a32b37434e718462892dc77722ca78c341f36a3bc4a0096337",
+      "settings": {
+        "type": "policy-head-fit",
+        "lr": 5e-05
+      },
+      "developmentValidation": {
+        "count": 207,
+        "crossEntropy": 1.8486766069407625,
+        "top1": 0.6086956521739131
+      },
+      "changedHeadScalars": 32895,
+      "fitting": {
+        "baseline": {
+          "count": 207,
+          "crossEntropy": 1.8504750146957987,
+          "top1": 0.6086956521739131
+        },
+        "selected": {
+          "count": 207,
+          "crossEntropy": 1.8486766069407625,
+          "top1": 0.6086956521739131
+        },
+        "selected_epoch": 1,
+        "history": [
+          {
+            "epoch": 1,
+            "validation": {
+              "count": 207,
+              "crossEntropy": 1.8486766069407625,
+              "top1": 0.6086956521739131
+            },
+            "selected": true
+          },
+          {
+            "epoch": 2,
+            "validation": {
+              "count": 207,
+              "crossEntropy": 1.847352366660528,
+              "top1": 0.6038647342995169
+            },
+            "selected": false
+          },
+          {
+            "epoch": 3,
+            "validation": {
+              "count": 207,
+              "crossEntropy": 1.8459863717429303,
+              "top1": 0.6038647342995169
+            },
+            "selected": false
+          },
+          {
+            "epoch": 4,
+            "validation": {
+              "count": 207,
+              "crossEntropy": 1.844564365160062,
+              "top1": 0.6038647342995169
+            },
+            "selected": false
+          },
+          {
+            "epoch": 5,
+            "validation": {
+              "count": 207,
+              "crossEntropy": 1.8430647292862767,
+              "top1": 0.6038647342995169
+            },
+            "selected": false
+          }
+        ],
+        "settings": {
+          "epochs": 12,
+          "lr": 5e-05,
+          "patience": 4,
+          "temperature": 0.05,
+          "bucketPriorKL": 0.05
+        }
+      }
+    }
+  ]
+}

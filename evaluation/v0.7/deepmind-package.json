@@ -1,0 +1,7 @@
+{
+  "sha256": "4756c52b59d693612ebaabba08c3d2d296a7d1f105ecafa8c969691fe46aaa1e",
+  "bytes": 33268150,
+  "stdout": "id name Chess Lab 9M\nid author Chess Lab contributors; pretrained weights Google DeepMind\nuciok\nreadyok\nbestmove c7c5\n",
+  "exitCode": 0,
+  "manifestVerified": true
+}

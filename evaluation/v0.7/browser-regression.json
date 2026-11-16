@@ -1,0 +1,56 @@
+{
+  "url": "http://127.0.0.1:4196/",
+  "browser": "145.0.7632.6",
+  "checks": [
+    "3 actual models exposed; 2 legacy models covered here; transformer covered by browser-transformer-e2e.py",
+    "64-square board and manifest loaded",
+    {
+      "seededBookNodeParity": "browser-book",
+      "move": "e2e4"
+    },
+    {
+      "seededBookNodeParity": "second-branch",
+      "move": "e2e4"
+    },
+    {
+      "seededBookNodeParity": "third-branch",
+      "move": "d2d4"
+    },
+    {
+      "workerNodeParity": "pocket-plus",
+      "move": "b1c3",
+      "browserInferenceMs": 40.30000001192093
+    },
+    "pocket-plus: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "atlas",
+      "move": "b1c3",
+      "browserInferenceMs": 75.1000000089407
+    },
+    "atlas: human e4 and real-weight reply",
+    "human Black, real-weight opening, flipped board",
+    "pocket-plus: actual neural mating choice finishes game",
+    "human underpromotion and insufficient-material draw",
+    "downloaded PGN contains promotion and result",
+    "castling moves king and rook",
+    "en passant removes captured pawn",
+    "terminal FEN stops game without policy move",
+    "real three-second clock flag fall",
+    "390px mobile board play without horizontal overflow"
+  ],
+  "pageErrors": [],
+  "sourceHashes": {
+    "public/index.html": "60487dc3ed447fb7ca82681f6476d4497c9fc96eb9c95a973145b113d367e57e",
+    "public/app.mjs": "e8562e57bfcdb189080c467db21e1a4f3fa09c274d6befd874b8fc2264a82625",
+    "public/worker.mjs": "8da5554a89d2e50e4787f8874e03e4cb5fa29bfedfcc6c69bd5238e029e16819",
+    "public/style.css": "f702029c951934e481a5c8f8648b9fba286f62dd66d760528b97f4e3ef88c41a",
+    "public/models/manifest.json": "6ca9d5f3b519f8b3200770e45e8926e1a4c279267f71fd9087e02ec382636823",
+    "src/engine.mjs": "5a381f2ca3b0c4a0d99115b6fef616ae8a6239cc3e802d27e7f26d0edbfe57b7",
+    "src/network.mjs": "f46d3a8fe19809c8780d69bc323707f3287de90582b66eba0ece30c4cbc5fd28",
+    "laptop/cli.mjs": "c1bf4e2f565ef1f335bee3c2844e02b31b1a00660bd67d2714249241772fca15",
+    "laptop/protocol.mjs": "443af851b0a85610c42dfd7e7e6ead6abfe5e448d7cc95326ff62cdca9d08c3f",
+    "src/opening-book.mjs": "691d5802ed8b30ce5572c0f6b3a7bab7d246ca2c545ff38fb48a61a391076e62",
+    "public/openings.json": "dc6398f617d58dc5e7697eea46452a465326cac808bc60f34d2439f5deef5d3d",
+    "tools/browser-e2e.py": "2ca4124d717089699563bb2dd132355882e17f5ca53b2bb7b94d94a24122d880"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "reviewedAt": "2026-11-16T21:45:49.510880+00:00",
+  "command": [
+    "node",
+    "--test",
+    "tests/v7-book.test.mjs",
+    "tests/opening-book.test.mjs",
+    "tests/book-cli.test.mjs"
+  ],
+  "exitCode": 0,
+  "durationSeconds": 42.123,
+  "stdout": "\u2714 CLI defaults to book, seed reproduces, and no-book selects actual policy (1949.665375ms)\n\u2714 UCI reports neutral identity and honest source; repetition never selects book (1219.209349ms)\n\u2714 curated artifact has at least 30 fully validated branches with exact position boundaries (4892.367261ms)\n\u2714 weighted book validates complete lines and samples reproducibly without neural scores (169.494555ms)\n\u2714 v7 pinned CC0 sources, deduplication and byte-for-byte offline rebuild (4777.362848ms)\n\u2139 Full strict trie compile: 4147.4 ms; 1013432 bytes\n\u2714 v7 full corpus preserves original compile contract and fully validates beyond cutoff (8501.05355ms)\n\u2139 Original independent per-line compile: 8468.8 ms\n\u2714 v7 every stored continuation is legal at its recorded fullmove and depth (6173.627189ms)\n\u2139 8190 legal continuations at 5575 positions\n\u2714 v7 seeded variety remains weighted and all ECO volumes offer actual book moves (3901.293082ms)\n\u2714 v7 all 500 ECO codes survive as legal terminal lines or shared prefixes (9032.145144ms)\n\u2139 All 3,865 source paths retained directly or as validated prefixes; all 500 ECO codes sampled legally\n\u2714 v7 imported phantom EP, fullmove, castling, terminal, legal filtering and transpositions (29.508174ms)\n\u2139 tests 10\n\u2139 suites 0\n\u2139 pass 10\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 41842.472796\n",
+  "stderr": "",
+  "artifactSha256": "dc6398f617d58dc5e7697eea46452a465326cac808bc60f34d2439f5deef5d3d",
+  "artifactBytes": 1013432,
+  "copyingVerbatim": true,
+  "browserRun": false,
+  "scope": "book/compiler/local source rebuild and Node CLI/UCI only; no UI, browser, packaging or model changes",
+  "defectsRequiringCodeRepair": []
+}

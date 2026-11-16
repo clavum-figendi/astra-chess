@@ -1,0 +1,28 @@
+{
+  "sourceRevision": "3ba6b20d31b2e6125cb0e6a2e792f400717d9d39",
+  "license": "CC0-1.0",
+  "rows": 3865,
+  "rowsByVolume": {
+    "A": 823,
+    "B": 781,
+    "C": 1250,
+    "D": 644,
+    "E": 367
+  },
+  "sourceEcoCodes": 500,
+  "retainedTerminalEcoCodes": 465,
+  "uniquePaths": 3865,
+  "duplicateRows": 0,
+  "prefixOnlyPaths": 1376,
+  "retainedLines": 2489,
+  "maxPlies": 32,
+  "longestValidatedLine": 36,
+  "totalLinePlies": 26091,
+  "validatedUniquePrefixes": 8801,
+  "positions": 5575,
+  "continuations": 8190,
+  "deepestSelectionPly": 31,
+  "artifactBytes": 1013432,
+  "artifactSha256": "dc6398f617d58dc5e7697eea46452a465326cac808bc60f34d2439f5deef5d3d",
+  "weighting": "One vote per maximal unique SAN path; not game popularity, outcomes, or neural scores."
+}

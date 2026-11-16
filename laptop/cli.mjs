@@ -7,6 +7,7 @@ import { chooseMove } from '../src/engine.mjs';
 import { createProtocol } from './protocol.mjs';
 import { chooseBookMove, seededRandom } from '../src/opening-book.mjs';
 import { randomBytes } from 'node:crypto';
+import { resolveModel } from './model-selection.mjs';
 
 const args = process.argv.slice(2);
 const modelDirectory = existsSync(new URL('../models/manifest.json', import.meta.url)) ? new URL('../models/', import.meta.url) : new URL('../public/models/', import.meta.url);
@@ -18,10 +19,10 @@ if (args.includes('--list-models')) {
 }
 const modelAt = args.indexOf('--model');
 const modelId = modelAt >= 0 ? args[modelAt + 1] : 'atlas';
-if (!['atlas','pocket','pocket-plus','atlas-plus','pocket-tuned','atlas-tuned','pocket-policy','atlas-policy'].includes(modelId)) { console.error('Unknown model. Use --list-models to list available policies.'); process.exit(1); }
-const local = new URL(`../models/${modelId}.bin`, import.meta.url);
-const development = new URL(`../public/models/${modelId}.bin`, import.meta.url);
-const bytes = readFileSync(existsSync(fileURLToPath(local)) ? local : development);
+let metadata;
+try { metadata = resolveModel(JSON.parse(readFileSync(new URL('manifest.json',modelDirectory),'utf8')).models,modelId); }
+catch (error) { console.error(error.message); process.exit(1); }
+const bytes = readFileSync(new URL(metadata.file,modelDirectory));
 const model = parseModel(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength));
 const bookEnabled = args.lastIndexOf('--no-book') < args.lastIndexOf('--book') || !args.includes('--no-book');
 const seedAt = args.indexOf('--seed');

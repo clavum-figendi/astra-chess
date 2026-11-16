@@ -1,0 +1,75 @@
+{
+  "frozenAt": "2026-11-16T21:53:24Z",
+  "dataProtocolSHA256": "87f31f45047aad1aa8e26bdb64fa65cba5d05854cd58c69bf91946194a2399de",
+  "validationSHA256": "39c2de58301052a6ff4454fc36bb095610e1d9eb12bb1124f02e4e66fbe77ee1",
+  "sparse": {
+    "pocket": {
+      "winner": {
+        "id": "pocket-plus",
+        "file": "public/models/pocket-plus.bin",
+        "sha256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+        "bytes": 8465724,
+        "control": true,
+        "count": 96,
+        "hits": 25,
+        "top4": 58
+      },
+      "control": {
+        "id": "pocket-plus",
+        "file": "public/models/pocket-plus.bin",
+        "sha256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+        "bytes": 8465724,
+        "control": true,
+        "count": 96,
+        "hits": 25,
+        "top4": 58
+      }
+    },
+    "atlas": {
+      "winner": {
+        "id": "atlas",
+        "file": "public/models/atlas.bin",
+        "sha256": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85",
+        "bytes": 38397700,
+        "control": true,
+        "count": 96,
+        "hits": 22,
+        "top4": 60
+      },
+      "control": {
+        "id": "atlas",
+        "file": "public/models/atlas.bin",
+        "sha256": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85",
+        "bytes": 38397700,
+        "control": true,
+        "count": 96,
+        "hits": 22,
+        "top4": 60
+      }
+    }
+  },
+  "deepmind": {
+    "winner": "scale-0.95-draw--0.05",
+    "file": ".cache/v7/deepmind-selected.pt",
+    "sha256": "d4d5b25a4f2a01e22ea8945e42e37559e0ce0525177290d49f002c94bda761ea",
+    "controlFile": ".cache/deepmind-v5/adapted.pt",
+    "controlSHA256": "05a434c6925312fc02323c3015d187d78016cef6ecc6485bbc9da0fcc4d3d264",
+    "validation": {
+      "count": 96,
+      "crossEntropy": 1.7590059641127784,
+      "top1": 0.5729166666666666
+    },
+    "controlValidation": {
+      "count": 96,
+      "crossEntropy": 1.7633061905701954,
+      "top1": 0.5729166666666666
+    },
+    "changedHeadScalars": 32896
+  },
+  "reportsSHA256": {
+    "sparse-validation.json": "45e92427bd5fcd53331a5479d1d83aa9d74633ca78b0eb36bd89796851e2844f",
+    "head-validation.json": "f3e56bd6329ac9e67977704e4b28754aface534f18b15faacb253251c5f3ee67",
+    "head-proposals.json": "e1f9e5be5d0bf80324cfd8a9703fa4c721fb274a3cd0b7f20f8e3573d7538442",
+    "sparse-proposals.json": "d6a0b3c6373f047963ff58472740b6db438e4bc26976081b6f81865fe58574a1"
+  }
+}
