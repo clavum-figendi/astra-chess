@@ -1,0 +1,97 @@
+{
+  "url": "http://127.0.0.1:4196/",
+  "browser": "145.0.7632.6",
+  "checks": [
+    "9 actual models exposed; 8 legacy models covered here; transformer covered by browser-transformer-e2e.py",
+    "64-square board and manifest loaded",
+    {
+      "seededBookNodeParity": "browser-book",
+      "move": "e2e4"
+    },
+    {
+      "seededBookNodeParity": "second-branch",
+      "move": "e2e4"
+    },
+    {
+      "seededBookNodeParity": "third-branch",
+      "move": "d2d4"
+    },
+    {
+      "workerNodeParity": "pocket",
+      "move": "b1c3",
+      "browserInferenceMs": 39.8999999910593
+    },
+    "pocket: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "pocket-plus",
+      "move": "b1c3",
+      "browserInferenceMs": 43.900000005960464
+    },
+    "pocket-plus: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "pocket-tuned",
+      "move": "d2d4",
+      "browserInferenceMs": 52.70000000298023
+    },
+    "pocket-tuned: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "pocket-policy",
+      "move": "b1c3",
+      "browserInferenceMs": 60.20000000298023
+    },
+    "pocket-policy: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "atlas",
+      "move": "b1c3",
+      "browserInferenceMs": 96.70000000298023
+    },
+    "atlas: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "atlas-plus",
+      "move": "b1c3",
+      "browserInferenceMs": 73
+    },
+    "atlas-plus: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "atlas-tuned",
+      "move": "b1c3",
+      "browserInferenceMs": 118.40000000596046
+    },
+    "atlas-tuned: human e4 and real-weight reply",
+    {
+      "workerNodeParity": "atlas-policy",
+      "move": "b1c3",
+      "browserInferenceMs": 83.70000000298023
+    },
+    "atlas-policy: human e4 and real-weight reply",
+    "human Black, real-weight opening, flipped board",
+    "pocket-plus: actual neural mating choice finishes game",
+    "atlas-plus: actual neural mating choice finishes game",
+    "pocket-tuned: actual neural mating choice finishes game",
+    "atlas-tuned: actual neural mating choice finishes game",
+    "pocket-policy: actual neural mating choice finishes game",
+    "atlas-policy: actual neural mating choice finishes game",
+    "human underpromotion and insufficient-material draw",
+    "downloaded PGN contains promotion and result",
+    "castling moves king and rook",
+    "en passant removes captured pawn",
+    "terminal FEN stops game without policy move",
+    "real three-second clock flag fall",
+    "390px mobile board play without horizontal overflow"
+  ],
+  "pageErrors": [],
+  "sourceHashes": {
+    "public/index.html": "2aac0ad214048630203556a9d26b7698c6b10a98276c908f5f705b977dd0122f",
+    "public/app.mjs": "2877388aabb19c89132017d39e41af678a517cee7dd3065d2db0dc775a88b74d",
+    "public/worker.mjs": "8da5554a89d2e50e4787f8874e03e4cb5fa29bfedfcc6c69bd5238e029e16819",
+    "public/style.css": "e7ddf51222919e23c2a92fb2de796c108c8e6250c500d8552c564bc0334080bf",
+    "public/models/manifest.json": "6ca9d5f3b519f8b3200770e45e8926e1a4c279267f71fd9087e02ec382636823",
+    "src/engine.mjs": "5a381f2ca3b0c4a0d99115b6fef616ae8a6239cc3e802d27e7f26d0edbfe57b7",
+    "src/network.mjs": "f46d3a8fe19809c8780d69bc323707f3287de90582b66eba0ece30c4cbc5fd28",
+    "laptop/cli.mjs": "6362e70da8440f408268447e38ae791d9d96698ec6ddc11140f37a8a3291f222",
+    "laptop/protocol.mjs": "443af851b0a85610c42dfd7e7e6ead6abfe5e448d7cc95326ff62cdca9d08c3f",
+    "src/opening-book.mjs": "7eb2996afaf9da450681937e4ebe8af0c4643dce9a44e1a83cc8ba3bac5d238d",
+    "public/openings.json": "eda61fb60b4baff9b7831259fdd52c291343598c73d13a6d3501e804283e64b1",
+    "tools/browser-e2e.py": "a29d8847abb2f3b95e1488e9e0761880e94211d9589b7601749cc5be78c1696b"
+  }
+}

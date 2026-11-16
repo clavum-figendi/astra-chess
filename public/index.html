@@ -18,6 +18,7 @@
   </header>
   <main>
     <div class="workspace-heading"><h1>Play the position.</h1><span class="local-note"><span aria-hidden="true">●</span> Runs on your device</span></div>
+    <p class="board-hint">New: select <strong>DeepMind 9M</strong> in the Policy menu to play the compressed transformer. Rapid or Unlimited is recommended; inference takes several seconds on a CPU. <a href="./docs/BROWSER-V6.md">Compression &amp; results ↗</a></p>
 
     <div class="workspace">
       <section class="board-column" aria-label="Chess game">
@@ -42,11 +43,12 @@
       </aside>
     </div>
     <section class="position-section" aria-labelledby="position-heading"><h2 id="position-heading">Position</h2><form id="fen-form"><label class="sr-only" for="fen">FEN position</label><input id="fen" type="text" spellcheck="false" autocomplete="off" aria-describedby="fen-help" placeholder="Paste a FEN position…"><button type="submit">Load FEN</button></form><p id="fen-help">Imports start a new game with the selected settings. Repetition history before the imported position is unknown.</p></section>
-    <section id="method" class="reference-section"><h2>About Chess Lab</h2><p>Opening moves use a weighted, seeded book when enabled. Outside the book, the selected neural policy ranks legal moves in one forward pass. Everything runs on your device.</p><details><summary>Rules & clock conventions</summary><p>Legal moves and terminal positions use chess.js. Threefold repetition and the fifty-move rule are drawn automatically. Thinking and background-tab time count against the clock; increment follows a move made before flag fall. Timeout is a loss unless the whole position has insufficient material. Imported positions use fresh clocks and do not include earlier repetition history.</p></details><p><a href="./docs/OPTIMIZATION-V3.md">Methods & measured results ↗</a> · <a href="./evaluation/v0.3/engine-results.json">Results data ↗</a> · <a href="https://github.com/clavum-figendi/astra-chess">Source ↗</a></p></section>
+    <section id="method" class="reference-section"><h2>About Chess Lab</h2><p>Opening moves use a weighted, seeded book when enabled. Pocket/Atlas use sparse neural policies; DeepMind 9M scores legal state/action pairs in batches. Neither performs game-tree search. Everything runs on your device.</p><details><summary>Rules & clock conventions</summary><p>Legal moves and terminal positions use chess.js. Threefold repetition and the fifty-move rule are drawn automatically. Thinking and background-tab time count against the clock; increment follows a move made before flag fall. Timeout is a loss unless the whole position has insufficient material. Imported positions use fresh clocks and do not include earlier repetition history. Inference has a 30-second safety timeout, including Unlimited games.</p></details><p><a href="./docs/BROWSER-V6.md">Transformer methods & measured results ↗</a> · <a href="./evaluation/v0.6/heldout-onnx.json">Results data ↗</a> · <a href="https://github.com/clavum-figendi/astra-chess">Source ↗</a></p></section>
 
 
     <section class="reference-section" aria-labelledby="weights-heading"><h2 id="weights-heading">Models & downloads</h2><div id="model-downloads" class="model-downloads">Loading model information…</div><a href="./models/manifest.json" download>Model manifest ↓</a><p class="laptop-download"><a href="./downloads/astra-chess-laptop.zip" download>Download laptop runtime + models ↓</a></p><p class="control-note">Laptop: Node.js 22+. Run <code>node laptop/cli.mjs --list-models</code> to list models; use <code>--no-book</code> for pure policy play or <code>--seed example</code> to replay opening choices.</p></section>
 
+    <p class="laptop-download"><a href="https://github.com/clavum-figendi/astra-chess/releases/download/v0.6.0/chess-lab-9m-laptop.zip">Download DeepMind 9M laptop bundle ↓</a> · Original and adapted checkpoints, Python/PyTorch UCI runner, instructions and evidence.</p>
     <details id="size-proposals" class="reference-section"><summary>Larger sizes: proposed, not built.</summary><p>Future model budgets and memory allowances are described in the <a href="./models/sizing-proposals.json">sizing proposals</a>.</p></details>
   </main>
   <footer><span>CHESS / LAB</span><span>Local play. Open source.</span><a href="#">Back to board ↑</a></footer>

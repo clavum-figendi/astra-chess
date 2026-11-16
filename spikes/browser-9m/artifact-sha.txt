@@ -1,0 +1,7 @@
+9ea656cfd009a7e9ab7958adc032b2798ce42b51eb4b168a6b39679910b36a17  public/models/deepmind-9m-float32.onnx
+4faa374e93c82e92f4f443cf36d9d2fdc98e22d69991cdc6d0d6a3ecdbe3957e  public/models/deepmind-9m-fp16.onnx
+ec20185c647833cd7a984ac3ae189778246023cc0f4d74d7705b90e06d852e83  public/models/deepmind-9m-int8-dynamic.onnx
+200ce0be0d937f99978ba1fa2eb0f0deb5527e5e5285ab1495b8e8fbd844307f  public/vendor/ort/ort.min.mjs
+d5a6d7bc8ee587648fb3742dde8c0094d17cbd3822a68bbec8ddfcd4f2adb88e  public/vendor/ort/ort.wasm.min.mjs
+5687566b1bc1c8cf628d76c2ddb16b2a3b81a7997273d4666564880495088e57  public/vendor/ort/ort-wasm-simd-threaded.mjs
+be0e129949062ad50290ef94683fac8be5bb6156f709e030b7a5f1661a2f6c17  public/vendor/ort/ort-wasm-simd-threaded.wasm

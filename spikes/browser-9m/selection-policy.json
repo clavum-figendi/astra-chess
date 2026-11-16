@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "split": ".cache/deepmind-v5/validation.json",
+  "expectedPositions": 207,
+  "rule": "Choose smallest browser-working candidate with >=95% adapted float32 PyTorch top-move agreement and at most 2 fewer teacher bestmove hits; otherwise FP16 storage if eligible, else float32 reference.",
+  "reference": "float32 PyTorch adapted checkpoint on the validation FEN and its python-chess legal moves",
+  "candidates": ["float32", "int8-dynamic-per-channel", "fp16-storage-cast-float32"],
+  "batchSize": 4,
+  "threads": 1,
+  "legalMoves": "python-chess legal-move generation",
+  "teacherHit": "Top candidate equals the first validation teacher move when present",
+  "tieBreak": "Descending expected value, then ascending UCI string",
+  "repetitionOverride": "Fivefold repetition or claimable threefold repetition scores exactly 0.5",
+  "historyEncoding": "chess.js/python-chess legal-only en-passant target square",
+  "finalTest": "Not used for selection; previously exposed historical 147-position test is not a fresh held-out estimate."
+}

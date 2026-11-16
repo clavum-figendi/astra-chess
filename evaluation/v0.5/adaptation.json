@@ -1,0 +1,158 @@
+{
+  "baseline": {
+    "count": 207,
+    "crossEntropy": 1.871682082541323,
+    "top1": 0.6038647342995169
+  },
+  "selected": {
+    "count": 207,
+    "crossEntropy": 1.8504750146957987,
+    "top1": 0.6086956521739131
+  },
+  "selected_epoch": 6,
+  "history": [
+    {
+      "epoch": 1,
+      "validation": {
+        "count": 207,
+        "crossEntropy": 1.8670509656270344,
+        "top1": 0.6038647342995169
+      },
+      "selected": true
+    },
+    {
+      "epoch": 2,
+      "validation": {
+        "count": 207,
+        "crossEntropy": 1.8636032214775178,
+        "top1": 0.6086956521739131
+      },
+      "selected": true
+    },
+    {
+      "epoch": 3,
+      "validation": {
+        "count": 207,
+        "crossEntropy": 1.8602089575235394,
+        "top1": 0.6086956521739131
+      },
+      "selected": true
+    },
+    {
+      "epoch": 4,
+      "validation": {
+        "count": 207,
+        "crossEntropy": 1.8567997620301546,
+        "top1": 0.6086956521739131
+      },
+      "selected": true
+    },
+    {
+      "epoch": 5,
+      "validation": {
+        "count": 207,
+        "crossEntropy": 1.8533254845994682,
+        "top1": 0.6086956521739131
+      },
+      "selected": true
+    },
+    {
+      "epoch": 6,
+      "validation": {
+        "count": 207,
+        "crossEntropy": 1.8504750146957987,
+        "top1": 0.6086956521739131
+      },
+      "selected": true
+    },
+    {
+      "epoch": 7,
+      "validation": {
+        "count": 207,
+        "crossEntropy": 1.8474416364218302,
+        "top1": 0.6038647342995169
+      },
+      "selected": false
+    },
+    {
+      "epoch": 8,
+      "validation": {
+        "count": 207,
+        "crossEntropy": 1.8445570821635389,
+        "top1": 0.6038647342995169
+      },
+      "selected": false
+    },
+    {
+      "epoch": 9,
+      "validation": {
+        "count": 207,
+        "crossEntropy": 1.841954191237832,
+        "top1": 0.6038647342995169
+      },
+      "selected": false
+    },
+    {
+      "epoch": 10,
+      "validation": {
+        "count": 207,
+        "crossEntropy": 1.838980485131775,
+        "top1": 0.6038647342995169
+      },
+      "selected": false
+    },
+    {
+      "epoch": 11,
+      "validation": {
+        "count": 207,
+        "crossEntropy": 1.8364932096522788,
+        "top1": 0.6038647342995169
+      },
+      "selected": false
+    },
+    {
+      "epoch": 12,
+      "validation": {
+        "count": 207,
+        "crossEntropy": 1.834242320291086,
+        "top1": 0.6038647342995169
+      },
+      "selected": false
+    }
+  ],
+  "settings": {
+    "epochs": 30,
+    "lr": 0.0001,
+    "patience": 6,
+    "temperature": 0.05,
+    "bucketPriorKL": 0.05
+  },
+  "sourceHashes": {
+    "spikes/deepmind-9m/adapt.py": "ca32f1e7a6afad3cdc71b140f8f55ac7262179de67a85eed9bf6b47d1ed70ff0",
+    "spikes/deepmind-9m/fine_tune_head.py": "79ceab4a19ded1d9ffa9d7c2e65772c8f2ee3d1ac3adcacfcbba72bfaab11f1a",
+    "spikes/deepmind-9m/action_value.py": "3f4c1b5242e238cdfa7322512697867eaf8243849ce21c217c228c5fe42b0057",
+    "spikes/deepmind-9m/model.py": "d560ab216cc0b932f6ed84c22fc0cd1b32b34b467feddc3f1fe5886077534c8e"
+  },
+  "baseCheckpointSHA256": "767a03340cf2362019eb724b2aaa4829bc0943b4c65b55bb4aa7f937a802bdf2",
+  "adaptedSHA256": "05a434c6925312fc02323c3015d187d78016cef6ecc6485bbc9da0fcc4d3d264",
+  "bytes": 35846345,
+  "changedParameters": 32896,
+  "featureIdentity": {
+    "checkpointSHA256": "767a03340cf2362019eb724b2aaa4829bc0943b4c65b55bb4aa7f937a802bdf2",
+    "sources": {
+      "spikes/deepmind-9m/adapt.py": "ca32f1e7a6afad3cdc71b140f8f55ac7262179de67a85eed9bf6b47d1ed70ff0",
+      "spikes/deepmind-9m/fine_tune_head.py": "79ceab4a19ded1d9ffa9d7c2e65772c8f2ee3d1ac3adcacfcbba72bfaab11f1a",
+      "spikes/deepmind-9m/action_value.py": "3f4c1b5242e238cdfa7322512697867eaf8243849ce21c217c228c5fe42b0057",
+      "spikes/deepmind-9m/model.py": "d560ab216cc0b932f6ed84c22fc0cd1b32b34b467feddc3f1fe5886077534c8e"
+    },
+    "dataset": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+    "batchSize": 8
+  },
+  "datasetSHA256": {
+    "train": "3f342ebc9b33523e41ad0ac84b1e473f61713105d0aa35df9350719114795fcf",
+    "validation": "8f0155f2a431d541b45e1a3384dc25a8bb7efb9f73c5bf39824ed0f432ee88ad"
+  },
+  "finishedAt": "2026-11-16T16:41:09Z",
+  "durationSeconds": 1091.9739909359923,
+  "testRead": false
+}

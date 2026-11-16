@@ -13,6 +13,8 @@
     "bench": "node tools/benchmark.mjs",
     "bench:v2": "node tools/benchmark-v2.mjs"
   },
-  "dependencies": {"chess.js": "1.4.0"},
-  "devDependencies": {}
+  "dependencies": {
+    "chess.js": "1.4.0",
+    "onnxruntime-web": "1.24.3"
+  }
 }

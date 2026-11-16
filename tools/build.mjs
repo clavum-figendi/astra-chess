@@ -1,4 +1,4 @@
-import { cp, mkdir, rm, writeFile, access } from 'node:fs/promises';
+import { cp, mkdir, rm, writeFile, readFile, access } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
@@ -9,7 +9,17 @@ export async function buildSite(root) {
   await rm(dist,{recursive:true,force:true});
   await rm(laptop,{recursive:true,force:true});
   await mkdir(dist,{recursive:true}); await mkdir(laptop,{recursive:true});
-  await cp(join(root,'public'),dist,{recursive:true});
+  let browserDescriptor;
+  try { browserDescriptor = JSON.parse(await readFile(join(root,'public/models/deepmind-browser.json'),'utf8')); }
+  catch (error) { if (error.code !== 'ENOENT') throw error; }
+  await cp(join(root,'public'),dist,{recursive:true,filter:path=>!path.endsWith('.onnx')||browserDescriptor?.models?.some(m=>path===join(root,'public/models',m.file))});
+  if (browserDescriptor) {
+    const manifest = JSON.parse(await readFile(join(dist,'models/manifest.json'),'utf8'));
+    if (!Array.isArray(browserDescriptor.models)) throw new Error('Invalid browser model descriptor');
+    manifest.models.push(...browserDescriptor.models.map(model=>({architecture:browserDescriptor.architecture,config:browserDescriptor.config,runtimeOptions:browserDescriptor.runtime,...model})));
+    if (new Set(manifest.models.map(m=>m.id)).size !== manifest.models.length) throw new Error('Duplicate model identifier');
+    await writeFile(join(dist,'models/manifest.json'),JSON.stringify(manifest,null,2)+'\n');
+  }
   await cp(join(root,'src'),join(dist,'src'),{recursive:true});
   const vendor = join(root,'node_modules/chess.js');
   await cp(join(vendor,'dist/esm/chess.js'),join(dist,'src/chess.mjs'));
@@ -20,7 +30,7 @@ export async function buildSite(root) {
   await cp(join(root,'LICENSE'),join(dist,'LICENSE'));
   await cp(join(dist,'src'),join(laptop,'src'),{recursive:true});
   await cp(join(root,'laptop'),join(laptop,'laptop'),{recursive:true});
-  await cp(join(root,'public/models'),join(laptop,'models'),{recursive:true});
+  await cp(join(root,'public/models'),join(laptop,'models'),{recursive:true,filter:path=>!path.endsWith('.onnx')&&!path.endsWith('deepmind-browser.json')});
   await cp(join(root,'public/openings.json'),join(laptop,'openings.json'));
   for (const name of ['README.md','LICENSE','CHESS-JS-LICENSE.txt']) await cp(join(dist,name),join(laptop,name));
   await cp(join(root,'docs'),join(laptop,'docs'),{recursive:true});

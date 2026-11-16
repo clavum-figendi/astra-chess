@@ -1,0 +1,891 @@
+{
+  "modelSHA256": "4faa374e93c82e92f4f443cf36d9d2fdc98e22d69991cdc6d0d6a3ecdbe3957e",
+  "positions": 147,
+  "referenceAgreements": 147,
+  "teacherHits": 85,
+  "selectionChanged": false,
+  "answers": [
+    {
+      "id": "7829c1f116fbb077c1c80a304febe1456f43ac311ff710c618e12692008b1bd8",
+      "fen": "rnbq1rk1/ppp3pp/5b2/3p4/3P4/2P2N2/P1P3PP/R1BQKB1R w KQ - 0 10",
+      "top": "f1e2",
+      "teacherBest": "f1d3"
+    },
+    {
+      "id": "f727cbea5728f89b204f35b57336b17a3eb22ba10eef3ebf851bb8d9776ecde5",
+      "fen": "rnbq1rk1/ppp3pp/8/3p4/3P3b/2P2N2/P1P1B1PP/R1BQK2R w KQ - 2 11",
+      "top": "g2g3",
+      "teacherBest": "g2g3"
+    },
+    {
+      "id": "3e3db4674789f658ff906b12f90feaf188a9abe9330ee47a3354c88ff5518019",
+      "fen": "rnbq1rk1/ppp1b1pp/8/3p4/3P4/2P2NP1/P1P1B2P/R1BQK2R w KQ - 1 12",
+      "top": "e1g1",
+      "teacherBest": "e1g1"
+    },
+    {
+      "id": "c3d402b9d2711221390e6140d1fd7a1464e1afea5a5ab19b713fb6bfece135dc",
+      "fen": "r1bq1rk1/ppp1b1pp/2n5/3p4/3P4/2P2NP1/P1P1B2P/R1BQ1RK1 w - - 3 13",
+      "top": "f3e1",
+      "teacherBest": "f3e1"
+    },
+    {
+      "id": "8e8d441d88bebbd7f9c2360da2a1b4c690db1396ba88466a08f4024fcb8b540e",
+      "fen": "r2q1rk1/ppp1b1pp/2n5/3p1b2/3P4/2P3P1/P1P1B2P/R1BQNRK1 w - - 5 14",
+      "top": "a1b1",
+      "teacherBest": "e1d3"
+    },
+    {
+      "id": "05fd876a7e3e70b818299a0847b8eeebbbd05f6f58a7f4796b8fa18369ac11ad",
+      "fen": "r4rk1/pppqb1pp/2n5/3p1b2/3P4/2PN2P1/P1P1B2P/R1BQ1RK1 w - - 7 15",
+      "top": "c1f4",
+      "teacherBest": "e2f3"
+    },
+    {
+      "id": "902c4c3d1c1f9a96091c5365c7aca2022ba22a2a3e09f6ceab3d2c5591b2f6a7",
+      "fen": "r4rk1/p1pqb1pp/1pn5/3p1b2/3P1B2/2PN2P1/P1P1B2P/R2Q1RK1 w - - 0 16",
+      "top": "e2f3",
+      "teacherBest": "e2h5"
+    },
+    {
+      "id": "2f57be129c84061bb8309a14517fec7dacb4cb81469b927d6e244df69b46f8a5",
+      "fen": "r4rk1/p1pq2pp/1pn2b2/3p1b1B/3P1B2/2PN2P1/P1P4P/R2Q1RK1 w - - 2 17",
+      "top": "h2h4",
+      "teacherBest": "d1e2"
+    },
+    {
+      "id": "1fc135ca8e4f920bf057cc9276d8ab74fb5263f9c54912a9e72be8df4925f147",
+      "fen": "r4rk1/p1pq2pp/1pn2b2/3p3B/3P1B2/2PN2Pb/P1P1Q2P/R4RK1 w - - 4 18",
+      "top": "f1e1",
+      "teacherBest": "f1e1"
+    },
+    {
+      "id": "16747585c06831fb4cd96752a527a6a033df275462d3f71ff11d95cc2218fc64",
+      "fen": "r4rk1/p1pqn1pp/1p3b2/3p3B/3P1B2/2PN2Pb/P1P1Q2P/R3R1K1 w - - 6 19",
+      "top": "f4e5",
+      "teacherBest": "d3e5"
+    },
+    {
+      "id": "543bffe1a0c2b373f9406e2e06cfb24b8aa5d2d782229be47a00562c233c02bb",
+      "fen": "r4rk1/p1pqn1pp/1p6/3pb2B/3P1B2/2P3Pb/P1P1Q2P/R3R1K1 w - - 0 20",
+      "top": "e2e5",
+      "teacherBest": "e2e5"
+    },
+    {
+      "id": "798ef7e3698d8cf7a4309c39a954f8a018d04fe337e1d8e270772e4dcab2858e",
+      "fen": "r4rk1/p1p1n1pp/1p2q3/3pP2B/5B2/2P3Pb/P1P1Q2P/R3R1K1 w - - 1 21",
+      "top": "a1d1",
+      "teacherBest": "c3c4"
+    },
+    {
+      "id": "11e51bff5236826ca9696ab587c14860815138a5445d54fdfdb04a5264b84770",
+      "fen": "r5k1/p1p1n1pp/1p2q3/3pPr1B/2P2B2/6Pb/P1P1Q2P/R3R1K1 w - - 1 22",
+      "top": "h5f3",
+      "teacherBest": "h5f3"
+    },
+    {
+      "id": "469db01d01f206d3f5bfa4d8eb7bb3ee90b7fcf0dd5fdc09b54e874c33c1c4d1",
+      "fen": "r5k1/p3n1pp/1pp1q3/3pPr2/2P2B2/5BPb/P1P1Q2P/R3R1K1 w - - 0 23",
+      "top": "c4d5",
+      "teacherBest": "a1d1"
+    },
+    {
+      "id": "d3fe99f4690358c3f4adec573004cd4fec5424bb3a8edd4191b149c6ed1af6dd",
+      "fen": "5rk1/p3n1pp/1pp1q3/3pPr2/2P2B2/5BPb/P1P1Q2P/3RR1K1 w - - 2 24",
+      "top": "c4d5",
+      "teacherBest": "d1d3"
+    },
+    {
+      "id": "6959b023d2b2210911d586297f982f6f367616ed7d797e90d0f41b09d65efce8",
+      "fen": "5rk1/p3n1p1/1pp1q2p/3pPr2/2P2B2/3R1BPb/P1P1Q2P/4R1K1 w - - 0 25",
+      "top": "c4d5",
+      "teacherBest": "f4d2"
+    },
+    {
+      "id": "f74aec793023253617abc31e6615f3c20757c76b7a0179c1d0ad8f40cd177f20",
+      "fen": "5rk1/p3nrp1/1pp1q2p/3pP3/2P2B2/P2R1BPb/2P1Q2P/4R1K1 w - - 1 26",
+      "top": "c4d5",
+      "teacherBest": "c4d5"
+    },
+    {
+      "id": "7a33b3b18d3670251f7fafa65f53d38067c42585c5fb38e08144fdd5a1060deb",
+      "fen": "r3k1nr/ppqb1ppp/2n1p3/2bpP3/5B2/2PB1N2/PP3PPP/RN1QK2R w KQkq - 0 9",
+      "top": "b2b4",
+      "teacherBest": "b2b4"
+    },
+    {
+      "id": "f5b5d8d5f3b0803163527cf89213a79d06361ba7fa099b90db55e1262f4ab988",
+      "fen": "r3k1nr/ppqb1ppp/1bn1p3/3pP3/1P3B2/2PB1N2/P4PPP/RN1QK2R w KQkq - 1 10",
+      "top": "a2a4",
+      "teacherBest": "a2a4"
+    },
+    {
+      "id": "cd37639696d3ff2e5326f5b05a956249e2adce73be6c1c62c68465cf866a78a9",
+      "fen": "r3k1nr/ppqb1p1p/1bn1p3/3pP1p1/1P3B2/2PB1N2/P2N1PPP/R2QK2R w KQkq - 0 11",
+      "top": "f4g5",
+      "teacherBest": "f4g5"
+    },
+    {
+      "id": "6308b20a320391acd28c68a7db05c135e481992669776b1cc22d9037d2096c5f",
+      "fen": "r3k1nr/ppqb1p1p/1b2p3/3pn1B1/1P6/2PB1N2/P2N1PPP/R2QK2R w KQkq - 0 12",
+      "top": "d3e2",
+      "teacherBest": "d1c2"
+    },
+    {
+      "id": "19a9d80cbb192254c13f6510b7531cc933178de87a42f5e9189e9b07528dfe75",
+      "fen": "2r1k1nr/ppqb1p1p/1b2p3/3pn1B1/1P6/2PB1N2/P1QN1PPP/R3K2R w KQk - 2 13",
+      "top": "a1c1",
+      "teacherBest": "a1c1"
+    },
+    {
+      "id": "c4a9d51a1e99cae26c192e97cd52418c65a78b20b8c23dd38e4ab83ce65414b6",
+      "fen": "2r1k1nr/ppqb3p/1b2pp2/3pn1B1/1P6/2PB1N2/P1QN1PPP/2R1K2R w Kk - 0 14",
+      "top": "g5h4",
+      "teacherBest": "g5h4"
+    },
+    {
+      "id": "3ece645050b3b767ec0b90e58954ef95bc8394394b19c3ce6e02a06a663e63a5",
+      "fen": "2r1k1nr/pp1b3p/1b2pp2/3pn3/1P5B/2qB1N2/P1QN1PPP/2R1K2R w Kk - 0 15",
+      "top": "c2c3",
+      "teacherBest": "c2c3"
+    },
+    {
+      "id": "f895a844c4e095977901f0d98f0784b9bb443941f3f7fdba6d019376f04105eb",
+      "fen": "2r1k1nr/pp1b3p/1b2pp2/3p4/1P5B/2Qn1N2/P2N1PPP/2R1K2R w Kk - 0 16",
+      "top": "c3d3",
+      "teacherBest": "c3d3"
+    },
+    {
+      "id": "19270e5d58dc3da66cdcbb93cf5d0c8d919b782611d025d2edc020e523a76229",
+      "fen": "4k1nr/pp1b3p/1b2pp2/3p4/1P5B/3Q1N2/P2N1PPP/2r1K2R w Kk - 0 17",
+      "top": "e1e2",
+      "teacherBest": "e1e2"
+    },
+    {
+      "id": "8d5e8a9a813935f1f36b53009852fa592afc76f8ab0540b8f8a251d5162a4ff9",
+      "fen": "4k1nr/pp1b3p/1b2pp2/3p4/1P5B/3Q1N2/P2NKPPP/7r w k - 0 18",
+      "top": "d2b3",
+      "teacherBest": "b4b5"
+    },
+    {
+      "id": "0dd895b9a2a9785765523763845c47042331a257a1b42d6746e41cec2be3a6f4",
+      "fen": "3bk1nr/pp1b3p/4pp2/1P1p4/7B/3Q1N2/P2NKPPP/7r w k - 1 19",
+      "top": "a2a4",
+      "teacherBest": "d2b3"
+    },
+    {
+      "id": "b80feaef15e66651d052160e891975a1b619aa59a8e41f742413bec7a716cb79",
+      "fen": "3bk2r/pp1b3p/4pp1n/1P1p4/7B/1N1Q1N2/P3KPPP/7r w k - 3 20",
+      "top": "b3c5",
+      "teacherBest": "a2a4"
+    },
+    {
+      "id": "a0496cc2c6731c91c862ae095e41a09fbcc2f6b0cacaeed57567fa9bd5b39a11",
+      "fen": "2bbk2r/pp5p/4pp1n/1PNp4/7B/3Q1N2/P3KPPP/7r w k - 5 21",
+      "top": "d3c3",
+      "teacherBest": "f3d4"
+    },
+    {
+      "id": "ec9d14c9ff482dada5b8222b2470129bfe161624abdb824efc6edd1d44cdc9e4",
+      "fen": "2b1k2r/pp5p/4pp1n/bPNp4/3N3B/3Q4/P3KPPP/7r w k - 7 22",
+      "top": "d3a3",
+      "teacherBest": "d3f3"
+    },
+    {
+      "id": "cb7872db3f19940cd9c3138b205aa287d1a9d0ed0174c777953530dae9c49315",
+      "fen": "2b1k2r/pp3n1p/4pp2/bPNp4/3N3B/5Q2/P3KPPP/7r w k - 9 23",
+      "top": "c5d3",
+      "teacherBest": "h4f6"
+    },
+    {
+      "id": "6a892cd92f5760488bde5e5624a84297012ecf4802bd62601d45b327978949de",
+      "fen": "2b1k2r/pp3n1p/4pB2/bPNp4/3N4/5Q2/P3KPPP/4r3 w k - 1 24",
+      "top": "e2d3",
+      "teacherBest": "e2d3"
+    },
+    {
+      "id": "e68ded9f9b6a66d6aca44b2483dc7b8ff85aa098deb9859b055c36b678bb412e",
+      "fen": "2b1k2r/pp3n1p/5B2/bPNpp3/3N4/3K1Q2/P4PPP/4r3 w k - 0 25",
+      "top": "d3c2",
+      "teacherBest": "d3c2"
+    },
+    {
+      "id": "c589873068406e63ba860227a4e5ba63c95d1959f7f942fe1ae7510b3f30c176",
+      "fen": "2b1k1r1/pp3n1p/5B2/bPNpp2Q/3N4/3K4/P4PPP/4r3 w - - 2 26",
+      "top": "d4f5",
+      "teacherBest": "d4e6"
+    },
+    {
+      "id": "0deca75e9f8dd71187980ada71ff3b6dcbbb38d1825c3693276cd9189f9ff0a9",
+      "fen": "rnb1k2r/1ppnqppp/p3p3/3pP3/3P1P2/2N5/PPP3PP/R2QKBNR w KQkq - 0 8",
+      "top": "d1d2",
+      "teacherBest": "d1g4"
+    },
+    {
+      "id": "812f56f86900d7f432756a00df74a828d3099f1eead2f46ea9134bed24ea671b",
+      "fen": "rnb1k2r/1ppnqp1p/p3p1p1/3pP3/3P1PQ1/2N5/PPP3PP/R3KBNR w KQkq - 0 9",
+      "top": "g1f3",
+      "teacherBest": "h2h4"
+    },
+    {
+      "id": "750fb34f20a226bbd17635fdd8958d45ba3ad57d78253c3359c802ce3bd49363",
+      "fen": "rnb1k2r/1p1nqp1p/p3p1p1/2ppP3/3P1PQP/2N5/PPP3P1/R3KBNR w KQkq - 0 10",
+      "top": "d4c5",
+      "teacherBest": "d4c5"
+    },
+    {
+      "id": "a2c2910c75e46fdcf4f599a4de5b6cd932dfe299a9826ace766e125e9e41bde8",
+      "fen": "rnb1k2r/1p1nq2p/p3p1p1/2ppPp1P/3P1PQ1/2N5/PPP3P1/R3KBNR w KQkq f6 0 11",
+      "top": "g4g3",
+      "teacherBest": "g4d1"
+    },
+    {
+      "id": "5925af2ab1f2b7b68fb407a60d99b624d43e7731441459020b74f3b1bb57c72c",
+      "fen": "rnb1k2r/1p1nq2p/p3p3/2ppPppP/3P1P2/2N5/PPP3P1/R2QKBNR w KQkq - 0 12",
+      "top": "c3e2",
+      "teacherBest": "g2g3"
+    },
+    {
+      "id": "1de0b67437399f4c0aedfff2448174ada01171fee7381bf13f67256e2317bd9d",
+      "fen": "rnb1k2r/3nq2p/p3p3/1pppPppP/3P1P2/2N3P1/PPP5/R2QKBNR w KQkq - 0 13",
+      "top": "c3e2",
+      "teacherBest": "c3e2"
+    },
+    {
+      "id": "c35a3e667aaf1e710260bfc593c84bffe7e9105be0b01ba71cca7ae4122fa45d",
+      "fen": "rnb1k2r/3nq2p/p3p3/1pppPp1P/3P1Pp1/6P1/PPP1N3/R2QKBNR w KQkq - 0 14",
+      "top": "d4c5",
+      "teacherBest": "d4c5"
+    },
+    {
+      "id": "7dba661478ef6e2208102e8af3a51f248808ae9263c1fc3a79ba90a29dbce7fa",
+      "fen": "rnb1k2r/4q2p/p3p3/1pnpPp1P/5Pp1/6P1/PPP1N3/R2QKBNR w KQkq - 0 15",
+      "top": "f1g2",
+      "teacherBest": "e2d4"
+    },
+    {
+      "id": "242b01cf561bb329a567fb1ebc5a3c66566031c0440b803d1489026dbb07a499",
+      "fen": "rnb1k2r/4q2p/p3p3/1p1pPp1P/4nPp1/2P3P1/PP2N3/R2QKBNR w KQkq - 1 16",
+      "top": "f1g2",
+      "teacherBest": "e2d4"
+    },
+    {
+      "id": "6fd545915cfdb74a9f7e606a8b422481679c74a3363b4346fc17529073b97d38",
+      "fen": "rnb1k2r/4q2p/p3p3/1p1pPp1P/3N1Pp1/2P3n1/PP6/R2QKBNR w KQkq - 0 17",
+      "top": "h1h2",
+      "teacherBest": "h1h2"
+    },
+    {
+      "id": "dcc5593db9bf615739f522ed04a254816fbd4b7532eefcbe07cce6df9e1a141c",
+      "fen": "rn2k2r/1b2q2p/p3p3/1p1pPp1P/3N1Pp1/2P3n1/PP5R/R2QKBN1 w Qkq - 2 18",
+      "top": "a2a4",
+      "teacherBest": "a2a4"
+    },
+    {
+      "id": "8c4403a12d8819593c446ed953720777603ea2afa9bd4ab4fdb3b75f3867676e",
+      "fen": "rn2k2r/1b2q2p/p3p3/3pPp1P/Pp1N1Pp1/2P3n1/1P5R/R2QKBN1 w Qkq - 0 19",
+      "top": "d1b3",
+      "teacherBest": "d1b3"
+    },
+    {
+      "id": "86d4cdd82a9315f9b5fc4a79b95826438854c83b79bdb8400227a51cf4ad875e",
+      "fen": "r3k2r/1b2q2p/p1n1p3/3pPp1P/Pp1N1Pp1/1QP3n1/1P5R/R3KBN1 w Qkq - 2 20",
+      "top": "d4c6",
+      "teacherBest": "d4c6"
+    },
+    {
+      "id": "ae19906134710edd070cb82e2b777bacab1cf83b3f4ae2a6f0e3f886f09cedca",
+      "fen": "r3k2r/1b2q2p/p1n1p3/3pPp1P/Pp1N1Pp1/1QP5/1P2n2R/R3KB2 w Qkq - 0 21",
+      "top": "f1e2",
+      "teacherBest": "f1e2"
+    },
+    {
+      "id": "87e0f4bbd6fc6dfaa785925012c99f98a9fdeee9623ee961258cd5ac14ec8ad2",
+      "fen": "r3k2r/1b2q2p/p3p3/3pPp1P/Pp1n1Pp1/1QP5/1P2B2R/R3K3 w Qkq - 0 22",
+      "top": "c3d4",
+      "teacherBest": "c3d4"
+    },
+    {
+      "id": "c10421c85561f914bffcba82b49650ac41e375632763ee74bc8dc4cdfa9d3f0a",
+      "fen": "r4rk1/1b2q2p/p3p3/3pPp1P/Pp1P1Pp1/1Q6/1P2B2R/R3K3 w Q - 1 23",
+      "top": "h5h6",
+      "teacherBest": "h5h6"
+    },
+    {
+      "id": "8006dc96c7d07974fbe22230ff53010dd9c6edf355d8b3a44b5dff7db0f01a32",
+      "fen": "r4rk1/1b2q2p/4p2P/p2pPp2/Pp1P1Pp1/1Q6/1P2B2R/R3K3 w Q - 0 24",
+      "top": "e1f2",
+      "teacherBest": "h2h5"
+    },
+    {
+      "id": "2e56ab0dc5a00e481288d670e32b0d3ebb8e0f3a5d08c996b4c7de848ed83ff0",
+      "fen": "r4r1k/1b2q2p/4p2P/p2pPp1R/Pp1P1Pp1/1Q6/1P2B3/R3K3 w Q - 2 25",
+      "top": "a1c1",
+      "teacherBest": "b3g3"
+    },
+    {
+      "id": "90735daaa53b483f3248b3379e86e04414e5110c8365a36fe1a9cfbd68cc342c",
+      "fen": "r1r4k/1b2q2p/4p2P/p2pPp1R/Pp1P1Pp1/1Q6/1P2BK2/R7 w - - 4 26",
+      "top": "h5g5",
+      "teacherBest": "e2b5"
+    },
+    {
+      "id": "6ee662843f427886c19ca18e7f9e7ad2f6a55e78c09dc18842fcfedddf94873a",
+      "fen": "r1bqk2r/pp2nppp/2n5/1Bbp4/8/5N2/PPPN1PPP/R1BQ1RK1 w kq - 2 9",
+      "top": "d2b3",
+      "teacherBest": "d2b3"
+    },
+    {
+      "id": "76f5120f113ca7c68c6bc62fa8494efbb94dcaea2af34b2daade4eacebba44de",
+      "fen": "r1bqk2r/pp2nppp/2nb4/1B1p4/8/1N3N2/PPP2PPP/R1BQ1RK1 w kq - 4 10",
+      "top": "f1e1",
+      "teacherBest": "h2h3"
+    },
+    {
+      "id": "49e6c4115bcbf11fae585a875787ad0d7f2a17289612467f33219a4743eaf126",
+      "fen": "r1bq1rk1/pp2nppp/2nb4/1B1p4/8/1N3N2/PPP2PPP/R1BQR1K1 w - - 6 11",
+      "top": "c2c3",
+      "teacherBest": "b5d3"
+    },
+    {
+      "id": "2793c8711595b7f8879e3fdad448a7222856ae83400bac3f9798d87a373a95a4",
+      "fen": "r1bq1rk1/pp2npp1/2nb3p/3p4/8/1N1B1N2/PPP2PPP/R1BQR1K1 w - - 0 12",
+      "top": "h2h3",
+      "teacherBest": "h2h3"
+    },
+    {
+      "id": "08103b1f5146cf25c62b5c7b0b98e194b24564225e3db5c124c832afb7df5cf5",
+      "fen": "r1bqr1k1/pp2npp1/2nb3p/3p4/8/1N1B1N1P/PPP2PP1/R1BQR1K1 w - - 1 13",
+      "top": "c2c3",
+      "teacherBest": "a2a4"
+    },
+    {
+      "id": "942d76cf65965d1b4deef551ab461b8c2b305ad0527ba122f3e807cc77489d07",
+      "fen": "r2qr1k1/pp1bnpp1/2nb3p/3p4/P7/1N1B1N1P/1PP2PP1/R1BQR1K1 w - - 1 14",
+      "top": "c2c3",
+      "teacherBest": "c2c3"
+    },
+    {
+      "id": "c488ceb133f60443ec361465ac4efef2f042aa931cf7ddebc1a4f5718edfcd97",
+      "fen": "r2qr1k1/pp1b1pp1/2nb3p/3p1n2/P7/1NPB1N1P/1P3PP1/R1BQR1K1 w - - 1 15",
+      "top": "e1e8",
+      "teacherBest": "e1e8"
+    },
+    {
+      "id": "1463f3cfc1bcc74528357307f41606b4dbeb92a1c9ffafce73fb490f9b0c54dc",
+      "fen": "r2q2k1/pp1b1pp1/2nb3p/3p1n2/P7/1NP2N1P/1PB2PP1/R1BQr1K1 w - - 0 16",
+      "top": "f3e1",
+      "teacherBest": "f3e1"
+    },
+    {
+      "id": "6a5634a0713680fd82fc7cf8fc75841e7886eb2d326f407e8421077cdcac15b3",
+      "fen": "r5k1/pp1bqpp1/2nb3p/3p1n2/P7/1NP4P/1PB2PP1/R1BQN1K1 w - - 1 17",
+      "top": "e1f3",
+      "teacherBest": "c2f5"
+    },
+    {
+      "id": "fafc28af6c9e5da47f9aaa2e99caf97a3e0c742896b0ff4a7452d932a6196de6",
+      "fen": "4r1k1/pp1bqpp1/2nb3p/3p1B2/P7/1NP4P/1P3PP1/R1BQN1K1 w - - 1 18",
+      "top": "c1h6",
+      "teacherBest": "c1h6"
+    },
+    {
+      "id": "bde46bd10e4ab92f7ba5f3370b547136dea48645e94b7e4856e2b4c103674d27",
+      "fen": "4r1k1/pp2qpp1/2nb3B/3p1b2/P7/1NP4P/1P3PP1/R2QN1K1 w - - 0 19",
+      "top": "h6e3",
+      "teacherBest": "h6e3"
+    },
+    {
+      "id": "6ebd6d48883b0ef4e7aa599b3560f31b99ff0498b3a8611be15c1bd2c72ade4f",
+      "fen": "3qr1k1/pp3pp1/2nb4/3p1b2/P7/1NP1B2P/1P3PP1/R2QN1K1 w - - 2 20",
+      "top": "b3d4",
+      "teacherBest": "b3d4"
+    },
+    {
+      "id": "07069dde15e2575e30738b55d674d652c6c1a6368c00577f1e1c81a56fd0abc6",
+      "fen": "3qr1k1/ppb2pp1/2n5/P2p1b2/8/1NP1B2P/1P3PP1/R2QN1K1 w - - 1 21",
+      "top": "e1f3",
+      "teacherBest": "a5a6"
+    },
+    {
+      "id": "04660be79c7517944fb7ae0551fc0b84359f4ed995df4f02fdd8745cd1f46a31",
+      "fen": "4r1k1/ppb2pp1/P1nq4/3p1b2/8/1NP1B2P/1P3PP1/R2QN1K1 w - - 1 22",
+      "top": "e1f3",
+      "teacherBest": "a6b7"
+    },
+    {
+      "id": "309dc072e299f249b5cdc5bdfb66888a51935147f916bed628edef614c630b23",
+      "fen": "4r1k1/pPb2pp1/2n5/3p1b2/8/1NP1B2P/1P3PPq/R2QN1K1 w - - 1 23",
+      "top": "g1f1",
+      "teacherBest": "g1f1"
+    },
+    {
+      "id": "89f9721ae8e39cb5d12c8fc94f290557468aa4a5592741d99444680c7cb10714",
+      "fen": "4r1k1/pPb2pp1/2n5/3p1b2/8/1NP1B2P/1P3PP1/R2QNK1q w - - 3 24",
+      "top": "f1e2",
+      "teacherBest": "f1e2"
+    },
+    {
+      "id": "efe07335042d1e68c5b0ee4530c44d7fa3fcb40d2e0271628fe76a7dd11bcb23",
+      "fen": "4r1k1/pPb2pp1/2n5/3p4/8/1NP1B2b/1P2KPP1/R2QN2q w - - 0 25",
+      "top": "g2h3",
+      "teacherBest": "d1d5"
+    },
+    {
+      "id": "1399d04909dc4919486337d89c987319b875c56391e51357a496abb3dd86d32d",
+      "fen": "6k1/pPb2pp1/2n5/3p4/8/1NP1r2P/1P2KP2/R2QN2q w - - 0 26",
+      "top": "f2e3",
+      "teacherBest": "f2e3"
+    },
+    {
+      "id": "772a64a54f91fce8545dc9f728aa6328151e367263ad4d857bc61bd5f33040a5",
+      "fen": "rnbq1rk1/ppp2pp1/3b1n1p/3p2B1/3P4/3B1N2/PPP2PPP/RN1Q1RK1 w - - 0 8",
+      "top": "g5h4",
+      "teacherBest": "g5h4"
+    },
+    {
+      "id": "2c636766cfacb33fb4459a03c61a55654d2951c013de5b6343f08890f106e9d7",
+      "fen": "rnbqr1k1/ppp2pp1/3b1n1p/3p4/3P3B/3B1N2/PPP2PPP/RN1Q1RK1 w - - 2 9",
+      "top": "b1c3",
+      "teacherBest": "b1c3"
+    },
+    {
+      "id": "774a00a416a9bc35d7abce2cd8467f0985392d57775b96300c3224fc051e7db4",
+      "fen": "rnbqr1k1/pp3pp1/2pb1n1p/3p4/3P3B/2NB1N2/PPP2PPP/R2Q1RK1 w - - 0 10",
+      "top": "h2h3",
+      "teacherBest": "d1d2"
+    },
+    {
+      "id": "09b4e53a260632e583906b8b2b7233f71d64fa5299399ec4e0d28c7748c89c2c",
+      "fen": "r1bqr1k1/pp1n1pp1/2pb1n1p/3p4/3P3B/2NB1N1P/PPP2PP1/R2Q1RK1 w - - 1 11",
+      "top": "d1d2",
+      "teacherBest": "f1e1"
+    },
+    {
+      "id": "4fffce7f6a7f171e978e7c11015b5a3cad3b72019047cb470721e9f2ff1c7441",
+      "fen": "r1bq2k1/pp1n1pp1/2pb1n1p/3p4/3P3B/2NB1N1P/PPP2PP1/R2Qr1K1 w - - 0 12",
+      "top": "d1e1",
+      "teacherBest": "d1e1"
+    },
+    {
+      "id": "f8cb18b4455e5f0386d02e35832f208486d582b95bfaabe3dc777dde682ef731",
+      "fen": "r1b1q1k1/pp1n1pp1/2pb1n1p/3p4/3P3B/2NB1N1P/PPP2PP1/R3Q1K1 w - - 1 13",
+      "top": "e1d2",
+      "teacherBest": "e1d2"
+    },
+    {
+      "id": "e1006772c753a5f4be48579fdf135b55e3356e287e9e920f50537a134ebddb02",
+      "fen": "r1b1q1k1/pp1n1pp1/2pb3p/3p4/3Pn2B/2NB1N1P/PPPQ1PP1/R5K1 w - - 3 14",
+      "top": "c3e4",
+      "teacherBest": "d2e3"
+    },
+    {
+      "id": "3a2847412e3360f6d8cf25e25622f66aa7435a65a60e9234d530616b8961bd6c",
+      "fen": "r1b1q1k1/pp1n1pp1/2pb1n1p/3p4/3P3B/2NBQN1P/PPP2PP1/R5K1 w - - 5 15",
+      "top": "e3d2",
+      "teacherBest": "e3d2"
+    },
+    {
+      "id": "1a260f8854937668bfe1afb4c74285d0a9f1dbf6e34dcb826ec2e488512f767e",
+      "fen": "r1b3k1/pp1n1pp1/2pbqn1p/3p4/3P3B/2NB1N1P/PPP2PP1/R1Q3K1 w - - 7 16",
+      "top": "c1d2",
+      "teacherBest": "c1f1"
+    },
+    {
+      "id": "b0a74703ffaa3f0c0a3c29bbd865cc3cd3daf53b7e8a72327e3e4157f7904d85",
+      "fen": "r1b3k1/pp1nqpp1/2pb1n1p/3p4/3P3B/2NB1N1P/PPP2PP1/R4QK1 w - - 9 17",
+      "top": "a1e1",
+      "teacherBest": "a1e1"
+    },
+    {
+      "id": "819f2dff0ba25a50327152e8c0fc4b9dd41b516b1415c52c8c289f7850d13eda",
+      "fen": "r1b2qk1/pp1n1pp1/2pb1n1p/3p4/3P3B/2NB1N1P/PPP2PP1/4RQK1 w - - 11 18",
+      "top": "f1e2",
+      "teacherBest": "f3e5"
+    },
+    {
+      "id": "f992fdf72adf4e87ca3d4a63a006532460d5ecfd960cb1d45f0ccdd7ff67d745",
+      "fen": "r1b2qk1/ppbn1pp1/2p2n1p/3pN3/3P3B/2NB3P/PPP2PP1/4RQK1 w - - 13 19",
+      "top": "f2f4",
+      "teacherBest": "f1e2"
+    },
+    {
+      "id": "3e553127103278bb3ba0c8b3046802c3249e7e51b453f31822e0a7d665d73d8e",
+      "fen": "r1b2qk1/pp1n1pp1/2p2n1p/b2pN3/3P3B/2NB3P/PPP1QPP1/4R1K1 w - - 15 20",
+      "top": "e5d7",
+      "teacherBest": "e5d7"
+    },
+    {
+      "id": "2889b48883a13bd7bf3c56c57c41dbe98a0a1d9122d1c59c779e02dd471569e6",
+      "fen": "r1b2qk1/pp1n1pp1/2p4p/b2pN3/3Pn2B/P1NB3P/1PP1QPP1/4R1K1 w - - 1 21",
+      "top": "c3e4",
+      "teacherBest": "c3e4"
+    },
+    {
+      "id": "5b42040349ee8574e1f7d03ca2d5434712148fb0eeeb5b5915254e4481fadd93",
+      "fen": "r1b2qk1/pp1n1pp1/2p4p/3pN3/3PN2B/P2B3P/1PP1QPP1/4b1K1 w - - 0 22",
+      "top": "e5d7",
+      "teacherBest": "e5d7"
+    },
+    {
+      "id": "e9335d1474f96f8647d4a7a44f11b2c7a3d6e3db278196984d99bd217fdfff99",
+      "fen": "r4qk1/pp1b1pp1/2p4p/3p4/3PN2B/P2B3P/1PP1QPP1/4b1K1 w - - 0 23",
+      "top": "e4c5",
+      "teacherBest": "e4c5"
+    },
+    {
+      "id": "31f1c1672562c9dced5ba6e5add83d83e337beaba009f49e81f37d9f1ca8ab36",
+      "fen": "4rqk1/pp1b1pp1/2p4p/2Np4/3P3B/P2B3P/1PP1QPP1/4b1K1 w - - 2 24",
+      "top": "c5d7",
+      "teacherBest": "c5d7"
+    },
+    {
+      "id": "77ef7a879f94ad6ca01b6bb34583c3e7d1ac6d014f15a5c27b4f4f481fdba886",
+      "fen": "5qk1/pp1N1pp1/2p4p/3p4/3P3B/P2B3P/1PP1rPP1/4b1K1 w - - 0 25",
+      "top": "d7f8",
+      "teacherBest": "d7f8"
+    },
+    {
+      "id": "9998a1afb577a05c3aa01060731ce3930b4d36ad3b43bb5d7dc9eafffcbc82f4",
+      "fen": "4rNk1/pp3pp1/2p4p/3p4/3P3B/P2B3P/1PP2PP1/4b1K1 w - - 1 26",
+      "top": "f8d7",
+      "teacherBest": "f8d7"
+    },
+    {
+      "id": "a8e11545651e8061899dd87791ac127d7c1835da094610d6a36ab451462eada7",
+      "fen": "rnbq1rk1/pp3ppp/4pn2/8/1bBp4/2N1PN2/PP3PPP/R1BQ1RK1 w - - 0 9",
+      "top": "e3d4",
+      "teacherBest": "e3d4"
+    },
+    {
+      "id": "79e9451b8b7105c877acebb11bc9ed241e743cadf3e988e8e7667ef84381ee3b",
+      "fen": "rnbq1rk1/p4ppp/1p2pn2/8/1bBP4/2N2N2/PP3PPP/R1BQ1RK1 w - - 0 10",
+      "top": "c1g5",
+      "teacherBest": "a2a3"
+    },
+    {
+      "id": "0b8d33a613929fd8e2ab70adcce2a9a6e676d120f95fb346b92447ca68abb683",
+      "fen": "r1bq1rk1/p4ppp/1pn1pn2/8/1bBP4/2N2N2/PP2QPPP/R1B2RK1 w - - 2 11",
+      "top": "f1d1",
+      "teacherBest": "f1d1"
+    },
+    {
+      "id": "dd603f972f6e6b9c5a75b9ab1d7ec8ea8573f236ff1ca6fa51b4c2b70fb6c82b",
+      "fen": "r2q1rk1/pb3ppp/1pn1pn2/8/1bBP4/2N2N2/PP2QPPP/R1BR2K1 w - - 4 12",
+      "top": "d4d5",
+      "teacherBest": "d4d5"
+    },
+    {
+      "id": "58a8f4e91e33282c2405a8be3a8e297757e24cc55620b1124778f5b46dbeb4ef",
+      "fen": "r2q1rk1/pb3ppp/1pn1p3/3n4/1bB5/2N2N2/PP2QPPP/R1BR2K1 w - - 0 13",
+      "top": "c3d5",
+      "teacherBest": "c3d5"
+    },
+    {
+      "id": "0dc1a27aa4c361937e15bfc18beaabcebe54c006a238f2542bd49c51747401bf",
+      "fen": "r2q1rk1/pb3ppp/1pn5/3p4/1bB5/5N2/PP2QPPP/R1BR2K1 w - - 0 14",
+      "top": "c4d5",
+      "teacherBest": "c4d5"
+    },
+    {
+      "id": "f4974a216183a99e7a1cd0e6a3ec49724e63727a68c45acea7623f6eb81bc9bb",
+      "fen": "r4rk1/pb3ppp/1pn2q2/3B4/1b6/5N2/PP2QPPP/R1BR2K1 w - - 1 15",
+      "top": "c1g5",
+      "teacherBest": "c1e3"
+    },
+    {
+      "id": "024158c0a87142d36916ed9c4f763ef9400c5c6f8e77e678ab4dcd055db9d1f8",
+      "fen": "r4rk1/pb3ppp/1pn2q2/1QbB4/8/5N2/PP3PPP/R1BR2K1 w - - 3 16",
+      "top": "c1g5",
+      "teacherBest": "c1g5"
+    },
+    {
+      "id": "2bbb97677cdab84797ef0c69fe4db8e63ee5df8695b6bde3f8292956517e3a0d",
+      "fen": "r4rk1/pb3ppp/1pn3q1/1QbB2B1/8/5N2/PP3PPP/R2R2K1 w - - 5 17",
+      "top": "b2b4",
+      "teacherBest": "a1c1"
+    },
+    {
+      "id": "39eca46cf006b85f057dc39702ccb0d7dce4b269d65bf1e07e6b26981acfde0c",
+      "fen": "1r3rk1/pb3ppp/1pn3q1/1QbB2B1/8/5N2/PP3PPP/2RR2K1 w - - 7 18",
+      "top": "g5f4",
+      "teacherBest": "g5h4"
+    },
+    {
+      "id": "161608000adf3590e80b9841223b514fe2b8fe447793ed3fd3688b64ce7b68cb",
+      "fen": "br3rk1/p4ppp/1pn3q1/1QbB4/7B/5N2/PP3PPP/2RR2K1 w - - 9 19",
+      "top": "a2a3",
+      "teacherBest": "a2a3"
+    },
+    {
+      "id": "9051dd155e9ec1c2a92f9551c685eecd49700649e46d860e3863403723fe6ffa",
+      "fen": "b1r2rk1/p4ppp/1pn3q1/1QbB4/7B/P4N2/1P3PPP/2RR2K1 w - - 1 20",
+      "top": "b5f1",
+      "teacherBest": "b5c4"
+    },
+    {
+      "id": "5afaf117de845bdd87cb8c26eda5dab87d8271470576ef1dfe3980561c37c767",
+      "fen": "b1r2rk1/p4ppp/1pn5/1QbB3q/7B/P4N1P/1P3PP1/2RR2K1 w - - 1 21",
+      "top": "g2g4",
+      "teacherBest": "g2g4"
+    },
+    {
+      "id": "aca28e9173b009cd81899b50645922812dce7ffef9de9bf22562da08a7f0c55b",
+      "fen": "b1r2rk1/p4ppp/1pn4q/1QbB4/6PB/P4N1P/1P3P2/2RR2K1 w - - 1 22",
+      "top": "c1c3",
+      "teacherBest": "c1c2"
+    },
+    {
+      "id": "51654a0c4439364b154ec23169dc81fe00263811cc649ce881e66804ab9fff9b",
+      "fen": "b1r2rk1/p4ppp/1p5q/1QbB4/3n2PB/P4N1P/1PR2P2/3R2K1 w - - 3 23",
+      "top": "d1d4",
+      "teacherBest": "d1d4"
+    },
+    {
+      "id": "61c82c765720875dc991c16bc2a6eca3f5df9aa1e5f240309a892cecc41e9306",
+      "fen": "b1r2rk1/p4ppp/1p5q/1Q1B4/3b2PB/P4N1P/1PR2P2/6K1 w - - 0 24",
+      "top": "c2c8",
+      "teacherBest": "c2c8"
+    },
+    {
+      "id": "5b8c62dde639b07924d838a2d3faedd2a8f7fa46c4238d93de929d25a1c37e38",
+      "fen": "b1r3k1/p4ppp/1p5q/1Q1B4/3b2PB/P4N1P/1P3P2/6K1 w - - 0 25",
+      "top": "d5f7",
+      "teacherBest": "d5a8"
+    },
+    {
+      "id": "46797a87354d67e5e5c42c9382ab029d5a1fbbc707851f3e17c03ebb79a9dbb4",
+      "fen": "B1r3k1/p4ppp/1p5q/1Q6/6PB/P4N1P/1P3b2/6K1 w - - 0 26",
+      "top": "h4f2",
+      "teacherBest": "g1f2"
+    },
+    {
+      "id": "dc51fc28be050b898ea2e42006d5d51afc853035c29e05e1d9338c94b9b1c9da",
+      "fen": "rn1q1rk1/pbp1bppp/1p1ppn2/8/2PP4/5NP1/PP2PPBP/RNBQR1K1 w - - 0 8",
+      "top": "b1c3",
+      "teacherBest": "d1d3"
+    },
+    {
+      "id": "adb99a4b754a3f1f51e0599f042094d07779a385da90511866aeed65d624fd13",
+      "fen": "rn1q1rk1/pb2bppp/1p1ppn2/2p5/2PP4/3Q1NP1/PP2PPBP/RNB1R1K1 w - - 0 9",
+      "top": "e2e4",
+      "teacherBest": "e2e4"
+    },
+    {
+      "id": "5f0d5decdf0e83e5b99e6cff83d187e541ba38ba0ea4f3e580eeb8c89f38d225",
+      "fen": "rn1q1rk1/pb2bppp/1p1ppn2/8/2PpP3/3Q1NP1/PP3PBP/RNB1R1K1 w - - 0 10",
+      "top": "f3d4",
+      "teacherBest": "f3d4"
+    },
+    {
+      "id": "d6aa0f9b90da9f2179009aa8381411e80f38a63142d45af1aec93b542031ce84",
+      "fen": "r2q1rk1/pb2bppp/1pnppn2/8/2PQP3/5NP1/PP3PBP/RNB1R1K1 w - - 1 11",
+      "top": "d4d1",
+      "teacherBest": "d4e3"
+    },
+    {
+      "id": "6ead4c4e89c324e9c1a4bb4ff2b01e105eca8fc0af6f94efbcc10e94608a0c96",
+      "fen": "r2q1rk1/pb2bppp/1pn1pn2/3p4/2P1P3/4QNP1/PP3PBP/RNB1R1K1 w - - 0 12",
+      "top": "e4d5",
+      "teacherBest": "e4d5"
+    },
+    {
+      "id": "bea227bc9cb86aeaba2a44fefb668d29921a7788e1b10579ad2681381c31347d",
+      "fen": "r2q1rk1/pb2bppp/1pn2n2/3p4/2P5/4QNP1/PP3PBP/RNB1R1K1 w - - 0 13",
+      "top": "c4d5",
+      "teacherBest": "b1c3"
+    },
+    {
+      "id": "41e771110a42b26b6a51a2fc73b4586ff1fa6882da60a1dab8ca83f54cc7e661",
+      "fen": "r2q1rk1/pb3ppp/1pn2n2/2bp4/2P5/2N1QNP1/PP3PBP/R1B1R1K1 w - - 2 14",
+      "top": "e3f4",
+      "teacherBest": "e3f4"
+    },
+    {
+      "id": "9bb63ba53656b2213e40c5ef60fac31d9a1bee8cc94b0cdec44241774c2b0f62",
+      "fen": "r2q1rk1/pb3ppp/1p3n2/2bp4/1nP2Q2/2N2NP1/PP3PBP/R1B1R1K1 w - - 4 15",
+      "top": "e1d1",
+      "teacherBest": "e1d1"
+    },
+    {
+      "id": "4ea74ef12feb80f134b2f376ecb507bf94ef18f79e5908ce742d90b55a180081",
+      "fen": "r2q1rk1/pb3ppp/1p3n2/2b5/1nPp1Q2/2N2NP1/PP2RPBP/R1B3K1 w - - 0 16",
+      "top": "e2d2",
+      "teacherBest": "c3b5"
+    },
+    {
+      "id": "e0f2405a0ef0e23a3022d44cddab8c049822165627b736a9b905c3f5589b9b83",
+      "fen": "r2q1rk1/pb3ppp/1p3n2/1Nb5/1nP2Q2/3p1NP1/PP2RPBP/R1B3K1 w - - 0 17",
+      "top": "e2e5",
+      "teacherBest": "e2e5"
+    },
+    {
+      "id": "9d604c2b91291cd7ceb6736adfc2fb0eb6dca9c2a3822d810ae488ac3b4cd815",
+      "fen": "1r1q1rk1/pb3ppp/1p3n2/1Nb1R3/1nP2Q2/3p1NP1/PP3PBP/R1B3K1 w - - 2 18",
+      "top": "c1d2",
+      "teacherBest": "c1d2"
+    },
+    {
+      "id": "4aa5b4ed79f56ae2fcbadce8768834812a0181e5b4dd76b187e2f7d54b6b9f08",
+      "fen": "1r1q1rk1/pb3ppp/1p3n2/1Nb1R3/2P2Q2/3p1NP1/PPnB1PBP/R5K1 w - - 4 19",
+      "top": "a1d1",
+      "teacherBest": "a1f1"
+    },
+    {
+      "id": "50f9b35e7717e8ee9dcddbd8a6e62adcc16aabfef2be286149e74fdf98a52d59",
+      "fen": "1r1q1rk1/1b3ppp/pp3n2/1Nb1R3/2P2Q2/3p1NP1/PPnB1PBP/5RK1 w - - 0 20",
+      "top": "b5c3",
+      "teacherBest": "b2b4"
+    },
+    {
+      "id": "73c5197b86075c20996223a2f92d9e6de4008ff1f1ded1e3e93b5a2a86e30fbb",
+      "fen": "1r1q1rk1/1b3ppp/pp3n2/1Nb1R3/1nP2Q2/3p1NP1/P2B1PBP/5RK1 w - - 0 21",
+      "top": "b5d4",
+      "teacherBest": "b5d4"
+    },
+    {
+      "id": "64127e9d9478fca1a6350f55d212151773902d3df53333582f74ba13faf23551",
+      "fen": "1r1q1rk1/5ppp/pp3n2/2b1R3/1nPN1Q2/3p1bP1/P2B1PBP/5RK1 w - - 0 22",
+      "top": "d4f3",
+      "teacherBest": "d4f3"
+    },
+    {
+      "id": "16fc9e44cceb8233f0b9c618dc76360518b18400e259e2a46ac774f6a11afaca",
+      "fen": "1r1q1rk1/5ppp/pp1b1n2/4R3/1nP2Q2/3p1NP1/P2B1PBP/5RK1 w - - 1 23",
+      "top": "d2b4",
+      "teacherBest": "d2b4"
+    },
+    {
+      "id": "2464f82d85afd2dc7aec62dae89ad873e558076dc62f08b1e2c9d49c7f3cbb73",
+      "fen": "1r1q1rk1/5ppp/pp3n2/4R3/1bP2Q2/3p1NP1/P4PBP/5RK1 w - - 0 24",
+      "top": "e5f5",
+      "teacherBest": "e5e3"
+    },
+    {
+      "id": "ab53948800f62c83cfacd408ceece0c8936a87384fb2ea87f7d36c0fae34e72c",
+      "fen": "1r1q1rk1/5ppp/pp3n2/2b5/2P2Q2/3pRNP1/P4PBP/5RK1 w - - 2 25",
+      "top": "e3e1",
+      "teacherBest": "e3e1"
+    },
+    {
+      "id": "6d714d83fefda8834651c5aacce105fd5cbca709587ce2839ab4dc82dcc19c11",
+      "fen": "1r1q1rk1/5pp1/pp3n1p/2b5/2P2Q2/3p1NP1/P4PBP/4RRK1 w - - 0 26",
+      "top": "e1d1",
+      "teacherBest": "e1d1"
+    },
+    {
+      "id": "87b3a5e304fd8de8876ecfaafb7f0fb8b6eec2ba24107505301442e4626ee702",
+      "fen": "r1bq1rk1/pp2ppbp/2np1np1/2p5/2P5/2NP1NP1/PP2PPBP/R1BQ1RK1 w - - 0 8",
+      "top": "d3d4",
+      "teacherBest": "c1d2"
+    },
+    {
+      "id": "90d8673d8997c35312390a14670be1bb446582222c629e72a7cf6435b02dd9fb",
+      "fen": "r2q1rk1/pp2ppbp/2np1np1/2p5/2P3b1/2NP1NP1/PP1BPPBP/R2Q1RK1 w - - 2 9",
+      "top": "h2h3",
+      "teacherBest": "h2h3"
+    },
+    {
+      "id": "171d1b621c29302803bd42f1835c0c044a6b8e43ab0be0cd3f7ffa3591b9b9a3",
+      "fen": "r2q1rk1/pp2ppbp/2np1np1/2p5/2P5/2NP1bPP/PP1BPPB1/R2Q1RK1 w - - 0 10",
+      "top": "g2f3",
+      "teacherBest": "g2f3"
+    },
+    {
+      "id": "3ef0f6edb2f0cf2aea2f452f8134aaabe2a0b490d240b520af071d5ee9f81141",
+      "fen": "r2q1rk1/pp3pbp/2nppnp1/2p5/2P5/2NP1PPP/PP1B1PB1/R2Q1RK1 w - - 0 11",
+      "top": "f3f4",
+      "teacherBest": "f3f4"
+    },
+    {
+      "id": "7e7f1517354d06a971284071e9d3dc76887fec635ec339db5a232d23b0241976",
+      "fen": "r2q1rk1/pp3pbp/2n1pnp1/2pp4/2P2P2/2NP2PP/PP1B1PB1/R2Q1RK1 w - - 0 12",
+      "top": "a2a3",
+      "teacherBest": "a1c1"
+    },
+    {
+      "id": "68a38f766c6489e779f343b52727865138e5fdee46c65fe0e74d9bd973fbb3d2",
+      "fen": "r4rk1/pp3pbp/2nqpnp1/2pp4/2P2P2/2NP2PP/PP1B1PB1/2RQ1RK1 w - - 2 13",
+      "top": "c4d5",
+      "teacherBest": "c4d5"
+    },
+    {
+      "id": "d9d447c43bbcc9d7f1d635c39cae79d9def6721a99fe2fad8ff444511b80af0c",
+      "fen": "r4rk1/pp3pbp/2nqp1p1/2pn4/5P2/2NP2PP/PP1B1PB1/2RQ1RK1 w - - 0 14",
+      "top": "c3e4",
+      "teacherBest": "c3e4"
+    },
+    {
+      "id": "81c61f40b2e49cce0e4323dc681ecda494bb2df10edf390921d09006ecf03c99",
+      "fen": "r4rk1/pp2qpbp/2n1p1p1/2pn4/4NP2/3P2PP/PP1B1PB1/2RQ1RK1 w - - 2 15",
+      "top": "e4c5",
+      "teacherBest": "d2c3"
+    },
+    {
+      "id": "686751bbcd3cc534142178a557a77edb849702dcd289937304542f0840ed8990",
+      "fen": "r2r2k1/pp2qpbp/2n1p1p1/2Nn4/5P2/3P2PP/PP1B1PB1/2RQ1RK1 w - - 1 16",
+      "top": "c5a4",
+      "teacherBest": "g2e4"
+    },
+    {
+      "id": "35da9d57286f74ea5cb022d0385a4e3ac6a7aa04e8ff96674add87f1c256b1fc",
+      "fen": "r2r2k1/pp2qp1p/2n1p1p1/2Nn4/4BP2/3P2PP/Pb1B1P2/2RQ1RK1 w - - 0 17",
+      "top": "c1b1",
+      "teacherBest": "c1b1"
+    },
+    {
+      "id": "d3bf3a21b35b193d81cf856f362ecbd002339a152ca727220a5214cd9d7b6a48",
+      "fen": "r2r2k1/pp2qp1p/2n1p1p1/2N5/4BP2/2nP2PP/Pb1B1P2/1R1Q1RK1 w - - 2 18",
+      "top": "d2c3",
+      "teacherBest": "d2c3"
+    },
+    {
+      "id": "31f03821de549156c64003045391ea638b09fb2bdd292cbc731198b823ccae73",
+      "fen": "r2r2k1/pp2qp1p/2n1p1p1/2N5/4BP2/2bP2PP/P4P2/1R1Q1RK1 w - - 0 19",
+      "top": "c5b7",
+      "teacherBest": "c5b7"
+    },
+    {
+      "id": "46fabc4c37759cf039140352234d20f90c202d5ba4b58173b97d5417c90f16e0",
+      "fen": "r1r3k1/pN2qp1p/2n1p1p1/8/4BP2/2bP2PP/P4P2/1R1Q1RK1 w - - 1 20",
+      "top": "d1a4",
+      "teacherBest": "b1c1"
+    },
+    {
+      "id": "ed838b6fb71d7b025c55f549d956a28383e370cfb824cc1a28ca32ece9cb2e99",
+      "fen": "r1r3k1/pN2qp1p/4p1p1/8/Q2nBP2/2bP2PP/P4P2/1R3RK1 w - - 3 21",
+      "top": "b7a5",
+      "teacherBest": "b7a5"
+    },
+    {
+      "id": "d6517f14bb229106ee25f37f899a0cc6dc36422f15651080af21e47b0bd455fb",
+      "fen": "1rr3k1/p3qp1p/4p1p1/N7/Q2nBP2/2bP2PP/P4P2/1R3RK1 w - - 5 22",
+      "top": "a5c4",
+      "teacherBest": "a5c4"
+    },
+    {
+      "id": "0ca5c63178a19600476aad93f39cf394ece736fdc7161d9fcda1bb49319c1b5b",
+      "fen": "1rr3k1/4qp1p/4p1p1/p7/Q1NnBP2/2bP2PP/P4P2/1R3RK1 w - - 0 23",
+      "top": "g1g2",
+      "teacherBest": "b1b8"
+    },
+    {
+      "id": "5c19eaf3793960fdbbc00fbed5378428a824fad8b40773927f99454928de5eee",
+      "fen": "1r4k1/4qp1p/4p1p1/p7/Q1NnBP2/2bP2PP/P4P2/5RK1 w - - 0 24",
+      "top": "g1g2",
+      "teacherBest": "g1g2"
+    },
+    {
+      "id": "3f0b25f59723bae2cab5fa8a3b88f6ff33fa0f6387926355e58ada35d9239209",
+      "fen": "1r4k1/4q2p/4p1p1/p4p2/Q1NnBP2/2bP2PP/P4PK1/5R2 w - - 0 25",
+      "top": "e4f3",
+      "teacherBest": "e4f3"
+    },
+    {
+      "id": "d6be28d3d618426fcfd84b7b3c46df37448dd3534e6f609414af91c3ceb2eb39",
+      "fen": "1r4k1/7p/2B1p1p1/p4p2/QqNn1P2/2bP2PP/P4PK1/5R2 w - - 2 26",
+      "top": "f1c1",
+      "teacherBest": "a2a3"
+    }
+  ]
+}

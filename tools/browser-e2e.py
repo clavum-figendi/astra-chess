@@ -35,10 +35,11 @@ with sync_playwright() as p:
     page.wait_for_selector('#model-downloads a')
     assert page.locator('#board button').count() == 64
     ids=[model['id'] for model in json.loads((root/'public/models/manifest.json').read_text())['models']]
-    assert page.locator('#model option').evaluate_all('(options)=>options.map(o=>o.value)') == ids
+    browser_ids = ids + [m['id'] for m in json.loads((root/'public/models/deepmind-browser.json').read_text())['models']]
+    assert page.locator('#model option').evaluate_all('(options)=>options.map(o=>o.value)') == browser_ids
     assert 'proposed, not built' in page.locator('#size-proposals').inner_text()
     assert page.evaluate("[...document.querySelectorAll('[aria-labelledby]')].every(el=>el.getAttribute('aria-labelledby').split(/\\s+/).every(id=>document.getElementById(id)))")
-    checks.append(f'{len(ids)} actual models exposed; future size proposals not selectable')
+    checks.append(f'{len(browser_ids)} actual models exposed; {len(ids)} legacy models covered here; transformer covered by browser-transformer-e2e.py')
     checks.append('64-square board and manifest loaded')
     # A seeded book response must agree with the laptop path, without invented scores.
     for seed in ('browser-book', 'second-branch', 'third-branch'):

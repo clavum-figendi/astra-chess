@@ -5,3 +5,5 @@ build/
 .env*
 *.log
 __pycache__/
+public/models/deepmind-9m-float32.onnx
+public/models/deepmind-9m-int8-dynamic.onnx

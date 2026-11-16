@@ -1,5 +1,6 @@
 import { Chess } from './src/chess.mjs';
 import { createClock } from './src/clock.mjs';
+import { modelResourceURL } from './src/model-resource.mjs';
 
 const $ = (id) => document.getElementById(id);
 const names = { p: 'pawn', n: 'knight', b: 'bishop', r: 'rook', q: 'queen', k: 'king' };
@@ -228,7 +229,7 @@ function takeTurn() {
   status(`${modelName()} is thinking…`);
   const token = generation;
   const fen = game.fen();
-  request('move', { fen: startFen && !game.history().length ? startFen : fen }).then((answer) => {
+  request('move', { fen: startFen && !game.history().length ? startFen : fen, history: {startFen: startFen || undefined, history: game.history({verbose:true}).map(m => m.from + m.to + (m.promotion || ''))} }).then((answer) => {
     if (token !== generation || !active || game.fen() !== fen) return;
     if (updateClocks().flagged || !active) return;
     if (typeof answer.move !== 'string' || !/^[a-h][1-8][a-h][1-8][qrbn]?$/.test(answer.move)) throw new Error('Policy returned no legal move.');
@@ -236,7 +237,7 @@ function takeTurn() {
     if (!legal) throw new Error('Policy returned an illegal move.');
     $('latency').textContent = `${Number(answer.elapsedMs).toFixed(2)} ms`;
     $('move-source').textContent = answer.source === 'book' ? 'book' : 'policy';
-    $('score-label').textContent = answer.source === 'book' ? 'Weight' : 'Raw score';
+    $('score-label').textContent = answer.source === 'book' ? 'Weight' : currentModel()?.runtime === 'onnx' ? 'Expected return' : 'Raw score';
     $('candidates').replaceChildren();
     for (const [index, item] of (Array.isArray(answer.candidates) ? answer.candidates : []).slice(0, 5).entries()) {
       if (typeof item.move !== 'string' || !Number.isFinite(answer.source === 'book' ? item.weight : item.score)) continue;
@@ -326,10 +327,9 @@ async function loadManifest() {
     const row = setNode('div', '', 'model-download');
     const info = setNode('div', neutralName(model.name));
     const count = (n) => Number.isFinite(n) ? n.toLocaleString('en-US') : '—';
-    info.append(setNode('small', `${count(model.parameters)} parameters · ${count(model.neurons)} neurons`));
-    const url = new URL(model.file, new URL('./models/', import.meta.url));
+    info.append(setNode('small', model.runtime === 'onnx' ? `${count(model.parameters)} parameters · Transformer / CPU WASM` : `${count(model.parameters)} parameters · ${count(model.neurons)} neurons`));
     const base = new URL('./models/', import.meta.url);
-    if (url.origin !== base.origin || !url.pathname.startsWith(base.pathname) || !url.pathname.endsWith('.bin')) throw new Error('Unsafe model artifact path.');
+    const url = modelResourceURL(model, base);
     const link = setNode('a', `${Number.isFinite(model.bytes) ? (model.bytes / 1024 / 1024).toFixed(2) + ' MiB' : 'Weights'} ↓`);
     link.href = url.href; link.download = model.file;
     row.append(info, link); $('model-downloads').append(row);

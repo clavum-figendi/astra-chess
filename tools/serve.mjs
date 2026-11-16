@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 export async function serve(root, port = 4173) {
   root = resolve(root);
-  const mime = {'.html':'text/html; charset=utf-8','.mjs':'text/javascript','.js':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.md':'text/plain; charset=utf-8','.zip':'application/zip'};
+  const mime = {'.html':'text/html; charset=utf-8','.mjs':'text/javascript','.js':'text/javascript','.wasm':'application/wasm','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.md':'text/plain; charset=utf-8','.zip':'application/zip'};
   const server = http.createServer(async (req,res) => {
     try {
       const path = decodeURIComponent(new URL(req.url,'http://localhost').pathname);

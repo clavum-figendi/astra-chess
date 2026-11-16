@@ -1,0 +1,663 @@
+{
+  "protocol": {
+    "id": "pretrained-adaptation-v5",
+    "depth": 10,
+    "multiPV": 4,
+    "plies": 40,
+    "sampleEvery": 2,
+    "bookSHA256": "eda61fb60b4baff9b7831259fdd52c291343598c73d13a6d3501e804283e64b1",
+    "split": "first four SAN plies SHA256 mod6: 0..3 train,4 validation,5 test",
+    "trajectory": "fresh engine each trajectory; warm hash within trajectory; rank2 on step%5==1 if within100cp",
+    "excludes": "all v0.3 and v0.4 board+side identities",
+    "sourceHashes": {
+      "tools/generate-pretrained-data.mjs": "9bf95cffefa1184ac2e2d2b95cc6a5e3834ad74a56daa6a512f44d92925f8c56",
+      "tools/teacher-policy.mjs": "a3dd3e84536757d64b5f15b8662bd15ce809ad07f39acf723f5ee54174853b34",
+      "tools/uci-engine.mjs": "d5cbf4ce8a19771992102b950fc48aafd9147fbfa4a38afdcc7dd47b985c8266"
+    }
+  },
+  "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+  "counts": {
+    "train": 435,
+    "validation": 207,
+    "test": 147
+  },
+  "splitSHA256": {
+    "train": "3f342ebc9b33523e41ad0ac84b1e473f61713105d0aa35df9350719114795fcf",
+    "validation": "8f0155f2a431d541b45e1a3384dc25a8bb7efb9f73c5bf39824ed0f432ee88ad",
+    "test": "a8186d4ac2ccd16b6eca1bc3ebd51c123f3fe74801fc5c2e9a735b41ee2a7104"
+  },
+  "games": [
+    {
+      "index": 0,
+      "name": "Ruy Lopez",
+      "group": "e4 e5 Nf3 Nc6",
+      "split": "validation",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O 9. h3 Na5 10. d4 Nxb3 11. Qxb3 Bb7 12. Qc2 d5 13. dxe5 Nxe4 14. Be3 c5 15. Nbd2 Qb6 16. b4 Nxd2 17. Bxd2 Rac8 18. Bg5 f6 19. exf6 Bxf6 20. bxc5 Qxc5 21. Bxf6 Rxf6 22. Ng5 Rg6 23. Re5 Qc4 24. Rae1 Rf8 25. Rf5 Rc8 26. Rfe5 Rf8 *"
+    },
+    {
+      "index": 1,
+      "name": "Berlin",
+      "group": "e4 e5 Nf3 Nc6",
+      "split": "validation",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 Nd6 6. Bxc6 dxc6 7. dxe5 Nf5 8. Qe2 Nd4 9. Nxd4 Qxd4 10. Rd1 Qg4 11. f3 Qg6 12. Nc3 Be7 13. Ne4 O-O 14. Bf4 Bf5 15. Kh1 h5 16. h3 Qe6 17. Qe3 Bxe4 18. fxe4 a5 19. Qe2 g6 20. Rf1 Rad8 21. Bd2 Bb4 22. Bg5 Rde8 23. Bf6 Kh7 24. Rf5 Qxf5 25. exf5 Be7 26. Qd3 Bxf6 *"
+    },
+    {
+      "index": 2,
+      "name": "Italian quiet",
+      "group": "e4 e5 Nf3 Nc6",
+      "split": "validation",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. O-O O-O 7. a4 Bb6 8. Bb3 Be6 9. Na3 d5 10. Ng5 Bg4 11. Qe1 Bh5 12. Kh1 h6 13. Nh3 Bg4 14. exd5 Nxd5 15. f3 Bf5 16. Qg3 Kh8 17. Nc4 f6 18. a5 Bc5 19. f4 b5 20. fxe5 bxc4 21. Rxf5 fxe5 22. Bg5 Qd6 23. Rxf8+ Rxf8 24. Bxc4 Nxa5 25. Ba2 Nc6 26. d4 Bb6 *"
+    },
+    {
+      "index": 3,
+      "name": "Italian open",
+      "group": "e4 e5 Nf3 Nc6",
+      "split": "validation",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nbd2 Nxe4 8. O-O Nxd2 9. Bxd2 O-O 10. d5 Bxd2 11. Qxd2 Ne7 12. d6 Nf5 13. dxc7 Qxc7 14. Rac1 Qb6 15. Ng5 d5 16. Qxd5 Nd6 17. Bb3 a5 18. Rfd1 a4 19. Qxd6 Qxd6 20. Rxd6 axb3 21. axb3 Ra2 22. Rd2 Bf5 23. h4 Ra6 24. Rc5 g6 25. h5 h6 26. hxg6 Bxg6 *"
+    },
+    {
+      "index": 4,
+      "name": "Two knights",
+      "group": "e4 e5 Nf3 Nc6",
+      "split": "validation",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d3 Bc5 5. O-O d6 6. c3 O-O 7. a4 a6 8. Bg5 h6 9. Bh4 Ba7 10. Na3 g5 11. Bg3 Kg7 12. Nc2 Re8 13. Re1 Bg4 14. Ne3 Qd7 15. Nxg4 Qxg4 16. b4 Ne7 17. Qb3 Rf8 18. d4 Nh5 19. h3 Qd7 20. Kh2 c6 21. dxe5 Nxg3 22. fxg3 b5 23. Be2 dxe5 24. Red1 Qc7 25. Qc2 c5 26. axb5 axb5 *"
+    },
+    {
+      "index": 5,
+      "name": "Scotch",
+      "group": "e4 e5 Nf3 Nc6",
+      "split": "validation",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6 5. Nc3 Bb4 6. Nxc6 bxc6 7. Bd3 d5 8. exd5 O-O 9. O-O cxd5 10. h3 c5 11. Qf3 Be6 12. Rd1 Rc8 13. Ba6 Rb8 14. Bf4 Rb6 15. Bd3 d4 16. Ne4 c4 17. Be2 Bf5 18. Nxf6+ Qxf6 19. c3 dxc3 20. bxc3 Qxc3 21. Qxc3 Bxc3 22. Rac1 Bb2 23. Rxc4 Bf6 24. Rc7 Rb2 25. Rd2 Rxd2 26. Bxd2 Rb8 *"
+    },
+    {
+      "index": 6,
+      "name": "Four knights",
+      "group": "e4 e5 Nf3 Nc6",
+      "split": "validation",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 Bb4 5. O-O O-O 6. d3 d6 7. Bg5 Bxc3 8. bxc3 Re8 9. Bh4 a6 10. Ba4 h6 11. h3 Bd7 12. Bb3 a5 13. Rb1 a4 14. Bd5 Rb8 15. a3 Qe7 16. Bc4 Kh8 17. d4 Rg8 18. Re1 b6 19. Bb5 g5 20. dxe5 Nxe5 21. Bg3 Rbe8 22. c4 Nxf3+ 23. Qxf3 Bxb5 24. Rxb5 Nd7 25. Rb4 Nc5 26. Qc3+ f6 *"
+    },
+    {
+      "index": 7,
+      "name": "Vienna",
+      "group": "e4 e5 Nc3 Nf6",
+      "split": "test",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e5 2. Nc3 Nf6 3. f4 d5 4. fxe5 Nxe4 5. Nf3 Be7 6. d3 Nxc3 7. bxc3 O-O 8. d4 f6 9. exf6 Bxf6 10. Be2 Bh4+ 11. g3 Be7 12. O-O Nc6 13. Ne1 Bf5 14. Nd3 Qd7 15. Bf4 b6 16. Bh5 Bf6 17. Qe2 Bh3 18. Rfe1 Ne7 19. Ne5 Bxe5 20. dxe5 Qe6 21. c4 Rf5 22. Bf3 c6 23. Rad1 Raf8 24. Rd3 h6 25. a3 R5f7 26. cxd5 Nxd5 *"
+    },
+    {
+      "index": 8,
+      "name": "Kings gambit",
+      "group": "e4 e5 f4 exf4",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e5 2. f4 exf4 3. Nf3 d5 4. exd5 Nf6 5. Bc4 Nxd5 6. O-O Be7 7. Nc3 Nb6 8. Bb3 a5 9. a4 Be6 10. d4 Bxb3 11. cxb3 g5 12. g3 Nc6 13. d5 Nb4 14. gxf4 gxf4 15. Qd4 Rg8+ 16. Kh1 Qd7 17. Bxf4 N4xd5 18. Bxc7 Nxc7 19. Qxb6 Qg4 20. Qg1 Qxg1+ 21. Nxg1 Rg5 22. Nf3 Rh5 23. Ne4 Ne6 24. Nfd2 Rh4 25. Rae1 Rd8 26. Nc4 Rd3 *"
+    },
+    {
+      "index": 9,
+      "name": "Petrov",
+      "group": "e4 e5 Nf3 Nf6",
+      "split": "validation",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Be7 7. O-O Nd6 8. Bf4 O-O 9. Nbd2 Nc6 10. Re1 Nf5 11. c3 Bd6 12. Bxd6 Qxd6 13. b4 Nce7 14. a4 Qd8 15. Qb1 g6 16. Qc1 Nd6 17. h3 h5 18. Nf1 a5 19. Ng3 Nef5 20. Re5 Nxg3 21. fxg3 Kg7 22. Rxd5 c6 23. Re5 Bf5 24. Qd2 Bxd3 25. Qxd3 Re8 26. Kh2 axb4 *"
+    },
+    {
+      "index": 10,
+      "name": "Philidor",
+      "group": "e4 e5 Nf3 d6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e5 2. Nf3 d6 3. d4 Nf6 4. Nc3 Nbd7 5. Bc4 Be7 6. O-O O-O 7. Be3 Ng4 8. Bc1 exd4 9. Nxd4 Nb6 10. Bd3 Ne5 11. a4 Nxd3 12. Qxd3 a5 13. Re1 Nd7 14. Nd5 Bh4 15. Qc3 Nc5 16. e5 Be6 17. exd6 cxd6 18. Nf4 Bd7 19. b3 Rc8 20. Qd2 Ne6 21. Nd5 Bc6 22. Nxc6 bxc6 23. Ne3 Bf6 24. Rb1 d5 25. Ba3 Re8 26. Nf5 c5 *"
+    },
+    {
+      "index": 11,
+      "name": "Sicilian Najdorf",
+      "group": "e4 c5 Nf3 d6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be3 e5 7. Nde2 Ng4 8. Nd5 Nxe3 9. Nxe3 g6 10. h4 Be6 11. Nc3 Bh6 12. Ng4 Bg7 13. h5 Nc6 14. h6 Bf6 15. Nd5 Bg5 16. Bc4 b5 17. Bb3 Nd4 18. g3 f5 19. exf5 gxf5 20. Nge3 Bxe3 21. Nxe3 d5 22. Qh5+ Bf7 23. Qd1 Qf6 24. c3 Nxb3 25. axb3 d4 26. cxd4 exd4 *"
+    },
+    {
+      "index": 12,
+      "name": "Sicilian dragon",
+      "group": "e4 c5 Nf3 d6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 Qb6 8. e5 Nh5 9. Bb5+ Bd7 10. Nd5 Qd8 11. Bg5 Bxe5 12. Bxe7 Qa5+ 13. b4 Qa3 14. Bxd7+ Kxd7 15. Nb5 Qa6 16. c4 Bxa1 17. O-O Bb2 18. Bxd6 Nc6 19. Ndc7 Bd4+ 20. Kh1 Qxa2 21. Nxd4 Kxd6 22. Ndb5+ Ke5 23. Qd6+ Kf5 24. h4 Qxg2+ 25. Kxg2 Rad8 26. Qc5+ Kf6 *"
+    },
+    {
+      "index": 13,
+      "name": "Sicilian classical",
+      "group": "e4 c5 Nf3 Nc6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 d6 6. Bg5 e6 7. Qd2 Nxd4 8. Qxd4 a6 9. O-O-O h6 10. Bh4 Qc7 11. f4 Be7 12. e5 dxe5 13. fxe5 Bc5 14. Qa4+ Nd7 15. Bb5 Rb8 16. Bxd7+ Bxd7 17. Qg4 g5 18. Ne4 Bb5 19. Be1 Rd8 20. Bb4 Bxb4 21. Nf6+ Kf8 22. Rxd8+ Qxd8 23. Qxb4+ Qe7 24. Qc3 b6 25. h4 Qc5 26. Qxc5+ bxc5 *"
+    },
+    {
+      "index": 14,
+      "name": "Sicilian accelerated",
+      "group": "e4 c5 Nf3 Nc6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6 5. c4 Bg7 6. Be3 Nf6 7. Nc3 O-O 8. Be2 d6 9. O-O Nxd4 10. Qxd4 Ng4 11. Qd3 Nxe3 12. Qxe3 Bd7 13. Rfd1 Bc6 14. c5 Qa5 15. Nd5 Bxd5 16. Rxd5 e6 17. Rxd6 Rac8 18. Rd2 Rfd8 19. Rad1 Rxd2 20. Rxd2 Qxa2 21. Bf1 Qa4 22. b3 Qa3 23. Rd7 Qxc5 24. Rd8+ Bf8 25. Rxc8 Qxc8 26. Qxa7 b5 *"
+    },
+    {
+      "index": 15,
+      "name": "Sicilian Alapin",
+      "group": "e4 c5 c3 d5",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 c5 2. c3 d5 3. exd5 Qxd5 4. d4 Nf6 5. Nf3 e6 6. Be2 Nc6 7. O-O Be7 8. dxc5 Qxc5 9. b4 Qf5 10. Re1 O-O 11. Bd3 Qd5 12. Qe2 Qh5 13. b5 Na5 14. Qc2 Bd6 15. c4 h6 16. Nbd2 b6 17. Bb2 Rd8 18. Bxf6 gxf6 19. Ne4 Be7 20. Rad1 Qg4 21. c5 bxc5 22. Ng3 Bb7 23. h3 Qg7 24. Nh5 Qf8 25. Nh4 f5 26. Nxf5 exf5 *"
+    },
+    {
+      "index": 16,
+      "name": "Sicilian closed",
+      "group": "e4 c5 Nc3 Nc6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 c5 2. Nc3 Nc6 3. g3 g6 4. Bg2 Bg7 5. d3 d6 6. Be3 e6 7. Nf3 Nd4 8. Bd2 Nc6 9. O-O Nge7 10. Rb1 O-O 11. h4 f5 12. h5 gxh5 13. Ng5 h6 14. Nh3 e5 15. exf5 Rxf5 16. f4 d5 17. fxe5 Nxe5 18. Qe2 Rxf1+ 19. Rxf1 Bg4 20. Qf2 d4 21. Ne4 Qb6 22. Nf4 Rf8 23. Qe1 Rf7 24. c4 Qc7 25. a4 Nf5 26. Ne6 Qe7 *"
+    },
+    {
+      "index": 17,
+      "name": "French advance",
+      "group": "e4 e6 d4 d5",
+      "split": "test",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Nc6 5. Nf3 Qb6 6. Bd3 Bd7 7. dxc5 Qc7 8. Bf4 Bxc5 9. b4 Bb6 10. Nbd2 g5 11. Bxg5 Nxe5 12. Qc2 Rc8 13. Rc1 f6 14. Bh4 Qxc3 15. Qxc3 Nxd3+ 16. Qxd3 Rxc1+ 17. Ke2 Rxh1 18. b5 Bd8 19. Nb3 Nh6 20. Nc5 Bc8 21. Nd4 Ba5 22. Qf3 Nf7 23. Bxf6 Re1+ 24. Kd3 e5 25. Qh5 Rg8 26. Nde6 Rxg2 *"
+    },
+    {
+      "index": 18,
+      "name": "French classical",
+      "group": "e4 e6 d4 d5",
+      "split": "test",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. Bg5 Be7 5. e5 Nfd7 6. Bxe7 Qxe7 7. f4 a6 8. Qg4 g6 9. h4 c5 10. h5 f5 11. Qd1 g5 12. g3 b5 13. Nce2 g4 14. dxc5 Nxc5 15. c3 Ne4 16. Nd4 Nxg3 17. Rh2 Bb7 18. a4 b4 19. Qb3 Nc6 20. Nge2 Nxe2 21. Bxe2 Nxd4 22. cxd4 O-O 23. h6 a5 24. Rh5 Kh8 25. Kf2 Rfc8 26. Bb5 Ba6 *"
+    },
+    {
+      "index": 19,
+      "name": "French Tarrasch",
+      "group": "e4 e6 d4 d5",
+      "split": "test",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e6 2. d4 d5 3. Nd2 c5 4. exd5 exd5 5. Ngf3 Nc6 6. Bb5 Bd6 7. dxc5 Bxc5 8. O-O Ne7 9. Nb3 Bd6 10. Re1 O-O 11. Bd3 h6 12. h3 Re8 13. a4 Bd7 14. c3 Nf5 15. Bc2 Rxe1+ 16. Nxe1 Qe7 17. Bxf5 Re8 18. Bxh6 Bxf5 19. Be3 Qd8 20. a5 Bc7 21. a6 Qd6 22. axb7 Qh2+ 23. Kf1 Qh1+ 24. Ke2 Bxh3 25. gxh3 Rxe3+ 26. fxe3 Qh2+ *"
+    },
+    {
+      "index": 20,
+      "name": "French exchange",
+      "group": "e4 e6 d4 d5",
+      "split": "test",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e6 2. d4 d5 3. exd5 exd5 4. Nf3 Nf6 5. Bd3 Bd6 6. O-O O-O 7. Bg5 h6 8. Bh4 Re8 9. Nc3 c6 10. h3 Nbd7 11. Re1 Rxe1+ 12. Qxe1 Qe8 13. Qd2 Ne4 14. Qe3 Nef6 15. Qc1 Qe6 16. Qf1 Qe7 17. Re1 Qf8 18. Ne5 Bc7 19. Qe2 Ba5 20. a3 Ne4 21. Nxe4 Bxe1 22. Nxd7 Bxd7 23. Nc5 Re8 24. Nxd7 Rxe2 25. Nxf8 Re8 26. Nd7 Bd2 *"
+    },
+    {
+      "index": 21,
+      "name": "Caro Kann classical",
+      "group": "e4 c6 d4 d5",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. h4 h6 7. Nf3 e6 8. Ne5 Ne7 9. h5 Bh7 10. Bd3 Bxd3 11. Qxd3 Nd7 12. Qe2 Qc7 13. O-O Nxe5 14. Bf4 f6 15. dxe5 Nd5 16. Bd2 f5 17. c4 Nb4 18. Rad1 c5 19. Qf3 O-O-O 20. b3 Nc6 21. Ne2 Qxe5 22. Bc3 Qe4 23. Rxd8+ Nxd8 24. Qxe4 fxe4 25. Nf4 Bd6 26. Ng6 Rg8 *"
+    },
+    {
+      "index": 22,
+      "name": "Caro Kann advance",
+      "group": "e4 c6 d4 d5",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 c6 2. d4 d5 3. e5 Bf5 4. Nf3 e6 5. Be2 c5 6. O-O Nc6 7. c3 cxd4 8. Nxd4 Nge7 9. Nxf5 Nxf5 10. Bb5 Qc7 11. Qe2 Be7 12. Re1 d4 13. Nd2 Rd8 14. Bd3 O-O 15. Rb1 dxc3 16. bxc3 Rd5 17. Nf3 Ra5 18. Bf4 h6 19. h4 Bc5 20. h5 Nce7 21. Qc2 Qc6 22. Re4 Rd8 23. a4 Bb6 24. g4 g5 25. Bb5 Qd5 26. Bh2 Ng7 *"
+    },
+    {
+      "index": 23,
+      "name": "Caro Kann Panov",
+      "group": "e4 c6 d4 d5",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 e6 6. Nf3 Bb4 7. Be2 O-O 8. Bg5 dxc4 9. Bxc4 h6 10. Bxf6 Qxf6 11. O-O Nc6 12. Bb5 Bxc3 13. bxc3 e5 14. Bxc6 Qxc6 15. dxe5 Qxc3 16. Qd4 Qa5 17. Qe4 Be6 18. Qxb7 Bd5 19. Qb2 Bxf3 20. gxf3 Rfe8 21. Rae1 Rab8 22. Qc2 Re6 23. Re3 Rxe5 24. Rxe5 Qxe5 25. Rd1 Qg5+ 26. Kh1 Rb6 *"
+    },
+    {
+      "index": 24,
+      "name": "Scandinavian",
+      "group": "e4 d5 exd5 Qxd5",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5 4. d4 Nf6 5. Nf3 c6 6. Bc4 Bf5 7. Ne5 Bg6 8. Qe2 e6 9. Bd2 Qc7 10. Bb3 Bd6 11. h4 Nbd7 12. h5 Bxe5 13. hxg6 Bxd4 14. Rh4 Qe5 15. Ne4 Bxb2 16. gxf7+ Kxf7 17. Rb1 Rae8 18. Ng5+ Ke7 19. Nxe6 Qxe2+ 20. Kxe2 Nd5 21. Bxd5 Bf6 22. Nxg7 Bxg7 23. Be4 Kd8 24. Rxb7 Bf6 25. Rg4 Kc8 26. Rxa7 h5 *"
+    },
+    {
+      "index": 25,
+      "name": "Pirc",
+      "group": "e4 d6 d4 Nf6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Nf3 Bg7 5. Be2 O-O 6. O-O c6 7. a4 Qc7 8. h3 e5 9. dxe5 dxe5 10. Be3 a5 11. Nd2 Rd8 12. Qe1 Qe7 13. Nc4 Na6 14. Nb6 Rb8 15. f4 exf4 16. Bxf4 Be6 17. Qf2 Qb4 18. Rad1 Nc5 19. Bxb8 Rxb8 20. e5 Nfe4 21. Nxe4 Nxe4 22. Qd4 Qxd4+ 23. Rxd4 Ng3 24. Re1 Bxe5 25. Rd3 Bf5 26. Rdd1 Bxc2 *"
+    },
+    {
+      "index": 26,
+      "name": "Alekhine",
+      "group": "e4 Nf6 e5 Nd5",
+      "split": "validation",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. Nf3 Bg4 5. Be2 e6 6. O-O Be7 7. c4 Nb6 8. exd6 cxd6 9. Nc3 O-O 10. a4 d5 11. c5 Nc8 12. b4 a6 13. Ne5 Bxe2 14. Nxe2 Nc6 15. Ra3 Nxe5 16. dxe5 a5 17. Rh3 Re8 18. c6 bxc6 19. Nd4 g6 20. Qd2 Bf8 21. Nxc6 Qc7 22. b5 Ne7 23. Nxe7+ Qxe7 24. Ba3 Qd7 25. Rb1 Bxa3 26. Qh6 f5 *"
+    },
+    {
+      "index": 27,
+      "name": "Queens gambit declined",
+      "group": "d4 d5 c4 e6",
+      "split": "validation",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 O-O 6. Nf3 h6 7. Bh4 Nbd7 8. Qc2 dxc4 9. Bxc4 c5 10. dxc5 Nh5 11. Bxe7 Qxe7 12. b4 a5 13. Qa4 b5 14. Bxb5 Bb7 15. c6 axb4 16. Qc2 Ba6 17. Bxa6 bxc3 18. Be2 Nb8 19. Qxc3 Rc8 20. Bb5 Nxc6 21. Bxc6 Ra6 22. Ne5 Ra7 23. O-O f6 24. Ng6 Qd6 25. g4 Ra4 26. h3 Ng3 *"
+    },
+    {
+      "index": 28,
+      "name": "Queens gambit accepted",
+      "group": "d4 d5 c4 dxc4",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. d4 d5 2. c4 dxc4 3. Nf3 Nf6 4. e3 e6 5. Bxc4 c5 6. O-O a6 7. Be2 b6 8. Qa4+ Nbd7 9. dxc5 Bxc5 10. Nbd2 Be7 11. Rd1 Bb7 12. Qf4 Rc8 13. Nc4 Qc7 14. Nd6+ Bxd6 15. Rxd6 e5 16. Qb4 Nd5 17. Rxd5 Bxd5 18. Bxa6 Ra8 19. Bf1 Rxa2 20. Rb1 Bxf3 21. gxf3 Qc2 22. Qe4 Qxe4 23. fxe4 O-O 24. Bc4 Ra7 25. b4 Rc8 26. Bb3 Rc3 *"
+    },
+    {
+      "index": 29,
+      "name": "Slav",
+      "group": "d4 d5 c4 c6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 dxc4 5. a4 Bf5 6. e3 e6 7. Bxc4 a5 8. O-O Bg6 9. Qb3 Nbd7 10. e4 Bb4 11. e5 Nd5 12. Bxd5 exd5 13. Na2 Qb6 14. Nxb4 Qxb4 15. Qe3 O-O 16. b3 Rfe8 17. Ba3 Qb6 18. Nh4 c5 19. dxc5 Qe6 20. Nxg6 hxg6 21. f4 Nb8 22. Bb2 Rd8 23. Bd4 Rd7 24. Rac1 Nc6 25. h3 Re8 26. Qc3 Nxd4 *"
+    },
+    {
+      "index": 30,
+      "name": "Semi Slav",
+      "group": "d4 d5 c4 c6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 e6 5. e3 Nbd7 6. Bd3 dxc4 7. Bxc4 Be7 8. O-O b5 9. Bd3 b4 10. Ne4 Bb7 11. Nxf6+ Nxf6 12. Qc2 Qb6 13. a4 a5 14. e4 b3 15. Qe2 c5 16. Bb5+ Bc6 17. Ne5 Bxb5 18. axb5 cxd4 19. Bd2 a4 20. Rfc1 a3 21. Nc6 Bc5 22. Qc4 Nxe4 23. Bb4 O-O 24. Rxa3 Rxa3 25. bxa3 Bxb4 26. Qxb4 Nc3 *"
+    },
+    {
+      "index": 31,
+      "name": "Kings Indian",
+      "group": "d4 Nf6 c4 g6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. Be3 Qe8 8. dxe5 Ng4 9. Bd4 c5 10. Be3 Nxe3 11. fxe3 Bxe5 12. Nxe5 Qxe5 13. Qd3 Nc6 14. Qd2 h5 15. Rd1 Qg5 16. Qxd6 Qxg2 17. Rf1 Bg4 18. Bxg4 Qxb2 19. Qf6 hxg4 20. Nd5 Qe5 21. Qh4 Kg7 22. Qxg4 Rae8 23. Rf4 Nb4 24. h4 Nxd5 25. Rxd5 Qc3+ 26. Kf2 Qxc4 *"
+    },
+    {
+      "index": 32,
+      "name": "Nimzo Indian",
+      "group": "d4 Nf6 c4 e6",
+      "split": "test",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 O-O 5. Bd3 d5 6. Nf3 c5 7. O-O dxc4 8. Bxc4 cxd4 9. exd4 b6 10. Qe2 Nc6 11. Rd1 Bb7 12. d5 Nxd5 13. Nxd5 exd5 14. Bxd5 Qf6 15. Qb5 Bc5 16. Bg5 Qg6 17. Rac1 Rab8 18. Bh4 Ba8 19. a3 Rbc8 20. h3 Qh5 21. g4 Qh6 22. Rc2 Nd4 23. Rxd4 Bxd4 24. Rxc8 Rxc8 25. Bxa8 Bxf2+ 26. Kxf2 Rxa8 *"
+    },
+    {
+      "index": 33,
+      "name": "Queens Indian",
+      "group": "d4 Nf6 c4 e6",
+      "split": "test",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. g3 Bb7 5. Bg2 Be7 6. O-O O-O 7. Re1 d6 8. Qd3 c5 9. e4 cxd4 10. Qxd4 Nc6 11. Qe3 d5 12. exd5 exd5 13. Nc3 Bc5 14. Qf4 Nb4 15. Re2 d4 16. Nb5 d3 17. Re5 Rb8 18. Bd2 Nc2 19. Rf1 a6 20. b4 Nxb4 21. Nbd4 Bxf3 22. Nxf3 Bd6 23. Bxb4 Bxb4 24. Re3 Bc5 25. Ree1 h6 26. Rd1 Bd6 *"
+    },
+    {
+      "index": 34,
+      "name": "Grunfeld",
+      "group": "d4 Nf6 c4 g6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Qa4+ Qd7 8. Qa3 Nc6 9. Nf3 O-O 10. h4 Qg4 11. e5 f6 12. exf6 exf6 13. Be3 Re8 14. h5 Bh6 15. Bc4+ Be6 16. Bxe6+ Rxe6 17. O-O Bf8 18. Qb3 b6 19. Qd5 Rd8 20. Qb5 Qxh5 21. Qxh5 gxh5 22. g3 Ba3 23. Kg2 Bb2 24. Rab1 Bxc3 25. Rbc1 Bb2 26. Rc2 Ba3 *"
+    },
+    {
+      "index": 35,
+      "name": "Benoni",
+      "group": "d4 Nf6 c4 c5",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. Nf3 g6 7. h3 b5 8. Nxb5 Bg7 9. Nc3 O-O 10. Bf4 Nbd7 11. e3 Nb6 12. Bg5 Bb7 13. e4 Qe7 14. Be2 h6 15. Bxf6 Bxf6 16. Nd2 Rae8 17. Rb1 Bxc3 18. bxc3 f5 19. c4 fxe4 20. Rb3 Rxf2 21. Kxf2 e3+ 22. Kf1 exd2 23. Qxd2 Ba6 24. Qc2 Qg5 25. Kg1 Bxc4 26. Bxc4 Nxc4 *"
+    },
+    {
+      "index": 36,
+      "name": "Dutch",
+      "group": "d4 f5 g3 Nf6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. d4 f5 2. g3 Nf6 3. Bg2 e6 4. Nf3 Be7 5. O-O O-O 6. c4 d6 7. b4 Nc6 8. a3 e5 9. dxe5 dxe5 10. Qxd8 Rxd8 11. b5 Nd4 12. Nxd4 Rxd4 13. Nd2 e4 14. e3 Rd3 15. Re1 Ng4 16. Bf1 Rd8 17. f4 exf3 18. Nxf3 c5 19. bxc6 bxc6 20. h3 Bf6 21. Rb1 Bc3 22. Re2 Ne5 23. Nxe5 Bxe5 24. Kf2 Be6 25. Rb7 Bxc4 26. Rc2 Bxf1 *"
+    },
+    {
+      "index": 37,
+      "name": "London",
+      "group": "d4 d5 Nf3 Nf6",
+      "split": "validation",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. d4 d5 2. Nf3 Nf6 3. Bf4 e6 4. e3 c5 5. c3 Nc6 6. Nbd2 Bd6 7. Bg3 cxd4 8. exd4 O-O 9. Bxd6 Qxd6 10. Be2 Re8 11. O-O e5 12. dxe5 Nxe5 13. Nxe5 Qxe5 14. Re1 Bd7 15. Bf3 Qf4 16. Rxe8+ Rxe8 17. Nf1 h5 18. Bxh5 d4 19. cxd4 Nxh5 20. Qxh5 Bc6 21. Ne3 Qxd4 22. Qe2 Qd5 23. h3 Qxg2+ 24. Nxg2 Rxe2 25. b3 Bd7 26. h4 Rd2 *"
+    },
+    {
+      "index": 38,
+      "name": "English symmetric",
+      "group": "c4 c5 Nc3 Nc6",
+      "split": "test",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. c4 c5 2. Nc3 Nc6 3. g3 g6 4. Bg2 Bg7 5. Nf3 Nf6 6. O-O O-O 7. d3 d6 8. Bd2 Bg4 9. h3 Bxf3 10. exf3 e6 11. f4 d5 12. Rc1 Qd6 13. cxd5 Nxd5 14. Ne4 Qe7 15. Nxc5 Rfd8 16. Be4 Bxb2 17. Rb1 Nc3 18. Bxc3 Bxc3 19. Nxb7 Rdc8 20. Qa4 Nd4 21. Na5 Rab8 22. Nc4 a5 23. Rxb8 Rxb8 24. Kg2 f5 25. Bc6 Qb4 26. a3 Qc5 *"
+    },
+    {
+      "index": 39,
+      "name": "English reversed Sicilian",
+      "group": "c4 e5 Nc3 Nf6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. c4 e5 2. Nc3 Nf6 3. g3 d5 4. cxd5 Nxd5 5. Bg2 Nb6 6. Nf3 Nc6 7. a3 a5 8. O-O Be7 9. d3 O-O 10. Re1 a4 11. Be3 Nd5 12. Nxd5 Qxd5 13. Nd4 Qa5 14. Nxc6 bxc6 15. Qc2 Be6 16. Rac1 Bd5 17. Bxd5 Qxd5 18. Qxc6 Qxc6 19. Rxc6 Bd6 20. Rb1 Ra5 21. Rbc1 Rb8 22. Bd2 Raa8 23. R1c2 f6 24. h4 Kf7 25. Kg2 h5 26. R6c4 Rb3 *"
+    },
+    {
+      "index": 40,
+      "name": "Reti",
+      "group": "Nf3 d5 g3 Nf6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. Nf3 d5 2. g3 Nf6 3. Bg2 e6 4. O-O Be7 5. d3 O-O 6. Nbd2 c5 7. c3 Qc7 8. e4 Nc6 9. Qe2 b5 10. d4 a5 11. exd5 exd5 12. Ne5 Bd6 13. Nxc6 Qxc6 14. dxc5 Bxc5 15. Qd1 Re8 16. Nb3 Bg4 17. Nd4 Bxd1 18. Nxc6 Be2 19. Re1 Ng4 20. Nd4 Bc4 21. Rd1 Bxd4 22. cxd4 Nf6 23. b3 Be2 24. Re1 Bd3 25. Bg5 Rxe1+ 26. Rxe1 Ne4 *"
+    },
+    {
+      "index": 41,
+      "name": "Larsen",
+      "group": "b3 d5 Bb2 Nf6",
+      "split": "train",
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "engine": {
+        "kind": "stockfish",
+        "path": "/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish",
+        "name": "Stockfish 17.1",
+        "author": "the Stockfish developers (see AUTHORS file)",
+        "sha256": "0fd9f5995bceb762f4c87bb577b99de28f0782456b609cb09a47852bba1a4af8"
+      },
+      "pgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. b3 d5 2. Bb2 Nf6 3. e3 e6 4. Nf3 Be7 5. c4 O-O 6. Be2 c5 7. O-O Nc6 8. d4 cxd4 9. Nxd4 Nxd4 10. Bxd4 dxc4 11. Nd2 cxb3 12. Qxb3 Nd5 13. Ne4 Re8 14. a4 Qa5 15. Qb2 Bf8 16. Rfc1 h6 17. Rc4 Rd8 18. Nc5 Nb6 19. Rc2 Nd7 20. Nxd7 Bxd7 21. Qxb7 Rab8 22. Qa6 Qf5 23. Rc7 Rb1+ 24. Rxb1 Qxb1+ 25. Bf1 Be8 26. h3 e5 *"
+    }
+  ],
+  "finishedAt": "2026-11-16T16:03:26.833Z",
+  "durationMs": 511389.74290899996
+}

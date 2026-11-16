@@ -1,0 +1,299 @@
+{
+  "url": "http://127.0.0.1:4194/dist/",
+  "metadata": {
+    "architecture": "deepmind-9m-action-value",
+    "config": {
+      "vocab_size": 1968,
+      "output_size": 128,
+      "embedding_dim": 256,
+      "num_layers": 8,
+      "num_heads": 8,
+      "max_sequence_length": 79,
+      "layer_norm_eps": 1e-05,
+      "embedding_scale": 16
+    },
+    "runtimeOptions": {
+      "type": "onnx",
+      "batchSize": 4
+    },
+    "id": "deepmind-9m",
+    "name": "DeepMind 9M",
+    "variant": "fp16-storage",
+    "file": "deepmind-9m-fp16.onnx",
+    "runtime": "onnx",
+    "bytes": 17991221,
+    "sha256": "4faa374e93c82e92f4f443cf36d9d2fdc98e22d69991cdc6d0d6a3ecdbe3957e",
+    "parameters": 8954240,
+    "scoreType": "expected-return",
+    "description": "Adapted DeepMind 9M action-value transformer, stored in FP16 and executed as float32 in ORT-Web WASM.",
+    "features": [
+      "legal-move-ranking",
+      "128-bucket-expected-return",
+      "cpu-wasm",
+      "no-tree-search"
+    ],
+    "measurement": {
+      "validationPositions": 207,
+      "referenceTopMoveAgreementRate": 1,
+      "teacherHits": 126,
+      "teacherDelta": 0,
+      "pythonInferenceSeconds": 249.39073627299513,
+      "batchSize": 4,
+      "threads": 1
+    },
+    "selection": {
+      "policy": "spikes/browser-9m/selection-policy.json",
+      "reason": "smallest eligible candidate satisfying the predeclared validation rule"
+    }
+  },
+  "ui": {
+    "notation": "1.\ne4",
+    "latency": "3716.50 ms"
+  },
+  "positions": [
+    {
+      "id": "7829c1f116fbb077c1c80a304febe1456f43ac311ff710c618e12692008b1bd8",
+      "move": "f1e2",
+      "referenceMove": "f1e2",
+      "teacher": "f1d3",
+      "elapsedMs": 5286.399999991059
+    },
+    {
+      "id": "f727cbea5728f89b204f35b57336b17a3eb22ba10eef3ebf851bb8d9776ecde5",
+      "move": "g2g3",
+      "referenceMove": "g2g3",
+      "teacher": "g2g3",
+      "elapsedMs": 558.1000000089407
+    },
+    {
+      "id": "3e3db4674789f658ff906b12f90feaf188a9abe9330ee47a3354c88ff5518019",
+      "move": "e1g1",
+      "referenceMove": "e1g1",
+      "teacher": "e1g1",
+      "elapsedMs": 4189.5999999940395
+    },
+    {
+      "id": "c3d402b9d2711221390e6140d1fd7a1464e1afea5a5ab19b713fb6bfece135dc",
+      "move": "f3e1",
+      "referenceMove": "f3e1",
+      "teacher": "f3e1",
+      "elapsedMs": 4372.20000000298
+    },
+    {
+      "id": "8e8d441d88bebbd7f9c2360da2a1b4c690db1396ba88466a08f4024fcb8b540e",
+      "move": "a1b1",
+      "referenceMove": "a1b1",
+      "teacher": "e1d3",
+      "elapsedMs": 3985.800000011921
+    },
+    {
+      "id": "05fd876a7e3e70b818299a0847b8eeebbbd05f6f58a7f4796b8fa18369ac11ad",
+      "move": "c1f4",
+      "referenceMove": "c1f4",
+      "teacher": "e2f3",
+      "elapsedMs": 4461
+    },
+    {
+      "id": "902c4c3d1c1f9a96091c5365c7aca2022ba22a2a3e09f6ceab3d2c5591b2f6a7",
+      "move": "e2f3",
+      "referenceMove": "e2f3",
+      "teacher": "e2h5",
+      "elapsedMs": 4738.800000011921
+    },
+    {
+      "id": "2f57be129c84061bb8309a14517fec7dacb4cb81469b927d6e244df69b46f8a5",
+      "move": "h2h4",
+      "referenceMove": "h2h4",
+      "teacher": "d1e2",
+      "elapsedMs": 5593.5999999940395
+    },
+    {
+      "id": "1fc135ca8e4f920bf057cc9276d8ab74fb5263f9c54912a9e72be8df4925f147",
+      "move": "f1e1",
+      "referenceMove": "f1e1",
+      "teacher": "f1e1",
+      "elapsedMs": 7792.399999991059
+    },
+    {
+      "id": "16747585c06831fb4cd96752a527a6a033df275462d3f71ff11d95cc2218fc64",
+      "move": "f4e5",
+      "referenceMove": "f4e5",
+      "teacher": "d3e5",
+      "elapsedMs": 5955.600000008941
+    },
+    {
+      "id": "543bffe1a0c2b373f9406e2e06cfb24b8aa5d2d782229be47a00562c233c02bb",
+      "move": "e2e5",
+      "referenceMove": "e2e5",
+      "teacher": "e2e5",
+      "elapsedMs": 5666.5999999940395
+    },
+    {
+      "id": "798ef7e3698d8cf7a4309c39a954f8a018d04fe337e1d8e270772e4dcab2858e",
+      "move": "a1d1",
+      "referenceMove": "a1d1",
+      "teacher": "c3c4",
+      "elapsedMs": 4972.70000000298
+    },
+    {
+      "id": "11e51bff5236826ca9696ab587c14860815138a5445d54fdfdb04a5264b84770",
+      "move": "h5f3",
+      "referenceMove": "h5f3",
+      "teacher": "h5f3",
+      "elapsedMs": 4868.79999999702
+    },
+    {
+      "id": "469db01d01f206d3f5bfa4d8eb7bb3ee90b7fcf0dd5fdc09b54e874c33c1c4d1",
+      "move": "c4d5",
+      "referenceMove": "c4d5",
+      "teacher": "a1d1",
+      "elapsedMs": 4560.800000011921
+    },
+    {
+      "id": "d3fe99f4690358c3f4adec573004cd4fec5424bb3a8edd4191b149c6ed1af6dd",
+      "move": "c4d5",
+      "referenceMove": "c4d5",
+      "teacher": "d1d3",
+      "elapsedMs": 4459.70000000298
+    },
+    {
+      "id": "6959b023d2b2210911d586297f982f6f367616ed7d797e90d0f41b09d65efce8",
+      "move": "c4d5",
+      "referenceMove": "c4d5",
+      "teacher": "f4d2",
+      "elapsedMs": 5718.4000000059605
+    },
+    {
+      "id": "f74aec793023253617abc31e6615f3c20757c76b7a0179c1d0ad8f40cd177f20",
+      "move": "c4d5",
+      "referenceMove": "c4d5",
+      "teacher": "c4d5",
+      "elapsedMs": 5482.29999999702
+    },
+    {
+      "id": "7a33b3b18d3670251f7fafa65f53d38067c42585c5fb38e08144fdd5a1060deb",
+      "move": "b2b4",
+      "referenceMove": "b2b4",
+      "teacher": "b2b4",
+      "elapsedMs": 5607.100000008941
+    },
+    {
+      "id": "f5b5d8d5f3b0803163527cf89213a79d06361ba7fa099b90db55e1262f4ab988",
+      "move": "a2a4",
+      "referenceMove": "a2a4",
+      "teacher": "a2a4",
+      "elapsedMs": 5980.800000011921
+    },
+    {
+      "id": "cd37639696d3ff2e5326f5b05a956249e2adce73be6c1c62c68465cf866a78a9",
+      "move": "f4g5",
+      "referenceMove": "f4g5",
+      "teacher": "f4g5",
+      "elapsedMs": 6078.899999991059
+    },
+    {
+      "id": "6308b20a320391acd28c68a7db05c135e481992669776b1cc22d9037d2096c5f",
+      "move": "d3e2",
+      "referenceMove": "d3e2",
+      "teacher": "d1c2",
+      "elapsedMs": 6633.399999991059
+    },
+    {
+      "id": "19a9d80cbb192254c13f6510b7531cc933178de87a42f5e9189e9b07528dfe75",
+      "move": "a1c1",
+      "referenceMove": "a1c1",
+      "teacher": "a1c1",
+      "elapsedMs": 7086.5999999940395
+    },
+    {
+      "id": "c4a9d51a1e99cae26c192e97cd52418c65a78b20b8c23dd38e4ab83ce65414b6",
+      "move": "g5h4",
+      "referenceMove": "g5h4",
+      "teacher": "g5h4",
+      "elapsedMs": 7438.9000000059605
+    },
+    {
+      "id": "3ece645050b3b767ec0b90e58954ef95bc8394394b19c3ce6e02a06a663e63a5",
+      "move": "c2c3",
+      "referenceMove": "c2c3",
+      "teacher": "c2c3",
+      "elapsedMs": 5333.899999991059
+    },
+    {
+      "id": "f895a844c4e095977901f0d98f0784b9bb443941f3f7fdba6d019376f04105eb",
+      "move": "c3d3",
+      "referenceMove": "c3d3",
+      "teacher": "c3d3",
+      "elapsedMs": 680.2000000029802
+    },
+    {
+      "id": "19270e5d58dc3da66cdcbb93cf5d0c8d919b782611d025d2edc020e523a76229",
+      "move": "e1e2",
+      "referenceMove": "e1e2",
+      "teacher": "e1e2",
+      "elapsedMs": 143.29999999701977
+    },
+    {
+      "id": "8d5e8a9a813935f1f36b53009852fa592afc76f8ab0540b8f8a251d5162a4ff9",
+      "move": "d2b3",
+      "referenceMove": "d2b3",
+      "teacher": "b4b5",
+      "elapsedMs": 4791.0999999940395
+    },
+    {
+      "id": "0dd895b9a2a9785765523763845c47042331a257a1b42d6746e41cec2be3a6f4",
+      "move": "a2a4",
+      "referenceMove": "a2a4",
+      "teacher": "d2b3",
+      "elapsedMs": 4711.399999991059
+    },
+    {
+      "id": "b80feaef15e66651d052160e891975a1b619aa59a8e41f742413bec7a716cb79",
+      "move": "b3c5",
+      "referenceMove": "b3c5",
+      "teacher": "a2a4",
+      "elapsedMs": 5495.399999991059
+    },
+    {
+      "id": "a0496cc2c6731c91c862ae095e41a09fbcc2f6b0cacaeed57567fa9bd5b39a11",
+      "move": "d3c3",
+      "referenceMove": "d3c3",
+      "teacher": "f3d4",
+      "elapsedMs": 5208.4000000059605
+    },
+    {
+      "id": "ec9d14c9ff482dada5b8222b2470129bfe161624abdb824efc6edd1d44cdc9e4",
+      "move": "d3a3",
+      "referenceMove": "d3a3",
+      "teacher": "d3f3",
+      "elapsedMs": 5667.5999999940395
+    },
+    {
+      "id": "cb7872db3f19940cd9c3138b205aa287d1a9d0ed0174c777953530dae9c49315",
+      "move": "c5d3",
+      "referenceMove": "c5d3",
+      "teacher": "h4f6",
+      "elapsedMs": 4981.600000008941
+    }
+  ],
+  "referenceAgreements": 32,
+  "teacherHits": 15,
+  "positionsCount": 32,
+  "medianMs": 5247.39999999851,
+  "maxMs": 7792.399999991059,
+  "bookMove": "e2e4",
+  "pageErrors": [],
+  "runtimeRequests": [
+    "http://127.0.0.1:4194/dist/vendor/ort/ort-wasm-simd-threaded.mjs",
+    "http://127.0.0.1:4194/dist/vendor/ort/ort-wasm-simd-threaded.wasm",
+    "http://127.0.0.1:4194/dist/vendor/ort/ort.wasm.bundle.min.mjs"
+  ],
+  "browser": "Chromium headless, CPU WASM, one thread",
+  "sources": {
+    "public/app.mjs": "2877388aabb19c89132017d39e41af678a517cee7dd3065d2db0dc775a88b74d",
+    "public/worker.mjs": "8da5554a89d2e50e4787f8874e03e4cb5fa29bfedfcc6c69bd5238e029e16819",
+    "src/transformer.mjs": "dc7ee006e1eb6448d186ea645ca40cf21f51f9db558366b8483e587a1ff1c0ab",
+    "src/model-resource.mjs": "1da6611174aceb2322ee8b534f0969bbd43a7c770163fd5bd1370f99f801d417",
+    "tools/build.mjs": "68119aa1d5a7428e8b3ccbf14e2ae0313a0a5fc790ab11a17a9a0327ad4c2587"
+  }
+}

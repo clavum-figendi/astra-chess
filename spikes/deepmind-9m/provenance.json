@@ -1,0 +1,11 @@
+{
+  "source": "https://github.com/google-deepmind/searchless_chess",
+  "checkpointURL": "https://storage.googleapis.com/searchless_chess/checkpoints/9M_behavioral_cloning.zip",
+  "checkpointSHA256": "b23bb4615c8c27f1945d689ae639af030a70c42fc7ff2a71e3da4db7b29784ff",
+  "weightsLicense": "CC-BY-4.0",
+  "codeLicense": "Apache-2.0",
+  "licenseEvidenceSHA256": "df0800f57ee673873ddc7a3f6681a4e583c4d42fdc68b33b6666eccbcfed1e37",
+  "parameters": 8930992,
+  "inspection": "TensorStore/OCDBT/Zarr arrays; no checkpoint code or pickle executed",
+  "status": "downloaded and structure inspected; inference conversion and fine-tuning not yet verified"
+}

@@ -45,5 +45,5 @@ if (fenAt >= 0) {
 } else {
   const protocol = createProtocol({ send: line => console.log(line), select, onNewGame: resetSeed });
   const input = createInterface({ input: process.stdin, crlfDelay: Infinity });
-  input.on('line', line => { if (line.trim() === 'quit') input.close(); else protocol(line); });
+  input.on('line', line => { if (line.trim() === 'quit') { input.close(); process.stdin.destroy(); } else protocol(line); });
 }

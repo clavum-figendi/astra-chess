@@ -1,0 +1,64 @@
+{
+  "checkpoint": "/home/hermes/projects/astra-chess/.cache/deepmind-v5/adapted.pt",
+  "checkpointSha256": "05a434c6925312fc02323c3015d187d78016cef6ecc6485bbc9da0fcc4d3d264",
+  "metadata": {
+    "format_version": 1,
+    "architecture": "deepmind-9m-action-value",
+    "config": {
+      "vocab_size": 1968,
+      "output_size": 128,
+      "embedding_dim": 256,
+      "num_layers": 8,
+      "num_heads": 8,
+      "use_causal_mask": false,
+      "pos_encodings": "LEARNED",
+      "max_sequence_length": 79,
+      "widening_factor": 4,
+      "apply_qk_layernorm": false,
+      "apply_post_ln": true,
+      "layer_norm_eps": 1e-05,
+      "embedding_scale": 16.0
+    },
+    "parameter_count": 8954240,
+    "tensor_count": 94,
+    "source_revision": "90ae0e6b121673fc3079aaeffa047580bb600c0a",
+    "archive_sha256": "e7a62f07c14819ec77433f108d3490599cdf097a49afe64f1be3973d19c34eed",
+    "checkpoint_step": 6400000,
+    "parameter_selection": "params",
+    "attribution": "Google DeepMind searchless_chess",
+    "weights_license": "CC-BY-4.0",
+    "modifications": "Chess Lab: policy-supervised output-head adaptation; encoder unchanged",
+    "adaptation": {
+      "protocolSHA": "ec22f0cda248f026dd575d0367b79a3a74f88fef95949d796c5f65984d435b67",
+      "baseCheckpointSHA256": "767a03340cf2362019eb724b2aaa4829bc0943b4c65b55bb4aa7f937a802bdf2",
+      "changedParameters": 32896,
+      "selectedEpoch": 6,
+      "teacher": "Stockfish 17.1 depth10 MultiPV4",
+      "objective": "75% bestmove + 25% rank target; policy CE over expected returns; prior bucket KL"
+    }
+  },
+  "batchSize": 4,
+  "variants": [
+    {
+      "variant": "float32",
+      "file": "deepmind-9m-float32.onnx",
+      "bytes": 35887968,
+      "sha256": "9ea656cfd009a7e9ab7958adc032b2798ce42b51eb4b168a6b39679910b36a17",
+      "sourceSha256": "05a434c6925312fc02323c3015d187d78016cef6ecc6485bbc9da0fcc4d3d264"
+    },
+    {
+      "variant": "int8",
+      "file": "deepmind-9m-int8-dynamic.onnx",
+      "bytes": 10869952,
+      "sha256": "ec20185c647833cd7a984ac3ae189778246023cc0f4d74d7705b90e06d852e83",
+      "sourceSha256": "05a434c6925312fc02323c3015d187d78016cef6ecc6485bbc9da0fcc4d3d264"
+    },
+    {
+      "variant": "fp16",
+      "file": "deepmind-9m-fp16.onnx",
+      "bytes": 17991221,
+      "sha256": "4faa374e93c82e92f4f443cf36d9d2fdc98e22d69991cdc6d0d6a3ecdbe3957e",
+      "sourceSha256": "05a434c6925312fc02323c3015d187d78016cef6ecc6485bbc9da0fcc4d3d264"
+    }
+  ]
+}

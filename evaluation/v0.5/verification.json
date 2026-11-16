@@ -1,0 +1,157 @@
+{
+  "verifiedAt": "2026-11-16T17:12:55Z",
+  "resultsSHA256": "fb79da5d840114199400bf1619c9625aec08bfd237f6cbec61bcda2b1b5033eb",
+  "verifierSHA256": "1a6db110cb70708fec22a85cee2bfcca1e81ae8d34fbb5afc6b87e0c8f42f661",
+  "freshEncoderPositions": 147,
+  "maxFeatureDifference": 0.0,
+  "games": 24,
+  "decisionsLegallyReplayed": 737,
+  "policyReexecutions": [
+    {
+      "key": "e4 e5 Nc3 Nf6/stockfish/True/legacy-atlas",
+      "ply": 41,
+      "move": "h4f3"
+    },
+    {
+      "key": "e4 e5 Nc3 Nf6/stockfish/True/pretrained",
+      "ply": 49,
+      "move": "f1f8"
+    },
+    {
+      "key": "e4 e5 Nc3 Nf6/stockfish/True/adapted",
+      "ply": 53,
+      "move": "a5a6"
+    },
+    {
+      "key": "e4 e5 Nc3 Nf6/stockfish/False/legacy-atlas",
+      "ply": 22,
+      "move": "a7a5"
+    },
+    {
+      "key": "e4 e5 Nc3 Nf6/stockfish/False/pretrained",
+      "ply": 36,
+      "move": "h7h5"
+    },
+    {
+      "key": "e4 e5 Nc3 Nf6/stockfish/False/adapted",
+      "ply": 62,
+      "move": "a8h8"
+    },
+    {
+      "key": "e4 e5 Nc3 Nf6/gnuchess/True/legacy-atlas",
+      "ply": 23,
+      "move": "d2b4"
+    },
+    {
+      "key": "e4 e5 Nc3 Nf6/gnuchess/True/pretrained",
+      "ply": 33,
+      "move": "e1g3"
+    },
+    {
+      "key": "e4 e5 Nc3 Nf6/gnuchess/True/adapted",
+      "ply": 33,
+      "move": "e1g3"
+    },
+    {
+      "key": "e4 e5 Nc3 Nf6/gnuchess/False/legacy-atlas",
+      "ply": 30,
+      "move": "f8e8"
+    },
+    {
+      "key": "e4 e5 Nc3 Nf6/gnuchess/False/pretrained",
+      "ply": 56,
+      "move": "e6e5"
+    },
+    {
+      "key": "e4 e5 Nc3 Nf6/gnuchess/False/adapted",
+      "ply": 56,
+      "move": "e6e5"
+    },
+    {
+      "key": "c4 c5 Nc3 Nc6/stockfish/True/legacy-atlas",
+      "ply": 79,
+      "move": "c7c6"
+    },
+    {
+      "key": "c4 c5 Nc3 Nc6/stockfish/True/pretrained",
+      "ply": 49,
+      "move": "h2h4"
+    },
+    {
+      "key": "c4 c5 Nc3 Nc6/stockfish/True/adapted",
+      "ply": 41,
+      "move": "d1d8"
+    },
+    {
+      "key": "c4 c5 Nc3 Nc6/stockfish/False/legacy-atlas",
+      "ply": 54,
+      "move": "g6g5"
+    },
+    {
+      "key": "c4 c5 Nc3 Nc6/stockfish/False/pretrained",
+      "ply": 52,
+      "move": "f8c8"
+    },
+    {
+      "key": "c4 c5 Nc3 Nc6/stockfish/False/adapted",
+      "ply": 38,
+      "move": "d5c3"
+    },
+    {
+      "key": "c4 c5 Nc3 Nc6/gnuchess/True/legacy-atlas",
+      "ply": 31,
+      "move": "e2e3"
+    },
+    {
+      "key": "c4 c5 Nc3 Nc6/gnuchess/True/pretrained",
+      "ply": 41,
+      "move": "d2d3"
+    },
+    {
+      "key": "c4 c5 Nc3 Nc6/gnuchess/True/adapted",
+      "ply": 41,
+      "move": "d2d3"
+    },
+    {
+      "key": "c4 c5 Nc3 Nc6/gnuchess/False/legacy-atlas",
+      "ply": 40,
+      "move": "g8h8"
+    },
+    {
+      "key": "c4 c5 Nc3 Nc6/gnuchess/False/pretrained",
+      "ply": 42,
+      "move": "a2e6"
+    },
+    {
+      "key": "c4 c5 Nc3 Nc6/gnuchess/False/adapted",
+      "ply": 42,
+      "move": "c5b3"
+    }
+  ],
+  "gameSummary": [
+    {
+      "id": "legacy-atlas",
+      "games": 8,
+      "wins": 0,
+      "losses": 6,
+      "draws": 2,
+      "unresolved": 0
+    },
+    {
+      "id": "pretrained",
+      "games": 8,
+      "wins": 7,
+      "losses": 0,
+      "draws": 1,
+      "unresolved": 0
+    },
+    {
+      "id": "adapted",
+      "games": 8,
+      "wins": 7,
+      "losses": 0,
+      "draws": 1,
+      "unresolved": 0
+    }
+  ]
+}
