@@ -1,5 +1,6 @@
 """Actual-weight browser integration, works on local or GitHub Pages origins."""
 import argparse
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -8,9 +9,11 @@ from playwright.sync_api import sync_playwright
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--url', default='http://127.0.0.1:4187/')
-parser.add_argument('--output', default='evaluation/v0.2/browser-local.json')
+parser.add_argument('--output', default='evaluation/v0.3/browser-local.json')
 args = parser.parse_args()
 root = Path(__file__).resolve().parent.parent
+bound_paths = ['public/index.html','public/app.mjs','public/worker.mjs','public/style.css','public/models/manifest.json','src/engine.mjs','src/network.mjs','laptop/cli.mjs','tools/browser-e2e.py']
+source_hashes = {name:hashlib.sha256((root/name).read_bytes()).hexdigest() for name in bound_paths}
 binary = os.environ.get('ASTRA_CHROMIUM')
 if not binary:
     candidates = sorted((Path.home()/'.cache/ms-playwright').glob('chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell'))
@@ -32,7 +35,7 @@ with sync_playwright() as p:
     assert page.locator('#model option').evaluate_all('(options)=>options.map(o=>o.value)') == ids
     assert 'proposed, not built' in page.locator('#size-proposals').inner_text()
     assert page.evaluate("[...document.querySelectorAll('[aria-labelledby]')].every(el=>el.getAttribute('aria-labelledby').split(/\\s+/).every(id=>document.getElementById(id)))")
-    checks.append('four actual models exposed; future size proposals not selectable')
+    checks.append(f'{len(ids)} actual models exposed; future size proposals not selectable')
     checks.append('64-square board and manifest loaded')
     # Cross-runtime agreement exercises the actual worker, binary parsing and engine.
     for model in ids:
@@ -60,7 +63,7 @@ with sync_playwright() as p:
         page.wait_for_function("document.querySelectorAll('.move-san').length === 2 && document.querySelector('#status').textContent === 'Your move'")
         assert page.locator('#candidates .candidate').count() > 0
         checks.append(f'{model}: human e4 and real-weight reply')
-    page.screenshot(path=str(root/'evaluation/v0.2/desktop.png'),full_page=True)
+    page.screenshot(path=str(root/'evaluation/v0.3/desktop.png'),full_page=True)
     page.select_option('#color','b'); page.click('#new-game')
     page.wait_for_function("document.querySelectorAll('.move-san').length === 1 && document.querySelector('#status').textContent === 'Your move'")
     assert page.locator('#board button').first.get_attribute('data-square') == 'h1'
@@ -71,7 +74,7 @@ with sync_playwright() as p:
         page.fill('#fen',fen); page.click('#fen-form button')
         page.wait_for_function('(text)=>document.querySelector("#status").textContent.includes(text)',arg=status)
 
-    for model in ('pocket-plus','atlas-plus'):
+    for model in ('pocket-plus','atlas-plus','pocket-tuned','atlas-tuned'):
         page.select_option('#model',model);page.select_option('#color','b')
         load_fen('7k/5K2/6Q1/8/8/8/8/8 w - - 0 1','Checkmate')
         checks.append(f'{model}: actual neural mating choice finishes game')
@@ -115,10 +118,11 @@ with sync_playwright() as p:
     page.click('[data-square="d2"]'); page.click('[data-square="d4"]')
     page.wait_for_function("document.querySelectorAll('.move-san').length === 2")
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
-    page.screenshot(path=str(root/'evaluation/v0.2/mobile.png'),full_page=True)
+    page.screenshot(path=str(root/'evaluation/v0.3/mobile.png'),full_page=True)
     checks.append('390px mobile board play without horizontal overflow')
     assert not errors, errors
-    receipt={'url':args.url,'browser':browser.version,'checks':checks,'pageErrors':errors}
+    assert source_hashes == {name:hashlib.sha256((root/name).read_bytes()).hexdigest() for name in bound_paths}, 'Inputs changed during browser suite'
+    receipt={'url':args.url,'browser':browser.version,'checks':checks,'pageErrors':errors,'sourceHashes':source_hashes}
     browser.close()
 output=root/args.output
 output.parent.mkdir(parents=True,exist_ok=True)

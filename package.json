@@ -1,12 +1,12 @@
 {
   "name": "astra-chess",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
-  "description": "Directly authored sparse neural chess policies, without training or tree search",
+  "description": "Authored and experimentally engine-tuned sparse chess policies, without inference-time search",
   "scripts": {
     "test": "node --test --test-concurrency=1 tests/*.test.mjs",
-    "weights": "node tools/compile-models.mjs",
+    "weights": "node tools/compile-models.mjs && node tools/rebuild-engine-tuned.mjs",
     "build": "node tools/build.mjs",
     "serve": "node tools/serve.mjs",
     "bench": "node tools/benchmark.mjs",

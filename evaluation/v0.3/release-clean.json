@@ -1,0 +1,217 @@
+{
+  "steps": [
+    {
+      "command": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "exitCode": 0,
+      "stdout": "\nadded 1 package in 2s\n"
+    },
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 0,
+      "stdout": "\n> astra-chess@0.3.0 test\n> node --test --test-concurrency=1 tests/*.test.mjs\n\n\u2714 puzzle scoring first applies the opponents prelude, then tests policy rather than solution replay (38.659027ms)\n\u2714 seeded random and capture baselines choose legal repeatable moves (62.507222ms)\n\u2714 build produces standalone browser and laptop ESM trees and binaries (158.872679ms)\n\u2714 workspace renders 64 accessible squares, experimental disclosure, and starts only on request (5264.31296ms)\n\u2714 black-side play, keyboard navigation, and reset cancel an outstanding decision (7606.570254ms)\n\u2714 FEN imports allow explicit underpromotions for either color and PGN contains the result (8195.95057ms)\n\u2714 clock loading is untimed, AI thinking is timed, and flag fall rejects a late worker reply (6832.124985ms)\n\u2714 mobile workspace fits without horizontal overflow (4911.804782ms)\n\u2714 worker returns request-correlated errors without falling back, and survives subsequent requests (223.798474ms)\n\u2714 a completed legal turn charges thinking time, credits increment, and starts the opponent (5.237879ms)\n\u2714 flagging is irreversible and a late move cannot gain increment or restart time (0.92718ms)\n\u2714 stopping freezes a settled clock and reset starts a fresh inactive game (1.192519ms)\n\u2714 unlimited clocks preserve null through turns, stop, and resetting a timed clock (0.673268ms)\n\u2714 only the active side loses actual monotonic elapsed time, even without ticks (1.013209ms)\n\u2714 Pocket scores free material above quiet play without entering a losing queen exchange (26458.160925ms)\n\u2714 Pocket attack rays respect blockers and the vacating source (52.935558ms)\n\u2714 Atlas adds genuine checking-fork and vacated-shield relationships (152.559345ms)\n\u2714 Atlas encodes protected adjacent queen checks without treating king pseudo-attacks as a free capture (156.828497ms)\n\u2714 en passant capture reward is encoded from raw pawn relationships (35.426325ms)\n\u2714 authored phase gate activates the king in pawn endings but not against enemy major pieces (220.118635ms)\n\u2714 authored rook-file weights distinguish open, semi-open and own-pawn files (275.242737ms)\n\u2714 both colors promote to a legal queen and castling has encoded value (296.172519ms)\n\u2714 all stored neurons contribute to policy outputs rather than size padding (167.253443ms)\n\u2714 downloaded artifacts reproduce byte-for-byte, with topology-inclusive manifest accounting (524.979756ms)\n\u2714 legal mask, black perspective and deterministic candidate ordering are preserved (47.668402ms)\n\u2714 specialist distinguishes queen mate, rook mate, and stalemate (217.868115ms)\n\u2714 specialist is inactive outside exactly own king plus one major versus bare king (43.641636ms)\n\u2714 specialist terminal signs agree with independent rules over seeded three-man positions (9901.641808ms)\n\u2714 labels require complete exact same-depth coverage and preserve side-to-move scores (79.841428ms)\n\u2714 mate targets use an explicitly separate surrogate and reject ambiguous scores (21.863605ms)\n\u2714 move selection is only network logits plus a legal mask, including lexical ties (510.506482ms)\n\u2714 parser rejects cycles, invalid sparse rows, nonfinite tensors and invalid outputs (28.893747ms)\n\u2714 binary network executes affine and ReLU nodes, retaining signed outputs (25.182896ms)\n\u2714 larger Plus variants carry three-man terminal knowledge and choose legal mating moves (61412.233528ms)\n\u2714 canonical encoding preserves files and swaps arbitrary piece colors by rank reflection (31.187323ms)\n\u2714 raw board encoding is twelve canonical one-hot planes for either side (3.222995ms)\n\u2714 direct engine-regret coordinate passes change bounded weights without touching protected values (12.856245ms)\n\u2714 bounded engine-label fitting improves validation regret and preserves fixed coefficients (46.936933ms)\n\u2714 rejects overlap between fitting and validation position identifiers (3.383003ms)\n\u2714 laptop runner exposes and executes every installed model including larger variants (10103.763268ms)\n\u2714 UCI applies full move history and returns one supplied legal policy move (21.347874ms)\n\u2714 UCI history detects repetition and does not ask the policy to move (16.779942ms)\n\u2714 invalid UCI position cannot leave a stale playable board (4.848237ms)\n\u2714 rebuilds a tuned artifact from pinned base/scales and labels its provenance (66.774751ms)\n\u2714 static server serves modules, 404 and confines paths to its root (295.489591ms)\n\u2714 UI exposes experimental fitted policies without promoting defaults or implying training-free provenance (7.893947ms)\n\u2714 FIXTURE: uses latest complete same-depth MultiPV, not mixed iterations/bounds (217.008518ms)\n\ufe63 REAL Stockfish: all legal moves scored at one complete depth-4 iteration (6.595323ms) # Real stockfish executable unavailable: /home/hermes/.hermes/cache/scratch/astra-release-0w_oz2a0/source/.cache/engines/root/usr/games/stockfish\n\u2714 FIXTURE: malformed or missing scores are never fabricated (132.582429ms)\n\u2714 FIXTURE: unexpected exit and illegal/null moves reject without fallback (423.68829ms)\n\u2714 FIXTURE: timeout poisons session and bounds stderr (438.250987ms)\n\u2714 FIXTURE: concurrent analysis is rejected, later sequential analysis works (378.229756ms)\n\u2714 FIXTURE: validates FEN, limits and complete standard-start history before sending (296.727776ms)\n\u2714 FIXTURE: handshake timeout and stale bestmove drainage (550.64324ms)\n\u2714 HARNESS UNIT: terminal history wins over ply cap; no material adjudication (87.447471ms)\n\u2714 HARNESS UNIT: engine illegal/null moves are errors, never fallback or a result (2.756111ms)\n\ufe63 REAL GNU Chess: node budget is bounded explicitly rather than ignored by its adapter (3.032595ms) # Real GNU Chess executable unavailable\n\ufe63 REAL classic Pocket versus GNU Chess: legal short game and PGN (1.481724ms) # Real GNU Chess executable unavailable\n\ufe63 REAL stockfish: handshake and legal moves with standard-start history (3.00625ms) # Real stockfish executable unavailable: /home/hermes/.hermes/cache/scratch/astra-release-0w_oz2a0/source/.cache/engines/root/usr/games/stockfish\n\ufe63 REAL gnuchess: handshake and legal moves with standard-start history (1.676428ms) # Real gnuchess executable unavailable: /home/hermes/.hermes/cache/scratch/astra-release-0w_oz2a0/source/.cache/engines/root/usr/games/gnuchess\n\u2714 promotion-sized pawn contributions are not tied to small pawn-placement coefficients (23.656096ms)\n\u2714 rewrites actual stored head weights, preserving backbone and protected capture coefficients (16.502742ms)\n\u2714 rejects invalid multipliers and changes to protected groups (4.596018ms)\n\u2714 cached legal-move features reproduce real serialized inference for both colors (3856.356337ms)\n\u2139 tests 64\n\u2139 suites 0\n\u2139 pass 59\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 5\n\u2139 todo 0\n\u2139 duration_ms 162474.614285\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "stdout": "\n> astra-chess@0.3.0 build\n> node tools/build.mjs\n\n{\n  dist: '/home/hermes/.hermes/cache/scratch/astra-release-0w_oz2a0/source/dist',\n  laptop: '/home/hermes/.hermes/cache/scratch/astra-release-0w_oz2a0/source/build/laptop'\n}\n"
+    },
+    {
+      "command": [
+        "node",
+        "laptop/cli.mjs",
+        "--model",
+        "pocket"
+      ],
+      "environment": "isolated extracted zip without node_modules",
+      "stdout": "id name Astra Authored Chess\nid author Astra-directed, Sol-assisted\nuciok\nreadyok\nbestmove b8c6\n",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "laptop/cli.mjs",
+        "--model",
+        "pocket-plus"
+      ],
+      "environment": "isolated extracted zip without node_modules",
+      "stdout": "id name Astra Authored Chess\nid author Astra-directed, Sol-assisted\nuciok\nreadyok\nbestmove g8f6\n",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "laptop/cli.mjs",
+        "--model",
+        "pocket-tuned"
+      ],
+      "environment": "isolated extracted zip without node_modules",
+      "stdout": "id name Astra Authored Chess\nid author Astra-directed, Sol-assisted\nuciok\nreadyok\nbestmove e7e5\n",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "laptop/cli.mjs",
+        "--model",
+        "atlas"
+      ],
+      "environment": "isolated extracted zip without node_modules",
+      "stdout": "id name Astra Authored Chess\nid author Astra-directed, Sol-assisted\nuciok\nreadyok\nbestmove g8f6\n",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "laptop/cli.mjs",
+        "--model",
+        "atlas-plus"
+      ],
+      "environment": "isolated extracted zip without node_modules",
+      "stdout": "id name Astra Authored Chess\nid author Astra-directed, Sol-assisted\nuciok\nreadyok\nbestmove g8f6\n",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "laptop/cli.mjs",
+        "--model",
+        "atlas-tuned"
+      ],
+      "environment": "isolated extracted zip without node_modules",
+      "stdout": "id name Astra Authored Chess\nid author Astra-directed, Sol-assisted\nuciok\nreadyok\nbestmove d7d5\n",
+      "exitCode": 0
+    }
+  ],
+  "sourceHashes": {
+    "public/app.mjs": "192f94c97e467b1f19ff16af1938ac79eab96006f34cc31df8b2a1a98bf2b4af",
+    "public/index.html": "087d04fd00b270737517ef515134abcfc561eaa7bf15336b3fa78063642aaff6",
+    "public/models/atlas-plus.bin": "30313d65ec8b74007a546576b5234aa00a521b63ade9159f1b2ec7f30b05c4a6",
+    "public/models/atlas-tuned.bin": "ca09975465cd379b96203a52d80db817cc898bc60ae6743f0e778c6efa50de12",
+    "public/models/atlas.bin": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85",
+    "public/models/manifest.json": "6c2e61f0f6e489ffa58eb4e44713ee4c3d8d98d18678208f64ae0167aec56bb3",
+    "public/models/pocket-plus.bin": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+    "public/models/pocket-tuned.bin": "6fc188f3dd52fab34cfe454e25be761bf61125faf852c8bcf17dc285c83c0e3d",
+    "public/models/pocket.bin": "77365eb86c5176255e06784592f9022a36ca6730c0dd3e4ce552cbf480762737",
+    "public/models/sizing-proposals.json": "1a8499142fec95761e6bb4636082f431d1203f16ffdc8a66f6c56b2bfeb8e975",
+    "public/models/tuned-config.json": "f2f95a2672949cf36bd87877375511cbb45f5efb1c264727cab5989e0d69c9fb",
+    "public/style.css": "4dd0f3bb43bec77224d1bd0852dd754095834b9d1275d6d9370439bb9a3e9f8d",
+    "public/worker.mjs": "3d25905ad766295c42370f5ebc90ad2b7c754d6119216ee393bebab12649bcec",
+    "src/chess.mjs": "50e77eeb7df13b537f4d0e681852369c7ebb85e63915373fa5ef2d6359611859",
+    "src/clock.mjs": "19355b93e1394a13d55c9a39d8d4a12c78093826b35edf862de7fc0c2128d6b0",
+    "src/engine.mjs": "5a381f2ca3b0c4a0d99115b6fef616ae8a6239cc3e802d27e7f26d0edbfe57b7",
+    "src/network.mjs": "f46d3a8fe19809c8780d69bc323707f3287de90582b66eba0ece30c4cbc5fd28",
+    "laptop/cli.mjs": "ea1b323b56e238cb02e6ba688a63e848755f9a3240cf614910abc1de26b10104",
+    "laptop/protocol.mjs": "546a22f91c2c982367af388e0ef371646b5256a43db3f222cc39bb742518b8bb",
+    "tools/benchmark-endgames.mjs": "8beda5ca85b755a9cba86d772bcfa012b79deddd006b29a23c19695fb52ede76",
+    "tools/benchmark-lib.mjs": "b239fd4f345b3202bf47dc6b42978105dfdd1ed7d9e78ac0c58338d356c7c6b1",
+    "tools/benchmark-v2.mjs": "aa10498593b702d5901283bbaa4e186ff74cedfa5edf1629933176dca933fb16",
+    "tools/benchmark.mjs": "9f5eab6511e925b2537c4ad4295d508480f596d0c92ee55dfc23f683d5f9b6cb",
+    "tools/browser-e2e.py": "546d2cf7ca3576fa721297bb2fa597e955b05071e9b6aa2b1102b58723e9e61a",
+    "tools/build.mjs": "1e33d923fb92dcef512a1bad8271f899f9fdf47185c2f47b69e337a97b4c7310",
+    "tools/cache-engine-features.mjs": "0d0025de742622406b721b7e4a77034d7884e7cf71142ac7d59582eec4dafe0a",
+    "tools/compile-models.mjs": "db54ba2fc6d2b9cc9a5ccfef6d06c902d80c5d2dffadf533e095491afafd1ef6",
+    "tools/endgame-circuits.mjs": "9f75b8ce150d4fcfaadd91bb1a3d4f76af62f1876c866250efe33e5ee9e3e686",
+    "tools/engine-games.mjs": "5f9d100146fc516f39669b6c76ae3d6bc96fa0ca02fb6b859bb5334c3b801069",
+    "tools/engine-labels.mjs": "edb91e9611b2210b538e181e0e291b57f06db9852a2d06970605f5fa929c9ad0",
+    "tools/evaluate-engine-tuned.mjs": "078f0c1b02636971e8435ce6062eef3013df2eb5187fd82276593c1d95a76eee",
+    "tools/generate-engine-data.mjs": "f92d158167bf8bf99ba612b7bfffb9b827fa50ef9b280af666756d32b5182cf0",
+    "tools/head-coordinate.mjs": "43fdfbcbe9552a201191c2a6a7e83b59d5fd9c620615fb09b921c516740521d5",
+    "tools/head-optimizer.mjs": "dcbf9162684f654fa4e7903f26603a97ce34207f4403622cd508b465234e33e4",
+    "tools/optimize-engine-weights.mjs": "b23fca3b8b69ea3363bf3f23b58a83917ae97991a4641d5eedecefdadd49ae07",
+    "tools/prepare-benchmark-v2.py": "4737d9509e37aa12f149031ad010451e2c958a7d138ba677cf9e7e7cd90f8d6e",
+    "tools/prepare-benchmark.py": "9316481d7c45f6c1c43e199a2b732e75568679d23fb64af5d301d757b00f3401",
+    "tools/rebuild-engine-tuned.mjs": "21088de5d1e07778a973839d2cee6ae1110a56b1f8588c98da2deffd5dfb58ea",
+    "tools/refine-engine-weights.mjs": "2a520604fb347e311cecb0121349757703577f34b2cecd8c0ad12642553c577f",
+    "tools/serve.mjs": "f02aa80dc15e520e77e708e70d44dac2d1726123fc9659e5925bb6b9a1a1e83d",
+    "tools/uci-engine.mjs": "d5cbf4ce8a19771992102b950fc48aafd9147fbfa4a38afdcc7dd47b985c8266",
+    "tools/verify-release.py": "aa026a572cf89a1a3ef4e0fb0911b090fae0e6b93e2ceca05f1cffc5b2090bda",
+    "tools/weight-tuning.mjs": "cd29b6a81235e619b8ddb2b3e42f189a9047e5f8b6720d324d243e7beb11b3a4",
+    "tests/benchmark.test.mjs": "76c7fdc48825f68228c65d78710983c669240de1ebc0e48f7978cd8c7fbb3cf1",
+    "tests/build.test.mjs": "e8bca0fa7c0ae15886d5d4f608ee23c6b4c3a3c1c4de2e50b4315ac1a0ecd17c",
+    "tests/clock-ui.test.mjs": "dd5a1c1f51d052e55209f84a5d90606ab25a26fe32d3c212079bb722b4e3f31c",
+    "tests/clock-worker.test.mjs": "10fc86e8bc83b4195fce012b4813d4bf58f228b8fdb12be6a1ae01f3ac73e747",
+    "tests/clock.test.mjs": "9f8a9fe25e026407d573e745ff236916f55f7eb5b9c377a5101e3a308adcfcf9",
+    "tests/engine-circuits.test.mjs": "e574818274b096a69de91f0e8dbffa6880b85282d8f9fb0f5929a72c758a14cc",
+    "tests/engine-endgames.test.mjs": "f4f369f8aa67aeb4638a6ecbb0e0172de62e4de9dce69526db78992a446ae01d",
+    "tests/engine-labels.test.mjs": "a553ca796e33512894692e0472a3ce3215918590c1e36d0ff3530220f32a4635",
+    "tests/engine-network.test.mjs": "496341cae7f596a6bf3ae7f312a6a7588f20443a1d7d1ae0d4ab33080e295194",
+    "tests/engine-plus.test.mjs": "551f5ac69d8c74d97a1920e7e2c6b18eff847d3f2fd46cbdae445187bb2131df",
+    "tests/engine.test.mjs": "9c708ab30b403d2a65ac094227c41b45f6f6796a6b2481f1688033007c731446",
+    "tests/fixtures/uci-peer.mjs": "7cc7ed929c3414d4531cfdaedfe30b276047744d79602d3cd066b12766e35902",
+    "tests/head-coordinate.test.mjs": "e6c24e22ba7ab7ae8ffdbb017b4a8eb441c6da371d6909e5a7f03eafce5bd291",
+    "tests/head-optimizer.test.mjs": "73184c104f655b0e85e09558714d09317387c344b3b59f8d08b2cf859b82a862",
+    "tests/laptop-catalog.test.mjs": "38993231ffbc501db611b85d6d4123999f2dd7f86b8afb787e02fd3c68562062",
+    "tests/laptop.test.mjs": "0c17c7133cb6f534cd8ec4f9c3153ff126593fb630fd7797d837f308068d65fc",
+    "tests/rebuild-tuned.test.mjs": "e078465fe3933776556e826eb60d0b33f6c37d6c4d2fd3bb55586e08e67b23b0",
+    "tests/server.test.mjs": "97f5822181d55641da8707c87e710f79c41d8215d0fb7d534831db3e90ea59ff",
+    "tests/tuned-ui.test.mjs": "95d3b08b4ce9be6ca2d7269372f52bcfb08d54971de98c64d77b5965526f3241",
+    "tests/uci-engine.test.mjs": "4b265803b1df7f3346824c8b5152a8593a9ddcdc9db9448193b32d82ed79025a",
+    "tests/weight-tuning.test.mjs": "ed161124195db6092deac5b1adab87d845c859f3cf7c6e65619675e464736eff",
+    "docs/ARCHITECTURE.md": "19b9d21daca860f23d498d6927771731cb804eb43e9bc40f7caf9835beb210da",
+    "docs/ENGINE-PROTOCOL.md": "63885d9e9135dc5397374430bd0a3ddb06ae94d51bf594736c67349e472ab9d0",
+    "docs/EVALUATION.md": "f42edb4e799a0d2322f257b4fee97a95221078c6711eb9804eaaa96d486a216d",
+    "docs/EXPANSION-V2.md": "996a48139e0c06679b2ec19d41249d1c0e39599231e0b023b4db55ed4de53e23",
+    "docs/OPTIMIZATION-V3.md": "8fbab9d5c15f0b12fb1643780242e0be2ef9b3f59fbbf96528ae5724b14d6267",
+    "docs/PLAN-V2.md": "679dd6c903135d650c225f8cfcef30aac0a32b34c4b27e530050f62b86251a65",
+    "docs/PLAN-V3.md": "780de9b39eb39f3a90341675eef916465c0698d20c469828e636d0784c423522",
+    "docs/RELEASE-V2.md": "90664bb4a508d7b67215ee3f00ac1223a5872f2e21560bbcf071b80543456785",
+    "docs/RELEASE.md": "16cfcd0003fcee5c634fe0328611597f39f3ddf82a342f3872cd3a0ad9173a3d",
+    "docs/RESULTS.md": "bf14edf7e6e13195a3890117370a62b966d775c9f5a1bc28796a0ed7b45c86f3",
+    "docs/REVIEW-FINAL.md": "c4dcf4f1dbf8118b817c536457e63cbc6f4bbc3cc869a1daa5c9b38cc6a2ec6a",
+    "docs/REVIEW-SPEC.md": "05c5d1bcde4345537e584e045bc5608ae3fedc6fe4a9922df0167b4efbb84245",
+    "docs/REVIEW-V2.md": "98666d4373ee3ab596968869dfa8aa5692c7c3ce9836073c5b5df7d79d8d0065",
+    "package.json": "d0077a7366252cb6ff94e20182f12498f7ae7144f36892780ba8b26efc7c75a9",
+    "package-lock.json": "292c29778fc85578456e0abc71a23cf27101beca979c7689d8cbbaa3ed322449",
+    "README.md": "df3ae45b984047f90cfd70d6894ecfafa929f4d1001c2ec02ad6f2f5b05afb9c",
+    "LICENSE": "8d2dfeb1e8990e120ff6f190846543d8184c5842572c34aef6b60f3de00b4b4a",
+    "evaluation/atlas-games.pgn": "4c88b94f916021a1a33c4b238d1c5aefb39175139872046c0a59de2a908715cd",
+    "evaluation/browser-live.json": "1fcb828c86e496bc81012cb78cdd7877bcd6d66af64dfca88098592160de5d01",
+    "evaluation/browser-local.json": "536b3ac23b12ab6f8a04290f6044f73d7f1ae50d4cc35bd79674dd1ed2f11628",
+    "evaluation/pocket-games.pgn": "72901cd6225437c4a6a63a8502a3f9a409d99fa21bafd102b18e15106bb2e338",
+    "evaluation/results.json": "0c242b2083f7379eaf563409d05cfa0a7911459a0db33df04115da8c2fd2adbe",
+    "evaluation/v0.2/atlas-games.pgn": "4c88b94f916021a1a33c4b238d1c5aefb39175139872046c0a59de2a908715cd",
+    "evaluation/v0.2/atlas-plus-games.pgn": "4c88b94f916021a1a33c4b238d1c5aefb39175139872046c0a59de2a908715cd",
+    "evaluation/v0.2/atlas-plus-versus-classic.pgn": "eb277f3378e94a295fb10e2f6276b1734137f801bab7c92ce643a51c8a5708f7",
+    "evaluation/v0.2/browser-live.json": "c91ca05ca3964dbd8daf13ad942a0d21abf42aa5be2dd0a8b928da58cff239a6",
+    "evaluation/v0.2/browser-local.json": "bd3908d8f6f2bb12397605608a8df4c766daaf78d74c064c0788fc6f3d295066",
+    "evaluation/v0.2/endgames.json": "56be3bead4e790c415f6e1ceaceb098baca7d2da22c43f6933ac77d391f7fb36",
+    "evaluation/v0.2/pocket-games.pgn": "72901cd6225437c4a6a63a8502a3f9a409d99fa21bafd102b18e15106bb2e338",
+    "evaluation/v0.2/pocket-plus-games.pgn": "d409219114b1e167333c4db5fc4c6e600b63f2def467e43d95cd807f5ae3a083",
+    "evaluation/v0.2/pocket-plus-versus-classic.pgn": "99cfda149d06834bb9920c2accce295b043b63225b6c0e902a9e67311b012930",
+    "evaluation/v0.2/results.json": "2b9a40ff867a01845ddc75a23a8085fb933bbddbaeb2bed31dbb5de8af8e1f9c",
+    "evaluation/v0.3/data/test.json": "397d644ceb7e890262e0e83064fe3d9c0d06441143f6d3ce29b4c33eb1b66012",
+    "evaluation/v0.3/data/train.json": "d47d8dda9070859416d1bb5bc6a238bf896b617876848a5749d0dfab415de7b5",
+    "evaluation/v0.3/data/validation.json": "a44efa00febce9b1165a3737e72873a2e8d4368bcbf895e4156ae07bc2a6f2ca",
+    "evaluation/v0.3/data-games.pgn": "09689551d98e0a4c22222e5d06aed5001e7fe63c926f370ddea23ee136fb2d05",
+    "evaluation/v0.3/data-protocol.json": "c10007696a64b3ba5718898f237878cc5ec16b01fafbc7c7fb89eecfd01a5337",
+    "evaluation/v0.3/engine-matches.pgn": "2130fbb9eafa618b75d8c2aa2d2cd178e1f29e61149ddbe8d646237df200257d",
+    "evaluation/v0.3/engine-results.json": "071f9214c8812efaab838393f14dd80c3d40da645a7cc270641fd463e69041e5",
+    "evaluation/v0.3/optimization-adam.json": "eb53173e2d6b5f4095b49784a5cc04ca717c8f2c4dbf0b9e6cdc35573894f0f2",
+    "evaluation/v0.3/optimization.json": "067ea604cab21e1c23b06c1fadd6bf0184a3b5c73bfce794fee7ca23fa95ad94",
+    "evaluation/v0.3/summary.json": "bbff7546a689ba2f375f7abcc059647882fe5804805527a64aaf01dcf3853d60"
+  },
+  "modelHashes": {
+    "pocket": "77365eb86c5176255e06784592f9022a36ca6730c0dd3e4ce552cbf480762737",
+    "pocket-plus": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+    "pocket-tuned": "6fc188f3dd52fab34cfe454e25be761bf61125faf852c8bcf17dc285c83c0e3d",
+    "atlas": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85",
+    "atlas-plus": "30313d65ec8b74007a546576b5234aa00a521b63ade9159f1b2ec7f30b05c4a6",
+    "atlas-tuned": "ca09975465cd379b96203a52d80db817cc898bc60ae6743f0e778c6efa50de12"
+  },
+  "archiveBytes": 23360311,
+  "archiveSHA256": "f20c4f3eb2e909eaa60fda25ac9f06a95ef58246dbf23bebbb8421153dc2c18d",
+  "note": "Clean-candidate archive tested; timestamps may differ from delivery ZIP. Runtime and model inputs are bound above. Later documentation-only repacks require rechecking delivered models and executing extracted runtime."
+}

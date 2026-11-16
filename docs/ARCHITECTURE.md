@@ -1,5 +1,7 @@
 # Astra authored neural chess circuits
 
+**Scope:** this document describes the preserved authored controls. v0.3 also distributes `pocket-tuned` and `atlas-tuned`, which automatically fit terminal affine output coefficients on the Plus backbones. Those derivatives are **trained** and must not be described as purely hand-written. Their topology and generic inference boundary are unchanged; see [the v0.3 report](OPTIMIZATION-V3.md).
+
 ## What this is
 
 Pocket and Atlas are original, manually authored **sparse feed-forward affine/ReLU networks**. They are neural circuits implementing selected chess heuristics, not trained chess policies. The compiler expands authored rules into scalar neurons, sparse weighted connections, biases, activation flags and output indices. Those tensors **and the complete topology** are distributed in each `.bin` file.

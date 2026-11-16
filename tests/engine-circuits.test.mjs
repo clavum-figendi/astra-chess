@@ -109,7 +109,7 @@ test('all stored neurons contribute to policy outputs rather than size padding',
 test('downloaded artifacts reproduce byte-for-byte, with topology-inclusive manifest accounting', () => {
   const manifest = JSON.parse(readFileSync(new URL('../public/models/manifest.json', import.meta.url), 'utf8'));
   assert.equal(manifest.formatVersion, 1);
-  assert.deepEqual(manifest.models.map(model => model.id), MODEL_IDS);
+  assert.deepEqual(manifest.models.filter(model=>!model.engineTuned).map(model => model.id), MODEL_IDS);
   for (const model of [pocket, atlas]) {
     const entry = manifest.models.find(m => m.id === model.metadata.id);
     const bytes = readFileSync(new URL(`../public/models/${entry.file}`, import.meta.url));

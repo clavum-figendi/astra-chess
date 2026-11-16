@@ -56,6 +56,6 @@ with tempfile.TemporaryDirectory(prefix='astra-release-') as tmp:
     receipt['archiveBytes']=archive.stat().st_size
     receipt['archiveSHA256']=hashlib.sha256(archive.read_bytes()).hexdigest()
 receipt['note']='Clean-candidate archive tested; timestamps may differ from delivery ZIP. Runtime and model inputs are bound above. Later documentation-only repacks require rechecking delivered models and executing extracted runtime.'
-(root/'evaluation/v0.2').mkdir(parents=True,exist_ok=True)
-(root/'evaluation/v0.2/release-clean.json').write_text(json.dumps(receipt,indent=2)+'\n')
+(root/'evaluation/v0.3').mkdir(parents=True,exist_ok=True)
+(root/'evaluation/v0.3/release-clean.json').write_text(json.dumps(receipt,indent=2)+'\n')
 print(json.dumps({key:value for key,value in receipt.items() if key not in ['steps','sourceHashes']},indent=2))

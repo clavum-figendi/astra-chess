@@ -16,7 +16,7 @@ if (args.includes('--list-models')) {
 }
 const modelAt = args.indexOf('--model');
 const modelId = modelAt >= 0 ? args[modelAt + 1] : 'atlas';
-if (!['atlas','pocket','pocket-plus','atlas-plus'].includes(modelId)) { console.error('Model must be pocket, pocket-plus, atlas or atlas-plus. Use --list-models.'); process.exit(1); }
+if (!['atlas','pocket','pocket-plus','atlas-plus','pocket-tuned','atlas-tuned'].includes(modelId)) { console.error('Unknown model. Use --list-models for authored and experimental engine-tuned policies.'); process.exit(1); }
 const local = new URL(`../models/${modelId}.bin`, import.meta.url);
 const development = new URL(`../public/models/${modelId}.bin`, import.meta.url);
 const bytes = readFileSync(existsSync(fileURLToPath(local)) ? local : development);

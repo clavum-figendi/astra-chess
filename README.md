@@ -1,20 +1,22 @@
 # Astra Chess
 
-An experiment in **directly authored neural-network weights**. No pretrained chess model, optimizer, training corpus, opening book, tablebase, or game-tree search is used to choose moves.
+An experiment in **authored sparse neural circuits and engine-tuned derivatives**. Four original policies remain unchanged; two optional policies now have output weights fitted offline to Stockfish scores. No pretrained policy tensors are imported. No optimizer, teacher engine, opening book, tablebase or game-tree search is used during move selection.
 
-[Play on GitHub Pages](https://clavum-figendi.github.io/astra-chess/) · [Download laptop package](https://clavum-figendi.github.io/astra-chess/downloads/astra-chess-laptop.zip) · [Expanded models and sizes](docs/EXPANSION-V2.md) · [v0.1 results](docs/RESULTS.md)
+[Play on GitHub Pages](https://clavum-figendi.github.io/astra-chess/) · [Download laptop package](https://clavum-figendi.github.io/astra-chess/downloads/astra-chess-laptop.zip) · [v0.3 engine optimization and results](docs/OPTIMIZATION-V3.md) · [Expanded models and sizes](docs/EXPANSION-V2.md)
 
 **Experimental and unrated. Grandmaster strength has not been established.** These are sparse neural circuits encoding authored chess heuristics, not a reproduction of DeepMind's trained transformer and not evidence of general intelligence. Larger does not automatically mean stronger.
 
 ## Play
 
-The web application runs locally in your browser after downloading its selected model. It does not send your positions to a server. Select Pocket, Pocket+, Atlas or Atlas+, a clock and your color. Pocket+ is the lightweight expanded option; Atlas+ adds its endgame specialist to the full tactical model. Originals remain defaults because the broader match results did not establish an improvement. The original Pocket/Atlas binaries remain unchanged for comparison. All four models use one fixed feed-forward computation per position; extra clock time does not increase search depth. Move scores are policy scores, not calibrated probabilities or engine centipawn evaluations.
+The web application runs locally in your browser after downloading its selected model. It does not send your positions to a server. Select Pocket, Pocket+, Pocket Tuned, Atlas, Atlas+ or Atlas Tuned, a clock and your color. Tuned variants are experimental alternatives, not recommended upgrades. Original defaults and all four v0.2 binaries remain unchanged. All six models use one fixed feed-forward computation per position; extra clock time does not increase search depth. Move scores are policy scores, not calibrated probabilities or engine centipawn evaluations.
+
+**v0.3 outcome:** six optimization rounds per family, 128 held-out positions, and 120 real-engine games. Across all six policies: 0 wins, 109 checkmate losses, 1 repetition draw and 10 unfinished games at the 160-ply cutoff. Test-score gains over Plus parents were tiny. More cutoff games are not proof of drawing ability. Neither a general strength upgrade nor “fully optimized” status is established; see the full report and raw PGNs.
 
 The app automatically ends games at threefold repetition and the fifty-move threshold rather than implementing a tournament claim dialogue. Legal-move generation and these game rules are provided by chess.js and are **not encoded in the weights**. Legal generation may temporarily make/unmake moves to reject self-check; this is rule enforcement, not policy lookahead. FEN imports cannot recover repetition history.
 
 ## Laptop download
 
-The website's `downloads/astra-chess-laptop.zip` contains all four actual weight files, the generic inference runtime, the chess rules dependency, and a command-line/UCI adapter. Extract it, install Node.js 22 or later, then run:
+The website's `downloads/astra-chess-laptop.zip` contains all six actual weight files, the generic inference runtime, the chess rules dependency, and a command-line/UCI adapter. Extract it, install Node.js 22 or later, then run:
 
 ```
 node laptop/cli.mjs --model atlas-plus
@@ -44,9 +46,11 @@ npm run build
 npm run serve
 ```
 
-Open `http://127.0.0.1:4173/`. Model generation is deterministic: tensor coefficients and sparse connections are authored by the compiler, not fitted to examples. See `docs/ARCHITECTURE.md` for the exact encoding, operations, circuit semantics, numerical representation, and limitations. `public/models/manifest.json` gives counts and SHA-256 hashes. We report full binary storage (including topology), not just float coefficients.
+Open `http://127.0.0.1:4173/`. Artifact rebuilding is deterministic: the compiler generates four authored controls, then the pinned `public/models/tuned-config.json` multipliers reconstruct the two fitted derivatives. Rebuilding does not rerun training or need engine executables. See `docs/ARCHITECTURE.md` for the original encoding and `docs/OPTIMIZATION-V3.md` for the fitting/reproduction protocol. `public/models/manifest.json` gives counts and SHA-256 hashes. We report full binary storage including topology, not just float coefficients.
 
 ## Evaluation
+
+The current real-engine study is in `evaluation/v0.3/`: data protocol, optimization histories, complete final-match receipts and PGNs. Its 192 training, 64 validation and 128 test positions have disjoint opening groups and board identities. Stockfish 17.1 supplied complete depth-4 legal-root rankings; final opponents were Stockfish at 128 nodes and depth 3, and GNU Chess 6.2.9 at depth 1. These limited budgets are disclosed, not full-strength engine ratings or equal-compute comparisons. Fitted weights were frozen before final test, and remain frozen despite disappointing results. Original public puzzle evaluations are not reused as fresh selection evidence.
 
 `docs/EVALUATION.md` specifies the original protocol; v0.1 records are preserved in `evaluation/results.json`. Version 0.2 uses the next 256 IDs in the same fixed ordering, disjoint from v0.1; its four-model comparison and paired matches live in `evaluation/v0.2/results.json`. Reproduce with `python tools/prepare-benchmark-v2.py` then `npm run bench:v2`. The separate evaluation harness may play baseline opponents and read public test positions, but no benchmark label or opponent is part of deployed move selection. Puzzle figures are not Elo estimates and test-suite correctness is not chess strength.
 
@@ -60,3 +64,5 @@ Open `http://127.0.0.1:4173/`. Model generation is deterministic: tensor coeffic
 Original implementation and generated weights: MIT. Astra directed the architecture and authored the phase-gated king-activity and rook-file circuit revision. Implementation workers were routed by Hermes to `gpt-6.1-sol`, which supplied the initial circuit compiler and UI. This is **Astra-directed, Sol-assisted authorship**, not an exclusively single-model experiment; no external pretrained policy is substituted.
 
 For v0.2 Astra directly authored the new KQK/KRK specialist, the Pocket+ tactical subset wiring, expanded model integration and size proposals. The Plus models retain the disclosed inherited base; this is not a retroactive claim of exclusive authorship for the whole system.
+
+For v0.3 Astra implemented offline engine-guided tied-head fitting and final evaluation; a Sol worker implemented the development UCI bridge/game harness. **Tuned weights are trained, not exclusively hand-written.** Stockfish (GPLv3) and GNU Chess (GPLv3+) were used locally as development teachers/opponents, not shipped as playing engines; executable/package provenance and acquisition instructions are in `docs/ENGINE-PROTOCOL.md`.
