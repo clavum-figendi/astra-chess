@@ -1,0 +1,2 @@
+# Large raw capture prefixes are reproducible via SOURCE.json metadata and must not be committed.
+raw/

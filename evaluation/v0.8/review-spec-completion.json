@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "verdict": "PASS",
+  "gate": "SPEC-1 operational reproducibility gate CLOSED",
+  "historicalLimitation": "UNCHANGED: original pre-exposure execution provenance remains incomplete.",
+  "claimScope": "Verified post-exposure fixed-candidate reproducibility in the recorded confirmation-complete environment only. No fresh holdout, independent statistical sample, Elo/stronger-play conclusion, historical freeze repair, publisher approval, or deployment certification.",
+  "checkedAt": "2026-11-17T01:41:58.868485+00:00",
+  "counts": {
+    "receiptArtifacts": 5,
+    "runtimeFilesVerified": 13528,
+    "candidateArtifacts": 8,
+    "validationRows": 95,
+    "validationArtifactResults": 8,
+    "heldoutRowsPerModel": 96,
+    "modelRecords": 5,
+    "pairedGames": 20
+  },
+  "allChecksPassed": true,
+  "resolvedCJS": "/home/hermes/projects/astra-chess/node_modules/chess.js/dist/cjs/chess.js",
+  "positionSummary": {
+    "deepmind-control": {
+      "count": 96,
+      "hits": 49,
+      "top4": 85,
+      "crossEntropy": 1.9803968638519587
+    },
+    "pocket-control": {
+      "count": 96,
+      "hits": 22,
+      "top4": 46,
+      "crossEntropy": 3.229008311364605
+    },
+    "pocket-candidate": {
+      "count": 96,
+      "hits": 32,
+      "top4": 54,
+      "crossEntropy": 3.1603520310531814
+    },
+    "atlas-control": {
+      "count": 96,
+      "hits": 21,
+      "top4": 47,
+      "crossEntropy": 3.207969043539595
+    },
+    "atlas-candidate": {
+      "count": 96,
+      "hits": 25,
+      "top4": 49,
+      "crossEntropy": 3.137402163004159
+    }
+  },
+  "gameSummary": {
+    "deepmind-control": {
+      "games": 4,
+      "wins": 3,
+      "losses": 0,
+      "draws": 1,
+      "unresolved": 0
+    },
+    "pocket-control": {
+      "games": 4,
+      "wins": 0,
+      "losses": 3,
+      "draws": 1,
+      "unresolved": 0
+    },
+    "pocket-candidate": {
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "draws": 0,
+      "unresolved": 0
+    },
+    "atlas-control": {
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "draws": 0,
+      "unresolved": 0
+    },
+    "atlas-candidate": {
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "draws": 0,
+      "unresolved": 0
+    }
+  },
+  "promotion": {
+    "deepmind": {
+      "promote": false,
+      "reason": "Control won fresh validation"
+    },
+    "pocket": {
+      "promote": false,
+      "heldoutNonRegression": true,
+      "pairedGamesNonRegression": false,
+      "reason": "Final non-regression gate failed or paired result unresolved"
+    },
+    "atlas": {
+      "promote": true,
+      "heldoutNonRegression": true,
+      "pairedGamesNonRegression": true,
+      "reason": "Validation gain plus non-regression gates; not Elo evidence"
+    }
+  },
+  "evidenceHashes": {
+    "evaluation/v0.8/confirmation-complete/receipt.json": "71a6b0be23f48badb4d8db90234ba35e913b8e96a24f9abe75557ddca46fe476",
+    "evaluation/v0.8/confirmation-complete/resolved-lineage.json": "e1c09ef483dc1dcc466e170e7d2dcbebc9bc84841abb5e1cd93f1c889629b492",
+    "evaluation/v0.8/confirmation-complete/pre-run-freeze.json": "82a189d509a736f61c1602b4913dc49b9ff484cf0583e6a817dce51bdf1da314",
+    "evaluation/v0.8/confirmation-complete/selection.json": "3d5fe8b69e24e10732bb0d1064683ac25171229c80506e9c51d7469911a52cc4",
+    "evaluation/v0.8/confirmation-complete/final-results.json": "890b87783c3fe23b1b61e4a6831774e024ce90844ca08c7347a0b2f751891bd7",
+    "evaluation/v0.8/confirmation-complete/validation-results.json": "ddb32a2721007341cfd043dd95b9383107219801c69f2ff60bb7eabbd9861f7c",
+    "evaluation/v0.8/confirmation-complete/matches.pgn": "b3fd036892e732ee480de716de15664d5bd60e3389c65fc5d7556fc5a2512366",
+    "evaluation/v0.8/PROVENANCE-LIMITS.md": "f7b0df553e7dd78913b18645c964a4c0d5a6123ee348f43991154704dd81a1cd"
+  },
+  "reviewedSourceHashes": {
+    "tools/v8_confirm.py": "ec06f2efafd01e74bb137c423258aa621edfe7a75c0225089de301be86a0d472",
+    "tools/v8_confirm_complete.py": "6e4ae7bfd11e675b187af38b200a264fc183bb939c9a681cdf2d0f42f1e699e1",
+    "tools/v8_select.py": "6da71283bd12c445f825bce80301b9f64798f7dfb40020832d7884376d2a9188",
+    "tools/v8_evaluate.py": "9b72617eb40853bf94f6dffbd99d8b92ac0412284b738e1157bfa3395267ee8d",
+    "tools/v8-score-sparse.mjs": "26010b9ffcbb537c5ae5d0f6a12c3e13822c35a6068c08b77cef0c3db7660642"
+  },
+  "baseCommit": "c6dc9647f7a0537322ffd71f784f0a696be97413",
+  "gameAccountingAndPromotionRecomputed": true,
+  "heldoutAnswerRecordsVerified": 480,
+  "recordedGamesBookOffDepth3WithinCap": true,
+  "findings": [],
+  "verifiedChecks": [
+    "Complete-wrapper and base-wrapper SHA-256 values match approved static-plan review, and both are bound in pre-run runtime identity. Original selector/evaluator/scorer also match approved source hashes.",
+    "Receipt, resolved-lineage and pre-run digest graph validated; every receipt-listed artifact rehashed successfully. Completion ordering and finishedAt verified. Driver EXIT0 is reported by parent; final resolved-lineage sidecar exists and its assertions/digest bindings independently validate.",
+    "All 13,528 runtime file digests independently recomputed, including actually Node-resolved CJS, browser ESM, wrapper/driver, Python/Node executables, Stockfish and recorded package distribution files. Current package versions and Python/Node version strings match pre-run identity.",
+    "Original reference selection/final-result hashes, original and replay validation report bindings, original frozen source bindings, replay selection/evaluator links, and all four original/copied input lineage digests verified.",
+    "All eight candidate artifact hashes verified; copied executable bytes equal originals.",
+    "All eight validation artifact result records/answers and selected records/metrics equal preserved originals; 95 validation rows per artifact.",
+    "All five model records, 96 heldout answer records per model, complete game dictionaries (20 games including full PGNs/decisions/outcomes), summaries and promotion fields equal preserved original results. matches.pgn bytes equal original.",
+    "Independently recounted game summaries, heldout hit/top4 totals and promotion gate booleans; every model has four games, recorded book-off/depth3, plies within 160. No fresh inference performed.",
+    "Updated PROVENANCE-LIMITS.md correctly names complete driver/evidence directory, distinguishes incomplete attempts, requires both final receipts and retains historical/post-exposure limitations."
+  ],
+  "decisionInterpretation": {
+    "atlas": "Recorded gate passes: 25 versus 21 teacher hits out of 96; both candidate/control lose all four paired games, no caps. This is teacher-agreement improvement with no detected regression in this small sample, NOT evidence of stronger actual play.",
+    "pocket": "Retain control: heldout hit increase does not override paired regression (control three losses/one draw versus candidate four losses).",
+    "deepmind": "Retain control: control won fresh validation."
+  },
+  "remainingOutOfScope": [
+    "Manual release artifact changes, final model export/runtime fidelity, browser/build/archive verification, final quality review and hosted deployment verification remain separate gates.",
+    "Unsafe publication helper removal/behavior is not reviewed or approved by this receipt closure.",
+    "Boundary hashes and file/record equality do not prove continuous anti-tamper protection or hermetic OS/shared-library state; no historical provenance rewrite."
+  ],
+  "createdFiles": [
+    "evaluation/v0.8/review-spec-completion.json",
+    "evaluation/v0.8/review-spec-completion.md"
+  ]
+}

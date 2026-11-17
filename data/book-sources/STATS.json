@@ -1,0 +1,24 @@
+{
+  "lichess-2200": {
+    "games": 3000,
+    "uniquePaths": 2705,
+    "rawUniquePaths": 2991,
+    "maxPlies": 12,
+    "positions": 12332,
+    "continuations": 15635,
+    "totalStoredLinePlies": 32418,
+    "artifactBytes": 1540282,
+    "artifactSha256": "3207537740ffa7420a58d4749489fe32539bc56bc1adb9dfcf9359b9051c1227"
+  },
+  "lichess-2200-slow": {
+    "games": 253,
+    "uniquePaths": 243,
+    "rawUniquePaths": 253,
+    "maxPlies": 12,
+    "positions": 1556,
+    "continuations": 1834,
+    "totalStoredLinePlies": 2905,
+    "artifactBytes": 182086,
+    "artifactSha256": "fdd9a2409d8993206caf2fc42e42a509d60ca2217e4ba0546672e2572361a43a"
+  }
+}

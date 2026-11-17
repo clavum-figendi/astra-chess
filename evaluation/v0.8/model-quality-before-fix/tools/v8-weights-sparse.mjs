@@ -1,0 +1,68 @@
+// Offline v8 terminal-weight experiment; runtime and base files are read-only.
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {pathToFileURL} from 'node:url';
+import {createTuningState} from './weight-tuning.mjs';
+import {legalPolicyFeatures,rewritePolicyWeights} from './policy-tuning.mjs';
+const hash=x=>createHash('sha256').update(x).digest('hex');
+export function repairState(bytes){
+ const s=createTuningState(bytes),old=s.groups,oldEdges=s.edgeGroups,groups=[],keys=new Map(),edgeGroups=new Int32Array(s.model.edgeCount).fill(-1);
+ const canonical=new Map();s.model.outputs.forEach((v,i)=>{if(!canonical.has(v))canonical.set(v,i);});
+ for(const n of s.heads){
+  const o=canonical.get(n+s.model.inputCount),to=Math.floor(o/5)%64,from=Math.floor(o/320),dx=to%8-from%8,dy=Math.floor(to/8)-Math.floor(from/8);
+  const geometry=Math.abs(dx)*Math.abs(dy)===2?'knight':dx===0?'straight':'lateral';
+  for(let e=s.model.rowPtr[n];e<s.model.rowPtr[n+1];e++){
+   const src=s.model.sources[e],w=s.model.weights[e],enemy=src>=384&&src<704&&Math.abs(w)<50;
+   const fixed=Math.abs(w)>=50||(old[oldEdges[e]].fixed&&!enemy);
+   const key=`${old[oldEdges[e]].key}|${fixed?'protected':geometry}`;
+   if(!keys.has(key)){keys.set(key,groups.length);groups.push({key,enemy,fixed,lower:fixed?1:enemy?.5:.8,upper:fixed?1:enemy?1.5:1.2,edges:0});}
+   const g=keys.get(key);edgeGroups[e]=g;groups[g].edges++;
+  }
+ }
+ return {...s,groups,edgeGroups};
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
+ if(['selection.json','test-exposed.json'].some(name=>existsSync(`.cache/v8/${name}`)))throw new Error('V8 frozen; no candidate writes');
+ const mode=process.argv[2];mkdirSync('.cache/v8',{recursive:true});mkdirSync('evaluation/v0.8',{recursive:true});
+ for(const family of ['pocket','atlas']){
+  const source=`public/models/${family==='pocket'?'pocket-plus':'atlas'}.bin`,s=repairState(readFileSync(source));
+  if(mode==='cache'){
+   const result={family,source,baseSHA256:s.baseSHA256,groups:s.groups,sourceSHA256:hash(readFileSync(process.argv[1])),helpers:Object.fromEntries(['tools/weight-tuning.mjs','tools/policy-tuning.mjs'].map(p=>[p,hash(readFileSync(p))])),datasetSHA256:{},splits:{}};
+   for(const split of ['train','validation']){
+    const p=`.cache/deepmind-v5/${split}.json`,raw=readFileSync(p),rows=JSON.parse(raw);result.datasetSHA256[split]=hash(raw);result.splits[split]=[];
+    for(const [i,row] of rows.entries()){
+     const moves=legalPolicyFeatures(row.fen,s);if(JSON.stringify(moves.map(m=>m.move))!==JSON.stringify(row.legal))throw Error(`legal mismatch ${row.id}`);
+     result.splits[split].push({...row,moves});if(i%100===0)console.log(JSON.stringify({family,split,position:i}));
+    }
+   }
+   writeFileSync(`.cache/v8/weight-${family}-features.json`,JSON.stringify(result));
+  }else if(mode==='export'){
+   const fit=JSON.parse(readFileSync(`.cache/v8/weight-${family}-fit.json`)),report=[];
+   for(const proposal of fit.candidates){
+    const candidate={...proposal,scales:proposal.scales.map((v,i)=>Math.max(s.groups[i].lower,Math.min(s.groups[i].upper,v)))};
+    const bytes=candidate.id==='control'?s.bytes:rewritePolicyWeights(s,candidate.scales,{experiment:'v8-bounded-contrastive',candidate:candidate.id,search:false});
+    const file=`.cache/v8/weight-${family}-${candidate.id}.bin`;writeFileSync(file,bytes);const parsed=repairState(readFileSync(file));
+    let changed=0,protectedEdges=0,protectedChanged=0,enemyMaterialChanged=0,mateScaleEdges=0,mateScaleChanged=0;
+    for(let e=0;e<s.model.edgeCount;e++){
+     const differs=parsed.model.weights[e]!==s.model.weights[e];if(differs)changed++;
+     const g=s.edgeGroups[e],enemy=g>=0&&s.groups[g].enemy;
+     if(enemy&&differs)enemyMaterialChanged++;
+     if(Math.abs(s.model.weights[e])>=50){mateScaleEdges++;if(differs)mateScaleChanged++;}
+     if(g<0||s.groups[g].fixed||(candidate.id!=='enemy-relaxed'&&enemy)){protectedEdges++;if(differs)protectedChanged++;}
+    }
+    if(protectedChanged)throw Error('protected edge changed');
+    for(const k of ['biases','sources','rowPtr','outputs','activations'])if(JSON.stringify(Array.from(s.model[k]))!==JSON.stringify(Array.from(parsed.model[k])))throw Error(`topology changed ${k}`);
+    const checks=[];
+    for(const row of JSON.parse(readFileSync('.cache/deepmind-v5/validation.json')).slice(0,5)){
+     const before=legalPolicyFeatures(row.fen,s),after=legalPolicyFeatures(row.fen,parsed);
+     const score=(m,scales)=>m.fixed+m.values.reduce((a,v,i)=>a+v*scales[m.indices[i]],0),ones=parsed.groups.map(()=>1);
+     const a=before.map(m=>[m.move,score(m,candidate.scales)]).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));
+     const b=after.map(m=>[m.move,score(m,ones)]).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));
+     const maxError=Math.max(...a.map(([move,v])=>Math.abs(v-b.find(x=>x[0]===move)[1])));if(a[0][0]!==b[0][0]||maxError>1e-3)throw Error('roundtrip prediction differs');checks.push({id:row.id,move:b[0][0],maxError});
+    }
+    report.push({...candidate,file,sha256:hash(bytes),bytes:bytes.length,changedScalars:changed,protectedEdges,protectedChanged,enemyMaterialChanged,mateScaleEdges,mateScaleChanged,parameterCount:s.model.nodeCount+s.model.edgeCount,topologyUnchanged:true,roundtrip:checks});
+   }
+   writeFileSync(`evaluation/v0.8/weight-${family}-artifacts.json`,JSON.stringify({base:source,baseSHA256:s.baseSHA256,exportSourceSHA256:hash(readFileSync(import.meta.filename)),candidates:report},null,2)+'\n');console.log(JSON.stringify({family,candidates:report.map(c=>({id:c.id,file:c.file,changed:c.changedScalars}))}));
+  }else throw Error('Use cache or export');
+ }
+}

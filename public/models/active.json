@@ -1,8 +1,8 @@
 {
   "sparse": [
     {"id":"pocket-plus","name":"Pocket"},
-    {"id":"atlas","name":"Atlas"}
+    {"id":"atlas-v8","name":"Atlas"}
   ],
-  "selectionReport":"evaluation/v0.7/selection.json",
-  "reason":"Highest fresh-validation bestmove agreement in each family; controls and smaller models win ties. Historical variants remain in source/history, not the playing catalogue."
+  "selectionReport":"evaluation/v0.8/selection.json",
+  "reason":"Pocket and DeepMind controls retained. Atlas V8 improves held-out teacher agreement with equal four-loss shallow-opponent results; no stronger-play or Elo claim. Full qualification and reproducibility evidence accompany the release."
 }

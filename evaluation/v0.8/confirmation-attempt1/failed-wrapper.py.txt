@@ -1,0 +1,80 @@
+"""Confirmatory replay, not a new holdout or retroactive execution freeze.
+Repeats fixed candidate selection and evaluation in an isolated output tree.
+Refuses any changed selected artifact; never fits or changes the original run.
+"""
+import hashlib, importlib.metadata, importlib.util, json, os, shutil, subprocess, sys, time
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+TARGET=ROOT/'.cache/v8-confirmation'
+OUT=ROOT/'evaluation/v0.8/confirmation'
+
+def sha(p):
+    h=hashlib.sha256()
+    with Path(p).open('rb') as f:
+        for chunk in iter(lambda:f.read(1024*1024),b''):h.update(chunk)
+    return h.hexdigest()
+def runtime_identity():
+    files={}
+    node=shutil.which('node')
+    if node is None:raise RuntimeError('Node executable unavailable')
+    paths=[ROOT/'src/chess.mjs',ROOT/'package.json',ROOT/'package-lock.json',ROOT/'node_modules/chess.js/package.json',ROOT/'node_modules/chess.js/dist/esm/chess.js',ROOT/'.cache/engines/root/usr/games/stockfish',Path(sys.executable).resolve(),Path(node).resolve(),Path(__file__)]
+    for name in ['torch','numpy','chess']:
+        dist=importlib.metadata.distribution(name)
+        for item in dist.files or []:
+            p=Path(str(dist.locate_file(item))).resolve()
+            if p.is_file() and p.suffix not in ['.pyc','.pyo'] and '__pycache__' not in p.parts:paths.append(p)
+    for p in sorted(set(paths)):files[str(p)]=sha(p)
+    versions={d.metadata['Name']:d.version for d in importlib.metadata.distributions() if d.metadata['Name']}
+    return {'python':sys.version,'node':subprocess.check_output(['node','--version'],text=True).strip(),'packages':dict(sorted(versions.items())),'files':files}
+def verify_identity(expected):
+    actual=runtime_identity()
+    if actual!=expected:raise RuntimeError('Confirmatory runtime changed; no acceptance')
+def module(name,path):
+    spec=importlib.util.spec_from_file_location(name,path);assert spec and spec.loader
+    result=importlib.util.module_from_spec(spec);spec.loader.exec_module(result);return result
+
+def main():
+    import torch
+    torch.set_num_threads(1)
+    original_dir=ROOT/'evaluation/v0.8';original=json.loads((ROOT/'.cache/v8/selection.json').read_text())
+    final=json.loads((original_dir/'final-results.json').read_text());assert final.get('finishedAt')
+    # A repeated run is deliberately not disguised as a fresh held-out test.
+    if TARGET.exists() or OUT.exists():raise RuntimeError('Confirmation directory already exists; inspect preserved run rather than overwrite')
+    TARGET.mkdir(parents=True);OUT.mkdir(parents=True)
+    for p in ['src','tools','spikes','node_modules']:(TARGET/p).symlink_to(ROOT/p,target_is_directory=True)
+    (TARGET/'.cache').mkdir();(TARGET/'.cache/v8').mkdir();(TARGET/'evaluation/v0.8').mkdir(parents=True)
+    for p in ['v7','engines']:(TARGET/'.cache'/p).symlink_to(ROOT/'.cache'/p,target_is_directory=True)
+    for name in ['validation.json','test.json']:shutil.copy2(ROOT/'.cache/v8'/name,TARGET/'.cache/v8'/name)
+    for name in ['data-protocol.json','weight-manifest.json','PROTOCOL.md']:shutil.copy2(original_dir/name,TARGET/'evaluation/v0.8'/name)
+    manifest=json.loads((original_dir/'weight-manifest.json').read_text())
+    for candidates in manifest['families'].values():
+        for c in candidates:
+            assert sha(ROOT/c['file'])==c['sha256']
+            if c['file'].startswith('.cache/v8/'):os.link(ROOT/c['file'],TARGET/c['file'])
+    identity=runtime_identity()
+    plan={'kind':'post-exposure-fixed-candidate-confirmatory-replay','originalSelectionSHA256':sha(ROOT/'.cache/v8/selection.json'),'originalFinalSHA256':sha(original_dir/'final-results.json'),'originalInputs':original['sourceHashes'],'expectedSelected':{f:{k:r[k]['sha256'] for k in ['winner','control']} for f,r in original['selected'].items()},'runtime':identity,'createdAt':time.time(),'limitations':'Original V8 runtime dependency/opponent freeze was incomplete. This binds the later replay only, reuses already-exposed data, does not establish historical immutability or add independent statistical evidence.'}
+    (OUT/'pre-run-freeze.json').write_text(json.dumps(plan,indent=2)+'\n');plan_sha=sha(OUT/'pre-run-freeze.json')
+    for p,digest in original['sourceHashes'].items():assert sha(ROOT/p)==digest
+    verify_identity(identity)
+    sys.path.insert(0,str(ROOT/'tools'))
+    selector=module('v8_confirm_selector',ROOT/'tools/v8_select.py');setattr(selector,'ROOT',TARGET);selector.main()
+    repeated=json.loads((TARGET/'.cache/v8/selection.json').read_text())
+    for family,old in original['selected'].items():
+        for role in ['winner','control']:
+            assert repeated['selected'][family][role]==old[role],f'Changed fixed decision/metrics: {family}/{role}'
+    # The original selected artifacts are mandatory; this is not a new choice.
+    verify_identity(identity)
+    evaluator=module('v8_confirm_evaluator',ROOT/'tools/v8_evaluate.py');setattr(evaluator,'ROOT',TARGET);evaluator.main()
+    result=json.loads((TARGET/'evaluation/v0.8/final-results.json').read_text());assert result.get('finishedAt')
+    assert result['positions']==final['positions']
+    for field in ['positionSummary','gameSummary','promotion']:assert result[field]==final[field],field
+    before={g['key']:g for g in final['games']};after={g['key']:g for g in result['games']};assert before.keys()==after.keys()
+    for key,g in after.items():
+        for field in ['result','termination','plies','engineSHA256','decisions','pgn']:assert g[field]==before[key][field],(key,field)
+    verify_identity(identity)
+    for p,digest in original['sourceHashes'].items():assert sha(ROOT/p)==digest
+    assert sha(OUT/'pre-run-freeze.json')==plan_sha
+    for name in ['selection.json','validation-results.json','final-results.json','matches.pgn']:shutil.copy2(TARGET/'evaluation/v0.8'/name,OUT/name)
+    receipt={'preRunFreezeSHA256':plan_sha,'completedAt':time.time(),'allSelectedArtifactsAndValidationMetricsIdentical':True,'allHeldoutPredictionsIdentical':True,'allPairedGamesAndDecisionsIdentical':True,'runtimeAndOpponentUnchangedAcrossReplay':True,'runtimeFilesChecked':len(identity['files']),'games':len(result['games']),'scope':plan['limitations'],'artifacts':{p.name:sha(p) for p in OUT.iterdir() if p.is_file()}}
+    (OUT/'receipt.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(receipt,indent=2),flush=True)
+if __name__=='__main__':main()

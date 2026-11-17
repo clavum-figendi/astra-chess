@@ -1,0 +1,31 @@
+{
+  "finding": "QUALITY-1",
+  "status": "fix implemented; independent source-bound re-review pending",
+  "scope": "Partial-download ownership cleanup only; not release, model, acquisition, security or package approval.",
+  "modifiedFiles": ["tools/v8-books-fetch.mjs", "tests/v8-books-fetch.test.mjs"],
+  "createdFiles": ["evaluation/v0.8/quality-fix-handoff.json", "evaluation/v0.8/quality-fix-handoff.md"],
+  "fix": "Keep deterministic <file>.download and wx. Set ownsPartial only on the write stream open event; cleanup may unlink only after that successful exclusive open. EEXIST leaves existing partial and final archive untouched. A colliding second acquisition rejects without disturbing the first, which can finish and rename normally.",
+  "tdd": {
+    "red": {"command": "node --test tests/v8-books-fetch.test.mjs", "exitCode": 1, "passed": 1, "failed": 2, "observed": "Both new collision and overlap regressions failed because the other writer's partial was absent after EEXIST (false !== true). Production code was unchanged at RED."},
+    "green": {"command": "node --test tests/v8-books-fetch.test.mjs", "exitCode": 0, "passed": 3, "failed": 0, "durationMs": 272.401195},
+    "repeat": {"command": "10 subprocess runs of node --test tests/v8-books-fetch.test.mjs", "runs": 10, "exitCodes": [0,0,0,0,0,0,0,0,0,0]},
+    "scopedSuite": {"command": "node --test --test-concurrency=1 tests/v8-book*.test.mjs", "exitCode": 0, "passed": 17, "failed": 0, "durationMs": 47204.397968, "note": "Ran after the production fix and collision tests, before one additional assertion verifying owned .download cleanup in the existing overflow/truncation test. Final test bytes were subsequently checked by the focused run and 10 repeats."}
+  },
+  "beforeSourceHashes": {
+    "tools/v8-books-fetch.mjs": "41bd4af4281b99fb24c958f24498bba7a630d9c3bc912c62d1bf87ff50b11a4c",
+    "tests/v8-books-fetch.test.mjs": "054b06d24ca48e1ed8ac052fe1f0f3d2c9c4dd0869ba995e0b9a35c27e8abd04"
+  },
+  "sourceHashes": {
+    "tools/v8-books-fetch.mjs": "2f33de59a0ff7c55919e865e4af767a833ce818d2c47355c590874971e25d1e0",
+    "tests/v8-books-fetch.test.mjs": "70cdac72fa3414213d51796606fb88c2252383ad85b8a66c20102ada2c8674a3"
+  },
+  "scopeCheck": {"archivedReviewedSources": 19, "changedReviewedSources": ["tests/v8-books-fetch.test.mjs", "tools/v8-books-fetch.mjs"], "otherReviewedSourcesUnchanged": 17},
+  "preservedBehavior": ["200000000-byte hard cap before network", "exact bounded 206 Content-Range validation", "streaming hash/backpressure", "overflow/truncation rejection and owned partial cleanup", "120000ms AbortController timeout spanning fetch and savePrefixResponse", "no authentication or paid API path"],
+  "lineage": {
+    "sourceReceipt": "data/book-sources/SOURCE.json",
+    "sourceReceiptSha256": "11dcdcc1c4c049e37361679e12379e66e06f86db553b5629b517f849a75289eb",
+    "sourceReceiptBindsFetchScript": false,
+    "consequence": "SOURCE.json binds retained acquisition bytes, selected corpus and evidence, not the fetch script. It was not modified or regenerated. Historical quality/books reviews and static scan bind the old fetch script (and quality review binds the old test), so they must not be claimed current after this fix. Preserve old reviewed sources/archive and historical acquisition hashes; obtain a new source-bound review instead of silently rebasing historical hashes."
+  },
+  "limitations": ["No network requests, heavy ML, build or browser run.", "Timeout unchanged by inspection; no 120-second timeout experiment performed.", "Original review-quality.json/md, bug-confirmation probe, archived sources and other reviews were not modified. The original probe still asserts the old defect; reviewer must adapt it independently.", "No commit or push."]
+}

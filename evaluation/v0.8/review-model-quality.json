@@ -1,0 +1,137 @@
+{
+  "passed": false,
+  "review_type": "independent static/focused-unit code-quality and security review",
+  "base_commit": "c6dc9647f7a0537322ffd71f784f0a696be97413",
+  "source_sha256": {
+    "docs/WEIGHT-REPAIR-V8.md": "efdfdb49222c85bc00c5e88e80b031beb133cee2474b192968136b1d83319a24",
+    "spikes/weight-repair-v8/repair.py": "6a872c87c6c096e97d256224f641609e282226666bbd224e10dd314803dce0e3",
+    "spikes/weight-repair-v8/run.py": "894b6c6fbbb19d5bb6cf68b4983d731d0ba85a5ff3532b752d76dbd146ecf622",
+    "spikes/weight-repair-v8/verify.py": "4676c015016dd6f11c64bea86c1e68cde4e3f1665ce82f5eb5c08e550b52b52b",
+    "tests/test_v8_complete_binding.py": "25c332c25b5b63d8caab6d8a66402b0c0dfecbf9c4e0432024dc1dec7c73b27f",
+    "tests/test_v8_confirmation.py": "b7a0e23cac63aa93746d1c6f293b6732baad537e7be9e721b6701dbbda4efb38",
+    "tests/test_v8_evaluation.py": "ca5c751d73e0538e01b2776972480ba30d8d4fef685042ec7a012ad1e544e90c",
+    "tests/test_v8_selection.py": "6d3d8047426408a36ed4724ae33e55444a7677eeeee595a9a033650d91632965",
+    "tests/test_v8_weight_repair.py": "f47eb2f34a66e455d0f2d4d2d80898baca310da77c74c7b62a0bd5cd5d0fb472",
+    "tests/v8-rebuild.test.mjs": "75c1a3e8a9b217ace4c90e51695ea7e9d1753b04b3582abeb123c9540dc7479a",
+    "tests/v8-selection.test.mjs": "e78e27ee58468df6156a19e29f39cf65a5dbadd12d483a03898c5ee3a3a73d26",
+    "tests/v8-weight-sparse.test.mjs": "9eb9a77750bab1a70eb9fad3a154d401ee156f73ed78d42c3d13d767e097536a",
+    "tools/rebuild-v8-models.mjs": "e93815a2ec1fea43e60dcd5ecd79b6ddc146a1f6f7c3f8d11f972e1056800afa",
+    "tools/v8-score-sparse.mjs": "26010b9ffcbb537c5ae5d0f6a12c3e13822c35a6068c08b77cef0c3db7660642",
+    "tools/v8-weights-sparse.mjs": "ca7e4b270c11d06181d90ba10d23c74bc6fb7270ea91870841366d3489b84b10",
+    "tools/v8-weights-verify.mjs": "db15533c40ab8826453cf03b7fe92c04ca2e676b2cd2da48821e88a6c25ae6d4",
+    "tools/v8_confirm.py": "ec06f2efafd01e74bb137c423258aa621edfe7a75c0225089de301be86a0d472",
+    "tools/v8_confirm_complete.py": "6e4ae7bfd11e675b187af38b200a264fc183bb939c9a681cdf2d0f42f1e699e1",
+    "tools/v8_evaluate.py": "9b72617eb40853bf94f6dffbd99d8b92ac0412284b738e1157bfa3395267ee8d",
+    "tools/v8_select.py": "6da71283bd12c445f825bce80301b9f64798f7dfb40020832d7884376d2a9188",
+    "tools/v8_verify.py": "4784d50095e72177cc9e7913da80b3deb429b65e0bb1abebba36ab0438bac11b",
+    "evaluation/v0.8/PROVENANCE-LIMITS.md": "f7b0df553e7dd78913b18645c964a4c0d5a6123ee348f43991154704dd81a1cd",
+    "tools/weight-tuning.mjs": "cd29b6a81235e619b8ddb2b3e42f189a9047e5f8b6720d324d243e7beb11b3a4",
+    "tools/policy-tuning.mjs": "a6cac7e246fdbac52a7ca14e25de960e4d1d0db6a943956deb99802eeb8bb19d"
+  },
+  "source_changes_during_review": [],
+  "security_concerns": [],
+  "logic_errors": [
+    {
+      "id": "Q1",
+      "severity": "high",
+      "file": "tools/rebuild-v8-models.mjs",
+      "lines": "23-32",
+      "title": "Empty acceptance-evidence map permits publication",
+      "detail": "approved=true plus evidenceSHA256={} satisfies the entire evidence loop. No required evidence keys, selection/final/complete-lineage binding, or chosen-record relationship is required before public binary/manifest writes. This is a defect in the new CLI gate, not a finding about the running confirmation evidence.",
+      "reproduction": "Sandbox probe empty-evidence used the real CLI with a valid public Pocket fitted candidate and empty evidenceSHA256. It exited 0, created pocket-v8.bin, and changed the sandbox manifest.",
+      "fix": "Define and validate a non-empty required decision/evidence schema, require the named acceptance receipts and their hashes, bind the chosen record and fit/base inputs to that evidence, and finish all checks before writing public output."
+    },
+    {
+      "id": "Q2",
+      "severity": "medium",
+      "file": "tools/rebuild-v8-models.mjs",
+      "lines": "27-38",
+      "title": "Later validation failure leaves partially published binaries",
+      "detail": "The CLI writes each family binary inside the validation loop, but updates the manifest only after all families succeed. A malformed later derivative leaves earlier output installed with no matching manifest update. Existing derivatives could be overwritten on this failed command.",
+      "reproduction": "Sandbox probe late-error used valid Pocket followed by missing Atlas candidate. CLI exited 1, but pocket-v8.bin existed and the manifest was unchanged.",
+      "fix": "Validate and rebuild every requested family into staging before any public mutation; use atomic replacement and rollback/transaction handling for binary-plus-manifest publication. Add a late-failure preservation test with existing binary/manifest sentinels."
+    },
+    {
+      "id": "Q3",
+      "severity": "medium",
+      "file": "tools/rebuild-v8-models.mjs",
+      "lines": "35",
+      "title": "Manifest changed-weight metadata is unvalidated caller input",
+      "detail": "changedWeights is copied directly from chosen.changedScalars rather than computed or checked against serialized candidate/base tensors. Negative, missing, or otherwise false counts can enter the public manifest despite successful byte reconstruction.",
+      "reproduction": "The empty-evidence sandbox used changedScalars=-1; successful generated manifest contained changedWeights=-1. This is distinct from the gate defect: even a populated, hash-correct evidence map does not validate this field.",
+      "fix": "Calculate changed scalar count from parsed base and rebuilt tensors (and verify protected/topology invariants), or compare a validated nonnegative integer to an independently bound artifact count. Add negative/missing/incorrect count tests."
+    }
+  ],
+  "suggestions": [
+    {
+      "file": "tools/v8_confirm_complete.py; tools/v8_confirm.py; tools/v8_select.py; tools/v8_evaluate.py",
+      "detail": "Many integrity checks use assert, which Python optimization removes. Document and reject optimized invocation, or use explicit exceptions for acceptance-critical checks. Current normal-mode tests pass; no optimized replay was executed."
+    },
+    {
+      "file": "tests/v8-rebuild.test.mjs",
+      "detail": "The current rebuild test verifies exact candidate bytes and rejects wrong base/missing candidate, but does not exercise CLI decision validation, manifest metadata, no-op behavior, or failed-write atomicity. Add isolated CLI regressions for Q1-Q3."
+    }
+  ],
+  "verification": {
+    "python_project_venv": {
+      "tests": 16,
+      "passed": 16,
+      "failed": 0,
+      "seconds": 1.171
+    },
+    "node_focused": {
+      "tests": 3,
+      "passed": 3,
+      "failed": 0,
+      "duration_ms": 11543.928533
+    },
+    "initial_default_python": {
+      "tests_reported": 14,
+      "errors": 2,
+      "reason": "Wrong interpreter: torch missing. Retried successfully with existing .cache/learning-venv/bin/python; no package installation."
+    },
+    "static_checks": "Parsed scoped Python source/tests with ast.parse; node --check on scoped MJS source/tests; scanned scoped source/tests for credential assignment, shell injection, eval/exec and pickle.load patterns: no matches.",
+    "cli_sandbox_probes": [
+      {
+        "probe": "empty-evidence",
+        "returncode": 0,
+        "newBinaryExists": true,
+        "manifestChanged": true,
+        "publishedChangedWeights": -1,
+        "stderrTail": ""
+      },
+      {
+        "probe": "late-error",
+        "returncode": 1,
+        "newBinaryExists": true,
+        "manifestChanged": false,
+        "publishedChangedWeights": null,
+        "stderrTail": "andidate\n    at rebuildVariant (file:///home/hermes/projects/astra-chess/tools/rebuild-v8-models.mjs:12:46)\n    at main (file:///home/hermes/projects/astra-chess/tools/rebuild-v8-models.mjs:32:15)\n    at file:///home/hermes/projects/astra-chess/tools/rebuild-v8-models.mjs:40:79\n    at ModuleJob.run (node:internal/modules/esm/module_job:569:25)\n    at async node:internal/modules/esm/loader:650:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.8.2\n"
+      }
+    ],
+    "release_decision_exists": false,
+    "positive_findings": [
+      "Public-coefficient helper reconstructed both relaxed candidate SHA-256 values byte-identically in focused tests.",
+      "Wrong base and missing candidate rejected.",
+      "Selection controls win hit ties; frozen/exposed fitting entrypoints rejected before loading/writing in unit tests.",
+      "Actual CJS resolution and runtime/lineage tamper checks passed their focused unit tests.",
+      "No source hashes changed during review."
+    ]
+  },
+  "actual_executed_commands": [
+    "git status --short && git rev-parse HEAD && git diff --stat",
+    "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -p 'test_v8_*.py' -v",
+    "node --test --test-concurrency=1 tests/v8-rebuild.test.mjs tests/v8-selection.test.mjs tests/v8-weight-sparse.test.mjs",
+    "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .cache/learning-venv/bin/python -m unittest discover -s tests -p 'test_v8_*.py' -v",
+    "python /home/hermes/.hermes/cache/scratch/v8-quality-cli-probe.py"
+  ],
+  "additional_execution": "Read-only inline Python inventoried/hash-bound scoped files, scanned/parsed them, and invoked node --check for each MJS. An initial inline version of the same isolated CLI probes was also executed. File content reads used read_file.",
+  "limits": [
+    "No source edits, refit, export command, browser, build, heavy evaluation, paid compute, or frozen-receipt edits.",
+    "Did not poll or read the active confirmation-complete outputs.",
+    "Tests are code-quality checks, not complete-evidence, strength, Elo or release certification.",
+    "No git staging, commit, or public weights/manifest changes. Sandbox publications were confined to scratch directories and removed afterward.",
+    "Current release decision is absent, so Q1-Q3 describe latent CLI publication defects, not an actual current promotion."
+  ],
+  "summary": "Code-quality review fails on three reproduced rebuild-CLI validation/publication defects; focused existing tests pass and no security issue was found."
+}

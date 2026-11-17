@@ -1,0 +1,18 @@
+{
+  "prefixBytes": 100000000,
+  "prefixSha256": "10786e08ae7308ab12e3463154a66b061548d6610e5428b61c04a8b8e0807888",
+  "selection": "First 3000 distinct qualifying complete games in decoded prefix; both ratings >=2200; rated blitz/rapid/classical only; first <=24 SAN plies retained.",
+  "encounteredGameRecords": 306874,
+  "completedResultRecords": 306837,
+  "qualifyingGames": 5209,
+  "incompleteOrUnfinishedRecords": 37,
+  "selectedGames": 3000,
+  "selectedBySpeed": {
+    "blitz": 2747,
+    "rapid": 244,
+    "classical": 9
+  },
+  "zstdExitCode": 1,
+  "zstdStderr": "data/book-sources/raw/lichess-2026-09-100MB.zst.part : Read error (39) : premature end",
+  "selectedSha256": "229cd17f3697f75eecd772c6f75300ad20dc863d37606fd06ce3770a6521ca6f"
+}

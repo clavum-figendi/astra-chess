@@ -1,0 +1,169 @@
+{
+  "reviewedAt": "2026-11-16T23:49:30.863390+00:00",
+  "baseCommit": "c6dc9647f7a0537322ffd71f784f0a696be97413",
+  "fileHashes": {
+    "public/app.mjs": "e5884aae4bf1370addb420b7d77b8e41d7f1c47cbc193ab0efcde8e10663b927",
+    "public/worker.mjs": "f970299643760048b0669f7e118aacdbe6a1def4f777e38efa035725da4c893e",
+    "public/index.html": "6a7fe35e89d2160fb76c25ad6c8da939df292425d7c724ee2af8a57ad1b83039",
+    "laptop/cli.mjs": "43de227f357d9d12c5ba4c9d528aa14676a3e471dec620aa87038fcc87587dc1",
+    "tools/build.mjs": "e94de1a83c6c29c82475f3181061658cb07312d9cbbeb02e58659c722181cf93",
+    "tools/v8_select.py": "6da71283bd12c445f825bce80301b9f64798f7dfb40020832d7884376d2a9188",
+    "tools/v8_evaluate.py": "9b72617eb40853bf94f6dffbd99d8b92ac0412284b738e1157bfa3395267ee8d",
+    "tools/v8-score-sparse.mjs": "26010b9ffcbb537c5ae5d0f6a12c3e13822c35a6068c08b77cef0c3db7660642",
+    "tests/test_v8_selection.py": "6d3d8047426408a36ed4724ae33e55444a7677eeeee595a9a033650d91632965",
+    "tests/test_v8_evaluation.py": "ca5c751d73e0538e01b2776972480ba30d8d4fef685042ec7a012ad1e544e90c",
+    "tests/v8-selection.test.mjs": "e78e27ee58468df6156a19e29f39cf65a5dbadd12d483a03898c5ee3a3a73d26",
+    "tests/v8-book-ui-app.test.mjs": "0a5c1ba1dafc41e39382384b79773acfe3d08f6de205d8ba50679997900cebfa",
+    "tests/v8-book-ui-build.test.mjs": "beb6c9d5676572df5ed8de4cdae4d3de91e8ca7e759d6d9f407ce659318ea4bd",
+    "tests/v8-book-ui-cli.test.mjs": "8cd8129400f597c3eadcd59a1e384947722638a5da01bd7fb5a9b79b7182ecbf",
+    "tests/v8-book-ui-worker.test.mjs": "c1727633950b236314db29c95bc5e11daa892bf0adc86790543c5db0a7861fc0"
+  },
+  "schemaVersion": 1,
+  "verdict": "REQUEST_CHANGES",
+  "reviewType": "independent spec-compliance, source-bound; not quality/release certification",
+  "scope": [
+    "public/app.mjs",
+    "public/worker.mjs",
+    "public/index.html",
+    "laptop/cli.mjs",
+    "tools/build.mjs",
+    "tools/v8_select.py",
+    "tools/v8_evaluate.py",
+    "tools/v8-score-sparse.mjs",
+    "tests/test_v8_selection.py",
+    "tests/test_v8_evaluation.py",
+    "tests/v8-selection.test.mjs",
+    "tests/v8-book-ui-app.test.mjs",
+    "tests/v8-book-ui-build.test.mjs",
+    "tests/v8-book-ui-cli.test.mjs",
+    "tests/v8-book-ui-worker.test.mjs"
+  ],
+  "excluded": [
+    "Production changes, commits, pushes, builds, browser runs, fitting, reselection, heavy model evaluation",
+    "Book acquisition/rights/validator implementation owned by separate worker",
+    "Running evaluation output and final-results.json: not inspected or polled"
+  ],
+  "findings": [
+    {
+      "id": "SPEC-1",
+      "severity": "medium",
+      "title": "Freeze receipt does not bind the full policy/opponent execution boundary",
+      "locations": [
+        "tools/v8_select.py:58-61",
+        "tools/v8_evaluate.py:18-25,62,70-71,88,103-105",
+        "tools/v8-score-sparse.mjs:8,14",
+        "src/chess.mjs:1"
+      ],
+      "evidence": "Frozen sourceHashes bind nine first-party sources but omit src/chess.mjs and the resolved chess.js dependency/lock. Sparse legal action enumeration and position encoding depend on that unbound import. Python chess/torch/numpy execution versions are also absent from this freeze. The paired Stockfish executable is hashed after each game, but its digest is never required to equal a pre-exposure frozen expected digest (a prior generator engine digest exists in data-protocol.json). Therefore changed legal-move code/dependencies or an opponent replacement can pass all current frozen-source assertions. Artifact hashes do verify the eight candidate files, but do not close this execution provenance gap.",
+      "impact": "The implementation supports a narrower claim: listed sources and candidate bytes are frozen. It cannot alone certify the requested all-source/artifact freeze for heldout/pair evidence. No claim is made that files actually changed or results are wrong.",
+      "requestedChange": "Do not edit the frozen selector/evaluator or receipts during the active run. Resolve the current claim using genuinely pre-exposure immutable dependency/engine evidence if available; otherwise explicitly qualify the current run and retain controls pending an authorized fully bound run. For a future protocol, freeze/check src/chess.mjs, dependency lock/resolved chess.js bytes and Python runtime package identities, plus the paired opponent binary digest, before exposure and at completion. Add negative tests for an unbound dependency/opponent change. Do not retrofit newly computed hashes as proof of pre-exposure freezing."
+    }
+  ],
+  "checks": [
+    {
+      "command": "node --test tests/v8-book-ui-*.test.mjs tests/v8-selection.test.mjs",
+      "result": "PASS",
+      "tests": 10,
+      "failures": 0,
+      "coverage": "UI/worker/CLI integration fixtures; build source gate only; sparse ranking test uses actual existing pocket-plus.bin"
+    },
+    {
+      "command": ".cache/learning-venv/bin/python -m unittest discover -s tests -p 'test_v8_selection.py'",
+      "result": "PASS",
+      "tests": 4,
+      "failures": 0,
+      "coverage": "Tie rules, freeze guards, partial-teacher fixture; no fitting executed"
+    },
+    {
+      "command": ".cache/learning-venv/bin/python -m unittest discover -s tests -p 'test_v8_evaluation.py'",
+      "result": "PASS",
+      "tests": 2,
+      "failures": 0,
+      "coverage": "Outcome accounting fixtures only"
+    },
+    {
+      "command": "Read-only SHA audit of weight-manifest.json entries",
+      "result": "PASS",
+      "familyCounts": {
+        "deepmind": 2,
+        "pocket": 3,
+        "atlas": 3
+      },
+      "verifiedArtifacts": 8
+    },
+    {
+      "command": "Read-only frozen split identity/hash audit (no inference or result inspection)",
+      "result": "PASS",
+      "validationCount": 95,
+      "testCount": 96,
+      "duplicateBoardSideIdentities": 0,
+      "priorV3V4V5V7Overlap": 0,
+      "crossSplitBoardSideOverlap": 0,
+      "crossSplitFamilyOverlap": 0,
+      "teacherMovesOutsideLegalMasks": 0,
+      "splitDigestsMatch": true,
+      "teacherDepthEvidence": "Generator source and finished data-protocol declare/use depth 12; rows contain no independent depth field."
+    },
+    {
+      "command": "Compare current sources to frozen selection; compare manifest digest",
+      "result": "PASS",
+      "listedSourceDigestsMatch": 9,
+      "manifestDigestMatches": true
+    },
+    {
+      "command": "Compare archived fitting programs against manifest hashes and current guarded versions",
+      "result": "PASS",
+      "originalArchiveDigestsMatch": 2,
+      "numericFitDelta": "None in the two diffs; only exposure guards/imports added. Historical report hashes remain historical, not certifications of current programs."
+    }
+  ],
+  "passConditions": [
+    {
+      "requirement": "Adjacent offline source choice, default ECO, technical details collapsed",
+      "status": "PASS_SOURCE_AND_FIXTURE"
+    },
+    {
+      "requirement": "Safe source paths, SHA mismatch rejection, unknown source errors without cross-book fallback",
+      "status": "PASS_SOURCE_AND_FIXTURE"
+    },
+    {
+      "requirement": "Book-off policy path, seeded choices, per-game source/seed/hash PGN",
+      "status": "PASS_SOURCE_AND_FIXTURE"
+    },
+    {
+      "requirement": "Profile changes cancel stale inference and clear premoves/reset clocks",
+      "status": "PASS_SOURCE; stale-reply fixture PASS; timed/premove browser evidence PENDING"
+    },
+    {
+      "requirement": "Compiled cache reused across fresh worker and valid-shaped corruption rejected",
+      "status": "PASS_FIXTURE_WITH_CHECKSUM"
+    },
+    {
+      "requirement": "CLI book-source/UCI/aliases/no-book; assets and docs copied",
+      "status": "PASS_CLI_FIXTURES_AND_BUILD_SOURCE_GATE; actual build PENDING"
+    },
+    {
+      "requirement": "Eight immutable artifacts; fresh depth12 family/board-side-disjoint splits; control wins hit ties, CE secondary",
+      "status": "PASS_HASH_SOURCE_AND_UNIT_CHECKS"
+    },
+    {
+      "requirement": "Partial teacher has zero unranked target mass; unchanged DeepMind encoder",
+      "status": "PASS_SOURCE; encoder equality asserted in selector/evaluator; not independently reloaded in this bounded review"
+    },
+    {
+      "requirement": "Freeze all execution sources/artifacts before test",
+      "status": "REQUEST_CHANGES_SPEC-1"
+    },
+    {
+      "requirement": "Book-off SF depth3 paired two openings/two colors; actual 160-ply cap unresolved; promotion only with heldout and pair nonregression/no caps",
+      "status": "PASS_SOURCE_AND_OUTCOME_UNITS; actual results NOT_REVIEWED"
+    }
+  ],
+  "limits": [
+    "No release certification. Real browser with actual models, timed clock/premove transitions, offline assets, full build and extracted packaging remain parent-owned gates.",
+    "Most UI/worker/CLI tests replace inference with fake engines; do not label their passing results actual-browser or chess-strength evidence.",
+    "This review inspected frozen data only for identity/mask invariants, not candidate predictions or running result files.",
+    "The initial invariant-audit command assumed a row depth field and exited KeyError after successfully checking artifact and split hashes; corrected read-only command passed. Depth evidence comes from generator/protocol rather than a nonexistent per-row field.",
+    "Current sources match the listed frozen digests. This is not proof of the omitted dependency/opponent pre-exposure lineage."
+  ]
+}

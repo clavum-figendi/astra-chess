@@ -1,0 +1,14 @@
+{
+  "confirmationReceiptSHA256": "71a6b0be23f48badb4d8db90234ba35e913b8e96a24f9abe75557ddca46fe476",
+  "preRunFreezeSHA256": "82a189d509a736f61c1602b4913dc49b9ff484cf0583e6a817dce51bdf1da314",
+  "resolvedNodeChess": "/home/hermes/projects/astra-chess/node_modules/chess.js/dist/cjs/chess.js",
+  "resolvedNodeChessSHA256": "ccf63ba6a6023ccebc8c110361361b8e14f85d40b556eff387baa8ede4fdd21f",
+  "inputLineage": {
+    ".cache/v8/validation.json": "bde5190a493a14ffa2a7239c2ad22160b85636484c1e77e4c3418e704cd2501e",
+    ".cache/v8/test.json": "91e8436f1a0d930f8c4275a0f92e5b3b081bf148d36be5cfe9ddcb5069267412",
+    "evaluation/v0.8/data-protocol.json": "029d09150aa89279c2926c31b7f95a5d7345c8e35a1bd05d876f274d0d59b1ee",
+    "evaluation/v0.8/weight-manifest.json": "0e9fb0ec58dda834b112000fb7c0a0c5bc60d96a93cfe44b12282c7cfe378a28"
+  },
+  "allLineageDigestsMatched": true,
+  "scope": "Post-exposure fixed-candidate reproducibility only; no new holdout or retroactive freeze."
+}

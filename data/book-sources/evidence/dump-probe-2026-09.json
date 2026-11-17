@@ -1,0 +1,11 @@
+{
+  "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2026-09.pgn.zst",
+  "method": "HEAD+Range(0-4999999)",
+  "retrievedAt": "2026-11-16T23:13:54.203772+00:00",
+  "contentLength": 29224520887,
+  "acceptRanges": "bytes",
+  "lastModified": "Sat, 03 Oct 2026 05:06:59 GMT",
+  "probeBytes": 5000000,
+  "probeSha256": "4c90473ee0a9259fee5861d6be9591e8d726b6067f04173209f7c7a7062f2370",
+  "probeMBps": 41.24
+}

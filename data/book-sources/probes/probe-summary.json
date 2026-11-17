@@ -1,0 +1,21 @@
+{
+  "kind": "explorer-probe",
+  "probedAt": "2026-11-16T23:17:28.937Z",
+  "anonymous": true,
+  "results": [
+    {
+      "endpoint": "masters",
+      "url": "https://explorer.lichess.ovh/masters?topGames=0&moves=12",
+      "status": 401,
+      "checkpoint": "data/book-sources/probes/probe-masters-401.json",
+      "sha256": "9371176869a945e2958e43b349397210a1b72b83f11c67e02e0be1f950254ef2"
+    },
+    {
+      "endpoint": "lichess",
+      "url": "https://explorer.lichess.ovh/lichess?variant=standard&speeds=rapid%2Cclassical&ratings=2200%2C2500&topGames=0&recentGames=0&moves=12",
+      "status": 401,
+      "checkpoint": "data/book-sources/probes/probe-lichess-401.json",
+      "sha256": "9371176869a945e2958e43b349397210a1b72b83f11c67e02e0be1f950254ef2"
+    }
+  ]
+}

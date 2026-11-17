@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "default": "eco",
+  "books": [
+    {
+      "id": "eco",
+      "name": "ECO repertoire",
+      "file": "../openings.json",
+      "sha256": "dc6398f617d58dc5e7697eea46452a465326cac808bc60f34d2439f5deef5d3d",
+      "rights": "CC0-1.0",
+      "sourceUrl": "https://github.com/lichess-org/chess-openings",
+      "weighting": "One vote per maximal named SAN path; not game frequency.",
+      "description": "Original ECO repertoire; unchanged default."
+    },
+    {
+      "id": "lichess-2200",
+      "name": "Lichess 2200+ · blitz / rapid / classical",
+      "file": "lichess-2200.json",
+      "sha256": "3207537740ffa7420a58d4749489fe32539bc56bc1adb9dfcf9359b9051c1227",
+      "rights": "CC0-1.0",
+      "licenseFile": "CC0-1.0.txt",
+      "sourceUrl": "https://database.lichess.org/standard/lichess_db_standard_rated_2026-09.pgn.zst",
+      "weighting": "One vote per sampled game at each recorded ply; duplicate SAN paths have summed game weights. Not full-database popularity or neural confidence.",
+      "description": "3000 actual games from the same bounded September 2026 export sample, both players rated 2200+. First 12 plies; blitz, rapid and classical; no bullet/ultrabullet.",
+      "games": 3000,
+      "positions": 12332,
+      "maxPlies": 12,
+      "corpus": "lichess-2026-09-prefix-100000000",
+      "sourceSha256": "229cd17f3697f75eecd772c6f75300ad20dc863d37606fd06ce3770a6521ca6f"
+    },
+    {
+      "id": "lichess-2200-slow",
+      "name": "Lichess 2200+ · rapid / classical",
+      "file": "lichess-2200-slow.json",
+      "sha256": "fdd9a2409d8993206caf2fc42e42a509d60ca2217e4ba0546672e2572361a43a",
+      "rights": "CC0-1.0",
+      "licenseFile": "CC0-1.0.txt",
+      "sourceUrl": "https://database.lichess.org/standard/lichess_db_standard_rated_2026-09.pgn.zst",
+      "weighting": "One vote per sampled game at each recorded ply; duplicate SAN paths have summed game weights. Not full-database popularity or neural confidence.",
+      "description": "253 actual games from the same bounded September 2026 export sample, both players rated 2200+. First 12 plies; rapid/classical subset only.",
+      "games": 253,
+      "positions": 1556,
+      "maxPlies": 12,
+      "corpus": "lichess-2026-09-prefix-100000000",
+      "sourceSha256": "229cd17f3697f75eecd772c6f75300ad20dc863d37606fd06ce3770a6521ca6f"
+    }
+  ],
+  "unavailable": [
+    {
+      "id": "masters",
+      "name": "Masters",
+      "available": false,
+      "reason": "Anonymous explorer access returned HTTP 401. No credentials used; redistribution rights for a Masters snapshot were not established."
+    }
+  ]
+}

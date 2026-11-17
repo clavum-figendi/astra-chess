@@ -1,0 +1,11 @@
+{
+  "url": "https://explorer.lichess.ovh/masters?topGames=0&moves=12",
+  "requestedAt": "2026-11-16T23:17:26.888Z",
+  "httpStatus": 401,
+  "elapsedMs": 253,
+  "sha256": "9371176869a945e2958e43b349397210a1b72b83f11c67e02e0be1f950254ef2",
+  "bytes": 172,
+  "retryAfter": null,
+  "xRateLimit": {},
+  "bodyExcerpt": "<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+}

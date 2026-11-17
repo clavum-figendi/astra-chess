@@ -1,11 +1,48 @@
-import { cp, mkdir, rm, writeFile, readFile, access } from 'node:fs/promises';
+import { cp, mkdir, rm, writeFile, readFile, access, readdir } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 
+export async function copyEvidence(source, destination) {
+  const files = [];
+  async function walk(directory, prefix = '') {
+    for (const entry of await readdir(directory, {withFileTypes:true})) {
+      const relative = prefix + entry.name;
+      if (entry.isDirectory()) await walk(join(directory,entry.name),relative+'/');
+      else if (/\.html?$/i.test(entry.name)) {
+        const published = relative + '.txt';
+        try { await access(join(source,published)); throw new Error('Evidence text alias collision'); }
+        catch (error) { if (error.code !== 'ENOENT') throw error; }
+        const bytes = await readFile(join(source,relative));
+        files.push({original:relative,published,sha256:createHash('sha256').update(bytes).digest('hex')});
+      }
+    }
+  }
+  await walk(source);
+  await cp(source,destination,{recursive:true,filter:path=>!(/\.html?$/i.test(path))});
+  for (const file of files) await cp(join(source,file.original),join(destination,file.published));
+  await writeFile(join(destination,'HTML-EVIDENCE.json'),JSON.stringify({note:'Raw HTML is preserved byte-for-byte as inert text; originals remain in the source repository.',files:files.sort((a,b)=>a.original.localeCompare(b.original))},null,2)+'\n');
+}
+
 export async function buildSite(root) {
   const dist = join(root,'dist');
   const laptop = join(root,'build/laptop');
+  let hasBookRegistry = true;
+  try {
+    // Check the registry itself, not an entire recursive copy: a missing child
+    // asset must never be mistaken for a legacy tree without profiles.
+    const registry = JSON.parse(await readFile(join(root,'public/books/manifest.json'),'utf8'));
+    if (registry.version !== 1 || registry.default !== 'eco' || !Array.isArray(registry.books) || !registry.books.length) throw new Error('Invalid opening-book registry.');
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
+    const legacyBook = JSON.parse(await readFile(join(root,'public/openings.json'),'utf8'));
+    let legacyWorker = '';
+    try { legacyWorker = await readFile(join(root,'public/worker.mjs'),'utf8'); }
+    catch (error) { if (error.code !== 'ENOENT') throw error; }
+    if (legacyBook.version !== 1 || !legacyBook.positions || typeof legacyBook.positions !== 'object' || Array.isArray(legacyBook.positions) || legacyWorker.includes('./books/')) throw new Error('Opening-book registry is required for profile-aware builds.');
+    hasBookRegistry = false;
+  }
   await rm(dist,{recursive:true,force:true});
   await rm(laptop,{recursive:true,force:true});
   await mkdir(dist,{recursive:true}); await mkdir(laptop,{recursive:true});
@@ -48,6 +85,7 @@ export async function buildSite(root) {
   await cp(join(root,'public/models'),join(laptop,'models'),{recursive:true,filter:path=>include(path)&&!path.endsWith('.onnx')&&!path.endsWith('deepmind-browser.json')});
   await writeFile(join(laptop,'models/manifest.json'),JSON.stringify(sparseManifest,null,2)+'\n');
   await cp(join(root,'public/openings.json'),join(laptop,'openings.json'));
+  if (hasBookRegistry) await cp(join(root,'public/books'),join(laptop,'books'),{recursive:true});
   for (const name of ['README.md','LICENSE','CHESS-JS-LICENSE.txt']) await cp(join(dist,name),join(laptop,name));
   await cp(join(dist,'docs'),join(laptop,'docs'),{recursive:true});
   try { await cp(join(root,'public/DEEPMIND-CODE-LICENSE.txt'),join(laptop,'DEEPMIND-CODE-LICENSE.txt')); }
@@ -57,8 +95,8 @@ export async function buildSite(root) {
   catch (error) { if (error.code !== 'ENOENT') throw error; }
   try {
     await access(join(root,'evaluation/results.json'));
-    await cp(join(root,'evaluation'),join(dist,'evaluation'),{recursive:true});
-    await cp(join(root,'evaluation'),join(laptop,'evaluation'),{recursive:true});
+    await copyEvidence(join(root,'evaluation'),join(dist,'evaluation'));
+    await copyEvidence(join(root,'evaluation'),join(laptop,'evaluation'));
     await cp(join(root,'evaluation/results.json'),join(dist,'evaluation.json'));
   } catch (error) { if(error.code!=='ENOENT') throw error; }
   await mkdir(join(dist,'downloads'),{recursive:true});

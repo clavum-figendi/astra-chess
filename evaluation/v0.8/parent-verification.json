@@ -1,0 +1,19 @@
+{
+  "verifierSHA256": "4784d50095e72177cc9e7913da80b3deb429b65e0bb1abebba36ab0438bac11b",
+  "selectionSHA256": "d4ba14e9660812069a20c06b4d8ccbe421d056f2e621d3f7112af5092e3b82ff",
+  "finalResultsSHA256": "ac063ee6c759b08cc4d903265a060ed8ed5d6b255be53fa55b10b3578d665093",
+  "dataCounts": {
+    "validation": 95,
+    "test": 96
+  },
+  "priorUniqueBoardSideIDs": 2198,
+  "allNewBoardsDisjoint": true,
+  "wholeFamilySplitDisjoint": true,
+  "legalMasksIndependentlyVerified": 191,
+  "allGamesReplayed": 20,
+  "pliesReplayed": 1403,
+  "allOutcomeSummariesRecomputed": true,
+  "sparseRawPositionReexecutions": 384,
+  "deepmindRawPositionAndHistoryReexecutions": 14,
+  "scope": "All PGNs/outcomes and sparse heldout moves; sampled DeepMind heldout and first/last decisions with full history, not an exhaustive DeepMind re-execution."
+}

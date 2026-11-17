@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "method": "Independent per-game strict Chess replay; does not use compileBook to derive empirical expected positions or weights.",
+  "games": 3000,
+  "replayedPlies": 71697,
+  "verified": {
+    "lichess-2200": {
+      "positions": 12332,
+      "continuations": 15635,
+      "bytes": 1540282,
+      "sha256": "3207537740ffa7420a58d4749489fe32539bc56bc1adb9dfcf9359b9051c1227"
+    },
+    "lichess-2200-slow": {
+      "positions": 1556,
+      "continuations": 1834,
+      "bytes": 182086,
+      "sha256": "fdd9a2409d8993206caf2fc42e42a509d60ca2217e4ba0546672e2572361a43a"
+    }
+  },
+  "checks": [
+    "Every retained SAN legal, including beyond runtime cutoff",
+    "Every serialized empirical FEN/UCI/absolute-ply/game-count weight independently matches source",
+    "Cutoff returns null",
+    "Terminal position returns null"
+  ],
+  "sourceHashes": {
+    "docs/BOOK-SOURCES-V8.md": "707b045691338466d82a5b17e4faa8e00f24575b996d623d5b48a9572672ad62",
+    "data/book-sources/SOURCE.json": "11dcdcc1c4c049e37361679e12379e66e06f86db553b5629b517f849a75289eb",
+    "data/book-sources/STATS.json": "3b066b2ba6108b99df1fe14876235289f96945fc10e02aa958493b068aef1e4b",
+    "data/book-sources/selected-games.ndjson": "229cd17f3697f75eecd772c6f75300ad20dc863d37606fd06ce3770a6521ca6f",
+    "data/book-sources/evidence/database.txt": "0e2083b7f71b0b446794d5b8c5c38e4a2e9711c845258edfb8b8d67c66b3fe04",
+    "data/book-sources/evidence/cc0-1.0-legalcode.txt": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+    "data/book-sources/evidence/prefix-response-headers.txt": "d0b7ac2a8b8546430c982091b9152f694160616da968c4d87f2c2d7b844f125e",
+    "public/books/manifest.json": "61ec837d33be73c83c051cba0661b32bd905ea5d59598852352410032e89125a",
+    "public/books/CC0-1.0.txt": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+    "public/openings.json": "dc6398f617d58dc5e7697eea46452a465326cac808bc60f34d2439f5deef5d3d",
+    "public/books/lichess-2200.json": "3207537740ffa7420a58d4749489fe32539bc56bc1adb9dfcf9359b9051c1227",
+    "public/books/lichess-2200-slow.json": "fdd9a2409d8993206caf2fc42e42a509d60ca2217e4ba0546672e2572361a43a",
+    "src/book-sources.mjs": "f575c12bf3f6d9717c923545949a9dd8e29e264f9752ea6dc0c35094b1980df7",
+    "src/opening-book.mjs": "691d5802ed8b30ce5572c0f6b3a7bab7d246ca2c545ff38fb48a61a391076e62",
+    "tools/v8-books-fetch.mjs": "41bd4af4281b99fb24c958f24498bba7a630d9c3bc912c62d1bf87ff50b11a4c",
+    "tools/v8-books-extract.py": "1c05faf9f19c5b508e0deeb99f2c4d291700e8e92fd45ce1616e3de90c11e1cd",
+    "tools/v8-books-build.mjs": "49f07dcfac0a702a7964e3a7597af5f2cc3b7a550143e9ca0ada874812180691",
+    "tools/v8-books-receipt.mjs": "d67e93e4eaff0742742fd115e97cd1ee0503dce242280b3ad0a2a07e899f81bd",
+    "tests/v8-books-build.test.mjs": "7fb6e3b78d201e192771a9775861f794dfe4a2a360577fd07764a7e713ccea44",
+    "tests/v8-books-fetch.test.mjs": "054b06d24ca48e1ed8ac052fe1f0f3d2c9c4dd0869ba995e0b9a35c27e8abd04",
+    "tests/v8-books-snapshots.test.mjs": "7e47f2a2ddf9764ad7a2c04dd8bd05060e0dd9f4e6f98235fb8dca9a9a57bc3b",
+    "tests/v8-books-validator.test.mjs": "8bcc9be0a9d22252f498c062c07f273d21219fee2316ddb377aa67ec3dd3b579",
+    "tests/test_v8_books_extract.py": "04826bee0c2b4b82a4fa5c3e9ac63b1adaf2bf04cbf0312c0dff0504d7096448"
+  }
+}

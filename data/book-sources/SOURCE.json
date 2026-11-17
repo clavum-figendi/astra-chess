@@ -1,0 +1,40 @@
+{
+  "kind": "bounded-official-lichess-CC0-export",
+  "sourceUrl": "https://database.lichess.org/standard/lichess_db_standard_rated_2026-09.pgn.zst",
+  "rights": "CC0-1.0",
+  "rightsSourceUrl": "https://database.lichess.org/",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt",
+  "retrievedAt": "Mon, 16 Nov 2026 23:28:21 GMT",
+  "contentRange": "bytes 0-99999999/29224520887",
+  "etag": "\"6ac08d73-6cdeaccb7\"",
+  "prefixBytes": 100000000,
+  "prefixSha256": "10786e08ae7308ab12e3463154a66b061548d6610e5428b61c04a8b8e0807888",
+  "selection": "First 3000 distinct qualifying complete games in decoded prefix; both ratings >=2200; rated blitz/rapid/classical only; first <=24 SAN plies retained.",
+  "encounteredGameRecords": 306874,
+  "completedResultRecords": 306837,
+  "qualifyingGames": 5209,
+  "incompleteOrUnfinishedRecords": 37,
+  "selectedGames": 3000,
+  "selectedBySpeed": {
+    "blitz": 2747,
+    "rapid": 244,
+    "classical": 9
+  },
+  "zstdExitCode": 1,
+  "zstdStderr": "data/book-sources/raw/lichess-2026-09-100MB.zst.part : Read error (39) : premature end",
+  "selectedSha256": "229cd17f3697f75eecd772c6f75300ad20dc863d37606fd06ce3770a6521ca6f",
+  "evidenceSha256": {
+    "data/book-sources/evidence/database.txt": "0e2083b7f71b0b446794d5b8c5c38e4a2e9711c845258edfb8b8d67c66b3fe04",
+    "data/book-sources/evidence/cc0-1.0-legalcode.txt": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+    "data/book-sources/evidence/prefix-response-headers.txt": "d0b7ac2a8b8546430c982091b9152f694160616da968c4d87f2c2d7b844f125e",
+    "data/book-sources/probes/probe-masters-401.json": "2ff95b0f1938d9da5959f381ee44c18b3626223404c1eee5a09378811283c955",
+    "data/book-sources/probes/probe-lichess-401.json": "0fe5aa2dc91807a85181be9cb843edc93f6dd7d848e0ad4ecdf04a756287f7cc"
+  },
+  "limitations": [
+    "Chronological prefix sample, not a representative estimate of all Lichess games.",
+    "2200 is the Lichess rating of both players at game time; no FIDE rating or titled-player claim.",
+    "Slow profile is a subset of the same sampled games, not a separate database.",
+    "Original source game must have a completed result; retained source includes only the first <=24 SAN plies.",
+    "Masters explorer was denied anonymously (401); no Masters data or API rights inferred from server software licenses."
+  ]
+}

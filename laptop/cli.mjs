@@ -6,7 +6,8 @@ import { parseModel } from '../src/network.mjs';
 import { chooseMove } from '../src/engine.mjs';
 import { createProtocol } from './protocol.mjs';
 import { chooseBookMove, seededRandom } from '../src/opening-book.mjs';
-import { randomBytes } from 'node:crypto';
+import { validateOpeningBook } from '../src/book-sources.mjs';
+import { randomBytes, createHash } from 'node:crypto';
 import { resolveModel } from './model-selection.mjs';
 
 const args = process.argv.slice(2);
@@ -33,18 +34,77 @@ function resetSeed() {
   random = seededRandom(seed);
 }
 resetSeed();
-const bookPath = existsSync(new URL('../openings.json',import.meta.url)) ? new URL('../openings.json',import.meta.url) : new URL('../public/openings.json',import.meta.url);
-const book = bookEnabled ? JSON.parse(readFileSync(bookPath,'utf8')) : null;
+const sourceAt = args.indexOf('--book-source');
+if (sourceAt >= 0 && (!args[sourceAt+1] || args[sourceAt+1].startsWith('--'))) throw new Error('--book-source requires an identifier');
+let bookSource = sourceAt >= 0 ? args[sourceAt+1] : 'eco';
+const publicBase = existsSync(new URL('../models/manifest.json', import.meta.url)) ? new URL('../', import.meta.url) : new URL('../public/', import.meta.url);
+const booksBase = new URL('./books/', publicBase);
+let registry;
+try { registry = JSON.parse(readFileSync(new URL('manifest.json', booksBase), 'utf8')); }
+catch (error) {
+  // Pure-policy legacy packages need no book assets. Never substitute a book
+  // when an enabled or explicitly selected source cannot be loaded.
+  if (error.code !== 'ENOENT' || bookEnabled || sourceAt >= 0) throw new Error(`Opening-book registry unavailable: ${error.message}`);
+  registry = {version:1,default:'eco',books:[{id:'eco',name:'ECO repertoire',file:'../openings.json'}]};
+}
+if (registry?.version !== 1 || registry.default !== 'eco' || !Array.isArray(registry.books) || !registry.books.length) throw new Error('Invalid opening-book registry.');
+const ids = new Set();
+for (const entry of registry.books) {
+  if (!entry || typeof entry.id !== 'string' || !/^[a-z][a-z0-9-]*$/.test(entry.id) || ids.has(entry.id) || typeof entry.name !== 'string' || !entry.name.trim()) throw new Error('Invalid opening-book registry entry.');
+  ids.add(entry.id);
+  if (entry.id === 'eco' ? entry.file !== '../openings.json' : typeof entry.file !== 'string' || !/^[a-zA-Z0-9][a-zA-Z0-9._-]*\.json$/.test(entry.file)) throw new Error('Invalid opening-book asset path.');
+  if (entry.sha256 !== undefined && (typeof entry.sha256 !== 'string' || !/^[a-f0-9]{64}$/.test(entry.sha256))) throw new Error('Invalid opening-book SHA256.');
+}
+if (!ids.has('eco')) throw new Error('Opening-book registry is missing ECO.');
+const compiledBooks = new Map();
+function loadProfile(id) {
+  if (typeof id !== 'string' || !/^[a-z][a-z0-9-]*$/.test(id)) throw new Error('Invalid opening-book source identifier.');
+  const entry = registry.books.find(entry => entry.id === id);
+  if (!entry) throw new Error(`Unknown opening-book source: ${id}.`);
+  if (!bookEnabled) return {book:null,sha256:entry.sha256 || ''};
+  const declaredKey = entry.sha256 && `${id}:${entry.sha256}`;
+  if (declaredKey && compiledBooks.has(declaredKey)) return compiledBooks.get(declaredKey);
+  const bytes = readFileSync(new URL(entry.file, booksBase));
+  const sha256 = createHash('sha256').update(bytes).digest('hex');
+  if (entry.sha256 && sha256 !== entry.sha256) throw new Error(`Opening-book SHA256 mismatch for ${id}.`);
+  const key = `${id}:${sha256}`;
+  if (!compiledBooks.has(key)) {
+    let book;
+    try { book = validateOpeningBook(JSON.parse(bytes.toString('utf8'))); }
+    catch (error) { throw new Error(`Invalid opening-book ${id}: ${error.message}`); }
+    compiledBooks.set(key, {book,sha256});
+  }
+  return compiledBooks.get(key);
+}
+let profile = loadProfile(bookSource);
 function select(fen) {
-  const reply = chooseBookMove(fen,book,{random,enabled:bookEnabled}) || {...chooseMove(fen,model),source:'policy'};
-  return {...reply,seed,book:bookEnabled};
+  if (!profile) throw new Error(`Opening-book source ${bookSource} is unavailable; select a valid BookSource.`);
+  const reply = chooseBookMove(fen,profile.book,{random,enabled:bookEnabled}) || {...chooseMove(fen,model),source:'policy'};
+  return {...reply,seed,book:bookEnabled,bookSource,bookSHA256:profile.sha256};
 }
 const fenAt = args.indexOf('--fen');
 if (fenAt >= 0) {
   if (!args[fenAt + 1]) throw new Error('--fen requires a quoted FEN');
   console.log(JSON.stringify(select(args[fenAt + 1]), null, 2));
 } else {
-  const protocol = createProtocol({ send: line => console.log(line), select, onNewGame: resetSeed });
+  const protocol = createProtocol({
+    send: line => {
+      if (line === 'uciok') console.log(`option name BookSource type combo default ${bookSource}${registry.books.map(entry=>` var ${entry.id}`).join('')}`);
+      if (line.startsWith('info string source ')) line += ` bookSource ${bookSource} bookSHA256 ${profile?.sha256 || 'unavailable'}`;
+      console.log(line);
+    }, select, onNewGame: resetSeed,
+  });
   const input = createInterface({ input: process.stdin, crlfDelay: Infinity });
-  input.on('line', line => { if (line.trim() === 'quit') { input.close(); process.stdin.destroy(); } else protocol(line); });
+  input.on('line', line => {
+    if (line.trim() === 'quit') { input.close(); process.stdin.destroy(); return; }
+    const option = /^setoption\s+name\s+BookSource(?:\s+value(?:\s+(.*))?)?\s*$/i.exec(line.trim());
+    if (option) {
+      bookSource = option[1] || ''; profile = null;
+      protocol('ucinewgame');
+      try { profile = loadProfile(bookSource); }
+      catch (error) { console.log(`info string error ${error.message.replace(/[\r\n]/g,' ')}`); }
+      return;
+    }
+    protocol(line);
+  });
 }

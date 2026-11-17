@@ -1,0 +1,104 @@
+{
+  "sourceHashes": {
+    "index.html": "b84b120211428492d39ebcb238a93b81f416776b23e30a853882c937367cf188",
+    "app.mjs": "f8d1d680710a5e5e4c355878489c40cff079afc93a610e9e2d2488b74c1c7d64",
+    "worker.mjs": "f970299643760048b0669f7e118aacdbe6a1def4f777e38efa035725da4c893e",
+    "style.css": "f702029c951934e481a5c8f8648b9fba286f62dd66d760528b97f4e3ef88c41a",
+    "books/manifest.json": "61ec837d33be73c83c051cba0661b32bd905ea5d59598852352410032e89125a",
+    "models/manifest.json": "590d6b74d0e5aea24ad750a2051963b475994a4aa6e54d9711a98ed7a8fb4098",
+    "src/book-sources.mjs": "f575c12bf3f6d9717c923545949a9dd8e29e264f9752ea6dc0c35094b1980df7",
+    "src/opening-book.mjs": "691d5802ed8b30ce5572c0f6b3a7bab7d246ca2c545ff38fb48a61a391076e62",
+    "src/chess.mjs": "76c7c34f0e2e9ab076521a5d6fe786a9cce537bb1b6f29d32a9c9970b5b232d2",
+    "src/engine.mjs": "5a381f2ca3b0c4a0d99115b6fef616ae8a6239cc3e802d27e7f26d0edbfe57b7",
+    "src/transformer.mjs": "dc7ee006e1eb6448d186ea645ca40cf21f51f9db558366b8483e587a1ff1c0ab",
+    "src/clock.mjs": "19355b93e1394a13d55c9a39d8d4a12c78093826b35edf862de7fc0c2128d6b0",
+    "src/premove.mjs": "2544bd78176f6b1192646e6eff0b59ec7b5c73988d4fba7ff746e2315bf0fdc8",
+    "src/sound.mjs": "aef70e82fbd96404fd689d586f0a177ae8309b925b5b0f57aa389fbd37a85c65",
+    "models/pocket-plus.bin": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+    "models/atlas-v8.bin": "c183d35facdf6c831331e7b9a82ca9b0b58c87e8f32f334a4c76df7a3d97ef66",
+    "models/deepmind-9m-v7.onnx": "b2a643b1bb910e0035e514ef7efecc62b69dbd3740af6cc18abaddf75471d8ee",
+    "openings.json": "dc6398f617d58dc5e7697eea46452a465326cac808bc60f34d2439f5deef5d3d",
+    "books/lichess-2200.json": "3207537740ffa7420a58d4749489fe32539bc56bc1adb9dfcf9359b9051c1227",
+    "books/lichess-2200-slow.json": "fdd9a2409d8993206caf2fc42e42a509d60ca2217e4ba0546672e2572361a43a"
+  },
+  "scriptSHA256": "25d851f1a98642e0f32dfbe81631b8c536f28c720a3a651666acee7c6cfdcdfb",
+  "browserVersion": "159.0.8154.6",
+  "checks": [
+    "All 3 models x 3 books: actual assets, first move, seed/Node parity, PGN source/hash; cached source survives fresh workers",
+    "All three actual policy runtimes produce book-off moves, including ONNX/WASM",
+    "Actual policy reply consumes one legal premove and clears queue highlights",
+    "Profile change during pending startup cancels the old generation; next game captures the new source",
+    "Time-control options and real three-second custom clock/flag result"
+  ],
+  "bookModelMatrix": [
+    {
+      "model": "pocket-plus",
+      "book": "eco",
+      "move": "d2d4",
+      "sha256": "dc6398f617d58dc5e7697eea46452a465326cac808bc60f34d2439f5deef5d3d",
+      "seed": "7332d65069491e06b31c2319798e04bd"
+    },
+    {
+      "model": "atlas-v8",
+      "book": "eco",
+      "move": "d2d4",
+      "sha256": "dc6398f617d58dc5e7697eea46452a465326cac808bc60f34d2439f5deef5d3d",
+      "seed": "b57b033dbefce33c0e16d7af4b3d0c28"
+    },
+    {
+      "model": "deepmind-9m",
+      "book": "eco",
+      "move": "d2d4",
+      "sha256": "dc6398f617d58dc5e7697eea46452a465326cac808bc60f34d2439f5deef5d3d",
+      "seed": "812729ae793249fe66eeeef1aa2f1a3b"
+    },
+    {
+      "model": "pocket-plus",
+      "book": "lichess-2200",
+      "move": "d2d4",
+      "sha256": "3207537740ffa7420a58d4749489fe32539bc56bc1adb9dfcf9359b9051c1227",
+      "seed": "5066fea2e655bb01dc0a9e2f94516384"
+    },
+    {
+      "model": "atlas-v8",
+      "book": "lichess-2200",
+      "move": "e2e4",
+      "sha256": "3207537740ffa7420a58d4749489fe32539bc56bc1adb9dfcf9359b9051c1227",
+      "seed": "23865f9901e552c9cf9ff9c8fbd341a7"
+    },
+    {
+      "model": "deepmind-9m",
+      "book": "lichess-2200",
+      "move": "d2d4",
+      "sha256": "3207537740ffa7420a58d4749489fe32539bc56bc1adb9dfcf9359b9051c1227",
+      "seed": "858485e89859cbde963dde6567940a79"
+    },
+    {
+      "model": "pocket-plus",
+      "book": "lichess-2200-slow",
+      "move": "e2e4",
+      "sha256": "fdd9a2409d8993206caf2fc42e42a509d60ca2217e4ba0546672e2572361a43a",
+      "seed": "ef48e1ee69e820d1ad322d7f96f67244"
+    },
+    {
+      "model": "atlas-v8",
+      "book": "lichess-2200-slow",
+      "move": "d2d4",
+      "sha256": "fdd9a2409d8993206caf2fc42e42a509d60ca2217e4ba0546672e2572361a43a",
+      "seed": "b5e671793af1d4398af0e36912a52df0"
+    },
+    {
+      "model": "deepmind-9m",
+      "book": "lichess-2200-slow",
+      "move": "d2d4",
+      "sha256": "fdd9a2409d8993206caf2fc42e42a509d60ca2217e4ba0546672e2572361a43a",
+      "seed": "1c75389ec66348a95987a173617ee96a"
+    }
+  ],
+  "pageErrors": [],
+  "screenshots": {
+    "desktop.png": "134352f35d949d7ede40cdca94ef117bdfb14f287464c560e855ea858803c6a1",
+    "mobile.png": "64b6e0392aee27fa039fd85e9aa7a15597783fd0e301de4aeb3aa7aa6544c161"
+  },
+  "scope": "Actual built app under /chesslab/, not hosted deployment; no latency or strength claim."
+}

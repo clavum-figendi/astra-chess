@@ -1,0 +1,4038 @@
+{
+  "base": "public/models/pocket-plus.bin",
+  "baseSHA256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+  "exportSourceSHA256": "7110870c46fcfac2dc5e4278bf30ffa21f45a754e710e042056089dd2801f71a",
+  "candidates": [
+    {
+      "id": "control",
+      "scales": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "epoch": 0,
+      "metrics": {
+        "train": {
+          "count": 435,
+          "bestmoveCorrect": 110,
+          "top1": 0.25287356321839083,
+          "crossEntropy": 3.1805641271259595,
+          "contrastiveLoss": 3.3816207409932697
+        },
+        "validation": {
+          "count": 207,
+          "bestmoveCorrect": 56,
+          "top1": 0.27053140096618356,
+          "crossEntropy": 3.3105813069044103,
+          "contrastiveLoss": 3.521506736819871
+        }
+      },
+      "status": "control",
+      "file": ".cache/v8/weight-pocket-control.bin",
+      "sha256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+      "bytes": 8465724,
+      "changedScalars": 0,
+      "protectedEdges": 756718,
+      "protectedChanged": 0,
+      "enemyMaterialChanged": 0,
+      "mateScaleEdges": 5960,
+      "mateScaleChanged": 0,
+      "parameterCount": 980468,
+      "topologyUnchanged": true,
+      "roundtrip": [
+        {
+          "id": "b1d1cfd3994997a2ab14f324eb8d48063f1c5ba6428eba3ea89838ab16c487d0",
+          "move": "d2d4",
+          "maxError": 0
+        },
+        {
+          "id": "cc6d66be05adac12d2956371242fa14057f14633a7c17b8fb3304afe1f1e2a36",
+          "move": "d2d4",
+          "maxError": 0
+        },
+        {
+          "id": "968e90665cdb8aa2d6cf62c200476d47960904be0b2005979092d6e7f3e90fd7",
+          "move": "a2b3",
+          "maxError": 0
+        },
+        {
+          "id": "3dfdc88337773cf3057a1332113348887ca137a9f583b853dac0d1cd99588c4f",
+          "move": "d4e5",
+          "maxError": 0
+        },
+        {
+          "id": "f8782b8de68d0f91657128f98afcd40f604249a5e92b072193b38f1412128958",
+          "move": "d4e5",
+          "maxError": 0
+        }
+      ],
+      "deployedDevelopmentValidation": {
+        "count": 207,
+        "bestmoveCorrect": 56,
+        "top1": 0.27053140096618356,
+        "predictions": [
+          {
+            "id": "b1d1cfd3994997a2ab14f324eb8d48063f1c5ba6428eba3ea89838ab16c487d0",
+            "move": "d2d4",
+            "best": "h2h3"
+          },
+          {
+            "id": "cc6d66be05adac12d2956371242fa14057f14633a7c17b8fb3304afe1f1e2a36",
+            "move": "d2d4",
+            "best": "b3c2"
+          },
+          {
+            "id": "968e90665cdb8aa2d6cf62c200476d47960904be0b2005979092d6e7f3e90fd7",
+            "move": "a2b3",
+            "best": "d1b3"
+          },
+          {
+            "id": "3dfdc88337773cf3057a1332113348887ca137a9f583b853dac0d1cd99588c4f",
+            "move": "d4e5",
+            "best": "b3c2"
+          },
+          {
+            "id": "f8782b8de68d0f91657128f98afcd40f604249a5e92b072193b38f1412128958",
+            "move": "d4e5",
+            "best": "d4e5"
+          },
+          {
+            "id": "4911b41b524fb7c622ec6cc03f7654b4dd9d4f5b8fda6feb254cd2e791767a7b",
+            "move": "b1d2",
+            "best": "c1e3"
+          },
+          {
+            "id": "b1c1bb9d651958f2229383235e26497e69ba7a818f8cd5b2a83100c34e364ab6",
+            "move": "b1d2",
+            "best": "a2a4"
+          },
+          {
+            "id": "87c5fae508d3fc50543eb88dbe578457d941e3024d6a85a44e7e95a08b540052",
+            "move": "d2e4",
+            "best": "b2b4"
+          },
+          {
+            "id": "3395d501ae861e5b318ced0f7860f45e30bd3eae1320d6129550da1dfd46cbb0",
+            "move": "c2d2",
+            "best": "e3d2"
+          },
+          {
+            "id": "2d821774f94e90b9c10407228a807eb002489ba9701b71ffa09ed353182c1b78",
+            "move": "e5e6",
+            "best": "d2g5"
+          },
+          {
+            "id": "1dedc794653dbf8c3d041cc2d50391c4da1f872146099019b0e93fe052cb2bd6",
+            "move": "g5e3",
+            "best": "e5f6"
+          },
+          {
+            "id": "ca3abebec481a6bc4f25cd3ec61dac14f45fc0b14c9f292d5e89988a6ea23ce0",
+            "move": "a1d1",
+            "best": "g5f6"
+          },
+          {
+            "id": "8246485163a831466ac86476454cbc59bf1f32b4e6e4939d9d26058ea34ee73a",
+            "move": "a1d1",
+            "best": "g5f6"
+          },
+          {
+            "id": "73db474206fcaef0683905c1d357276fd007ea646895aaea2a333d159c563f2f",
+            "move": "a1d1",
+            "best": "f3g5"
+          },
+          {
+            "id": "5a050410c802146de4591e801669ea95b32a0e1f168d196d3c227dd6cee0e969",
+            "move": "g5e6",
+            "best": "e1e5"
+          },
+          {
+            "id": "48d22a9e6edc54771b21539eae5881a7af40607bfbb980f2204372a856305fe5",
+            "move": "a1e1",
+            "best": "a1e1"
+          },
+          {
+            "id": "a9948db685d5bdc28702f14f37fa4104e1dd1b86d88a7a9c137c54c81b4ef8d2",
+            "move": "e5e7",
+            "best": "g5h7"
+          },
+          {
+            "id": "8c71f5c081f949044b950c07db1cc88a3677768566faf14f5766928687518728",
+            "move": "f5e5",
+            "best": "f5e5"
+          },
+          {
+            "id": "2d2db836c0ac29c6efc42cb0da54c30b16870dc5861574d208228343cc72e029",
+            "move": "b1c3",
+            "best": "d1e2"
+          },
+          {
+            "id": "8931a8ff4a461e5661d62e759928b59ef5761ad0f24297ed7f09507e8df6441b",
+            "move": "e2d1",
+            "best": "f3d4"
+          },
+          {
+            "id": "625cd66c490acb73bf4815db19724e011f3a83a3f76c02a4eaf56cb9e1279771",
+            "move": "f1d1",
+            "best": "h2h3"
+          },
+          {
+            "id": "f3fa817c2bfacdce3db8019a5d769b804f7e12da359bad4a77b060f72b16c93c",
+            "move": "e2e1",
+            "best": "f2f3"
+          },
+          {
+            "id": "b5d039cbc862a9eb800bacedb4b72f1b8bb7583dbcac779747ea8a6d901e019c",
+            "move": "b1c3",
+            "best": "b1c3"
+          },
+          {
+            "id": "b91402cca2464dd3f3939d89d249c3721d85b74c9e25dd80abdc1545006ef8aa",
+            "move": "c1e3",
+            "best": "c3e4"
+          },
+          {
+            "id": "90e88ff758024204d48f66ce01d563a30cb7fcae1fd11753dcda00d21a2ab7cf",
+            "move": "c1e3",
+            "best": "c1f4"
+          },
+          {
+            "id": "f8e67b2c4fcb6370865064325922430070f84d7868c105300de0410f15deabde",
+            "move": "a2a4",
+            "best": "g2g4"
+          },
+          {
+            "id": "7ca285c3fb52784f901c8fbd3c604673660e2bbcbd774df7091029a86ad8783d",
+            "move": "a2a4",
+            "best": "h2h3"
+          },
+          {
+            "id": "988fdaaeb76c9dd3f896eed3c5f098e884ac26be1219d4282f9d012cc7a68ee9",
+            "move": "e4g3",
+            "best": "e2e3"
+          },
+          {
+            "id": "863ea85448105978d4502362112e5bbdcaa6570806ad940cfefbdca27cb52c93",
+            "move": "f3e4",
+            "best": "f3e4"
+          },
+          {
+            "id": "8311e49baa472aaf4a99d9fd520b57e58521d572bb26fc2db3dde207a2d0c2cf",
+            "move": "a2a4",
+            "best": "e3e2"
+          },
+          {
+            "id": "96f4f2a00b9a2bffbc1ec25704a194d3798e611141483e264b221739b813a2fc",
+            "move": "a2a4",
+            "best": "d1d3"
+          },
+          {
+            "id": "ab96dfcd8e5f61c59945f7bd4e73dbac5d79cbf7a5259199fb442372bb9135a5",
+            "move": "a1d1",
+            "best": "f4d2"
+          },
+          {
+            "id": "f461bf00560fdf7dc7783de5b118967313d99d999b99789a215eaf5faebc8167",
+            "move": "a1d1",
+            "best": "d2g5"
+          },
+          {
+            "id": "28bc431fb3bd8f9cc2e27ea0ee46d5b66d27d125d08fb050047af80e8ca3ad67",
+            "move": "a1d1",
+            "best": "g5f6"
+          },
+          {
+            "id": "e3c75cbe0b825b4f028dc5d2dcdc224c79b472eccf37176c1e63c6107f0ae2a0",
+            "move": "a1d1",
+            "best": "f1f5"
+          },
+          {
+            "id": "bc76b5c06e6f3966aae4b24303a1098cbe689ae55c67e7896e78df61aedd4c94",
+            "move": "e4f5",
+            "best": "e4f5"
+          },
+          {
+            "id": "0df2037d68a6be84a7a9f24fbe0bd8b9fef875ac576e9491f3cc99b963ac6bd2",
+            "move": "f5g6",
+            "best": "e2d3"
+          },
+          {
+            "id": "f74a2cacff5e244efe2b945784ed61f849dbfe554651dfc0c95283e217051109",
+            "move": "b1d2",
+            "best": "c4b3"
+          },
+          {
+            "id": "6e6979a35cfbbbf32830e664e5b9429011ff738c6fda6d927c10235aff61fd77",
+            "move": "f3g5",
+            "best": "b1a3"
+          },
+          {
+            "id": "fd0485b87cabaebac29d597881bb015a661328aff264ce63b803991f82e11cbc",
+            "move": "e4d5",
+            "best": "e4d5"
+          },
+          {
+            "id": "5095b4f00792063dab567b85312670c51874777821dcc1d8f3cb3dacfaaa222b",
+            "move": "d1e1",
+            "best": "d1e1"
+          },
+          {
+            "id": "b3671cca71030f734c74e7767a4de823cc149dbd5f0ee6962fd33041f8a5eb14",
+            "move": "e4d5",
+            "best": "g1h1"
+          },
+          {
+            "id": "35bd2dfba5f982cba622baa7452373add97691f7f9afd301bd0a4b4de14ddd29",
+            "move": "g5f3",
+            "best": "g5h3"
+          },
+          {
+            "id": "8a5a9356bd54e0127d2eed7d142892f9c8cc23e4aafc8e2c28968d8907076bac",
+            "move": "e4d5",
+            "best": "e4d5"
+          },
+          {
+            "id": "e934574ccc4f8f265cae4c04db6f5dd9e9411b2a2000e78e4d93a23da18206f3",
+            "move": "a3c4",
+            "best": "a3c4"
+          },
+          {
+            "id": "83642bd15cf76ab522abc803c126116cda1c51b792ab89307ea511213021ae27",
+            "move": "d3d4",
+            "best": "e1g3"
+          },
+          {
+            "id": "6f43b86fde8d8bf9194fc71d0120d2f0c6c3e1281de433f550f25787175a65f0",
+            "move": "d3d4",
+            "best": "a3c4"
+          },
+          {
+            "id": "e068614517526e5b0263c33ddab4c56b405ff11fe3cf26baf4eea79cdaf73a5d",
+            "move": "d3d4",
+            "best": "a4a5"
+          },
+          {
+            "id": "d885840b704f07c0e8485052f98eb473d329e3a832769f621b42e6b456b76e69",
+            "move": "d3d4",
+            "best": "f3f4"
+          },
+          {
+            "id": "85f73255052c7b1d419418d7c8923b1c22c953f7086bc330d77b915cd23344be",
+            "move": "c4e3",
+            "best": "a5b6"
+          },
+          {
+            "id": "3b105da86bb8522b3faeaebd5c017ab54db32fd78103c9b68665156f6d519c02",
+            "move": "b3c4",
+            "best": "f1f5"
+          },
+          {
+            "id": "cd83a896fc8e53bd7ea9639dedad85d12736c0e709bf1989d6958ed50f460ec2",
+            "move": "f5f3",
+            "best": "c1g5"
+          },
+          {
+            "id": "e2c7ae9edaf59a6fb39e603133190770e66ae4985f227333427e904dada9d391",
+            "move": "f5f3",
+            "best": "f5f8"
+          },
+          {
+            "id": "a107cd1478b928b68dba0cbb8adbcb339817eea0c316c1ea7cedb5da2b3620ea",
+            "move": "b3c4",
+            "best": "b3c4"
+          },
+          {
+            "id": "9772ce0b5d111329bd41bdfd8a3ad3934456f0ad7c818b21840c6c7125b89057",
+            "move": "a1a5",
+            "best": "b2b4"
+          },
+          {
+            "id": "e06aefd0981a804fabbc2354dfb298c838ab741bc42facf033bf49a2e23bee94",
+            "move": "g5d2",
+            "best": "d3d4"
+          },
+          {
+            "id": "2e5c11e8c4d1539266974450f062a38b0293f01ab4dadc1885ae3bd1dce27e2e",
+            "move": "e1g1",
+            "best": "e1g1"
+          },
+          {
+            "id": "c8fc5dc29c362363243d05650f723e2ec974cf9f22e63565bbc9b58604d22b7a",
+            "move": "f3d2",
+            "best": "c1d2"
+          },
+          {
+            "id": "f25716dc902b88411db591669ed2cbee94a3534f239d06f2a791abdac45fcabc",
+            "move": "d4d5",
+            "best": "d2b4"
+          },
+          {
+            "id": "6feee41d25b8ea4c7e4ef47a681d437570a5abd7b1fb66d6b052bef4534ecf8b",
+            "move": "d1d2",
+            "best": "d1d2"
+          },
+          {
+            "id": "574472002c65c87a3524541d4787c87b31b381d93912971bcae33907cfa8b8a5",
+            "move": "a1e1",
+            "best": "d5d6"
+          },
+          {
+            "id": "475ff20acf9d7c9c5025dcdd0facdd34c3249de6c2d9fc29ce5e440f16019235",
+            "move": "a1e1",
+            "best": "d6c7"
+          },
+          {
+            "id": "ed774f96aef75452d5ddc145f4e4b8c63acafa314650f63b7812d8e43891713b",
+            "move": "c4d5",
+            "best": "a1c1"
+          },
+          {
+            "id": "c61c65778855952463fd3c95c5ba308220bb068540e767f6ad726ac8b54e86be",
+            "move": "f1e1",
+            "best": "f1e1"
+          },
+          {
+            "id": "80c86c3e6511b9f6e2be8c12659283ba96416911d437af68bd24f41fd72360c9",
+            "move": "c4d5",
+            "best": "d2d5"
+          },
+          {
+            "id": "c934cb16dc987c5d8c01253b08611f75c605a9dcb13c052703868536397eeaaa",
+            "move": "b2b3",
+            "best": "c4b3"
+          },
+          {
+            "id": "cd979b41342272266c267870be1fa208a7d316fb9196ef9bca07e5a5a4d016ed",
+            "move": "g5f7",
+            "best": "f1d1"
+          },
+          {
+            "id": "d1037b4728b8c342f161ce16d134f6ba3ed52098e8d594ff4171ea91a6ce93d1",
+            "move": "d5d6",
+            "best": "d5d6"
+          },
+          {
+            "id": "a253bc0429b79f7cceb6672bafc811abc32ea5617ba466e4fc3cf75472e02ca8",
+            "move": "d1d6",
+            "best": "b3f7"
+          },
+          {
+            "id": "8df9958b61b1ac1c69ff8bfb07997364baf2404ebc40aae3a8bf3b142fa045ee",
+            "move": "a2b3",
+            "best": "a2b3"
+          },
+          {
+            "id": "c635d9b416b7584d7d47c6ad10af188f91e06c356e1387245d6cfa7cf06b7a7c",
+            "move": "g5e4",
+            "best": "d6d2"
+          },
+          {
+            "id": "15af8602b6315de526b404205bbe8436d20af2b5fed06fc6d76c828f7e3cc2bb",
+            "move": "c1c7",
+            "best": "h2h4"
+          },
+          {
+            "id": "7632a6ec0d2e850e75c3d08ad6abdcd8072bf1c801f5855998793399146d64d1",
+            "move": "c1c7",
+            "best": "c1c5"
+          },
+          {
+            "id": "47f20ae5bb7476833dc0115138db6d73fa50268495f8bb6de11aa3c9c0d3b189",
+            "move": "c5c7",
+            "best": "c5b5"
+          },
+          {
+            "id": "e48a2ee6d9279c30740455af849217126ba1387afb24ba4928562f8d6b50a415",
+            "move": "g5f3",
+            "best": "h5g6"
+          },
+          {
+            "id": "2cdb275a02f029961ea11b264f343a5ad41839aa170d68bbed2fe4773c7e87c5",
+            "move": "b1d2",
+            "best": "c1g5"
+          },
+          {
+            "id": "7c4fdc8f471d92db82c8d86c8effdffdd8431e1d83be99ca040e9cc02d1c2dd5",
+            "move": "g5d2",
+            "best": "g5h4"
+          },
+          {
+            "id": "dcb0de56238cc166248ead139db77e640817025979d8fd27f15ae6704cf9c1bf",
+            "move": "b1d2",
+            "best": "b1d2"
+          },
+          {
+            "id": "9f4cbe1978e661fbf3d30f8e4baf851216a5cdfcde8ff10bed591180909e3b79",
+            "move": "h4g3",
+            "best": "h4g3"
+          },
+          {
+            "id": "ef3a0b5d92f75d885d7efb8820e9cb7855a84b92b9eb35622f99bd2c19b8ee09",
+            "move": "a3c2",
+            "best": "a3c2"
+          },
+          {
+            "id": "adde75b0e0adece638fa3c6b9cc192bbeda4152529a9aa88c4a14d5948650b93",
+            "move": "d3d4",
+            "best": "f1e1"
+          },
+          {
+            "id": "35f2d76f668fd042d9ec928354e1590e45473cc96ae8e274aa01210021400f1b",
+            "move": "d3d4",
+            "best": "c2e3"
+          },
+          {
+            "id": "e0003482432fc99e25acc7bb78269b48762292a78aeae25f8cbec0f66e6bd8d3",
+            "move": "d3d4",
+            "best": "b2b4"
+          },
+          {
+            "id": "ace91f635ec1e32b9b2a852c2f45d8ac1270c81ed6e14fe4e9f9c6a09c772494",
+            "move": "d3d4",
+            "best": "b2b4"
+          },
+          {
+            "id": "23a1c63eba1f0166d8097ad71ee15e6a3c8a5f8e20ca40c3024c38a475d4f6dd",
+            "move": "d3d4",
+            "best": "d1b3"
+          },
+          {
+            "id": "d37693ed8255b9f546549f2fa04101d0405706a751a46a64658507f66ee75487",
+            "move": "c4f7",
+            "best": "d3d4"
+          },
+          {
+            "id": "faeda057772658c925c12dc0cdf9c2aadab2109ef33801d2b754791d840cd3be",
+            "move": "d4e5",
+            "best": "h2h3"
+          },
+          {
+            "id": "c6d9552d238e8427b07874c91d97038a0cf592cdb6da17ccec409ab3ae792463",
+            "move": "d4e5",
+            "best": "g3h2"
+          },
+          {
+            "id": "bc5015a37813d6bfd4c9f55383c7d4e7425214ac4c5012139748cf53771918e3",
+            "move": "d4e5",
+            "best": "d4e5"
+          },
+          {
+            "id": "6b2154219ed8f805c0aadbb018c0010cd56161683bd30bdb431398ab0a5fbe25",
+            "move": "f2g3",
+            "best": "f2g3"
+          },
+          {
+            "id": "b42b8b045504f286829d4a21f215a4f09a19b7d8b1d0a3fb7da7d4edc818f951",
+            "move": "c4f7",
+            "best": "c4e2"
+          },
+          {
+            "id": "f451cc9461111cc850d9a88bd05ffe79950561733ca29bf981a7bcb3ca8c227d",
+            "move": "f3e5",
+            "best": "e1d1"
+          },
+          {
+            "id": "69deb74462662986a5544705ce596db2eef0dc0e12a18b70d4977f07f5624015",
+            "move": "a4b5",
+            "best": "c3c4"
+          },
+          {
+            "id": "fc13972139ab4b025bb4b4e30ed44e7883033808f1ecf1a831f7182aca3fc634",
+            "move": "a4b5",
+            "best": "a4b5"
+          },
+          {
+            "id": "0dcf35ce41be5c8a26c2b950b885a5d857a3517ed0051a3aef8a45630d236c44",
+            "move": "e4d5",
+            "best": "e4d5"
+          },
+          {
+            "id": "388507c3af60f0bed4e6780ca1778299397b744e22327f465d0f2c4bdf8704ee",
+            "move": "d5c6",
+            "best": "e1g1"
+          },
+          {
+            "id": "7846c2ad953dae1b8541a17a6200d6da965f869e198bd98136e511f31da0aedd",
+            "move": "f1e1",
+            "best": "d1f3"
+          },
+          {
+            "id": "5190cd460d2480c4ec4e68bf0d28b4b8e2fee8b0883cd50999a798ba21b3ca13",
+            "move": "f1e1",
+            "best": "d1f3"
+          },
+          {
+            "id": "e2c6d77677a4d4663f27f4f79d09d9934b474c084f84d5cb664d0e659025fbb9",
+            "move": "c3d5",
+            "best": "f1d1"
+          },
+          {
+            "id": "09f387ddeba1c53b0fb4c53ba3b8377c4e65bff852f2da4d7b7928939c5eab04",
+            "move": "c3d5",
+            "best": "d3a6"
+          },
+          {
+            "id": "93090484a893f9a3ef9c47a1751f391f468a52526bc42d774c6ee0843e6d8953",
+            "move": "c3d5",
+            "best": "c1f4"
+          },
+          {
+            "id": "e47ade35a46f16972c412564611ac20950e200f52f6ab64554759014959bc7c7",
+            "move": "a6d3",
+            "best": "a6f1"
+          },
+          {
+            "id": "ba7c7e6aeb361cdae58c78d523e490ec3e097663890ff1e6742f13940b743566",
+            "move": "c3a4",
+            "best": "c3e4"
+          },
+          {
+            "id": "9fa06159322912e3ee0fdfc00e9430d1a914b101710a54050f480ad96147567b",
+            "move": "d3e2",
+            "best": "d3e2"
+          },
+          {
+            "id": "be854f0cddbefbb7587c7eba6c462e98d62d5ea4937f1095140d740ba677e243",
+            "move": "e2c4",
+            "best": "e4f6"
+          },
+          {
+            "id": "216b903376daa688468e1b70b32c23071b1359586e6536a5eb1e8e7c4f1806b3",
+            "move": "c2c3",
+            "best": "c2c3"
+          },
+          {
+            "id": "fc4e160d75b7dae2e3d83b2ebee011e36fe25d20e1344bf33a56b9bd93af44f9",
+            "move": "b2c3",
+            "best": "b2c3"
+          },
+          {
+            "id": "4a1a2ff4f52866967238f1c512e23e4c8e49c0a4fc9d365f310f66968120f01f",
+            "move": "a1c1",
+            "best": "f3c3"
+          },
+          {
+            "id": "ebc66296e3368edba2cced67fa141bff6197b634733f1d0acdaf5caaea8fe217",
+            "move": "a1c1",
+            "best": "a1c1"
+          },
+          {
+            "id": "1917f0ec85043772a05d528deb70414ccf212d6ed6a087643c832b1e87e3000e",
+            "move": "c1c4",
+            "best": "c1c4"
+          },
+          {
+            "id": "7c009bce0e2f185c9f9983f6d5044dcd8b77bfe33bc6385efa138b38631364b7",
+            "move": "c4c7",
+            "best": "c4c7"
+          },
+          {
+            "id": "303c1d7efef0d122b4f1ab7fee3422984c51c2d1c830ac43bf8c7046f4705bf5",
+            "move": "e2c4",
+            "best": "e2c4"
+          },
+          {
+            "id": "b50110219cedd0f3ba72b98121c6450e1b2cd0f68cd7a9a3cd2dc13775d6f75e",
+            "move": "f4d2",
+            "best": "f4d2"
+          },
+          {
+            "id": "120f683d2c4339208e3a15432088a4acf47518892441867266a6bedc85f2a463",
+            "move": "b2c3",
+            "best": "b2c3"
+          },
+          {
+            "id": "c4208f07c261de4e3677f0c217c6b65c69083ada8d492ab30caaeead67105ba6",
+            "move": "d3d4",
+            "best": "g5h4"
+          },
+          {
+            "id": "fa006bb5ded247c5341869ba60fa10a0d453bc8588ddea9a577b0f7ea91c0d2f",
+            "move": "b5c4",
+            "best": "b5c6"
+          },
+          {
+            "id": "396510dc0d270928cebc16c5684c1707079c044677b32f9a2b43ad209807dd6e",
+            "move": "d3d4",
+            "best": "h2h3"
+          },
+          {
+            "id": "73756b0e1ad3126720626497151f61c35264f2c1e8603220b11eabba0269d815",
+            "move": "d3d4",
+            "best": "a4b3"
+          },
+          {
+            "id": "ffdc775b0b12efde4f5e9c5ebb90c0477eda1ab1987c4069caa314b70d3340f6",
+            "move": "d3d4",
+            "best": "a1b1"
+          },
+          {
+            "id": "4d0aaf447b4f7bfc576d90219025c5522c60e22e043f9a38349c30f7ae086919",
+            "move": "b3c4",
+            "best": "b3d5"
+          },
+          {
+            "id": "85d257bf66e90bba04a8d779f8574bdf3abc97a443949b1cc903b5bf8da1a592",
+            "move": "d3d4",
+            "best": "d1d2"
+          },
+          {
+            "id": "b13a5ebd92fa8fea92248fb3324a9ed4d2417c04f6c5667096e263b8c305a812",
+            "move": "d3d4",
+            "best": "d5c4"
+          },
+          {
+            "id": "f33c1d84d6a54815aa81c058b7e9c84635046a98860d1fd3ed7e36fdf0fba86a",
+            "move": "d3d4",
+            "best": "d3d4"
+          },
+          {
+            "id": "b2ab50d08a91444268e35c5ad7d050ddb7ce70ba38abdc41365580e87a64b303",
+            "move": "d4e5",
+            "best": "f1e1"
+          },
+          {
+            "id": "d738ae281c9c23dcf127abc59ddf0bf00769ea74ca5ff4f9743992775455c0da",
+            "move": "d4e5",
+            "best": "c4b5"
+          },
+          {
+            "id": "1b9269d8374fe31ad26bb118ba9ddd41a3fba3f8a4e09fc32aacc45ebf2377f5",
+            "move": "h4g3",
+            "best": "h4g3"
+          },
+          {
+            "id": "710f6d3c2c7e55aa64634b3be199caeef72e8ca7f0977f396c69833fc7afe1c5",
+            "move": "h4g3",
+            "best": "h4g3"
+          },
+          {
+            "id": "c8aacd84e3930f99786191532d70a749d27862548a24e7eb8f00f26594d89021",
+            "move": "f3e5",
+            "best": "c3c4"
+          },
+          {
+            "id": "0c347d96bc5c1e37963727a4cc0b0bd0b74ebbaa0c8c43e55d121a69e9a08e5e",
+            "move": "d1f3",
+            "best": "d1f3"
+          },
+          {
+            "id": "f0adb76f0c7cf17d9cf1d6932bb2f7386622fa4c53db16c9fe1b56a195bffa5e",
+            "move": "c4b5",
+            "best": "b1b5"
+          },
+          {
+            "id": "4b31e9bfc1db196679e2877f1ab0f921c5cea5751ca689432892557f30ff75a5",
+            "move": "e4e5",
+            "best": "f3c3"
+          },
+          {
+            "id": "05cdca3abe6f47d798884976db13255edd05e1f197000e22322a979fd58bd09c",
+            "move": "e4e5",
+            "best": "f3c3"
+          },
+          {
+            "id": "11e510ef0fa402aca91264736a98d8fe0e77f347a9708fdc54480cd610fbedb1",
+            "move": "b1c3",
+            "best": "c1f4"
+          },
+          {
+            "id": "1261005b1acef0c42be3cd027411b021a5f6e58c6f946860138babaecfadf92f",
+            "move": "b1c3",
+            "best": "b1d2"
+          },
+          {
+            "id": "fc367d914a4949fcf133c4323fb2b2e6edb8fbeecd4414575a64b6613e2bd42b",
+            "move": "f1e1",
+            "best": "c2c3"
+          },
+          {
+            "id": "d4c1fb3db6e8bf5b8c5f496f296a572d433c0a1be89e8ee140233b95039c5928",
+            "move": "g2g4",
+            "best": "c2c3"
+          },
+          {
+            "id": "62d55665e241644cc0e4ec8ddcc79f8a91fef28ec48093242e2ceaeac6e8fc53",
+            "move": "f4g5",
+            "best": "f4d6"
+          },
+          {
+            "id": "c8f4e67d5a09b21f17724e1b5d01b9cf76785834f4672dd66b8ef3ed2e5aa203",
+            "move": "g2g4",
+            "best": "b2b4"
+          },
+          {
+            "id": "5c49255e9a0a522bd9f9b6afa88362989b6e738db8fa4ddd2375cbfe03370e27",
+            "move": "g2g4",
+            "best": "a2a4"
+          },
+          {
+            "id": "f06084765a854fdb1599bf4df3fa089a30f84f579468303fd6b0fad0531b961e",
+            "move": "f3e5",
+            "best": "d1c2"
+          },
+          {
+            "id": "3201e183790144532b2538c405cef6859eb3622c127e9c4288e2eaf7d5cd9509",
+            "move": "d3f5",
+            "best": "b1c1"
+          },
+          {
+            "id": "45a5036c600650705c5b3f2193c795a3bd2f28f6296c348f05c94cef5f967072",
+            "move": "f3e5",
+            "best": "h2h3"
+          },
+          {
+            "id": "405d3fc34029ce02d38e7c530e387ba5454a8cf44abde919574b652ffe4c7a43",
+            "move": "f3e5",
+            "best": "d2f1"
+          },
+          {
+            "id": "ade98f35419212f57b2bf8b50c9a3ae44b2e3a5f22e2903cae83c59218e6affd",
+            "move": "f1e3",
+            "best": "f1g3"
+          },
+          {
+            "id": "e7ed65c13dc4ed112ca6ab22b5af2f02fdf0fbecc358c378b1e2dd8d5d621707",
+            "move": "g3f5",
+            "best": "d3f5"
+          },
+          {
+            "id": "17dac3c5a5ad572bb3d35170f8af460bef6dff55dec68e59b413360514707e7c",
+            "move": "f2g3",
+            "best": "f2g3"
+          },
+          {
+            "id": "32c2bf62be963b0f9ef3f1f426933466cba28c045703b81627e4130cae17c315",
+            "move": "e5d5",
+            "best": "e5d5"
+          },
+          {
+            "id": "31e7f80a9e8366ecbfcc560899283eb08ad76645ce22304c82311a0440397628",
+            "move": "d5a5",
+            "best": "d5e5"
+          },
+          {
+            "id": "0fb3d406c2211d96c5a924d5b809b4d84f90976ed38c63f396852131b926d710",
+            "move": "d3f5",
+            "best": "c1d2"
+          },
+          {
+            "id": "36d517d95f40e37e60502818d55d9e38858aef1d95f0023f2d3ee6b65e9f1110",
+            "move": "d2d3",
+            "best": "d2d3"
+          },
+          {
+            "id": "f1a82b36b0461c4ef5e5be751279a857c081b6f76788c7af4708615598d5de82",
+            "move": "b4a5",
+            "best": "g1h2"
+          },
+          {
+            "id": "62cd6e157f87b0d3beb862017c99c85b8a77bb043a05feaeed7a007af873ac8e",
+            "move": "b1c3",
+            "best": "b1c3"
+          },
+          {
+            "id": "b58e91b48c4303878a564cb4aaf36089a9c72fbdeed4d04263858a85fd97f691",
+            "move": "c3e4",
+            "best": "h2h3"
+          },
+          {
+            "id": "5703f7a17885713078063d397bf41a096c8320509c4f8b35687e36991a391604",
+            "move": "c4d5",
+            "best": "c4c5"
+          },
+          {
+            "id": "e9b0b762b7638cbc2a447dfbdfa8c30e3bcc58a9571d67b9b4a1439adb66183c",
+            "move": "f3e5",
+            "best": "b2b4"
+          },
+          {
+            "id": "91e72edcbd2fe65b047336d99091f11cb308a93f863f38b0b81af5060f247a1d",
+            "move": "f3e5",
+            "best": "f3e5"
+          },
+          {
+            "id": "b12ac10a0ce9af8c0342f7c4efd876eb783078994e435854d992cd0fdc568c90",
+            "move": "d1e2",
+            "best": "c3e2"
+          },
+          {
+            "id": "e7957da193d86b2184ba1dd4ec343712f2176c968364ba1631250fddd7f80e94",
+            "move": "b4b5",
+            "best": "e5g4"
+          },
+          {
+            "id": "79ac581ef37bd35093fbbcfdf8036a820ad52b1186c4094eec1785d0c9694434",
+            "move": "d4e5",
+            "best": "d4e5"
+          },
+          {
+            "id": "adae00ffa3e6f3183f94f1f93c140c8a37d5a8cd7e45ad20b39498fe07f5791e",
+            "move": "b4b5",
+            "best": "a3h3"
+          },
+          {
+            "id": "8634fdb6e35837e357aa67fe0fde09a5927f90fa47f041fa96264fbb19fec214",
+            "move": "b4b5",
+            "best": "c5c6"
+          },
+          {
+            "id": "0257e19400d5bceccbe9a4d32a6b8249f7866e7a4f3661510c2c1eb30e1b3a90",
+            "move": "b4b5",
+            "best": "e2d4"
+          },
+          {
+            "id": "05ff8bae9a92d3139588b185af37bdd9d32cdc20aaaf2b4d23ebd858a13aadec",
+            "move": "d4c6",
+            "best": "d4c6"
+          },
+          {
+            "id": "31f6cdaf7d820a844378f8f83fda6bc4aad0c87bdea9c1a8b7092fb7316ef405",
+            "move": "d4c6",
+            "best": "d4c6"
+          },
+          {
+            "id": "7a3b41dd2a531ebf721ee10548f20fd755ba57e6015a8a8ea5f025d4052a0a9e",
+            "move": "c6a5",
+            "best": "b4b5"
+          },
+          {
+            "id": "9acb8de1cf8b5e28b85461b63468fa864d5cd5a2ce442cac36ba72cca62160ca",
+            "move": "c6a5",
+            "best": "c6e7"
+          },
+          {
+            "id": "0adadcce37a98dde0f2ca7dec3fb617a7cb30001c2b7388c51f9dc9daf7ac599",
+            "move": "h3c3",
+            "best": "c1a3"
+          },
+          {
+            "id": "2cd8cfc4730c8bfe91f040074bfa4b4050291906107a80774ea875fd6f5cf69f",
+            "move": "h3c3",
+            "best": "d2f4"
+          },
+          {
+            "id": "14f22e1968c8eae8377e86544b902ab09e9f000448c69aeb1c53ff84d385ed50",
+            "move": "h3a3",
+            "best": "d2h6"
+          },
+          {
+            "id": "58b0752d41e3ae43dbd2e708faa78027fd029bb4df99715ce4af6c17243bead2",
+            "move": "c4d5",
+            "best": "d1c2"
+          },
+          {
+            "id": "26b48aeefdca443b90ed3ac6275e7171e166c4148ada757da231bc9ade0ff554",
+            "move": "f1c4",
+            "best": "f1c4"
+          },
+          {
+            "id": "a860b0cc40680f8f7510a2bf9274df303064fee31ef76023955a91c27701fcf8",
+            "move": "e1c1",
+            "best": "a1d1"
+          },
+          {
+            "id": "9b423050ff8f3c74ac4f8de24b75956785db64d0fcc8c5ccbf80ecdaf51f673d",
+            "move": "e1c1",
+            "best": "h4e7"
+          },
+          {
+            "id": "7049ed3ee2add6398fe8d0f5a4c854e7fe3cf5362980bb9eb06b2fc7fc708e64",
+            "move": "e1c1",
+            "best": "b2b4"
+          },
+          {
+            "id": "f9cb45613e68e71bef1bae55d6167811bbb4c5f89e8e629fee175b530c0e831f",
+            "move": "b4b5",
+            "best": "c2a4"
+          },
+          {
+            "id": "dd0efb10ce3562fdecf7d837e6e6be56071d2d99e71991c9fd89399a4f65ff92",
+            "move": "a4b5",
+            "best": "c4b5"
+          },
+          {
+            "id": "ed271d6e92fc6d76d2fa3d24cb929705df2086aadaa7f0712dcb75d1114a108b",
+            "move": "b5d7",
+            "best": "b5d7"
+          },
+          {
+            "id": "e3dd9e3b1f93b8536a8ff19cb86322708598601a0310bd4fac603b126ef12e12",
+            "move": "c6b7",
+            "best": "a4c2"
+          },
+          {
+            "id": "6798eb9faca78c910a523b59d73b645ac82af9a61c93d97385317d32eaf1bb94",
+            "move": "c6d7",
+            "best": "b5a6"
+          },
+          {
+            "id": "b2722a810537fb2babf19f17e586b5549ffe4a8020ed3f5f31b031d338a2e99c",
+            "move": "a6c4",
+            "best": "a6e2"
+          },
+          {
+            "id": "221cd8bce9d8bfa4ac76b0da34e03652e179fc85a5b8dbc99cc0ba446bad7c6f",
+            "move": "c2c3",
+            "best": "c2c3"
+          },
+          {
+            "id": "df2509b82b0c7212bd62a217ea56fec4f5cd3c821db6331399b720cca3c052cb",
+            "move": "e1c1",
+            "best": "e1g1"
+          },
+          {
+            "id": "4dce4a5e085a5ddad74d3b20220ffffab036bd5e7454486d4d0e0fb223273c20",
+            "move": "b5c6",
+            "best": "b5c6"
+          },
+          {
+            "id": "3455bf46a7b67365aa99cf002f7df75e42ccfef3616fc1db96f8b2a6089f7117",
+            "move": "e1c1",
+            "best": "f3e5"
+          },
+          {
+            "id": "b79bf0cc1df0f18c23993178ff6a1c793407c8cfe2c19b83dbf6cfebd40d2cb9",
+            "move": "e1c1",
+            "best": "e1g1"
+          },
+          {
+            "id": "ebdf2856601de5d35808c09aeb1acacc38a2275b3a4d4d829c0ab8d7ed478fae",
+            "move": "e5g6",
+            "best": "e5g6"
+          },
+          {
+            "id": "a7a8a6a9354acfa39fc80f7a43d35d34257b29130612c86d23253c8586414849",
+            "move": "a1d1",
+            "best": "a1c1"
+          },
+          {
+            "id": "3548ff6b6b4a8a7507b6c3049dbe9c9ea66206f3e0b78fd4ae9d67a8a8115b79",
+            "move": "c6a4",
+            "best": "h2h3"
+          },
+          {
+            "id": "6318b1232ffe440ead464744ed33728e9c8224a3b60bca1baf1099e2f8e9e79f",
+            "move": "f3d4",
+            "best": "e3d4"
+          },
+          {
+            "id": "2675828b999c1cb24b470837525d9cc90c6572030bfae8fe5c05ea54de75e162",
+            "move": "f3g5",
+            "best": "g3d6"
+          },
+          {
+            "id": "15f45ce8145de7374bf780f17389b22399216f60d5cf35773e2d57bad0c08cfc",
+            "move": "f3g5",
+            "best": "f1b5"
+          },
+          {
+            "id": "63bfb8c8a9ec86a9177bf761076caa226a84f4c9c94012db0c385a4973ecd046",
+            "move": "e1g1",
+            "best": "e1g1"
+          },
+          {
+            "id": "3beb21c76ac3eb28d0be61214087b5ff44320d35d53acb21d1786adb32633f26",
+            "move": "f3e5",
+            "best": "d4e5"
+          },
+          {
+            "id": "d89f097f3d0cbc4eb7b45c9f65b5da52900b8559319a6a6db21514c3f5d154c9",
+            "move": "f1e1",
+            "best": "f3e5"
+          },
+          {
+            "id": "a811fd43b2626f25e2aaa530ef8fa68ab802dbea239af451d94349d9a622fb4d",
+            "move": "d2f3",
+            "best": "f1e1"
+          },
+          {
+            "id": "7296c9781e6ef138a8ce309fc3d44bb3986c6743ddd9bd0ec9598fde2809d7b8",
+            "move": "d2f3",
+            "best": "d2f3"
+          },
+          {
+            "id": "5f1361cf9087f8c5a678f2dc1e2eb879f5baef570c7afee3ff376e01c8a7184b",
+            "move": "a2a4",
+            "best": "e1e8"
+          },
+          {
+            "id": "f1349330fc19acf5288e3baa099b7593a837a8c7b3298e52aa0f363bdb9c5c5a",
+            "move": "a2a4",
+            "best": "d2f1"
+          },
+          {
+            "id": "d958cef7e41a1b151550d81c08b7a56649140d86a2fa0502e4869b1053076352",
+            "move": "f3d5",
+            "best": "f3h5"
+          },
+          {
+            "id": "3cac6d3c93eb4e4c7527001c90c3adaff9e93b0f83cba294da11ab257a4d08f5",
+            "move": "c3d4",
+            "best": "c3d4"
+          },
+          {
+            "id": "4cf8259856e64bb3477068cf600571f8b00f6298491829a5ccc3c299bc0b9a28",
+            "move": "d1h5",
+            "best": "d1h5"
+          },
+          {
+            "id": "931d0905fdc0e5e18d48468ffadac156bd400663df4a6288330ff5d53bbf5d17",
+            "move": "d4d5",
+            "best": "f1e3"
+          },
+          {
+            "id": "b09402b3bdc8134d5d168380b87e99902f3490dd21521be10c694b30c0ecdce5",
+            "move": "b2b3",
+            "best": "h5e2"
+          },
+          {
+            "id": "13cc5f086d79bbac50bf04ddbb3b6a0c6ed484dbf311939f28178454677c4962",
+            "move": "e3d5",
+            "best": "h2h3"
+          },
+          {
+            "id": "9a7628692873f309323f99450fa87196d8858ebd3574b3c0dd9a324fe26142d4",
+            "move": "e3g2",
+            "best": "e3g2"
+          },
+          {
+            "id": "77a3037f9c71419f08b35edcdb398084547a32806790825e32c2c453e71d81c0",
+            "move": "b2b4",
+            "best": "b2b4"
+          },
+          {
+            "id": "869eee6a4e82e053d7463fff9f4501970b5e552af3a3c9a63897c3dbe22f36f8",
+            "move": "h3h4",
+            "best": "h3h4"
+          }
+        ]
+      },
+      "float32FeatureMetricDisagreement": 0
+    },
+    {
+      "id": "enemy-protected",
+      "scales": [
+        0.9912713766098022,
+        1.0582751035690308,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.9604851007461548,
+        0.8113975524902344,
+        0.8174610733985901,
+        1.1091817617416382,
+        1.2,
+        0.800000011920929,
+        1.2,
+        0.9932098388671875,
+        1.0173702239990234,
+        1.2,
+        1.0180184841156006,
+        0.800000011920929,
+        1,
+        1,
+        1,
+        1.1414204835891724,
+        1.2,
+        0.8067693710327148,
+        1.2,
+        1,
+        1,
+        0.800000011920929,
+        1.1423420906066895,
+        1.0066192150115967,
+        1.0869179964065552,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1.1886192560195923,
+        0.8240448832511902,
+        1.0491466522216797,
+        0.8749538660049438,
+        1.0090659856796265,
+        0.9572577476501465,
+        1,
+        1,
+        0.9363051056861877,
+        1.0174084901809692,
+        0.800000011920929,
+        0.9285478591918945,
+        0.800000011920929,
+        1.013039231300354,
+        0.9238047003746033,
+        0.9525018334388733,
+        1.0727213621139526,
+        1,
+        1.1791155338287354,
+        1,
+        0.8458607196807861,
+        1,
+        0.933618426322937,
+        0.9574452638626099,
+        1.1954162120819092,
+        0.9593913555145264,
+        0.962797224521637,
+        0.9587972164154053,
+        0.800000011920929,
+        1,
+        1.2,
+        1.2,
+        1.2,
+        1,
+        1.2,
+        0.8106908202171326,
+        0.800000011920929,
+        0.88154536485672,
+        1.1998987197875977,
+        1.1952433586120605,
+        1.2,
+        1,
+        0.9393592476844788,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1.2,
+        1,
+        1,
+        1.2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.8213185667991638,
+        0.8115145564079285,
+        0.8097627758979797,
+        0.9652951955795288,
+        0.8195620179176331,
+        0.9414560198783875,
+        0.800958514213562,
+        1,
+        1.2,
+        1.159822940826416,
+        0.800000011920929,
+        1.1925500631332397,
+        1.1849448680877686,
+        1.1942968368530273,
+        0.9214286208152771,
+        0.9830679297447205,
+        0.9759215712547302,
+        1.2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1.0006479024887085,
+        1,
+        0.8734483122825623,
+        1.128602385520935,
+        1,
+        0.973983108997345,
+        1,
+        1.010131597518921,
+        1.2,
+        1,
+        1,
+        1,
+        0.9960171580314636,
+        1,
+        1,
+        1,
+        1,
+        1.2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "epoch": 12,
+      "history": [
+        {
+          "epoch": 1,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 57,
+            "top1": 0.2753623188405797,
+            "crossEntropy": 3.287539761999379,
+            "contrastiveLoss": 3.5030826825450583
+          }
+        },
+        {
+          "epoch": 2,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 55,
+            "top1": 0.26570048309178745,
+            "crossEntropy": 3.2859269299944818,
+            "contrastiveLoss": 3.5010993227290648
+          }
+        },
+        {
+          "epoch": 3,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 56,
+            "top1": 0.27053140096618356,
+            "crossEntropy": 3.2849108614207467,
+            "contrastiveLoss": 3.4997398571115763
+          }
+        },
+        {
+          "epoch": 4,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 57,
+            "top1": 0.2753623188405797,
+            "crossEntropy": 3.2837571786797564,
+            "contrastiveLoss": 3.498575677042422
+          }
+        },
+        {
+          "epoch": 5,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 55,
+            "top1": 0.26570048309178745,
+            "crossEntropy": 3.2846949699420285,
+            "contrastiveLoss": 3.4990301667780117
+          }
+        },
+        {
+          "epoch": 6,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 58,
+            "top1": 0.28019323671497587,
+            "crossEntropy": 3.2846095671400355,
+            "contrastiveLoss": 3.4987323537540895
+          }
+        },
+        {
+          "epoch": 7,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 57,
+            "top1": 0.2753623188405797,
+            "crossEntropy": 3.284402134913753,
+            "contrastiveLoss": 3.4977191957298683
+          }
+        },
+        {
+          "epoch": 8,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 58,
+            "top1": 0.28019323671497587,
+            "crossEntropy": 3.284888485779509,
+            "contrastiveLoss": 3.498853833779045
+          }
+        },
+        {
+          "epoch": 9,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 55,
+            "top1": 0.26570048309178745,
+            "crossEntropy": 3.2850741533841488,
+            "contrastiveLoss": 3.498732024920735
+          }
+        },
+        {
+          "epoch": 10,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 58,
+            "top1": 0.28019323671497587,
+            "crossEntropy": 3.2857229467751323,
+            "contrastiveLoss": 3.4996251046369617
+          }
+        },
+        {
+          "epoch": 11,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 56,
+            "top1": 0.27053140096618356,
+            "crossEntropy": 3.2855112541125018,
+            "contrastiveLoss": 3.4993275363664123
+          }
+        },
+        {
+          "epoch": 12,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 57,
+            "top1": 0.2753623188405797,
+            "crossEntropy": 3.285392701913769,
+            "contrastiveLoss": 3.4989792264026143
+          }
+        }
+      ],
+      "metrics": {
+        "train": {
+          "count": 435,
+          "bestmoveCorrect": 114,
+          "top1": 0.2620689655172414,
+          "crossEntropy": 3.1510175097262723,
+          "contrastiveLoss": 3.3480940685190004
+        },
+        "validation": {
+          "count": 207,
+          "bestmoveCorrect": 57,
+          "top1": 0.2753623188405797,
+          "crossEntropy": 3.285392701913769,
+          "contrastiveLoss": 3.4989792264026143
+        }
+      },
+      "changedGroups": 84,
+      "freeGroups": 128,
+      "settings": {
+        "epochs": 12,
+        "lr": 0.015,
+        "temperature": 4,
+        "margin": 1,
+        "regularization": 0.1,
+        "enemyRelaxed": false,
+        "nonEnemyBounds": [
+          0.8,
+          1.2
+        ],
+        "enemyBounds": [
+          0.5,
+          1.5
+        ]
+      },
+      "developmentPredictionChanges": 45,
+      "status": "candidate-not-selected",
+      "file": ".cache/v8/weight-pocket-enemy-protected.bin",
+      "sha256": "dd18fab366db2206906ec41c0bc9467d6fd77e12582df87abbc490105e86ba00",
+      "bytes": 8465964,
+      "changedScalars": 55903,
+      "protectedEdges": 756718,
+      "protectedChanged": 0,
+      "enemyMaterialChanged": 0,
+      "mateScaleEdges": 5960,
+      "mateScaleChanged": 0,
+      "parameterCount": 980468,
+      "topologyUnchanged": true,
+      "roundtrip": [
+        {
+          "id": "b1d1cfd3994997a2ab14f324eb8d48063f1c5ba6428eba3ea89838ab16c487d0",
+          "move": "d2d4",
+          "maxError": 1.2096085133528334e-7
+        },
+        {
+          "id": "cc6d66be05adac12d2956371242fa14057f14633a7c17b8fb3304afe1f1e2a36",
+          "move": "b3c2",
+          "maxError": 3.036055016281125e-7
+        },
+        {
+          "id": "968e90665cdb8aa2d6cf62c200476d47960904be0b2005979092d6e7f3e90fd7",
+          "move": "a2b3",
+          "maxError": 3.713370215763234e-7
+        },
+        {
+          "id": "3dfdc88337773cf3057a1332113348887ca137a9f583b853dac0d1cd99588c4f",
+          "move": "d4e5",
+          "maxError": 3.0893453129010595e-7
+        },
+        {
+          "id": "f8782b8de68d0f91657128f98afcd40f604249a5e92b072193b38f1412128958",
+          "move": "d4e5",
+          "maxError": 3.0893453129010595e-7
+        }
+      ],
+      "deployedDevelopmentValidation": {
+        "count": 207,
+        "bestmoveCorrect": 57,
+        "top1": 0.2753623188405797,
+        "predictions": [
+          {
+            "id": "b1d1cfd3994997a2ab14f324eb8d48063f1c5ba6428eba3ea89838ab16c487d0",
+            "move": "d2d4",
+            "best": "h2h3"
+          },
+          {
+            "id": "cc6d66be05adac12d2956371242fa14057f14633a7c17b8fb3304afe1f1e2a36",
+            "move": "b3c2",
+            "best": "b3c2"
+          },
+          {
+            "id": "968e90665cdb8aa2d6cf62c200476d47960904be0b2005979092d6e7f3e90fd7",
+            "move": "a2b3",
+            "best": "d1b3"
+          },
+          {
+            "id": "3dfdc88337773cf3057a1332113348887ca137a9f583b853dac0d1cd99588c4f",
+            "move": "d4e5",
+            "best": "b3c2"
+          },
+          {
+            "id": "f8782b8de68d0f91657128f98afcd40f604249a5e92b072193b38f1412128958",
+            "move": "d4e5",
+            "best": "d4e5"
+          },
+          {
+            "id": "4911b41b524fb7c622ec6cc03f7654b4dd9d4f5b8fda6feb254cd2e791767a7b",
+            "move": "b1d2",
+            "best": "c1e3"
+          },
+          {
+            "id": "b1c1bb9d651958f2229383235e26497e69ba7a818f8cd5b2a83100c34e364ab6",
+            "move": "b1d2",
+            "best": "a2a4"
+          },
+          {
+            "id": "87c5fae508d3fc50543eb88dbe578457d941e3024d6a85a44e7e95a08b540052",
+            "move": "d2e4",
+            "best": "b2b4"
+          },
+          {
+            "id": "3395d501ae861e5b318ced0f7860f45e30bd3eae1320d6129550da1dfd46cbb0",
+            "move": "f3d2",
+            "best": "e3d2"
+          },
+          {
+            "id": "2d821774f94e90b9c10407228a807eb002489ba9701b71ffa09ed353182c1b78",
+            "move": "b4c5",
+            "best": "d2g5"
+          },
+          {
+            "id": "1dedc794653dbf8c3d041cc2d50391c4da1f872146099019b0e93fe052cb2bd6",
+            "move": "g5e3",
+            "best": "e5f6"
+          },
+          {
+            "id": "ca3abebec481a6bc4f25cd3ec61dac14f45fc0b14c9f292d5e89988a6ea23ce0",
+            "move": "b4c5",
+            "best": "g5f6"
+          },
+          {
+            "id": "8246485163a831466ac86476454cbc59bf1f32b4e6e4939d9d26058ea34ee73a",
+            "move": "g5f4",
+            "best": "g5f6"
+          },
+          {
+            "id": "73db474206fcaef0683905c1d357276fd007ea646895aaea2a333d159c563f2f",
+            "move": "f3e5",
+            "best": "f3g5"
+          },
+          {
+            "id": "5a050410c802146de4591e801669ea95b32a0e1f168d196d3c227dd6cee0e969",
+            "move": "g5e6",
+            "best": "e1e5"
+          },
+          {
+            "id": "48d22a9e6edc54771b21539eae5881a7af40607bfbb980f2204372a856305fe5",
+            "move": "a1e1",
+            "best": "a1e1"
+          },
+          {
+            "id": "a9948db685d5bdc28702f14f37fa4104e1dd1b86d88a7a9c137c54c81b4ef8d2",
+            "move": "c2e2",
+            "best": "g5h7"
+          },
+          {
+            "id": "8c71f5c081f949044b950c07db1cc88a3677768566faf14f5766928687518728",
+            "move": "f5e5",
+            "best": "f5e5"
+          },
+          {
+            "id": "2d2db836c0ac29c6efc42cb0da54c30b16870dc5861574d208228343cc72e029",
+            "move": "d1e1",
+            "best": "d1e2"
+          },
+          {
+            "id": "8931a8ff4a461e5661d62e759928b59ef5761ad0f24297ed7f09507e8df6441b",
+            "move": "e2d1",
+            "best": "f3d4"
+          },
+          {
+            "id": "625cd66c490acb73bf4815db19724e011f3a83a3f76c02a4eaf56cb9e1279771",
+            "move": "b1c3",
+            "best": "h2h3"
+          },
+          {
+            "id": "f3fa817c2bfacdce3db8019a5d769b804f7e12da359bad4a77b060f72b16c93c",
+            "move": "e2f3",
+            "best": "f2f3"
+          },
+          {
+            "id": "b5d039cbc862a9eb800bacedb4b72f1b8bb7583dbcac779747ea8a6d901e019c",
+            "move": "b1c3",
+            "best": "b1c3"
+          },
+          {
+            "id": "b91402cca2464dd3f3939d89d249c3721d85b74c9e25dd80abdc1545006ef8aa",
+            "move": "c1e3",
+            "best": "c3e4"
+          },
+          {
+            "id": "90e88ff758024204d48f66ce01d563a30cb7fcae1fd11753dcda00d21a2ab7cf",
+            "move": "c1e3",
+            "best": "c1f4"
+          },
+          {
+            "id": "f8e67b2c4fcb6370865064325922430070f84d7868c105300de0410f15deabde",
+            "move": "a2a3",
+            "best": "g2g4"
+          },
+          {
+            "id": "7ca285c3fb52784f901c8fbd3c604673660e2bbcbd774df7091029a86ad8783d",
+            "move": "g2g4",
+            "best": "h2h3"
+          },
+          {
+            "id": "988fdaaeb76c9dd3f896eed3c5f098e884ac26be1219d4282f9d012cc7a68ee9",
+            "move": "e4g3",
+            "best": "e2e3"
+          },
+          {
+            "id": "863ea85448105978d4502362112e5bbdcaa6570806ad940cfefbdca27cb52c93",
+            "move": "f3e4",
+            "best": "f3e4"
+          },
+          {
+            "id": "8311e49baa472aaf4a99d9fd520b57e58521d572bb26fc2db3dde207a2d0c2cf",
+            "move": "e3b3",
+            "best": "e3e2"
+          },
+          {
+            "id": "96f4f2a00b9a2bffbc1ec25704a194d3798e611141483e264b221739b813a2fc",
+            "move": "c2c4",
+            "best": "d1d3"
+          },
+          {
+            "id": "ab96dfcd8e5f61c59945f7bd4e73dbac5d79cbf7a5259199fb442372bb9135a5",
+            "move": "a1d1",
+            "best": "f4d2"
+          },
+          {
+            "id": "f461bf00560fdf7dc7783de5b118967313d99d999b99789a215eaf5faebc8167",
+            "move": "d2e3",
+            "best": "d2g5"
+          },
+          {
+            "id": "28bc431fb3bd8f9cc2e27ea0ee46d5b66d27d125d08fb050047af80e8ca3ad67",
+            "move": "a1d1",
+            "best": "g5f6"
+          },
+          {
+            "id": "e3c75cbe0b825b4f028dc5d2dcdc224c79b472eccf37176c1e63c6107f0ae2a0",
+            "move": "a1d1",
+            "best": "f1f5"
+          },
+          {
+            "id": "bc76b5c06e6f3966aae4b24303a1098cbe689ae55c67e7896e78df61aedd4c94",
+            "move": "e4f5",
+            "best": "e4f5"
+          },
+          {
+            "id": "0df2037d68a6be84a7a9f24fbe0bd8b9fef875ac576e9491f3cc99b963ac6bd2",
+            "move": "f5g6",
+            "best": "e2d3"
+          },
+          {
+            "id": "f74a2cacff5e244efe2b945784ed61f849dbfe554651dfc0c95283e217051109",
+            "move": "b1d2",
+            "best": "c4b3"
+          },
+          {
+            "id": "6e6979a35cfbbbf32830e664e5b9429011ff738c6fda6d927c10235aff61fd77",
+            "move": "b3c2",
+            "best": "b1a3"
+          },
+          {
+            "id": "fd0485b87cabaebac29d597881bb015a661328aff264ce63b803991f82e11cbc",
+            "move": "e4d5",
+            "best": "e4d5"
+          },
+          {
+            "id": "5095b4f00792063dab567b85312670c51874777821dcc1d8f3cb3dacfaaa222b",
+            "move": "d1d2",
+            "best": "d1e1"
+          },
+          {
+            "id": "b3671cca71030f734c74e7767a4de823cc149dbd5f0ee6962fd33041f8a5eb14",
+            "move": "e4d5",
+            "best": "g1h1"
+          },
+          {
+            "id": "35bd2dfba5f982cba622baa7452373add97691f7f9afd301bd0a4b4de14ddd29",
+            "move": "g5f3",
+            "best": "g5h3"
+          },
+          {
+            "id": "8a5a9356bd54e0127d2eed7d142892f9c8cc23e4aafc8e2c28968d8907076bac",
+            "move": "e4d5",
+            "best": "e4d5"
+          },
+          {
+            "id": "e934574ccc4f8f265cae4c04db6f5dd9e9411b2a2000e78e4d93a23da18206f3",
+            "move": "a3c4",
+            "best": "a3c4"
+          },
+          {
+            "id": "83642bd15cf76ab522abc803c126116cda1c51b792ab89307ea511213021ae27",
+            "move": "d3d4",
+            "best": "e1g3"
+          },
+          {
+            "id": "6f43b86fde8d8bf9194fc71d0120d2f0c6c3e1281de433f550f25787175a65f0",
+            "move": "d3d4",
+            "best": "a3c4"
+          },
+          {
+            "id": "e068614517526e5b0263c33ddab4c56b405ff11fe3cf26baf4eea79cdaf73a5d",
+            "move": "d3d4",
+            "best": "a4a5"
+          },
+          {
+            "id": "d885840b704f07c0e8485052f98eb473d329e3a832769f621b42e6b456b76e69",
+            "move": "d3d4",
+            "best": "f3f4"
+          },
+          {
+            "id": "85f73255052c7b1d419418d7c8923b1c22c953f7086bc330d77b915cd23344be",
+            "move": "c4e3",
+            "best": "a5b6"
+          },
+          {
+            "id": "3b105da86bb8522b3faeaebd5c017ab54db32fd78103c9b68665156f6d519c02",
+            "move": "b3c4",
+            "best": "f1f5"
+          },
+          {
+            "id": "cd83a896fc8e53bd7ea9639dedad85d12736c0e709bf1989d6958ed50f460ec2",
+            "move": "f5f3",
+            "best": "c1g5"
+          },
+          {
+            "id": "e2c7ae9edaf59a6fb39e603133190770e66ae4985f227333427e904dada9d391",
+            "move": "f5f3",
+            "best": "f5f8"
+          },
+          {
+            "id": "a107cd1478b928b68dba0cbb8adbcb339817eea0c316c1ea7cedb5da2b3620ea",
+            "move": "b3c4",
+            "best": "b3c4"
+          },
+          {
+            "id": "9772ce0b5d111329bd41bdfd8a3ad3934456f0ad7c818b21840c6c7125b89057",
+            "move": "g5d2",
+            "best": "b2b4"
+          },
+          {
+            "id": "e06aefd0981a804fabbc2354dfb298c838ab741bc42facf033bf49a2e23bee94",
+            "move": "g5d2",
+            "best": "d3d4"
+          },
+          {
+            "id": "2e5c11e8c4d1539266974450f062a38b0293f01ab4dadc1885ae3bd1dce27e2e",
+            "move": "e1g1",
+            "best": "e1g1"
+          },
+          {
+            "id": "c8fc5dc29c362363243d05650f723e2ec974cf9f22e63565bbc9b58604d22b7a",
+            "move": "c4d5",
+            "best": "c1d2"
+          },
+          {
+            "id": "f25716dc902b88411db591669ed2cbee94a3534f239d06f2a791abdac45fcabc",
+            "move": "d2e3",
+            "best": "d2b4"
+          },
+          {
+            "id": "6feee41d25b8ea4c7e4ef47a681d437570a5abd7b1fb66d6b052bef4534ecf8b",
+            "move": "d1d2",
+            "best": "d1d2"
+          },
+          {
+            "id": "574472002c65c87a3524541d4787c87b31b381d93912971bcae33907cfa8b8a5",
+            "move": "a1e1",
+            "best": "d5d6"
+          },
+          {
+            "id": "475ff20acf9d7c9c5025dcdd0facdd34c3249de6c2d9fc29ce5e440f16019235",
+            "move": "d6c7",
+            "best": "d6c7"
+          },
+          {
+            "id": "ed774f96aef75452d5ddc145f4e4b8c63acafa314650f63b7812d8e43891713b",
+            "move": "c4d5",
+            "best": "a1c1"
+          },
+          {
+            "id": "c61c65778855952463fd3c95c5ba308220bb068540e767f6ad726ac8b54e86be",
+            "move": "f1e1",
+            "best": "f1e1"
+          },
+          {
+            "id": "80c86c3e6511b9f6e2be8c12659283ba96416911d437af68bd24f41fd72360c9",
+            "move": "c4d5",
+            "best": "d2d5"
+          },
+          {
+            "id": "c934cb16dc987c5d8c01253b08611f75c605a9dcb13c052703868536397eeaaa",
+            "move": "b2b3",
+            "best": "c4b3"
+          },
+          {
+            "id": "cd979b41342272266c267870be1fa208a7d316fb9196ef9bca07e5a5a4d016ed",
+            "move": "g5f7",
+            "best": "f1d1"
+          },
+          {
+            "id": "d1037b4728b8c342f161ce16d134f6ba3ed52098e8d594ff4171ea91a6ce93d1",
+            "move": "d5d6",
+            "best": "d5d6"
+          },
+          {
+            "id": "a253bc0429b79f7cceb6672bafc811abc32ea5617ba466e4fc3cf75472e02ca8",
+            "move": "d1d6",
+            "best": "b3f7"
+          },
+          {
+            "id": "8df9958b61b1ac1c69ff8bfb07997364baf2404ebc40aae3a8bf3b142fa045ee",
+            "move": "a2b3",
+            "best": "a2b3"
+          },
+          {
+            "id": "c635d9b416b7584d7d47c6ad10af188f91e06c356e1387245d6cfa7cf06b7a7c",
+            "move": "g5e4",
+            "best": "d6d2"
+          },
+          {
+            "id": "15af8602b6315de526b404205bbe8436d20af2b5fed06fc6d76c828f7e3cc2bb",
+            "move": "c1c7",
+            "best": "h2h4"
+          },
+          {
+            "id": "7632a6ec0d2e850e75c3d08ad6abdcd8072bf1c801f5855998793399146d64d1",
+            "move": "c1c7",
+            "best": "c1c5"
+          },
+          {
+            "id": "47f20ae5bb7476833dc0115138db6d73fa50268495f8bb6de11aa3c9c0d3b189",
+            "move": "c5c7",
+            "best": "c5b5"
+          },
+          {
+            "id": "e48a2ee6d9279c30740455af849217126ba1387afb24ba4928562f8d6b50a415",
+            "move": "g5f3",
+            "best": "h5g6"
+          },
+          {
+            "id": "2cdb275a02f029961ea11b264f343a5ad41839aa170d68bbed2fe4773c7e87c5",
+            "move": "b1d2",
+            "best": "c1g5"
+          },
+          {
+            "id": "7c4fdc8f471d92db82c8d86c8effdffdd8431e1d83be99ca040e9cc02d1c2dd5",
+            "move": "g5d2",
+            "best": "g5h4"
+          },
+          {
+            "id": "dcb0de56238cc166248ead139db77e640817025979d8fd27f15ae6704cf9c1bf",
+            "move": "b1d2",
+            "best": "b1d2"
+          },
+          {
+            "id": "9f4cbe1978e661fbf3d30f8e4baf851216a5cdfcde8ff10bed591180909e3b79",
+            "move": "h4g3",
+            "best": "h4g3"
+          },
+          {
+            "id": "ef3a0b5d92f75d885d7efb8820e9cb7855a84b92b9eb35622f99bd2c19b8ee09",
+            "move": "a3c2",
+            "best": "a3c2"
+          },
+          {
+            "id": "adde75b0e0adece638fa3c6b9cc192bbeda4152529a9aa88c4a14d5948650b93",
+            "move": "d3d4",
+            "best": "f1e1"
+          },
+          {
+            "id": "35f2d76f668fd042d9ec928354e1590e45473cc96ae8e274aa01210021400f1b",
+            "move": "d3d4",
+            "best": "c2e3"
+          },
+          {
+            "id": "e0003482432fc99e25acc7bb78269b48762292a78aeae25f8cbec0f66e6bd8d3",
+            "move": "e3g4",
+            "best": "b2b4"
+          },
+          {
+            "id": "ace91f635ec1e32b9b2a852c2f45d8ac1270c81ed6e14fe4e9f9c6a09c772494",
+            "move": "d3d4",
+            "best": "b2b4"
+          },
+          {
+            "id": "23a1c63eba1f0166d8097ad71ee15e6a3c8a5f8e20ca40c3024c38a475d4f6dd",
+            "move": "d3d4",
+            "best": "d1b3"
+          },
+          {
+            "id": "d37693ed8255b9f546549f2fa04101d0405706a751a46a64658507f66ee75487",
+            "move": "c4f7",
+            "best": "d3d4"
+          },
+          {
+            "id": "faeda057772658c925c12dc0cdf9c2aadab2109ef33801d2b754791d840cd3be",
+            "move": "d4e5",
+            "best": "h2h3"
+          },
+          {
+            "id": "c6d9552d238e8427b07874c91d97038a0cf592cdb6da17ccec409ab3ae792463",
+            "move": "d4e5",
+            "best": "g3h2"
+          },
+          {
+            "id": "bc5015a37813d6bfd4c9f55383c7d4e7425214ac4c5012139748cf53771918e3",
+            "move": "d4e5",
+            "best": "d4e5"
+          },
+          {
+            "id": "6b2154219ed8f805c0aadbb018c0010cd56161683bd30bdb431398ab0a5fbe25",
+            "move": "f2g3",
+            "best": "f2g3"
+          },
+          {
+            "id": "b42b8b045504f286829d4a21f215a4f09a19b7d8b1d0a3fb7da7d4edc818f951",
+            "move": "c4f7",
+            "best": "c4e2"
+          },
+          {
+            "id": "f451cc9461111cc850d9a88bd05ffe79950561733ca29bf981a7bcb3ca8c227d",
+            "move": "f3e5",
+            "best": "e1d1"
+          },
+          {
+            "id": "69deb74462662986a5544705ce596db2eef0dc0e12a18b70d4977f07f5624015",
+            "move": "a4b5",
+            "best": "c3c4"
+          },
+          {
+            "id": "fc13972139ab4b025bb4b4e30ed44e7883033808f1ecf1a831f7182aca3fc634",
+            "move": "a4b5",
+            "best": "a4b5"
+          },
+          {
+            "id": "0dcf35ce41be5c8a26c2b950b885a5d857a3517ed0051a3aef8a45630d236c44",
+            "move": "e4d5",
+            "best": "e4d5"
+          },
+          {
+            "id": "388507c3af60f0bed4e6780ca1778299397b744e22327f465d0f2c4bdf8704ee",
+            "move": "d5c6",
+            "best": "e1g1"
+          },
+          {
+            "id": "7846c2ad953dae1b8541a17a6200d6da965f869e198bd98136e511f31da0aedd",
+            "move": "f1e1",
+            "best": "d1f3"
+          },
+          {
+            "id": "5190cd460d2480c4ec4e68bf0d28b4b8e2fee8b0883cd50999a798ba21b3ca13",
+            "move": "f1e1",
+            "best": "d1f3"
+          },
+          {
+            "id": "e2c6d77677a4d4663f27f4f79d09d9934b474c084f84d5cb664d0e659025fbb9",
+            "move": "c3d5",
+            "best": "f1d1"
+          },
+          {
+            "id": "09f387ddeba1c53b0fb4c53ba3b8377c4e65bff852f2da4d7b7928939c5eab04",
+            "move": "c3d5",
+            "best": "d3a6"
+          },
+          {
+            "id": "93090484a893f9a3ef9c47a1751f391f468a52526bc42d774c6ee0843e6d8953",
+            "move": "c3d5",
+            "best": "c1f4"
+          },
+          {
+            "id": "e47ade35a46f16972c412564611ac20950e200f52f6ab64554759014959bc7c7",
+            "move": "a6d3",
+            "best": "a6f1"
+          },
+          {
+            "id": "ba7c7e6aeb361cdae58c78d523e490ec3e097663890ff1e6742f13940b743566",
+            "move": "c3a4",
+            "best": "c3e4"
+          },
+          {
+            "id": "9fa06159322912e3ee0fdfc00e9430d1a914b101710a54050f480ad96147567b",
+            "move": "d3e2",
+            "best": "d3e2"
+          },
+          {
+            "id": "be854f0cddbefbb7587c7eba6c462e98d62d5ea4937f1095140d740ba677e243",
+            "move": "e2c4",
+            "best": "e4f6"
+          },
+          {
+            "id": "216b903376daa688468e1b70b32c23071b1359586e6536a5eb1e8e7c4f1806b3",
+            "move": "c2c3",
+            "best": "c2c3"
+          },
+          {
+            "id": "fc4e160d75b7dae2e3d83b2ebee011e36fe25d20e1344bf33a56b9bd93af44f9",
+            "move": "b2c3",
+            "best": "b2c3"
+          },
+          {
+            "id": "4a1a2ff4f52866967238f1c512e23e4c8e49c0a4fc9d365f310f66968120f01f",
+            "move": "f3e3",
+            "best": "f3c3"
+          },
+          {
+            "id": "ebc66296e3368edba2cced67fa141bff6197b634733f1d0acdaf5caaea8fe217",
+            "move": "a1c1",
+            "best": "a1c1"
+          },
+          {
+            "id": "1917f0ec85043772a05d528deb70414ccf212d6ed6a087643c832b1e87e3000e",
+            "move": "c1c4",
+            "best": "c1c4"
+          },
+          {
+            "id": "7c009bce0e2f185c9f9983f6d5044dcd8b77bfe33bc6385efa138b38631364b7",
+            "move": "c4c7",
+            "best": "c4c7"
+          },
+          {
+            "id": "303c1d7efef0d122b4f1ab7fee3422984c51c2d1c830ac43bf8c7046f4705bf5",
+            "move": "e2c4",
+            "best": "e2c4"
+          },
+          {
+            "id": "b50110219cedd0f3ba72b98121c6450e1b2cd0f68cd7a9a3cd2dc13775d6f75e",
+            "move": "f4d2",
+            "best": "f4d2"
+          },
+          {
+            "id": "120f683d2c4339208e3a15432088a4acf47518892441867266a6bedc85f2a463",
+            "move": "b2c3",
+            "best": "b2c3"
+          },
+          {
+            "id": "c4208f07c261de4e3677f0c217c6b65c69083ada8d492ab30caaeead67105ba6",
+            "move": "d3d4",
+            "best": "g5h4"
+          },
+          {
+            "id": "fa006bb5ded247c5341869ba60fa10a0d453bc8588ddea9a577b0f7ea91c0d2f",
+            "move": "b5c4",
+            "best": "b5c6"
+          },
+          {
+            "id": "396510dc0d270928cebc16c5684c1707079c044677b32f9a2b43ad209807dd6e",
+            "move": "d3d4",
+            "best": "h2h3"
+          },
+          {
+            "id": "73756b0e1ad3126720626497151f61c35264f2c1e8603220b11eabba0269d815",
+            "move": "d3d4",
+            "best": "a4b3"
+          },
+          {
+            "id": "ffdc775b0b12efde4f5e9c5ebb90c0477eda1ab1987c4069caa314b70d3340f6",
+            "move": "d3d4",
+            "best": "a1b1"
+          },
+          {
+            "id": "4d0aaf447b4f7bfc576d90219025c5522c60e22e043f9a38349c30f7ae086919",
+            "move": "b3c4",
+            "best": "b3d5"
+          },
+          {
+            "id": "85d257bf66e90bba04a8d779f8574bdf3abc97a443949b1cc903b5bf8da1a592",
+            "move": "d5c4",
+            "best": "d1d2"
+          },
+          {
+            "id": "b13a5ebd92fa8fea92248fb3324a9ed4d2417c04f6c5667096e263b8c305a812",
+            "move": "d5c4",
+            "best": "d5c4"
+          },
+          {
+            "id": "f33c1d84d6a54815aa81c058b7e9c84635046a98860d1fd3ed7e36fdf0fba86a",
+            "move": "d3d4",
+            "best": "d3d4"
+          },
+          {
+            "id": "b2ab50d08a91444268e35c5ad7d050ddb7ce70ba38abdc41365580e87a64b303",
+            "move": "d4e5",
+            "best": "f1e1"
+          },
+          {
+            "id": "d738ae281c9c23dcf127abc59ddf0bf00769ea74ca5ff4f9743992775455c0da",
+            "move": "d4e5",
+            "best": "c4b5"
+          },
+          {
+            "id": "1b9269d8374fe31ad26bb118ba9ddd41a3fba3f8a4e09fc32aacc45ebf2377f5",
+            "move": "h4g3",
+            "best": "h4g3"
+          },
+          {
+            "id": "710f6d3c2c7e55aa64634b3be199caeef72e8ca7f0977f396c69833fc7afe1c5",
+            "move": "h4g3",
+            "best": "h4g3"
+          },
+          {
+            "id": "c8aacd84e3930f99786191532d70a749d27862548a24e7eb8f00f26594d89021",
+            "move": "f3e5",
+            "best": "c3c4"
+          },
+          {
+            "id": "0c347d96bc5c1e37963727a4cc0b0bd0b74ebbaa0c8c43e55d121a69e9a08e5e",
+            "move": "d1f3",
+            "best": "d1f3"
+          },
+          {
+            "id": "f0adb76f0c7cf17d9cf1d6932bb2f7386622fa4c53db16c9fe1b56a195bffa5e",
+            "move": "c4b5",
+            "best": "b1b5"
+          },
+          {
+            "id": "4b31e9bfc1db196679e2877f1ab0f921c5cea5751ca689432892557f30ff75a5",
+            "move": "e4e5",
+            "best": "f3c3"
+          },
+          {
+            "id": "05cdca3abe6f47d798884976db13255edd05e1f197000e22322a979fd58bd09c",
+            "move": "e4e5",
+            "best": "f3c3"
+          },
+          {
+            "id": "11e510ef0fa402aca91264736a98d8fe0e77f347a9708fdc54480cd610fbedb1",
+            "move": "b1c3",
+            "best": "c1f4"
+          },
+          {
+            "id": "1261005b1acef0c42be3cd027411b021a5f6e58c6f946860138babaecfadf92f",
+            "move": "b1c3",
+            "best": "b1d2"
+          },
+          {
+            "id": "fc367d914a4949fcf133c4323fb2b2e6edb8fbeecd4414575a64b6613e2bd42b",
+            "move": "f1e1",
+            "best": "c2c3"
+          },
+          {
+            "id": "d4c1fb3db6e8bf5b8c5f496f296a572d433c0a1be89e8ee140233b95039c5928",
+            "move": "g2g4",
+            "best": "c2c3"
+          },
+          {
+            "id": "62d55665e241644cc0e4ec8ddcc79f8a91fef28ec48093242e2ceaeac6e8fc53",
+            "move": "f4d6",
+            "best": "f4d6"
+          },
+          {
+            "id": "c8f4e67d5a09b21f17724e1b5d01b9cf76785834f4672dd66b8ef3ed2e5aa203",
+            "move": "g2g4",
+            "best": "b2b4"
+          },
+          {
+            "id": "5c49255e9a0a522bd9f9b6afa88362989b6e738db8fa4ddd2375cbfe03370e27",
+            "move": "g2g4",
+            "best": "a2a4"
+          },
+          {
+            "id": "f06084765a854fdb1599bf4df3fa089a30f84f579468303fd6b0fad0531b961e",
+            "move": "f3e5",
+            "best": "d1c2"
+          },
+          {
+            "id": "3201e183790144532b2538c405cef6859eb3622c127e9c4288e2eaf7d5cd9509",
+            "move": "d3f5",
+            "best": "b1c1"
+          },
+          {
+            "id": "45a5036c600650705c5b3f2193c795a3bd2f28f6296c348f05c94cef5f967072",
+            "move": "f3e5",
+            "best": "h2h3"
+          },
+          {
+            "id": "405d3fc34029ce02d38e7c530e387ba5454a8cf44abde919574b652ffe4c7a43",
+            "move": "f3e5",
+            "best": "d2f1"
+          },
+          {
+            "id": "ade98f35419212f57b2bf8b50c9a3ae44b2e3a5f22e2903cae83c59218e6affd",
+            "move": "f1e3",
+            "best": "f1g3"
+          },
+          {
+            "id": "e7ed65c13dc4ed112ca6ab22b5af2f02fdf0fbecc358c378b1e2dd8d5d621707",
+            "move": "g3f5",
+            "best": "d3f5"
+          },
+          {
+            "id": "17dac3c5a5ad572bb3d35170f8af460bef6dff55dec68e59b413360514707e7c",
+            "move": "f2g3",
+            "best": "f2g3"
+          },
+          {
+            "id": "32c2bf62be963b0f9ef3f1f426933466cba28c045703b81627e4130cae17c315",
+            "move": "b4a5",
+            "best": "e5d5"
+          },
+          {
+            "id": "31e7f80a9e8366ecbfcc560899283eb08ad76645ce22304c82311a0440397628",
+            "move": "d5a5",
+            "best": "d5e5"
+          },
+          {
+            "id": "0fb3d406c2211d96c5a924d5b809b4d84f90976ed38c63f396852131b926d710",
+            "move": "d3f5",
+            "best": "c1d2"
+          },
+          {
+            "id": "36d517d95f40e37e60502818d55d9e38858aef1d95f0023f2d3ee6b65e9f1110",
+            "move": "d2d3",
+            "best": "d2d3"
+          },
+          {
+            "id": "f1a82b36b0461c4ef5e5be751279a857c081b6f76788c7af4708615598d5de82",
+            "move": "b4a5",
+            "best": "g1h2"
+          },
+          {
+            "id": "62cd6e157f87b0d3beb862017c99c85b8a77bb043a05feaeed7a007af873ac8e",
+            "move": "b1c3",
+            "best": "b1c3"
+          },
+          {
+            "id": "b58e91b48c4303878a564cb4aaf36089a9c72fbdeed4d04263858a85fd97f691",
+            "move": "c1e3",
+            "best": "h2h3"
+          },
+          {
+            "id": "5703f7a17885713078063d397bf41a096c8320509c4f8b35687e36991a391604",
+            "move": "c4d5",
+            "best": "c4c5"
+          },
+          {
+            "id": "e9b0b762b7638cbc2a447dfbdfa8c30e3bcc58a9571d67b9b4a1439adb66183c",
+            "move": "f3e5",
+            "best": "b2b4"
+          },
+          {
+            "id": "91e72edcbd2fe65b047336d99091f11cb308a93f863f38b0b81af5060f247a1d",
+            "move": "f3e5",
+            "best": "f3e5"
+          },
+          {
+            "id": "b12ac10a0ce9af8c0342f7c4efd876eb783078994e435854d992cd0fdc568c90",
+            "move": "d1e2",
+            "best": "c3e2"
+          },
+          {
+            "id": "e7957da193d86b2184ba1dd4ec343712f2176c968364ba1631250fddd7f80e94",
+            "move": "b4b5",
+            "best": "e5g4"
+          },
+          {
+            "id": "79ac581ef37bd35093fbbcfdf8036a820ad52b1186c4094eec1785d0c9694434",
+            "move": "d4e5",
+            "best": "d4e5"
+          },
+          {
+            "id": "adae00ffa3e6f3183f94f1f93c140c8a37d5a8cd7e45ad20b39498fe07f5791e",
+            "move": "b4a5",
+            "best": "a3h3"
+          },
+          {
+            "id": "8634fdb6e35837e357aa67fe0fde09a5927f90fa47f041fa96264fbb19fec214",
+            "move": "b4a5",
+            "best": "c5c6"
+          },
+          {
+            "id": "0257e19400d5bceccbe9a4d32a6b8249f7866e7a4f3661510c2c1eb30e1b3a90",
+            "move": "b4a5",
+            "best": "e2d4"
+          },
+          {
+            "id": "05ff8bae9a92d3139588b185af37bdd9d32cdc20aaaf2b4d23ebd858a13aadec",
+            "move": "d4c6",
+            "best": "d4c6"
+          },
+          {
+            "id": "31f6cdaf7d820a844378f8f83fda6bc4aad0c87bdea9c1a8b7092fb7316ef405",
+            "move": "b4a5",
+            "best": "d4c6"
+          },
+          {
+            "id": "7a3b41dd2a531ebf721ee10548f20fd755ba57e6015a8a8ea5f025d4052a0a9e",
+            "move": "c6a5",
+            "best": "b4b5"
+          },
+          {
+            "id": "9acb8de1cf8b5e28b85461b63468fa864d5cd5a2ce442cac36ba72cca62160ca",
+            "move": "c6a5",
+            "best": "c6e7"
+          },
+          {
+            "id": "0adadcce37a98dde0f2ca7dec3fb617a7cb30001c2b7388c51f9dc9daf7ac599",
+            "move": "h3c3",
+            "best": "c1a3"
+          },
+          {
+            "id": "2cd8cfc4730c8bfe91f040074bfa4b4050291906107a80774ea875fd6f5cf69f",
+            "move": "a3b2",
+            "best": "d2f4"
+          },
+          {
+            "id": "14f22e1968c8eae8377e86544b902ab09e9f000448c69aeb1c53ff84d385ed50",
+            "move": "h3a3",
+            "best": "d2h6"
+          },
+          {
+            "id": "58b0752d41e3ae43dbd2e708faa78027fd029bb4df99715ce4af6c17243bead2",
+            "move": "c4d5",
+            "best": "d1c2"
+          },
+          {
+            "id": "26b48aeefdca443b90ed3ac6275e7171e166c4148ada757da231bc9ade0ff554",
+            "move": "f1c4",
+            "best": "f1c4"
+          },
+          {
+            "id": "a860b0cc40680f8f7510a2bf9274df303064fee31ef76023955a91c27701fcf8",
+            "move": "e1c1",
+            "best": "a1d1"
+          },
+          {
+            "id": "9b423050ff8f3c74ac4f8de24b75956785db64d0fcc8c5ccbf80ecdaf51f673d",
+            "move": "e1c1",
+            "best": "h4e7"
+          },
+          {
+            "id": "7049ed3ee2add6398fe8d0f5a4c854e7fe3cf5362980bb9eb06b2fc7fc708e64",
+            "move": "e1c1",
+            "best": "b2b4"
+          },
+          {
+            "id": "f9cb45613e68e71bef1bae55d6167811bbb4c5f89e8e629fee175b530c0e831f",
+            "move": "b4a5",
+            "best": "c2a4"
+          },
+          {
+            "id": "dd0efb10ce3562fdecf7d837e6e6be56071d2d99e71991c9fd89399a4f65ff92",
+            "move": "a4b5",
+            "best": "c4b5"
+          },
+          {
+            "id": "ed271d6e92fc6d76d2fa3d24cb929705df2086aadaa7f0712dcb75d1114a108b",
+            "move": "b5d7",
+            "best": "b5d7"
+          },
+          {
+            "id": "e3dd9e3b1f93b8536a8ff19cb86322708598601a0310bd4fac603b126ef12e12",
+            "move": "c6b7",
+            "best": "a4c2"
+          },
+          {
+            "id": "6798eb9faca78c910a523b59d73b645ac82af9a61c93d97385317d32eaf1bb94",
+            "move": "c6d7",
+            "best": "b5a6"
+          },
+          {
+            "id": "b2722a810537fb2babf19f17e586b5549ffe4a8020ed3f5f31b031d338a2e99c",
+            "move": "a6c4",
+            "best": "a6e2"
+          },
+          {
+            "id": "221cd8bce9d8bfa4ac76b0da34e03652e179fc85a5b8dbc99cc0ba446bad7c6f",
+            "move": "c2c3",
+            "best": "c2c3"
+          },
+          {
+            "id": "df2509b82b0c7212bd62a217ea56fec4f5cd3c821db6331399b720cca3c052cb",
+            "move": "e1c1",
+            "best": "e1g1"
+          },
+          {
+            "id": "4dce4a5e085a5ddad74d3b20220ffffab036bd5e7454486d4d0e0fb223273c20",
+            "move": "b5c6",
+            "best": "b5c6"
+          },
+          {
+            "id": "3455bf46a7b67365aa99cf002f7df75e42ccfef3616fc1db96f8b2a6089f7117",
+            "move": "e1c1",
+            "best": "f3e5"
+          },
+          {
+            "id": "b79bf0cc1df0f18c23993178ff6a1c793407c8cfe2c19b83dbf6cfebd40d2cb9",
+            "move": "e1c1",
+            "best": "e1g1"
+          },
+          {
+            "id": "ebdf2856601de5d35808c09aeb1acacc38a2275b3a4d4d829c0ab8d7ed478fae",
+            "move": "e5g6",
+            "best": "e5g6"
+          },
+          {
+            "id": "a7a8a6a9354acfa39fc80f7a43d35d34257b29130612c86d23253c8586414849",
+            "move": "c6e4",
+            "best": "a1c1"
+          },
+          {
+            "id": "3548ff6b6b4a8a7507b6c3049dbe9c9ea66206f3e0b78fd4ae9d67a8a8115b79",
+            "move": "c6a4",
+            "best": "h2h3"
+          },
+          {
+            "id": "6318b1232ffe440ead464744ed33728e9c8224a3b60bca1baf1099e2f8e9e79f",
+            "move": "c3d4",
+            "best": "e3d4"
+          },
+          {
+            "id": "2675828b999c1cb24b470837525d9cc90c6572030bfae8fe5c05ea54de75e162",
+            "move": "g3h4",
+            "best": "g3d6"
+          },
+          {
+            "id": "15f45ce8145de7374bf780f17389b22399216f60d5cf35773e2d57bad0c08cfc",
+            "move": "f1d3",
+            "best": "f1b5"
+          },
+          {
+            "id": "63bfb8c8a9ec86a9177bf761076caa226a84f4c9c94012db0c385a4973ecd046",
+            "move": "e1g1",
+            "best": "e1g1"
+          },
+          {
+            "id": "3beb21c76ac3eb28d0be61214087b5ff44320d35d53acb21d1786adb32633f26",
+            "move": "d4e5",
+            "best": "d4e5"
+          },
+          {
+            "id": "d89f097f3d0cbc4eb7b45c9f65b5da52900b8559319a6a6db21514c3f5d154c9",
+            "move": "f3e5",
+            "best": "f3e5"
+          },
+          {
+            "id": "a811fd43b2626f25e2aaa530ef8fa68ab802dbea239af451d94349d9a622fb4d",
+            "move": "d2f3",
+            "best": "f1e1"
+          },
+          {
+            "id": "7296c9781e6ef138a8ce309fc3d44bb3986c6743ddd9bd0ec9598fde2809d7b8",
+            "move": "d2f3",
+            "best": "d2f3"
+          },
+          {
+            "id": "5f1361cf9087f8c5a678f2dc1e2eb879f5baef570c7afee3ff376e01c8a7184b",
+            "move": "e1e3",
+            "best": "e1e8"
+          },
+          {
+            "id": "f1349330fc19acf5288e3baa099b7593a837a8c7b3298e52aa0f363bdb9c5c5a",
+            "move": "f3e2",
+            "best": "d2f1"
+          },
+          {
+            "id": "d958cef7e41a1b151550d81c08b7a56649140d86a2fa0502e4869b1053076352",
+            "move": "f3d5",
+            "best": "f3h5"
+          },
+          {
+            "id": "3cac6d3c93eb4e4c7527001c90c3adaff9e93b0f83cba294da11ab257a4d08f5",
+            "move": "c3d4",
+            "best": "c3d4"
+          },
+          {
+            "id": "4cf8259856e64bb3477068cf600571f8b00f6298491829a5ccc3c299bc0b9a28",
+            "move": "d1h5",
+            "best": "d1h5"
+          },
+          {
+            "id": "931d0905fdc0e5e18d48468ffadac156bd400663df4a6288330ff5d53bbf5d17",
+            "move": "d4d5",
+            "best": "f1e3"
+          },
+          {
+            "id": "b09402b3bdc8134d5d168380b87e99902f3490dd21521be10c694b30c0ecdce5",
+            "move": "e3f5",
+            "best": "h5e2"
+          },
+          {
+            "id": "13cc5f086d79bbac50bf04ddbb3b6a0c6ed484dbf311939f28178454677c4962",
+            "move": "e3d5",
+            "best": "h2h3"
+          },
+          {
+            "id": "9a7628692873f309323f99450fa87196d8858ebd3574b3c0dd9a324fe26142d4",
+            "move": "e3g2",
+            "best": "e3g2"
+          },
+          {
+            "id": "77a3037f9c71419f08b35edcdb398084547a32806790825e32c2c453e71d81c0",
+            "move": "g2f4",
+            "best": "b2b4"
+          },
+          {
+            "id": "869eee6a4e82e053d7463fff9f4501970b5e552af3a3c9a63897c3dbe22f36f8",
+            "move": "g2f4",
+            "best": "h3h4"
+          }
+        ]
+      },
+      "float32FeatureMetricDisagreement": 0
+    },
+    {
+      "id": "enemy-relaxed",
+      "scales": [
+        0.9995502233505249,
+        1.058701515197754,
+        1.4881404638290405,
+        1.5,
+        1.5,
+        1.5,
+        1.3942197561264038,
+        1.1073431968688965,
+        0.8053461313247681,
+        1.033105492591858,
+        1.2,
+        1.2,
+        0.800000011920929,
+        1.2,
+        1.020556926727295,
+        1.1477899551391602,
+        1.2,
+        1.0077944993972778,
+        0.800000011920929,
+        1,
+        1,
+        1,
+        1.1903550624847412,
+        1.2,
+        0.806328535079956,
+        1.2,
+        1,
+        1,
+        0.8214818239212036,
+        1.1016629934310913,
+        1.0145354270935059,
+        1.0877071619033813,
+        1.5,
+        1.5,
+        1.49276864528656,
+        1.5,
+        1.5,
+        1.2,
+        0.8098125457763672,
+        0.9824097156524658,
+        0.9746295213699341,
+        1.0087350606918335,
+        1.1080968379974365,
+        1,
+        1,
+        1.0402438640594482,
+        1.1538077592849731,
+        0.800000011920929,
+        1.0534460544586182,
+        0.8163414001464844,
+        1.2,
+        0.9826779961585999,
+        1.093641996383667,
+        1.2,
+        1,
+        1.1971192359924316,
+        1,
+        1.0137375593185425,
+        1,
+        0.9327661991119385,
+        0.9568607807159424,
+        1.195391297340393,
+        0.9586186408996582,
+        0.9622377753257751,
+        0.9585183262825012,
+        0.800000011920929,
+        1,
+        1.2,
+        1.2,
+        1.2,
+        1,
+        1.2,
+        0.8112258911132812,
+        0.800000011920929,
+        1.1125164031982422,
+        1.2,
+        1.1966326236724854,
+        1.2,
+        1,
+        0.9341071248054504,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1.2,
+        1,
+        1,
+        1.2,
+        1.5,
+        1.5,
+        1.5,
+        0.7648418545722961,
+        1.5,
+        1.0431275367736816,
+        0.825089693069458,
+        1.063673973083496,
+        0.9789079427719116,
+        0.8430737853050232,
+        0.972107470035553,
+        0.9207236170768738,
+        1,
+        1.2,
+        1.160471796989441,
+        0.8292584419250488,
+        1.1875600814819336,
+        1.1776715517044067,
+        1.1944694519042969,
+        0.9246050119400024,
+        0.9833389520645142,
+        0.9770788550376892,
+        1.2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.9989553093910217,
+        1,
+        0.8869395852088928,
+        1.132124423980713,
+        1,
+        0.9737930297851562,
+        1,
+        1.0103256702423096,
+        1.2,
+        1,
+        1,
+        1,
+        0.9219153523445129,
+        1,
+        1,
+        1,
+        1,
+        1.2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "epoch": 12,
+      "history": [
+        {
+          "epoch": 1,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 58,
+            "top1": 0.28019323671497587,
+            "crossEntropy": 3.2704619543563918,
+            "contrastiveLoss": 3.4871020236452996
+          }
+        },
+        {
+          "epoch": 2,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 63,
+            "top1": 0.30434782608695654,
+            "crossEntropy": 3.250535892403644,
+            "contrastiveLoss": 3.4706218611215047
+          }
+        },
+        {
+          "epoch": 3,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 63,
+            "top1": 0.30434782608695654,
+            "crossEntropy": 3.237147161350158,
+            "contrastiveLoss": 3.4607094330488195
+          }
+        },
+        {
+          "epoch": 4,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 64,
+            "top1": 0.30917874396135264,
+            "crossEntropy": 3.230004350056395,
+            "contrastiveLoss": 3.4559616604864885
+          }
+        },
+        {
+          "epoch": 5,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 65,
+            "top1": 0.3140096618357488,
+            "crossEntropy": 3.2249934969892826,
+            "contrastiveLoss": 3.453138208043748
+          }
+        },
+        {
+          "epoch": 6,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 65,
+            "top1": 0.3140096618357488,
+            "crossEntropy": 3.221306539963985,
+            "contrastiveLoss": 3.451496283789188
+          }
+        },
+        {
+          "epoch": 7,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 64,
+            "top1": 0.30917874396135264,
+            "crossEntropy": 3.219832630837021,
+            "contrastiveLoss": 3.4494074087787943
+          }
+        },
+        {
+          "epoch": 8,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 64,
+            "top1": 0.30917874396135264,
+            "crossEntropy": 3.218483464729383,
+            "contrastiveLoss": 3.448441869970681
+          }
+        },
+        {
+          "epoch": 9,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 63,
+            "top1": 0.30434782608695654,
+            "crossEntropy": 3.216942478493216,
+            "contrastiveLoss": 3.446387173472971
+          }
+        },
+        {
+          "epoch": 10,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 63,
+            "top1": 0.30434782608695654,
+            "crossEntropy": 3.2162963540657707,
+            "contrastiveLoss": 3.445327245094926
+          }
+        },
+        {
+          "epoch": 11,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 62,
+            "top1": 0.2995169082125604,
+            "crossEntropy": 3.2152349090806527,
+            "contrastiveLoss": 3.4442511779674585
+          }
+        },
+        {
+          "epoch": 12,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 63,
+            "top1": 0.30434782608695654,
+            "crossEntropy": 3.215101324417741,
+            "contrastiveLoss": 3.4439562397878527
+          }
+        }
+      ],
+      "metrics": {
+        "train": {
+          "count": 435,
+          "bestmoveCorrect": 127,
+          "top1": 0.29195402298850576,
+          "crossEntropy": 3.0801915476376984,
+          "contrastiveLoss": 3.2824934020124634
+        },
+        "validation": {
+          "count": 207,
+          "bestmoveCorrect": 63,
+          "top1": 0.30434782608695654,
+          "crossEntropy": 3.215101324417741,
+          "contrastiveLoss": 3.4439562397878527
+        }
+      },
+      "changedGroups": 99,
+      "freeGroups": 143,
+      "settings": {
+        "epochs": 12,
+        "lr": 0.015,
+        "temperature": 4,
+        "margin": 1,
+        "regularization": 0.1,
+        "enemyRelaxed": true,
+        "nonEnemyBounds": [
+          0.8,
+          1.2
+        ],
+        "enemyBounds": [
+          0.5,
+          1.5
+        ]
+      },
+      "developmentPredictionChanges": 67,
+      "status": "candidate-not-selected",
+      "file": ".cache/v8/weight-pocket-enemy-relaxed.bin",
+      "sha256": "be57790e21e0ed51a44a18aed3272c7f1cbc780b68fb218a0d8c3f24d4da9e73",
+      "bytes": 8465960,
+      "changedScalars": 65303,
+      "protectedEdges": 747318,
+      "protectedChanged": 0,
+      "enemyMaterialChanged": 9400,
+      "mateScaleEdges": 5960,
+      "mateScaleChanged": 0,
+      "parameterCount": 980468,
+      "topologyUnchanged": true,
+      "roundtrip": [
+        {
+          "id": "b1d1cfd3994997a2ab14f324eb8d48063f1c5ba6428eba3ea89838ab16c487d0",
+          "move": "d2d4",
+          "maxError": 2.121514599551233e-7
+        },
+        {
+          "id": "cc6d66be05adac12d2956371242fa14057f14633a7c17b8fb3304afe1f1e2a36",
+          "move": "b3c2",
+          "maxError": 1.3891122030429415e-7
+        },
+        {
+          "id": "968e90665cdb8aa2d6cf62c200476d47960904be0b2005979092d6e7f3e90fd7",
+          "move": "a2b3",
+          "maxError": 2.8809045105049336e-7
+        },
+        {
+          "id": "3dfdc88337773cf3057a1332113348887ca137a9f583b853dac0d1cd99588c4f",
+          "move": "d4e5",
+          "maxError": 3.040861784597837e-7
+        },
+        {
+          "id": "f8782b8de68d0f91657128f98afcd40f604249a5e92b072193b38f1412128958",
+          "move": "d4e5",
+          "maxError": 2.273054633405991e-7
+        }
+      ],
+      "deployedDevelopmentValidation": {
+        "count": 207,
+        "bestmoveCorrect": 63,
+        "top1": 0.30434782608695654,
+        "predictions": [
+          {
+            "id": "b1d1cfd3994997a2ab14f324eb8d48063f1c5ba6428eba3ea89838ab16c487d0",
+            "move": "d2d4",
+            "best": "h2h3"
+          },
+          {
+            "id": "cc6d66be05adac12d2956371242fa14057f14633a7c17b8fb3304afe1f1e2a36",
+            "move": "b3c2",
+            "best": "b3c2"
+          },
+          {
+            "id": "968e90665cdb8aa2d6cf62c200476d47960904be0b2005979092d6e7f3e90fd7",
+            "move": "a2b3",
+            "best": "d1b3"
+          },
+          {
+            "id": "3dfdc88337773cf3057a1332113348887ca137a9f583b853dac0d1cd99588c4f",
+            "move": "d4e5",
+            "best": "b3c2"
+          },
+          {
+            "id": "f8782b8de68d0f91657128f98afcd40f604249a5e92b072193b38f1412128958",
+            "move": "d4e5",
+            "best": "d4e5"
+          },
+          {
+            "id": "4911b41b524fb7c622ec6cc03f7654b4dd9d4f5b8fda6feb254cd2e791767a7b",
+            "move": "c1e3",
+            "best": "c1e3"
+          },
+          {
+            "id": "b1c1bb9d651958f2229383235e26497e69ba7a818f8cd5b2a83100c34e364ab6",
+            "move": "b1d2",
+            "best": "a2a4"
+          },
+          {
+            "id": "87c5fae508d3fc50543eb88dbe578457d941e3024d6a85a44e7e95a08b540052",
+            "move": "d2e4",
+            "best": "b2b4"
+          },
+          {
+            "id": "3395d501ae861e5b318ced0f7860f45e30bd3eae1320d6129550da1dfd46cbb0",
+            "move": "f3d2",
+            "best": "e3d2"
+          },
+          {
+            "id": "2d821774f94e90b9c10407228a807eb002489ba9701b71ffa09ed353182c1b78",
+            "move": "b4c5",
+            "best": "d2g5"
+          },
+          {
+            "id": "1dedc794653dbf8c3d041cc2d50391c4da1f872146099019b0e93fe052cb2bd6",
+            "move": "g5e3",
+            "best": "e5f6"
+          },
+          {
+            "id": "ca3abebec481a6bc4f25cd3ec61dac14f45fc0b14c9f292d5e89988a6ea23ce0",
+            "move": "b4c5",
+            "best": "g5f6"
+          },
+          {
+            "id": "8246485163a831466ac86476454cbc59bf1f32b4e6e4939d9d26058ea34ee73a",
+            "move": "g5f6",
+            "best": "g5f6"
+          },
+          {
+            "id": "73db474206fcaef0683905c1d357276fd007ea646895aaea2a333d159c563f2f",
+            "move": "f3e5",
+            "best": "f3g5"
+          },
+          {
+            "id": "5a050410c802146de4591e801669ea95b32a0e1f168d196d3c227dd6cee0e969",
+            "move": "g5f3",
+            "best": "e1e5"
+          },
+          {
+            "id": "48d22a9e6edc54771b21539eae5881a7af40607bfbb980f2204372a856305fe5",
+            "move": "a1e1",
+            "best": "a1e1"
+          },
+          {
+            "id": "a9948db685d5bdc28702f14f37fa4104e1dd1b86d88a7a9c137c54c81b4ef8d2",
+            "move": "a2a4",
+            "best": "g5h7"
+          },
+          {
+            "id": "8c71f5c081f949044b950c07db1cc88a3677768566faf14f5766928687518728",
+            "move": "f5e5",
+            "best": "f5e5"
+          },
+          {
+            "id": "2d2db836c0ac29c6efc42cb0da54c30b16870dc5861574d208228343cc72e029",
+            "move": "d1d8",
+            "best": "d1e2"
+          },
+          {
+            "id": "8931a8ff4a461e5661d62e759928b59ef5761ad0f24297ed7f09507e8df6441b",
+            "move": "e2e1",
+            "best": "f3d4"
+          },
+          {
+            "id": "625cd66c490acb73bf4815db19724e011f3a83a3f76c02a4eaf56cb9e1279771",
+            "move": "e5e6",
+            "best": "h2h3"
+          },
+          {
+            "id": "f3fa817c2bfacdce3db8019a5d769b804f7e12da359bad4a77b060f72b16c93c",
+            "move": "e2g4",
+            "best": "f2f3"
+          },
+          {
+            "id": "b5d039cbc862a9eb800bacedb4b72f1b8bb7583dbcac779747ea8a6d901e019c",
+            "move": "b1c3",
+            "best": "b1c3"
+          },
+          {
+            "id": "b91402cca2464dd3f3939d89d249c3721d85b74c9e25dd80abdc1545006ef8aa",
+            "move": "c1e3",
+            "best": "c3e4"
+          },
+          {
+            "id": "90e88ff758024204d48f66ce01d563a30cb7fcae1fd11753dcda00d21a2ab7cf",
+            "move": "c1e3",
+            "best": "c1f4"
+          },
+          {
+            "id": "f8e67b2c4fcb6370865064325922430070f84d7868c105300de0410f15deabde",
+            "move": "a2a3",
+            "best": "g2g4"
+          },
+          {
+            "id": "7ca285c3fb52784f901c8fbd3c604673660e2bbcbd774df7091029a86ad8783d",
+            "move": "g2g4",
+            "best": "h2h3"
+          },
+          {
+            "id": "988fdaaeb76c9dd3f896eed3c5f098e884ac26be1219d4282f9d012cc7a68ee9",
+            "move": "e4g3",
+            "best": "e2e3"
+          },
+          {
+            "id": "863ea85448105978d4502362112e5bbdcaa6570806ad940cfefbdca27cb52c93",
+            "move": "f3e4",
+            "best": "f3e4"
+          },
+          {
+            "id": "8311e49baa472aaf4a99d9fd520b57e58521d572bb26fc2db3dde207a2d0c2cf",
+            "move": "g2g4",
+            "best": "e3e2"
+          },
+          {
+            "id": "96f4f2a00b9a2bffbc1ec25704a194d3798e611141483e264b221739b813a2fc",
+            "move": "c2c4",
+            "best": "d1d3"
+          },
+          {
+            "id": "ab96dfcd8e5f61c59945f7bd4e73dbac5d79cbf7a5259199fb442372bb9135a5",
+            "move": "c2c4",
+            "best": "f4d2"
+          },
+          {
+            "id": "f461bf00560fdf7dc7783de5b118967313d99d999b99789a215eaf5faebc8167",
+            "move": "d2b4",
+            "best": "d2g5"
+          },
+          {
+            "id": "28bc431fb3bd8f9cc2e27ea0ee46d5b66d27d125d08fb050047af80e8ca3ad67",
+            "move": "a1d1",
+            "best": "g5f6"
+          },
+          {
+            "id": "e3c75cbe0b825b4f028dc5d2dcdc224c79b472eccf37176c1e63c6107f0ae2a0",
+            "move": "a1d1",
+            "best": "f1f5"
+          },
+          {
+            "id": "bc76b5c06e6f3966aae4b24303a1098cbe689ae55c67e7896e78df61aedd4c94",
+            "move": "e4f5",
+            "best": "e4f5"
+          },
+          {
+            "id": "0df2037d68a6be84a7a9f24fbe0bd8b9fef875ac576e9491f3cc99b963ac6bd2",
+            "move": "f5g6",
+            "best": "e2d3"
+          },
+          {
+            "id": "f74a2cacff5e244efe2b945784ed61f849dbfe554651dfc0c95283e217051109",
+            "move": "b1d2",
+            "best": "c4b3"
+          },
+          {
+            "id": "6e6979a35cfbbbf32830e664e5b9429011ff738c6fda6d927c10235aff61fd77",
+            "move": "b3e6",
+            "best": "b1a3"
+          },
+          {
+            "id": "fd0485b87cabaebac29d597881bb015a661328aff264ce63b803991f82e11cbc",
+            "move": "e4d5",
+            "best": "e4d5"
+          },
+          {
+            "id": "5095b4f00792063dab567b85312670c51874777821dcc1d8f3cb3dacfaaa222b",
+            "move": "d1d2",
+            "best": "d1e1"
+          },
+          {
+            "id": "b3671cca71030f734c74e7767a4de823cc149dbd5f0ee6962fd33041f8a5eb14",
+            "move": "e4d5",
+            "best": "g1h1"
+          },
+          {
+            "id": "35bd2dfba5f982cba622baa7452373add97691f7f9afd301bd0a4b4de14ddd29",
+            "move": "g5f3",
+            "best": "g5h3"
+          },
+          {
+            "id": "8a5a9356bd54e0127d2eed7d142892f9c8cc23e4aafc8e2c28968d8907076bac",
+            "move": "e4d5",
+            "best": "e4d5"
+          },
+          {
+            "id": "e934574ccc4f8f265cae4c04db6f5dd9e9411b2a2000e78e4d93a23da18206f3",
+            "move": "a3c4",
+            "best": "a3c4"
+          },
+          {
+            "id": "83642bd15cf76ab522abc803c126116cda1c51b792ab89307ea511213021ae27",
+            "move": "d3d4",
+            "best": "e1g3"
+          },
+          {
+            "id": "6f43b86fde8d8bf9194fc71d0120d2f0c6c3e1281de433f550f25787175a65f0",
+            "move": "d3d4",
+            "best": "a3c4"
+          },
+          {
+            "id": "e068614517526e5b0263c33ddab4c56b405ff11fe3cf26baf4eea79cdaf73a5d",
+            "move": "d3d4",
+            "best": "a4a5"
+          },
+          {
+            "id": "d885840b704f07c0e8485052f98eb473d329e3a832769f621b42e6b456b76e69",
+            "move": "d3d4",
+            "best": "f3f4"
+          },
+          {
+            "id": "85f73255052c7b1d419418d7c8923b1c22c953f7086bc330d77b915cd23344be",
+            "move": "c4d2",
+            "best": "a5b6"
+          },
+          {
+            "id": "3b105da86bb8522b3faeaebd5c017ab54db32fd78103c9b68665156f6d519c02",
+            "move": "b3c4",
+            "best": "f1f5"
+          },
+          {
+            "id": "cd83a896fc8e53bd7ea9639dedad85d12736c0e709bf1989d6958ed50f460ec2",
+            "move": "f5f8",
+            "best": "c1g5"
+          },
+          {
+            "id": "e2c7ae9edaf59a6fb39e603133190770e66ae4985f227333427e904dada9d391",
+            "move": "f5f8",
+            "best": "f5f8"
+          },
+          {
+            "id": "a107cd1478b928b68dba0cbb8adbcb339817eea0c316c1ea7cedb5da2b3620ea",
+            "move": "b3c4",
+            "best": "b3c4"
+          },
+          {
+            "id": "9772ce0b5d111329bd41bdfd8a3ad3934456f0ad7c818b21840c6c7125b89057",
+            "move": "a1a5",
+            "best": "b2b4"
+          },
+          {
+            "id": "e06aefd0981a804fabbc2354dfb298c838ab741bc42facf033bf49a2e23bee94",
+            "move": "g5d2",
+            "best": "d3d4"
+          },
+          {
+            "id": "2e5c11e8c4d1539266974450f062a38b0293f01ab4dadc1885ae3bd1dce27e2e",
+            "move": "e1g1",
+            "best": "e1g1"
+          },
+          {
+            "id": "c8fc5dc29c362363243d05650f723e2ec974cf9f22e63565bbc9b58604d22b7a",
+            "move": "f3d2",
+            "best": "c1d2"
+          },
+          {
+            "id": "f25716dc902b88411db591669ed2cbee94a3534f239d06f2a791abdac45fcabc",
+            "move": "d2b4",
+            "best": "d2b4"
+          },
+          {
+            "id": "6feee41d25b8ea4c7e4ef47a681d437570a5abd7b1fb66d6b052bef4534ecf8b",
+            "move": "f3d2",
+            "best": "d1d2"
+          },
+          {
+            "id": "574472002c65c87a3524541d4787c87b31b381d93912971bcae33907cfa8b8a5",
+            "move": "a1e1",
+            "best": "d5d6"
+          },
+          {
+            "id": "475ff20acf9d7c9c5025dcdd0facdd34c3249de6c2d9fc29ce5e440f16019235",
+            "move": "d6c7",
+            "best": "d6c7"
+          },
+          {
+            "id": "ed774f96aef75452d5ddc145f4e4b8c63acafa314650f63b7812d8e43891713b",
+            "move": "c4d5",
+            "best": "a1c1"
+          },
+          {
+            "id": "c61c65778855952463fd3c95c5ba308220bb068540e767f6ad726ac8b54e86be",
+            "move": "f1e1",
+            "best": "f1e1"
+          },
+          {
+            "id": "80c86c3e6511b9f6e2be8c12659283ba96416911d437af68bd24f41fd72360c9",
+            "move": "c4d5",
+            "best": "d2d5"
+          },
+          {
+            "id": "c934cb16dc987c5d8c01253b08611f75c605a9dcb13c052703868536397eeaaa",
+            "move": "g5f7",
+            "best": "c4b3"
+          },
+          {
+            "id": "cd979b41342272266c267870be1fa208a7d316fb9196ef9bca07e5a5a4d016ed",
+            "move": "g5f7",
+            "best": "f1d1"
+          },
+          {
+            "id": "d1037b4728b8c342f161ce16d134f6ba3ed52098e8d594ff4171ea91a6ce93d1",
+            "move": "d5d6",
+            "best": "d5d6"
+          },
+          {
+            "id": "a253bc0429b79f7cceb6672bafc811abc32ea5617ba466e4fc3cf75472e02ca8",
+            "move": "d1d6",
+            "best": "b3f7"
+          },
+          {
+            "id": "8df9958b61b1ac1c69ff8bfb07997364baf2404ebc40aae3a8bf3b142fa045ee",
+            "move": "a2b3",
+            "best": "a2b3"
+          },
+          {
+            "id": "c635d9b416b7584d7d47c6ad10af188f91e06c356e1387245d6cfa7cf06b7a7c",
+            "move": "g5e4",
+            "best": "d6d2"
+          },
+          {
+            "id": "15af8602b6315de526b404205bbe8436d20af2b5fed06fc6d76c828f7e3cc2bb",
+            "move": "c1c7",
+            "best": "h2h4"
+          },
+          {
+            "id": "7632a6ec0d2e850e75c3d08ad6abdcd8072bf1c801f5855998793399146d64d1",
+            "move": "c1c7",
+            "best": "c1c5"
+          },
+          {
+            "id": "47f20ae5bb7476833dc0115138db6d73fa50268495f8bb6de11aa3c9c0d3b189",
+            "move": "c5c7",
+            "best": "c5b5"
+          },
+          {
+            "id": "e48a2ee6d9279c30740455af849217126ba1387afb24ba4928562f8d6b50a415",
+            "move": "g5f3",
+            "best": "h5g6"
+          },
+          {
+            "id": "2cdb275a02f029961ea11b264f343a5ad41839aa170d68bbed2fe4773c7e87c5",
+            "move": "b1d2",
+            "best": "c1g5"
+          },
+          {
+            "id": "7c4fdc8f471d92db82c8d86c8effdffdd8431e1d83be99ca040e9cc02d1c2dd5",
+            "move": "g5f6",
+            "best": "g5h4"
+          },
+          {
+            "id": "dcb0de56238cc166248ead139db77e640817025979d8fd27f15ae6704cf9c1bf",
+            "move": "b1d2",
+            "best": "b1d2"
+          },
+          {
+            "id": "9f4cbe1978e661fbf3d30f8e4baf851216a5cdfcde8ff10bed591180909e3b79",
+            "move": "h4g3",
+            "best": "h4g3"
+          },
+          {
+            "id": "ef3a0b5d92f75d885d7efb8820e9cb7855a84b92b9eb35622f99bd2c19b8ee09",
+            "move": "a3c2",
+            "best": "a3c2"
+          },
+          {
+            "id": "adde75b0e0adece638fa3c6b9cc192bbeda4152529a9aa88c4a14d5948650b93",
+            "move": "d3d4",
+            "best": "f1e1"
+          },
+          {
+            "id": "35f2d76f668fd042d9ec928354e1590e45473cc96ae8e274aa01210021400f1b",
+            "move": "d3d4",
+            "best": "c2e3"
+          },
+          {
+            "id": "e0003482432fc99e25acc7bb78269b48762292a78aeae25f8cbec0f66e6bd8d3",
+            "move": "e3g4",
+            "best": "b2b4"
+          },
+          {
+            "id": "ace91f635ec1e32b9b2a852c2f45d8ac1270c81ed6e14fe4e9f9c6a09c772494",
+            "move": "d3d4",
+            "best": "b2b4"
+          },
+          {
+            "id": "23a1c63eba1f0166d8097ad71ee15e6a3c8a5f8e20ca40c3024c38a475d4f6dd",
+            "move": "d3d4",
+            "best": "d1b3"
+          },
+          {
+            "id": "d37693ed8255b9f546549f2fa04101d0405706a751a46a64658507f66ee75487",
+            "move": "c4f7",
+            "best": "d3d4"
+          },
+          {
+            "id": "faeda057772658c925c12dc0cdf9c2aadab2109ef33801d2b754791d840cd3be",
+            "move": "d4e5",
+            "best": "h2h3"
+          },
+          {
+            "id": "c6d9552d238e8427b07874c91d97038a0cf592cdb6da17ccec409ab3ae792463",
+            "move": "d4e5",
+            "best": "g3h2"
+          },
+          {
+            "id": "bc5015a37813d6bfd4c9f55383c7d4e7425214ac4c5012139748cf53771918e3",
+            "move": "d4e5",
+            "best": "d4e5"
+          },
+          {
+            "id": "6b2154219ed8f805c0aadbb018c0010cd56161683bd30bdb431398ab0a5fbe25",
+            "move": "f2g3",
+            "best": "f2g3"
+          },
+          {
+            "id": "b42b8b045504f286829d4a21f215a4f09a19b7d8b1d0a3fb7da7d4edc818f951",
+            "move": "c4f7",
+            "best": "c4e2"
+          },
+          {
+            "id": "f451cc9461111cc850d9a88bd05ffe79950561733ca29bf981a7bcb3ca8c227d",
+            "move": "f3e5",
+            "best": "e1d1"
+          },
+          {
+            "id": "69deb74462662986a5544705ce596db2eef0dc0e12a18b70d4977f07f5624015",
+            "move": "a4b5",
+            "best": "c3c4"
+          },
+          {
+            "id": "fc13972139ab4b025bb4b4e30ed44e7883033808f1ecf1a831f7182aca3fc634",
+            "move": "a4b5",
+            "best": "a4b5"
+          },
+          {
+            "id": "0dcf35ce41be5c8a26c2b950b885a5d857a3517ed0051a3aef8a45630d236c44",
+            "move": "e4d5",
+            "best": "e4d5"
+          },
+          {
+            "id": "388507c3af60f0bed4e6780ca1778299397b744e22327f465d0f2c4bdf8704ee",
+            "move": "d5c6",
+            "best": "e1g1"
+          },
+          {
+            "id": "7846c2ad953dae1b8541a17a6200d6da965f869e198bd98136e511f31da0aedd",
+            "move": "f1e1",
+            "best": "d1f3"
+          },
+          {
+            "id": "5190cd460d2480c4ec4e68bf0d28b4b8e2fee8b0883cd50999a798ba21b3ca13",
+            "move": "f1e1",
+            "best": "d1f3"
+          },
+          {
+            "id": "e2c6d77677a4d4663f27f4f79d09d9934b474c084f84d5cb664d0e659025fbb9",
+            "move": "c3d5",
+            "best": "f1d1"
+          },
+          {
+            "id": "09f387ddeba1c53b0fb4c53ba3b8377c4e65bff852f2da4d7b7928939c5eab04",
+            "move": "c3d5",
+            "best": "d3a6"
+          },
+          {
+            "id": "93090484a893f9a3ef9c47a1751f391f468a52526bc42d774c6ee0843e6d8953",
+            "move": "c3d5",
+            "best": "c1f4"
+          },
+          {
+            "id": "e47ade35a46f16972c412564611ac20950e200f52f6ab64554759014959bc7c7",
+            "move": "a6d3",
+            "best": "a6f1"
+          },
+          {
+            "id": "ba7c7e6aeb361cdae58c78d523e490ec3e097663890ff1e6742f13940b743566",
+            "move": "c3a4",
+            "best": "c3e4"
+          },
+          {
+            "id": "9fa06159322912e3ee0fdfc00e9430d1a914b101710a54050f480ad96147567b",
+            "move": "d3e2",
+            "best": "d3e2"
+          },
+          {
+            "id": "be854f0cddbefbb7587c7eba6c462e98d62d5ea4937f1095140d740ba677e243",
+            "move": "e2c4",
+            "best": "e4f6"
+          },
+          {
+            "id": "216b903376daa688468e1b70b32c23071b1359586e6536a5eb1e8e7c4f1806b3",
+            "move": "e2c4",
+            "best": "c2c3"
+          },
+          {
+            "id": "fc4e160d75b7dae2e3d83b2ebee011e36fe25d20e1344bf33a56b9bd93af44f9",
+            "move": "b2c3",
+            "best": "b2c3"
+          },
+          {
+            "id": "4a1a2ff4f52866967238f1c512e23e4c8e49c0a4fc9d365f310f66968120f01f",
+            "move": "f3c3",
+            "best": "f3c3"
+          },
+          {
+            "id": "ebc66296e3368edba2cced67fa141bff6197b634733f1d0acdaf5caaea8fe217",
+            "move": "a1c1",
+            "best": "a1c1"
+          },
+          {
+            "id": "1917f0ec85043772a05d528deb70414ccf212d6ed6a087643c832b1e87e3000e",
+            "move": "c1c4",
+            "best": "c1c4"
+          },
+          {
+            "id": "7c009bce0e2f185c9f9983f6d5044dcd8b77bfe33bc6385efa138b38631364b7",
+            "move": "c4c7",
+            "best": "c4c7"
+          },
+          {
+            "id": "303c1d7efef0d122b4f1ab7fee3422984c51c2d1c830ac43bf8c7046f4705bf5",
+            "move": "e2c4",
+            "best": "e2c4"
+          },
+          {
+            "id": "b50110219cedd0f3ba72b98121c6450e1b2cd0f68cd7a9a3cd2dc13775d6f75e",
+            "move": "f4d2",
+            "best": "f4d2"
+          },
+          {
+            "id": "120f683d2c4339208e3a15432088a4acf47518892441867266a6bedc85f2a463",
+            "move": "b2c3",
+            "best": "b2c3"
+          },
+          {
+            "id": "c4208f07c261de4e3677f0c217c6b65c69083ada8d492ab30caaeead67105ba6",
+            "move": "b5c6",
+            "best": "g5h4"
+          },
+          {
+            "id": "fa006bb5ded247c5341869ba60fa10a0d453bc8588ddea9a577b0f7ea91c0d2f",
+            "move": "b5c6",
+            "best": "b5c6"
+          },
+          {
+            "id": "396510dc0d270928cebc16c5684c1707079c044677b32f9a2b43ad209807dd6e",
+            "move": "a4c6",
+            "best": "h2h3"
+          },
+          {
+            "id": "73756b0e1ad3126720626497151f61c35264f2c1e8603220b11eabba0269d815",
+            "move": "a4c6",
+            "best": "a4b3"
+          },
+          {
+            "id": "ffdc775b0b12efde4f5e9c5ebb90c0477eda1ab1987c4069caa314b70d3340f6",
+            "move": "h4f6",
+            "best": "a1b1"
+          },
+          {
+            "id": "4d0aaf447b4f7bfc576d90219025c5522c60e22e043f9a38349c30f7ae086919",
+            "move": "b3c4",
+            "best": "b3d5"
+          },
+          {
+            "id": "85d257bf66e90bba04a8d779f8574bdf3abc97a443949b1cc903b5bf8da1a592",
+            "move": "d5c6",
+            "best": "d1d2"
+          },
+          {
+            "id": "b13a5ebd92fa8fea92248fb3324a9ed4d2417c04f6c5667096e263b8c305a812",
+            "move": "d5c6",
+            "best": "d5c4"
+          },
+          {
+            "id": "f33c1d84d6a54815aa81c058b7e9c84635046a98860d1fd3ed7e36fdf0fba86a",
+            "move": "h4f6",
+            "best": "d3d4"
+          },
+          {
+            "id": "b2ab50d08a91444268e35c5ad7d050ddb7ce70ba38abdc41365580e87a64b303",
+            "move": "d4e5",
+            "best": "f1e1"
+          },
+          {
+            "id": "d738ae281c9c23dcf127abc59ddf0bf00769ea74ca5ff4f9743992775455c0da",
+            "move": "d4e5",
+            "best": "c4b5"
+          },
+          {
+            "id": "1b9269d8374fe31ad26bb118ba9ddd41a3fba3f8a4e09fc32aacc45ebf2377f5",
+            "move": "h4g3",
+            "best": "h4g3"
+          },
+          {
+            "id": "710f6d3c2c7e55aa64634b3be199caeef72e8ca7f0977f396c69833fc7afe1c5",
+            "move": "h4g3",
+            "best": "h4g3"
+          },
+          {
+            "id": "c8aacd84e3930f99786191532d70a749d27862548a24e7eb8f00f26594d89021",
+            "move": "f3e5",
+            "best": "c3c4"
+          },
+          {
+            "id": "0c347d96bc5c1e37963727a4cc0b0bd0b74ebbaa0c8c43e55d121a69e9a08e5e",
+            "move": "d1f3",
+            "best": "d1f3"
+          },
+          {
+            "id": "f0adb76f0c7cf17d9cf1d6932bb2f7386622fa4c53db16c9fe1b56a195bffa5e",
+            "move": "c4b5",
+            "best": "b1b5"
+          },
+          {
+            "id": "4b31e9bfc1db196679e2877f1ab0f921c5cea5751ca689432892557f30ff75a5",
+            "move": "e4e5",
+            "best": "f3c3"
+          },
+          {
+            "id": "05cdca3abe6f47d798884976db13255edd05e1f197000e22322a979fd58bd09c",
+            "move": "e4e5",
+            "best": "f3c3"
+          },
+          {
+            "id": "11e510ef0fa402aca91264736a98d8fe0e77f347a9708fdc54480cd610fbedb1",
+            "move": "b1c3",
+            "best": "c1f4"
+          },
+          {
+            "id": "1261005b1acef0c42be3cd027411b021a5f6e58c6f946860138babaecfadf92f",
+            "move": "b1c3",
+            "best": "b1d2"
+          },
+          {
+            "id": "fc367d914a4949fcf133c4323fb2b2e6edb8fbeecd4414575a64b6613e2bd42b",
+            "move": "f1e1",
+            "best": "c2c3"
+          },
+          {
+            "id": "d4c1fb3db6e8bf5b8c5f496f296a572d433c0a1be89e8ee140233b95039c5928",
+            "move": "d3f5",
+            "best": "c2c3"
+          },
+          {
+            "id": "62d55665e241644cc0e4ec8ddcc79f8a91fef28ec48093242e2ceaeac6e8fc53",
+            "move": "f4d6",
+            "best": "f4d6"
+          },
+          {
+            "id": "c8f4e67d5a09b21f17724e1b5d01b9cf76785834f4672dd66b8ef3ed2e5aa203",
+            "move": "d3f5",
+            "best": "b2b4"
+          },
+          {
+            "id": "5c49255e9a0a522bd9f9b6afa88362989b6e738db8fa4ddd2375cbfe03370e27",
+            "move": "d3f5",
+            "best": "a2a4"
+          },
+          {
+            "id": "f06084765a854fdb1599bf4df3fa089a30f84f579468303fd6b0fad0531b961e",
+            "move": "d3f5",
+            "best": "d1c2"
+          },
+          {
+            "id": "3201e183790144532b2538c405cef6859eb3622c127e9c4288e2eaf7d5cd9509",
+            "move": "d3f5",
+            "best": "b1c1"
+          },
+          {
+            "id": "45a5036c600650705c5b3f2193c795a3bd2f28f6296c348f05c94cef5f967072",
+            "move": "f3e5",
+            "best": "h2h3"
+          },
+          {
+            "id": "405d3fc34029ce02d38e7c530e387ba5454a8cf44abde919574b652ffe4c7a43",
+            "move": "f3e5",
+            "best": "d2f1"
+          },
+          {
+            "id": "ade98f35419212f57b2bf8b50c9a3ae44b2e3a5f22e2903cae83c59218e6affd",
+            "move": "b4a5",
+            "best": "f1g3"
+          },
+          {
+            "id": "e7ed65c13dc4ed112ca6ab22b5af2f02fdf0fbecc358c378b1e2dd8d5d621707",
+            "move": "g3f5",
+            "best": "d3f5"
+          },
+          {
+            "id": "17dac3c5a5ad572bb3d35170f8af460bef6dff55dec68e59b413360514707e7c",
+            "move": "f2g3",
+            "best": "f2g3"
+          },
+          {
+            "id": "32c2bf62be963b0f9ef3f1f426933466cba28c045703b81627e4130cae17c315",
+            "move": "b4a5",
+            "best": "e5d5"
+          },
+          {
+            "id": "31e7f80a9e8366ecbfcc560899283eb08ad76645ce22304c82311a0440397628",
+            "move": "d5a5",
+            "best": "d5e5"
+          },
+          {
+            "id": "0fb3d406c2211d96c5a924d5b809b4d84f90976ed38c63f396852131b926d710",
+            "move": "d3f5",
+            "best": "c1d2"
+          },
+          {
+            "id": "36d517d95f40e37e60502818d55d9e38858aef1d95f0023f2d3ee6b65e9f1110",
+            "move": "d2d3",
+            "best": "d2d3"
+          },
+          {
+            "id": "f1a82b36b0461c4ef5e5be751279a857c081b6f76788c7af4708615598d5de82",
+            "move": "e5e8",
+            "best": "g1h2"
+          },
+          {
+            "id": "62cd6e157f87b0d3beb862017c99c85b8a77bb043a05feaeed7a007af873ac8e",
+            "move": "b1c3",
+            "best": "b1c3"
+          },
+          {
+            "id": "b58e91b48c4303878a564cb4aaf36089a9c72fbdeed4d04263858a85fd97f691",
+            "move": "c1e3",
+            "best": "h2h3"
+          },
+          {
+            "id": "5703f7a17885713078063d397bf41a096c8320509c4f8b35687e36991a391604",
+            "move": "c4d5",
+            "best": "c4c5"
+          },
+          {
+            "id": "e9b0b762b7638cbc2a447dfbdfa8c30e3bcc58a9571d67b9b4a1439adb66183c",
+            "move": "f3e5",
+            "best": "b2b4"
+          },
+          {
+            "id": "91e72edcbd2fe65b047336d99091f11cb308a93f863f38b0b81af5060f247a1d",
+            "move": "f3e5",
+            "best": "f3e5"
+          },
+          {
+            "id": "b12ac10a0ce9af8c0342f7c4efd876eb783078994e435854d992cd0fdc568c90",
+            "move": "d1e2",
+            "best": "c3e2"
+          },
+          {
+            "id": "e7957da193d86b2184ba1dd4ec343712f2176c968364ba1631250fddd7f80e94",
+            "move": "b4b5",
+            "best": "e5g4"
+          },
+          {
+            "id": "79ac581ef37bd35093fbbcfdf8036a820ad52b1186c4094eec1785d0c9694434",
+            "move": "d4e5",
+            "best": "d4e5"
+          },
+          {
+            "id": "adae00ffa3e6f3183f94f1f93c140c8a37d5a8cd7e45ad20b39498fe07f5791e",
+            "move": "b4a5",
+            "best": "a3h3"
+          },
+          {
+            "id": "8634fdb6e35837e357aa67fe0fde09a5927f90fa47f041fa96264fbb19fec214",
+            "move": "b4a5",
+            "best": "c5c6"
+          },
+          {
+            "id": "0257e19400d5bceccbe9a4d32a6b8249f7866e7a4f3661510c2c1eb30e1b3a90",
+            "move": "b4a5",
+            "best": "e2d4"
+          },
+          {
+            "id": "05ff8bae9a92d3139588b185af37bdd9d32cdc20aaaf2b4d23ebd858a13aadec",
+            "move": "d4c6",
+            "best": "d4c6"
+          },
+          {
+            "id": "31f6cdaf7d820a844378f8f83fda6bc4aad0c87bdea9c1a8b7092fb7316ef405",
+            "move": "d4c6",
+            "best": "d4c6"
+          },
+          {
+            "id": "7a3b41dd2a531ebf721ee10548f20fd755ba57e6015a8a8ea5f025d4052a0a9e",
+            "move": "c6a5",
+            "best": "b4b5"
+          },
+          {
+            "id": "9acb8de1cf8b5e28b85461b63468fa864d5cd5a2ce442cac36ba72cca62160ca",
+            "move": "c6a5",
+            "best": "c6e7"
+          },
+          {
+            "id": "0adadcce37a98dde0f2ca7dec3fb617a7cb30001c2b7388c51f9dc9daf7ac599",
+            "move": "h3c3",
+            "best": "c1a3"
+          },
+          {
+            "id": "2cd8cfc4730c8bfe91f040074bfa4b4050291906107a80774ea875fd6f5cf69f",
+            "move": "a3f8",
+            "best": "d2f4"
+          },
+          {
+            "id": "14f22e1968c8eae8377e86544b902ab09e9f000448c69aeb1c53ff84d385ed50",
+            "move": "h3a3",
+            "best": "d2h6"
+          },
+          {
+            "id": "58b0752d41e3ae43dbd2e708faa78027fd029bb4df99715ce4af6c17243bead2",
+            "move": "c4d5",
+            "best": "d1c2"
+          },
+          {
+            "id": "26b48aeefdca443b90ed3ac6275e7171e166c4148ada757da231bc9ade0ff554",
+            "move": "f1c4",
+            "best": "f1c4"
+          },
+          {
+            "id": "a860b0cc40680f8f7510a2bf9274df303064fee31ef76023955a91c27701fcf8",
+            "move": "d4c5",
+            "best": "a1d1"
+          },
+          {
+            "id": "9b423050ff8f3c74ac4f8de24b75956785db64d0fcc8c5ccbf80ecdaf51f673d",
+            "move": "h4e7",
+            "best": "h4e7"
+          },
+          {
+            "id": "7049ed3ee2add6398fe8d0f5a4c854e7fe3cf5362980bb9eb06b2fc7fc708e64",
+            "move": "e1c1",
+            "best": "b2b4"
+          },
+          {
+            "id": "f9cb45613e68e71bef1bae55d6167811bbb4c5f89e8e629fee175b530c0e831f",
+            "move": "b4a5",
+            "best": "c2a4"
+          },
+          {
+            "id": "dd0efb10ce3562fdecf7d837e6e6be56071d2d99e71991c9fd89399a4f65ff92",
+            "move": "a4b5",
+            "best": "c4b5"
+          },
+          {
+            "id": "ed271d6e92fc6d76d2fa3d24cb929705df2086aadaa7f0712dcb75d1114a108b",
+            "move": "b5d7",
+            "best": "b5d7"
+          },
+          {
+            "id": "e3dd9e3b1f93b8536a8ff19cb86322708598601a0310bd4fac603b126ef12e12",
+            "move": "c6b7",
+            "best": "a4c2"
+          },
+          {
+            "id": "6798eb9faca78c910a523b59d73b645ac82af9a61c93d97385317d32eaf1bb94",
+            "move": "c6d7",
+            "best": "b5a6"
+          },
+          {
+            "id": "b2722a810537fb2babf19f17e586b5549ffe4a8020ed3f5f31b031d338a2e99c",
+            "move": "c6d7",
+            "best": "a6e2"
+          },
+          {
+            "id": "221cd8bce9d8bfa4ac76b0da34e03652e179fc85a5b8dbc99cc0ba446bad7c6f",
+            "move": "c2c3",
+            "best": "c2c3"
+          },
+          {
+            "id": "df2509b82b0c7212bd62a217ea56fec4f5cd3c821db6331399b720cca3c052cb",
+            "move": "e1c1",
+            "best": "e1g1"
+          },
+          {
+            "id": "4dce4a5e085a5ddad74d3b20220ffffab036bd5e7454486d4d0e0fb223273c20",
+            "move": "b5c6",
+            "best": "b5c6"
+          },
+          {
+            "id": "3455bf46a7b67365aa99cf002f7df75e42ccfef3616fc1db96f8b2a6089f7117",
+            "move": "e1c1",
+            "best": "f3e5"
+          },
+          {
+            "id": "b79bf0cc1df0f18c23993178ff6a1c793407c8cfe2c19b83dbf6cfebd40d2cb9",
+            "move": "e1c1",
+            "best": "e1g1"
+          },
+          {
+            "id": "ebdf2856601de5d35808c09aeb1acacc38a2275b3a4d4d829c0ab8d7ed478fae",
+            "move": "e5g6",
+            "best": "e5g6"
+          },
+          {
+            "id": "a7a8a6a9354acfa39fc80f7a43d35d34257b29130612c86d23253c8586414849",
+            "move": "c6e4",
+            "best": "a1c1"
+          },
+          {
+            "id": "3548ff6b6b4a8a7507b6c3049dbe9c9ea66206f3e0b78fd4ae9d67a8a8115b79",
+            "move": "c6a4",
+            "best": "h2h3"
+          },
+          {
+            "id": "6318b1232ffe440ead464744ed33728e9c8224a3b60bca1baf1099e2f8e9e79f",
+            "move": "c3d4",
+            "best": "e3d4"
+          },
+          {
+            "id": "2675828b999c1cb24b470837525d9cc90c6572030bfae8fe5c05ea54de75e162",
+            "move": "g3d6",
+            "best": "g3d6"
+          },
+          {
+            "id": "15f45ce8145de7374bf780f17389b22399216f60d5cf35773e2d57bad0c08cfc",
+            "move": "f1d3",
+            "best": "f1b5"
+          },
+          {
+            "id": "63bfb8c8a9ec86a9177bf761076caa226a84f4c9c94012db0c385a4973ecd046",
+            "move": "e1g1",
+            "best": "e1g1"
+          },
+          {
+            "id": "3beb21c76ac3eb28d0be61214087b5ff44320d35d53acb21d1786adb32633f26",
+            "move": "d4e5",
+            "best": "d4e5"
+          },
+          {
+            "id": "d89f097f3d0cbc4eb7b45c9f65b5da52900b8559319a6a6db21514c3f5d154c9",
+            "move": "f3e5",
+            "best": "f3e5"
+          },
+          {
+            "id": "a811fd43b2626f25e2aaa530ef8fa68ab802dbea239af451d94349d9a622fb4d",
+            "move": "d2f3",
+            "best": "f1e1"
+          },
+          {
+            "id": "7296c9781e6ef138a8ce309fc3d44bb3986c6743ddd9bd0ec9598fde2809d7b8",
+            "move": "d2f3",
+            "best": "d2f3"
+          },
+          {
+            "id": "5f1361cf9087f8c5a678f2dc1e2eb879f5baef570c7afee3ff376e01c8a7184b",
+            "move": "e1e8",
+            "best": "e1e8"
+          },
+          {
+            "id": "f1349330fc19acf5288e3baa099b7593a837a8c7b3298e52aa0f363bdb9c5c5a",
+            "move": "a2a4",
+            "best": "d2f1"
+          },
+          {
+            "id": "d958cef7e41a1b151550d81c08b7a56649140d86a2fa0502e4869b1053076352",
+            "move": "f3d5",
+            "best": "f3h5"
+          },
+          {
+            "id": "3cac6d3c93eb4e4c7527001c90c3adaff9e93b0f83cba294da11ab257a4d08f5",
+            "move": "c3d4",
+            "best": "c3d4"
+          },
+          {
+            "id": "4cf8259856e64bb3477068cf600571f8b00f6298491829a5ccc3c299bc0b9a28",
+            "move": "d1h5",
+            "best": "d1h5"
+          },
+          {
+            "id": "931d0905fdc0e5e18d48468ffadac156bd400663df4a6288330ff5d53bbf5d17",
+            "move": "d4d5",
+            "best": "f1e3"
+          },
+          {
+            "id": "b09402b3bdc8134d5d168380b87e99902f3490dd21521be10c694b30c0ecdce5",
+            "move": "e3f5",
+            "best": "h5e2"
+          },
+          {
+            "id": "13cc5f086d79bbac50bf04ddbb3b6a0c6ed484dbf311939f28178454677c4962",
+            "move": "e3d5",
+            "best": "h2h3"
+          },
+          {
+            "id": "9a7628692873f309323f99450fa87196d8858ebd3574b3c0dd9a324fe26142d4",
+            "move": "e3g2",
+            "best": "e3g2"
+          },
+          {
+            "id": "77a3037f9c71419f08b35edcdb398084547a32806790825e32c2c453e71d81c0",
+            "move": "g2f4",
+            "best": "b2b4"
+          },
+          {
+            "id": "869eee6a4e82e053d7463fff9f4501970b5e552af3a3c9a63897c3dbe22f36f8",
+            "move": "g2f4",
+            "best": "h3h4"
+          }
+        ]
+      },
+      "float32FeatureMetricDisagreement": 0
+    }
+  ],
+  "verificationSourceSHA256": "db15533c40ab8826453cf03b7fe92c04ca2e676b2cd2da48821e88a6c25ae6d4",
+  "developmentDatasetSHA256": "8f0155f2a431d541b45e1a3384dc25a8bb7efb9f73c5bf39824ed0f432ee88ad"
+}

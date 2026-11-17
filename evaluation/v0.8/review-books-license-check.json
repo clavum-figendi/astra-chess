@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "officialUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode.en",
+  "httpStatus": 200,
+  "htmlBytes": 32223,
+  "htmlSha256": "b43732f4c1463b087cf10d4daf8d8766514b2bf8f21bc5ef50905f95be227726",
+  "shippedTextBytes": 7048,
+  "shippedTextSha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+  "comparison": "Statement of Purpose and all substantive sections 1-4 equal after whitespace normalization and removal of plain-text list markers (HTML renders these as list metadata). Shipped original disclaimer is present.",
+  "notClaimed": "Did not refetch legalcode.txt; parent reported that separate request returned 403."
+}

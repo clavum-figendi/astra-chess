@@ -1,0 +1,74 @@
+{
+  "passed": false,
+  "verdict": "FAIL",
+  "scope": "Independent code-quality/security review of offline-book UI, worker, CLI, build and acquisition implementation, including all scoped untracked source/tests. Not model-evaluation provenance, weight confirmation, promotion, deployment or whole-release approval.",
+  "baseCommit": "c6dc9647f7a0537322ffd71f784f0a696be97413",
+  "reviewedFileCount": 19,
+  "sourceHashes": {
+    "laptop/cli.mjs": "43de227f357d9d12c5ba4c9d528aa14676a3e471dec620aa87038fcc87587dc1",
+    "public/app.mjs": "f8d1d680710a5e5e4c355878489c40cff079afc93a610e9e2d2488b74c1c7d64",
+    "public/index.html": "6a7fe35e89d2160fb76c25ad6c8da939df292425d7c724ee2af8a57ad1b83039",
+    "public/worker.mjs": "f970299643760048b0669f7e118aacdbe6a1def4f777e38efa035725da4c893e",
+    "src/book-sources.mjs": "f575c12bf3f6d9717c923545949a9dd8e29e264f9752ea6dc0c35094b1980df7",
+    "tests/test_v8_books_extract.py": "04826bee0c2b4b82a4fa5c3e9ac63b1adaf2bf04cbf0312c0dff0504d7096448",
+    "tests/v8-book-ui-app.test.mjs": "9ccb5691c69ec053a49f14574a340b9f32910406d8923c377d9b9183e94ebb88",
+    "tests/v8-book-ui-build.test.mjs": "beb6c9d5676572df5ed8de4cdae4d3de91e8ca7e759d6d9f407ce659318ea4bd",
+    "tests/v8-book-ui-cli.test.mjs": "8cd8129400f597c3eadcd59a1e384947722638a5da01bd7fb5a9b79b7182ecbf",
+    "tests/v8-book-ui-worker.test.mjs": "c1727633950b236314db29c95bc5e11daa892bf0adc86790543c5db0a7861fc0",
+    "tests/v8-books-build.test.mjs": "7fb6e3b78d201e192771a9775861f794dfe4a2a360577fd07764a7e713ccea44",
+    "tests/v8-books-fetch.test.mjs": "054b06d24ca48e1ed8ac052fe1f0f3d2c9c4dd0869ba995e0b9a35c27e8abd04",
+    "tests/v8-books-snapshots.test.mjs": "7e47f2a2ddf9764ad7a2c04dd8bd05060e0dd9f4e6f98235fb8dca9a9a57bc3b",
+    "tests/v8-books-validator.test.mjs": "8bcc9be0a9d22252f498c062c07f273d21219fee2316ddb377aa67ec3dd3b579",
+    "tools/build.mjs": "e94de1a83c6c29c82475f3181061658cb07312d9cbbeb02e58659c722181cf93",
+    "tools/v8-books-build.mjs": "49f07dcfac0a702a7964e3a7597af5f2cc3b7a550143e9ca0ada874812180691",
+    "tools/v8-books-extract.py": "1c05faf9f19c5b508e0deeb99f2c4d291700e8e92fd45ce1616e3de90c11e1cd",
+    "tools/v8-books-fetch.mjs": "41bd4af4281b99fb24c958f24498bba7a630d9c3bc912c62d1bf87ff50b11a4c",
+    "tools/v8-books-receipt.mjs": "d67e93e4eaff0742742fd115e97cd1ee0503dce242280b3ad0a2a07e899f81bd"
+  },
+  "security_concerns": [],
+  "logic_errors": [
+    {
+      "id": "QUALITY-1",
+      "severity": "medium",
+      "file": "tools/v8-books-fetch.mjs",
+      "lines": "21-33",
+      "title": "Failed exclusive-create deletes an existing partial download it does not own",
+      "description": "The deterministic .download path is opened with wx, but the unconditional catch cleanup unlinks it even when createWriteStream failed with EEXIST. A second fetch, or retry encountering an existing partial, destroys the first operation's checkpoint instead of leaving it untouched. In a concurrent fetch the first writer can continue writing an unlinked inode and later fail rename.",
+      "reproduction": "node evaluation/v0.8/review-quality-probes.mjs",
+      "observed": {"errorCode": "EEXIST", "existingPartialSurvived": false, "finalExists": false},
+      "fix": "Create a uniquely named partial per operation, or establish exclusive ownership before entering cleanup and only unlink if this operation successfully created the file. Preserve any pre-existing partial on EEXIST. Add sequential-collision and overlapping-fetch regression tests.",
+      "acceptance": "An EEXIST rejection preserves the pre-existing sentinel bytes; another active acquisition remains able to rename its own partial. Existing exact-range, overflow, truncation and timeout behavior still passes."
+    }
+  ],
+  "suggestions": [
+    {"file":"public/app.mjs, public/worker.mjs, laptop/cli.mjs", "note":"Registry schema/path/SHA checks are duplicated in three places, with a weaker top-level-only build check. Centralize the pure registry validator in a shared module in a later change to prevent drift; do not silently broaden accepted paths."},
+    {"file":"tools/v8-books-extract.py:45-78", "note":"Harden exceptional subprocess cleanup with try/finally/context management, terminate/wait on parser/read failure, and consider bounded readline before allocating oversized physical lines. Normal official-corpus behavior passed; malformed decompressor output and child lifetime were not independently exercised here."},
+    {"file":"tests/v8-book-ui-build.test.mjs", "note":"This test is explicitly a source-pattern gate, not a packaged execution test. Keep its evidence separate from parent-owned actual build/package validation. Future preflight tests could exercise missing registry-referenced assets and malformed entry schema in temporary build roots."},
+    {"file":"public/worker.mjs:50-61", "note":"The compiled-cache header digest detects accidental corruption, not malicious same-origin cache writers who can replace both body and header. Source asset SHA is verified before cache use; no independent security boundary against same-origin code is claimed."}
+  ],
+  "executedCommands": [
+    {"command":"git status --short && git rev-parse HEAD && git diff --stat && git diff -- public/app.mjs public/worker.mjs public/index.html laptop/cli.mjs tools/build.mjs src/book-sources.mjs", "exitCode":0, "result":"Reviewed actual tracked diff plus every scoped untracked source/test through file reads."},
+    {"command":"node --test --test-concurrency=1 tests/v8-book*.test.mjs && python -m unittest discover -s tests -p test_v8_books_extract.py -v", "exitCode":0, "node":{"passed":15,"failed":0,"skipped":0,"durationMs":47705.203765},"python":{"passed":1,"failed":0}},
+    {"command":"node evaluation/v0.8/review-quality-probes.mjs", "exitCode":0, "result":"QUALITY-1 reproduced; probe asserts observed defect rather than acceptance behavior."}
+  ],
+  "checks": {
+    "staticScan":"Existing .cache/v8/static-scan.json covers exactly all 19 current source hashes. Both flagged exec occurrences are fixed RegExp.exec calls at laptop/cli.mjs:100 and tools/v8-books-fetch.mjs:16, not dynamic code execution. Manual review found no literal secrets, shell=True, unsafe deserialization or untrusted HTML interpolation in scoped changes.",
+    "pathsAndHash":"Book IDs and filenames use anchored allowlists, ECO has one exact compatibility path, enabled profile bytes are SHA checked, source lines are strictly replayed and position maps compared. Registry errors, bad SHA and unknown sources do not substitute ECO. SOURCE.json is parsed without an exception-swallowing fallback in buildSnapshots; malformed JSON throws closed by inspection.",
+    "streaming":"Acquisition has a pre-network 200000000-byte cap, exact bounded 206 range validation, streaming hash/backpressure, overflow/truncation rejection and 120-second controller spanning body transfer. Temporary cleanup has QUALITY-1 and therefore is not approved.",
+    "lifecycle":"App generation/worker identity guards and worker loadVersion prevent stale profile publication; clocks and premove paths remain intact. Actual app-module fixture exercises cancellation and PGN loadPgn roundtrip with BookHash and BookHashAlgorithm SHA256. Worker fixture covers profile/error/cache/cancellation paths with model/network doubles, not actual neural inference.",
+    "realCorpus":"Executed read-only snapshot rebuild and all three actual runtime validators; byte-identical artifacts, 3000 unique qualifying source games, same-corpus slow subset, integer frequency weights, license, legal moves and exact FEN/ply guards passed.",
+    "cli":"Executed packaged-layout fixtures with actual CLI/protocol/book code and stubbed policy/network. Source selection, seed/SHA, book off, policy fallback, unknown/corrupt source rejection and UCI BookSource reset passed. Not actual model-strength evidence."
+  },
+  "priorBrowserReceipt": {
+    "path":".cache/v8/browser/receipt.json",
+    "sha256":"c447ce2813f38a210d4d98a85cc34898ec81f52735d9351577d16ffe74d61557",
+    "verifiedDistBindings":20,
+    "distMismatches":[],
+    "currentAppWorkerIndexMismatches":[],
+    "runnerSHA256Matches":true,
+    "matrixEntries":9,
+    "interpretation":"Parent-owned earlier built-browser evidence only. Its 20 bound dist assets, current public app/worker/index bytes and runner hash match. No browser launched or live/whole-release claim made by this review."
+  },
+  "limitations":["No production edits, dist rebuild, browser launch, acquisition request, heavy ML, commit or push.","No full Node suite rerun; only scoped 15 Node tests plus one Python test executed independently.","No extracted release/package certification; build test is a source-pattern check.","Only the retained book corpus was replayed; no full original game or rating/strength claim.","Model-evaluation provenance, final weight/promotion confirmation and final documentation delivery remain outside this approval scope."],
+  "summary":"FAIL: no security blocker found, but a reproduced acquisition cleanup ownership error must be fixed; all 15 scoped Node tests and one Python test passed."
+}
