@@ -1,0 +1,278 @@
+[
+  {
+    "path": "openings.json",
+    "sha256": "dc6398f617d58dc5e7697eea46452a465326cac808bc60f34d2439f5deef5d3d",
+    "bytes": 1013432,
+    "contentType": "application/json; charset=utf-8"
+  },
+  {
+    "path": "index.html",
+    "sha256": "b84b120211428492d39ebcb238a93b81f416776b23e30a853882c937367cf188",
+    "bytes": 9374,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "evaluation.json",
+    "sha256": "0c242b2083f7379eaf563409d05cfa0a7911459a0db33df04115da8c2fd2adbe",
+    "bytes": 210955,
+    "contentType": "application/json; charset=utf-8"
+  },
+  {
+    "path": "DEEPMIND-CODE-LICENSE.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "bytes": 11358,
+    "contentType": "text/plain; charset=utf-8"
+  },
+  {
+    "path": "app.mjs",
+    "sha256": "f8d1d680710a5e5e4c355878489c40cff079afc93a610e9e2d2488b74c1c7d64",
+    "bytes": 24652,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "README.md",
+    "sha256": "847bbdd1b6c1ca275c0ca2509a78f6d50834ef81de7d3e0a80e5607a924b874b",
+    "bytes": 5323,
+    "contentType": "text/markdown; charset=utf-8"
+  },
+  {
+    "path": "CHESS-JS-LICENSE.txt",
+    "sha256": "0b3a3c2b4432a26bb18f9d06f5bba4de015bcc980306b7db28b06025495e2186",
+    "bytes": 1315,
+    "contentType": "text/plain; charset=utf-8"
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "8d2dfeb1e8990e120ff6f190846543d8184c5842572c34aef6b60f3de00b4b4a",
+    "bytes": 1081,
+    "contentType": "application/octet-stream"
+  },
+  {
+    "path": "OPENING-BOOK-NOTICE.txt",
+    "sha256": "2f0074c1bb523585970e3300838a22f55434dd7b77bdc12377982d771affd4df",
+    "bytes": 698,
+    "contentType": "text/plain; charset=utf-8"
+  },
+  {
+    "path": ".nojekyll",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "contentType": "application/octet-stream"
+  },
+  {
+    "path": "worker.mjs",
+    "sha256": "f970299643760048b0669f7e118aacdbe6a1def4f777e38efa035725da4c893e",
+    "bytes": 7901,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "style.css",
+    "sha256": "f702029c951934e481a5c8f8648b9fba286f62dd66d760528b97f4e3ef88c41a",
+    "bytes": 14831,
+    "contentType": "text/css; charset=utf-8"
+  },
+  {
+    "path": "books/lichess-2200.json",
+    "sha256": "3207537740ffa7420a58d4749489fe32539bc56bc1adb9dfcf9359b9051c1227",
+    "bytes": 1540282,
+    "contentType": "application/json; charset=utf-8"
+  },
+  {
+    "path": "books/manifest.json",
+    "sha256": "61ec837d33be73c83c051cba0661b32bd905ea5d59598852352410032e89125a",
+    "bytes": 2615,
+    "contentType": "application/json; charset=utf-8"
+  },
+  {
+    "path": "books/CC0-1.0.txt",
+    "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+    "bytes": 7048,
+    "contentType": "text/plain; charset=utf-8"
+  },
+  {
+    "path": "books/lichess-2200-slow.json",
+    "sha256": "fdd9a2409d8993206caf2fc42e42a509d60ca2217e4ba0546672e2572361a43a",
+    "bytes": 182086,
+    "contentType": "application/json; charset=utf-8"
+  },
+  {
+    "path": "models/atlas-v8.bin",
+    "sha256": "c183d35facdf6c831331e7b9a82ca9b0b58c87e8f32f334a4c76df7a3d97ef66",
+    "bytes": 38397944,
+    "contentType": "application/octet-stream"
+  },
+  {
+    "path": "models/deepmind-9m-v7.onnx",
+    "sha256": "b2a643b1bb910e0035e514ef7efecc62b69dbd3740af6cc18abaddf75471d8ee",
+    "bytes": 17991221,
+    "contentType": "application/octet-stream"
+  },
+  {
+    "path": "models/manifest.json",
+    "sha256": "590d6b74d0e5aea24ad750a2051963b475994a4aa6e54d9711a98ed7a8fb4098",
+    "bytes": 4121,
+    "contentType": "application/json; charset=utf-8"
+  },
+  {
+    "path": "models/pocket-plus.bin",
+    "sha256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+    "bytes": 8465724,
+    "contentType": "application/octet-stream"
+  },
+  {
+    "path": "models/deepmind-browser.json",
+    "sha256": "b93d7f22f570ce8c5c01d570adc15fa3a6edd9b9098d7f2e107f24243d950000",
+    "bytes": 1398,
+    "contentType": "application/json; charset=utf-8"
+  },
+  {
+    "path": "models/policy-config.json",
+    "sha256": "b7d9e4133433bda6eae1cd00a0fc3c217375d003727b97465ad06ac79cef567d",
+    "bytes": 45720,
+    "contentType": "application/json; charset=utf-8"
+  },
+  {
+    "path": "models/active.json",
+    "sha256": "a2257fb1443af2b9729426a4a947f796cb19dec635cc8247481ff02ecde466e4",
+    "bytes": 402,
+    "contentType": "application/json; charset=utf-8"
+  },
+  {
+    "path": "models/sizing-proposals.json",
+    "sha256": "1a8499142fec95761e6bb4636082f431d1203f16ffdc8a66f6c56b2bfeb8e975",
+    "bytes": 2080,
+    "contentType": "application/json; charset=utf-8"
+  },
+  {
+    "path": "models/tuned-config.json",
+    "sha256": "f2f95a2672949cf36bd87877375511cbb45f5efb1c264727cab5989e0d69c9fb",
+    "bytes": 4369,
+    "contentType": "application/json; charset=utf-8"
+  },
+  {
+    "path": "src/clock.mjs",
+    "sha256": "19355b93e1394a13d55c9a39d8d4a12c78093826b35edf862de7fc0c2128d6b0",
+    "bytes": 1288,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "src/model-resource.mjs",
+    "sha256": "1da6611174aceb2322ee8b534f0969bbd43a7c770163fd5bd1370f99f801d417",
+    "bytes": 1096,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "src/opening-book.mjs",
+    "sha256": "691d5802ed8b30ce5572c0f6b3a7bab7d246ca2c545ff38fb48a61a391076e62",
+    "bytes": 4302,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "src/premove.mjs",
+    "sha256": "2544bd78176f6b1192646e6eff0b59ec7b5c73988d4fba7ff746e2315bf0fdc8",
+    "bytes": 1186,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "src/engine.mjs",
+    "sha256": "5a381f2ca3b0c4a0d99115b6fef616ae8a6239cc3e802d27e7f26d0edbfe57b7",
+    "bytes": 1926,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "src/transformer.mjs",
+    "sha256": "dc7ee006e1eb6448d186ea645ca40cf21f51f9db558366b8483e587a1ff1c0ab",
+    "bytes": 8980,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "src/sound.mjs",
+    "sha256": "aef70e82fbd96404fd689d586f0a177ae8309b925b5b0f57aa389fbd37a85c65",
+    "bytes": 1858,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "src/book-sources.mjs",
+    "sha256": "f575c12bf3f6d9717c923545949a9dd8e29e264f9752ea6dc0c35094b1980df7",
+    "bytes": 1723,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "src/chess.mjs",
+    "sha256": "76c7c34f0e2e9ab076521a5d6fe786a9cce537bb1b6f29d32a9c9970b5b232d2",
+    "bytes": 107052,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "src/network.mjs",
+    "sha256": "f46d3a8fe19809c8780d69bc323707f3287de90582b66eba0ece30c4cbc5fd28",
+    "bytes": 4253,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "vendor/ort/ort.wasm.min.mjs",
+    "sha256": "d5a6d7bc8ee587648fb3742dde8c0094d17cbd3822a68bbec8ddfcd4f2adb88e",
+    "bytes": 49997,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "vendor/ort/ort-wasm-simd-threaded.mjs",
+    "sha256": "5687566b1bc1c8cf628d76c2ddb16b2a3b81a7997273d4666564880495088e57",
+    "bytes": 24274,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "vendor/ort/ThirdPartyNotices.txt",
+    "sha256": "0e07b95f3a8d6230037707c5c4a2b554d12c4cb67369669ac255635528ffcee2",
+    "bytes": 325054,
+    "contentType": "text/plain; charset=utf-8"
+  },
+  {
+    "path": "vendor/ort/ort.min.mjs",
+    "sha256": "200ce0be0d937f99978ba1fa2eb0f0deb5527e5e5285ab1495b8e8fbd844307f",
+    "bytes": 357981,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "vendor/ort/ort-wasm-simd-threaded.wasm",
+    "sha256": "be0e129949062ad50290ef94683fac8be5bb6156f709e030b7a5f1661a2f6c17",
+    "bytes": 12361745,
+    "contentType": "application/wasm"
+  },
+  {
+    "path": "vendor/ort/ort.wasm.bundle.min.mjs",
+    "sha256": "9f716d6e3c4280dcced6f0fcb9814c1d7630de83d8177880a2ef445fe48ca913",
+    "bytes": 72812,
+    "contentType": "text/javascript; charset=utf-8"
+  },
+  {
+    "path": "vendor/ort/LICENSE.txt",
+    "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+    "bytes": 1073,
+    "contentType": "text/plain; charset=utf-8"
+  },
+  {
+    "path": "docs/RELEASE-V8.md",
+    "sha256": "6cab448e7c13b85bfe6936035bfd3d8b2583ee64fe740c6c9c2073dfa1a5ff29",
+    "bytes": 3840,
+    "contentType": "text/markdown; charset=utf-8"
+  },
+  {
+    "path": "downloads/astra-chess-laptop.zip",
+    "sha256": "7fe91e3d52e40355257c89385c7b4d488189dda3cd500e24b00878851531a2b8",
+    "bytes": 16392325,
+    "contentType": "application/x-zip-compressed"
+  },
+  {
+    "path": "evaluation/v0.8/review-spec-completion.json",
+    "sha256": "a35fbcf12bbf9bbbb587e65d56333f65d52a91c70820e47885b586e20b9c2deb",
+    "bytes": 7613,
+    "contentType": "application/json; charset=utf-8"
+  },
+  {
+    "path": "evaluation/v0.8/review-model-quality-final.json",
+    "sha256": "456b5e20606380fec026880a383291ee860de6e3c6f945f0b65d69c937fd7796",
+    "bytes": 6992,
+    "contentType": "application/json; charset=utf-8"
+  }
+]
