@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "verdict": "PASS",
+  "scope": "Bounded independent final release-delta quality/security review only: evidence-copy helper, index links, Atlas V8 catalogue/binary identity, README/release notes, and catalogue/evidence regression tests. Not model-confirmation completion, deployment, broad release verification or promotion authorization.",
+  "baseCommit": "c6dc9647f7a0537322ffd71f784f0a696be97413",
+  "security_concerns": [],
+  "logic_errors": [],
+  "sourceHashes": {
+    "tools/build.mjs": "97c636c7ffd378f266ecf75302f7fe3fea27e6079048b7fb4823fc40e6416390",
+    "public/index.html": "b84b120211428492d39ebcb238a93b81f416776b23e30a853882c937367cf188",
+    "public/models/manifest.json": "fa211b472c2d04cf82faa20c48a55dd38a60c202bc91b82fb4e59f482a5820c5",
+    "public/models/active.json": "a2257fb1443af2b9729426a4a947f796cb19dec635cc8247481ff02ecde466e4",
+    "public/models/atlas-v8.bin": "c183d35facdf6c831331e7b9a82ca9b0b58c87e8f32f334a4c76df7a3d97ef66",
+    "README.md": "847bbdd1b6c1ca275c0ca2509a78f6d50834ef81de7d3e0a80e5607a924b874b",
+    "docs/RELEASE-V8.md": "6cab448e7c13b85bfe6936035bfd3d8b2583ee64fe740c6c9c2073dfa1a5ff29",
+    "tests/laptop-catalog.test.mjs": "6dcbb5a2ecc0a40274d2c8a9153b21aa98b327245567710be01a0e4056078bb1",
+    "tests/v8-evidence-copy.test.mjs": "9d3512ff6eb281319db231d4320383990b83ddfe316d4df8e377977bc0d79bee"
+  },
+  "priorScopePreservation": {
+    "receipt": "evaluation/v0.8/review-quality-final.json",
+    "previouslyBoundFiles": 19,
+    "unchangedFiles": 17,
+    "changedFiles": ["public/index.html", "tools/build.mjs"],
+    "method": "Hashed every current file against original quality-final source map. Reviewed actual before/after unified diffs for both changed files against preserved reviewed source. Index delta is documentation/results/source links only; build delta is copyEvidence export/imports and replacement of two evaluation-directory copies. Original app/worker/CLI/book/fetcher/test code is unchanged."
+  },
+  "checks": {
+    "evidenceSafety": "copyEvidence recursively identifies case-insensitive .html/.htm, checks source alias collisions before copying, filters original HTML paths, copies original bytes to extension-appended .txt names, and writes SHA256 original/published mapping. Both site and laptop evidence copies use this helper. Original repository evidence is not modified. Fresh temporary-fixture tests exercise nested HTML, digest equality, JSON preservation, uppercase HTML, .htm and collision-before-copy rejection. No real build was run.",
+    "evidenceInventory": ["evaluation/v0.8/review-books-cc0-official.html", "evaluation/v0.8/quality-before-fix/public/index.html"],
+    "catalogue": "Compared old manifest from git HEAD with current manifest: every previous sparse descriptor is unchanged; Atlas V8 is the sole model addition. active.json selects pocket-plus and atlas-v8. Existing build filtering publishes only active sparse binaries, and existing resolveModel supports atlas alias when only atlas-v8 remains in the package. Source tree deliberately retains all nine sparse IDs.",
+    "atlasIdentity": {"id":"atlas-v8","bytes":38397944,"sha256":"c183d35facdf6c831331e7b9a82ca9b0b58c87e8f32f334a4c76df7a3d97ef66","matchesDescriptorAndFrozenSelection":true,"changedWeightsDeclared":815429},
+    "retainedModels": {"pocketPlusActualSHA256":"038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f","deepmindActualSHA256":"b2a643b1bb910e0035e514ef7efecc62b69dbd3740af6cc18abaddf75471d8ee","unchangedFromPreviouslyVerifiedModels":true},
+    "catalogueRegression": "Only exact expected source IDs changed in laptop-catalog test; per-model successful execution and legal-move assertions are unchanged. Fresh test ran all nine actual sparse models with book disabled; no heavy ML or training was performed.",
+    "documentation": "README and RELEASE-V8 consistently identify Atlas derivative/hash, 25 versus 21 teacher matches over 96 final positions, equal four losses, unchanged Pocket/DeepMind, separate book layer, and no Elo/stronger-play claim. Statistical counts are provided/parent-reviewed context, not independently recomputed in this delta review. Runtime-freeze/replay limitations remain linked.",
+    "index": "Only links/labels changed relative to prior scoped approval; no new script, event handler or dynamic HTML. Current release/book/results/source targets use fixed URLs."
+  },
+  "executedCommands": [
+    {"command":"git diff -- tools/build.mjs public/index.html public/models/manifest.json public/models/active.json README.md tests/laptop-catalog.test.mjs && git rev-parse HEAD","exitCode":0},
+    {"command":"node --test tests/v8-evidence-copy.test.mjs tests/laptop-catalog.test.mjs tests/v8-book-ui-build.test.mjs","exitCode":0,"passed":3,"failed":0,"skipped":0,"durationMs":11361.129185},
+    {"command":"node --input-type=module -e <inline temporary-fixture copyEvidence assertions>","exitCode":0,"description":"Directly called actual copyEvidence with upper.HTML and short.htm, asserted byte-identical text aliases and omission of originals, then added short.htm.txt and asserted collision rejection before destination creation.","result":{"mixedCaseAndHtmAliases":2,"rawHtmlOmitted":true,"aliasCollisionFailsBeforeCopy":true,"sourcePreserved":true}}
+  ],
+  "suggestions": [
+    "Published .txt evidence relies on normal static-host text/plain handling for .txt. Do not override these aliases to text/html; no host MIME verification or deployment was performed here.",
+    "Evidence documents can retain historical links to original .html names. HTML-EVIDENCE.json supplies the mapping; a future documentation-only change can make distributed alias links easier to follow.",
+    "copyEvidence is reviewed as a fresh-output build helper over repository-owned evidence, not an untrusted-upload sanitizer or an in-place cleaner of previously populated destinations. buildSite removes its output trees first."
+  ],
+  "limitations": [
+    "No production changes, network, browser, full build, training, heavy ML, commit or push by this reviewer.",
+    "No broad test round or independent replay of 13528 runtime bindings/20 games. Full model-confirmation completion is owned by the separate reviewer and is not approved by this receipt.",
+    "Unsafe auto-publishing CLI removal is reported as separately underway; no approval is granted for that tool or its removal by this narrowly scoped verdict.",
+    "Prior browser/package evidence is not relabeled current after Atlas catalogue and documentation changes. Final build, extracted-artifact checks, deployment and delivery remain parent-owned."
+  ],
+  "summary": "PASS for the frozen named release deltas: safe inert-text evidence copying, link-only UI changes, exact Atlas V8 artifact/catalogue identity, and preserved original scope; no security or logic blocker found."
+}

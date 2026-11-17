@@ -1,0 +1,2651 @@
+{
+  "family": "pocket",
+  "objective": "full-legal partial-rank policy CE + hardest legal negative hinge; unranked target mass zero",
+  "featureCacheSHA256": "7eaa5a1e11f8e9fe4bf60333531d050a650d4892ab7522176498923123f365a5",
+  "baseSHA256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+  "datasetSHA256": {
+    "train": "3f342ebc9b33523e41ad0ac84b1e473f61713105d0aa35df9350719114795fcf",
+    "validation": "8f0155f2a431d541b45e1a3384dc25a8bb7efb9f73c5bf39824ed0f432ee88ad"
+  },
+  "sourceHashes": {
+    "spikes/weight-repair-v8/run.py": "e727073b530f1b182a9c4b513e5f7d5fe2b78fe540b53cc614e53868ee704735",
+    "spikes/weight-repair-v8/repair.py": "6a872c87c6c096e97d256224f641609e282226666bbd224e10dd314803dce0e3"
+  },
+  "groups": [
+    {
+      "key": "input:3:small|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 384
+    },
+    {
+      "key": "input:4:small|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 800
+    },
+    {
+      "key": "input:6:small|lateral",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 1064
+    },
+    {
+      "key": "input:7:large|lateral",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 1064
+    },
+    {
+      "key": "input:8:large|lateral",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 1064
+    },
+    {
+      "key": "input:9:large|lateral",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 1064
+    },
+    {
+      "key": "input:10:large|lateral",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 1064
+    },
+    {
+      "key": "relu:-5.9|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 462
+    },
+    {
+      "key": "relu:1.18|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 2282
+    },
+    {
+      "key": "relu:2.596|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 2184
+    },
+    {
+      "key": "relu:2.124|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1540
+    },
+    {
+      "key": "relu:5.5|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 448
+    },
+    {
+      "key": "relu:-1.1|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 2282
+    },
+    {
+      "key": "relu:-2.42|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 2128
+    },
+    {
+      "key": "relu:-1.98|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1512
+    },
+    {
+      "key": "relu:-10.62|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1078
+    },
+    {
+      "key": "relu:4.72|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1078
+    },
+    {
+      "key": "relu:9.9|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1064
+    },
+    {
+      "key": "relu:-4.4|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1064
+    },
+    {
+      "key": "relu:0.22|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 204
+    },
+    {
+      "key": "relu:-0.12|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 11965
+    },
+    {
+      "key": "relu:0.12|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 10001
+    },
+    {
+      "key": "relu:0.18|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 448
+    },
+    {
+      "key": "relu:-0.18|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 448
+    },
+    {
+      "key": "relu:0.3|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 448
+    },
+    {
+      "key": "relu:-0.3|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 448
+    },
+    {
+      "key": "relu:100|protected",
+      "enemy": false,
+      "fixed": true,
+      "lower": 1,
+      "upper": 1,
+      "edges": 2980
+    },
+    {
+      "key": "relu:-100|protected",
+      "enemy": false,
+      "fixed": true,
+      "lower": 1,
+      "upper": 1,
+      "edges": 2980
+    },
+    {
+      "key": "input:0:small|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 64
+    },
+    {
+      "key": "input:3:small|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 432
+    },
+    {
+      "key": "input:4:small|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 416
+    },
+    {
+      "key": "input:5:small|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 144
+    },
+    {
+      "key": "input:6:small|straight",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 480
+    },
+    {
+      "key": "input:7:large|straight",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 480
+    },
+    {
+      "key": "input:8:large|straight",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 480
+    },
+    {
+      "key": "input:9:large|straight",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 480
+    },
+    {
+      "key": "input:10:large|straight",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 480
+    },
+    {
+      "key": "relu:5.5|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 480
+    },
+    {
+      "key": "relu:-1.1|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1056
+    },
+    {
+      "key": "relu:-2.42|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 960
+    },
+    {
+      "key": "relu:-1.98|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 960
+    },
+    {
+      "key": "relu:9.9|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 480
+    },
+    {
+      "key": "relu:-4.4|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 480
+    },
+    {
+      "key": "relu:0.31|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 24
+    },
+    {
+      "key": "relu:-0.12|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 3960
+    },
+    {
+      "key": "relu:-1.18|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 64
+    },
+    {
+      "key": "relu:1.18|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1056
+    },
+    {
+      "key": "relu:1.1|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 96
+    },
+    {
+      "key": "relu:-5.9|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 488
+    },
+    {
+      "key": "relu:2.596|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 992
+    },
+    {
+      "key": "relu:2.124|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 976
+    },
+    {
+      "key": "relu:-0.13|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 480
+    },
+    {
+      "key": "relu:-10.62|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 488
+    },
+    {
+      "key": "relu:4.72|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 488
+    },
+    {
+      "key": "relu:0.105|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 98
+    },
+    {
+      "key": "relu:0.336|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 98
+    },
+    {
+      "key": "relu:0.35175|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 98
+    },
+    {
+      "key": "relu:0.525|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 98
+    },
+    {
+      "key": "relu:0.945|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 98
+    },
+    {
+      "key": "relu:0.32|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 98
+    },
+    {
+      "key": "relu:0.22|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 98
+    },
+    {
+      "key": "relu:0.64|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 98
+    },
+    {
+      "key": "relu:0.67|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 98
+    },
+    {
+      "key": "relu:1|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 98
+    },
+    {
+      "key": "relu:1.8|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 98
+    },
+    {
+      "key": "relu:0.65|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 96
+    },
+    {
+      "key": "relu:0.12|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 2872
+    },
+    {
+      "key": "input:0:small|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 98
+    },
+    {
+      "key": "input:2:small|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 456
+    },
+    {
+      "key": "input:5:small|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 254
+    },
+    {
+      "key": "relu:0.53|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 18
+    },
+    {
+      "key": "relu:1.1|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 154
+    },
+    {
+      "key": "relu:-0.13|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 972
+    },
+    {
+      "key": "relu:-1.18|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 98
+    },
+    {
+      "key": "relu:-3.953|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 630
+    },
+    {
+      "key": "relu:0.177|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 630
+    },
+    {
+      "key": "relu:3.685|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 616
+    },
+    {
+      "key": "relu:-0.165|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 616
+    },
+    {
+      "key": "relu:0.105|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 156
+    },
+    {
+      "key": "relu:0.336|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 156
+    },
+    {
+      "key": "relu:0.35175|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 156
+    },
+    {
+      "key": "relu:0.525|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 156
+    },
+    {
+      "key": "relu:0.945|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 156
+    },
+    {
+      "key": "relu:0.32|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 156
+    },
+    {
+      "key": "relu:0.64|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 156
+    },
+    {
+      "key": "relu:0.67|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 156
+    },
+    {
+      "key": "relu:1|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 170
+    },
+    {
+      "key": "relu:1.8|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 156
+    },
+    {
+      "key": "relu:0.65|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 154
+    },
+    {
+      "key": "input:1:small|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 300
+    },
+    {
+      "key": "input:6:small|knight",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 336
+    },
+    {
+      "key": "input:7:large|knight",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 336
+    },
+    {
+      "key": "input:8:large|knight",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 336
+    },
+    {
+      "key": "input:9:large|knight",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 336
+    },
+    {
+      "key": "input:10:large|knight",
+      "enemy": true,
+      "fixed": false,
+      "lower": 0.5,
+      "upper": 1.5,
+      "edges": 336
+    },
+    {
+      "key": "relu:-3.776|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 336
+    },
+    {
+      "key": "relu:1.18|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 336
+    },
+    {
+      "key": "relu:2.596|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 336
+    },
+    {
+      "key": "relu:3.52|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 336
+    },
+    {
+      "key": "relu:-1.1|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 336
+    },
+    {
+      "key": "relu:-2.42|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 336
+    },
+    {
+      "key": "relu:0.105|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1672
+    },
+    {
+      "key": "relu:0.336|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1672
+    },
+    {
+      "key": "relu:0.35175|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1672
+    },
+    {
+      "key": "relu:0.525|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1672
+    },
+    {
+      "key": "relu:0.945|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1672
+    },
+    {
+      "key": "relu:0.32|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1672
+    },
+    {
+      "key": "relu:0.22|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1672
+    },
+    {
+      "key": "relu:0.64|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1672
+    },
+    {
+      "key": "relu:0.67|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1672
+    },
+    {
+      "key": "relu:1|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1672
+    },
+    {
+      "key": "relu:1.8|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1672
+    },
+    {
+      "key": "relu:0.65|knight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 336
+    },
+    {
+      "key": "relu:-0.22|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 49
+    },
+    {
+      "key": "relu:0.09|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 62
+    },
+    {
+      "key": "relu:0.31|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 12
+    },
+    {
+      "key": "relu:0.24|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 9
+    },
+    {
+      "key": "relu:-0.24|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 25
+    },
+    {
+      "key": "relu:-0.44|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 1
+    },
+    {
+      "key": "relu:-0.31|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 24
+    },
+    {
+      "key": "relu:-0.09|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 38
+    },
+    {
+      "key": "relu:0.035|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 16
+    },
+    {
+      "key": "relu:-0.53|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 18
+    },
+    {
+      "key": "relu:-0.26|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 11
+    },
+    {
+      "key": "relu:-0.26|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 12
+    },
+    {
+      "key": "relu:-0.31|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 12
+    },
+    {
+      "key": "relu:0.035|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 14
+    },
+    {
+      "key": "relu:0.09|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 8
+    },
+    {
+      "key": "relu:0.14|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 8
+    },
+    {
+      "key": "relu:0.14|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 14
+    },
+    {
+      "key": "relu:-0.09|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 8
+    },
+    {
+      "key": "relu:0.13|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 12
+    },
+    {
+      "key": "relu:0.315|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 8
+    },
+    {
+      "key": "relu:0.315|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 14
+    },
+    {
+      "key": "relu:-0.35|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 42
+    },
+    {
+      "key": "relu:0.13|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 24
+    },
+    {
+      "key": "relu:0.35|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 18
+    },
+    {
+      "key": "relu:0.56|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 8
+    },
+    {
+      "key": "relu:0.56|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 14
+    },
+    {
+      "key": "input:0:large|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 32
+    },
+    {
+      "key": "relu:-3.953|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 8
+    },
+    {
+      "key": "relu:0.177|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 8
+    },
+    {
+      "key": "relu:-3.776|straight",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 8
+    },
+    {
+      "key": "input:0:large|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 56
+    },
+    {
+      "key": "relu:-3.776|lateral",
+      "enemy": false,
+      "fixed": false,
+      "lower": 0.8,
+      "upper": 1.2,
+      "edges": 14
+    }
+  ],
+  "diagnosis": {
+    "wrongTrainingCount": 325,
+    "examples": [
+      {
+        "id": "3aa80a1469fe23f299c4eacb850c85128f44b24e67dcfb2eb2339bb7d43de65a",
+        "fen": "2r1k2r/1bqn1ppp/pp1R4/3np3/1Q6/4PN2/PP2BPPP/R1B3K1 w k - 2 17",
+        "wrong": "b4e1",
+        "teacherBest": "d6d5",
+        "scoreGap": 12.58650016784668,
+        "protectedFixedGap": 0.0,
+        "groupGapContributions": [
+          {
+            "group": "relu:9.9|lateral",
+            "enemyMaterial": false,
+            "value": 9.899999618530273
+          },
+          {
+            "group": "relu:-5.9|straight",
+            "enemyMaterial": false,
+            "value": 5.900000095367432
+          },
+          {
+            "group": "relu:5.5|straight",
+            "enemyMaterial": false,
+            "value": -5.5
+          },
+          {
+            "group": "input:7:large|straight",
+            "enemyMaterial": true,
+            "value": -3.200000047683716
+          },
+          {
+            "group": "relu:-2.42|straight",
+            "enemyMaterial": false,
+            "value": 2.4200000762939453
+          },
+          {
+            "group": "relu:-1.98|straight",
+            "enemyMaterial": false,
+            "value": 1.9800000190734863
+          },
+          {
+            "group": "relu:-1.1|straight",
+            "enemyMaterial": false,
+            "value": 1.100000023841858
+          },
+          {
+            "group": "input:3:small|straight",
+            "enemyMaterial": false,
+            "value": -0.007499999832361937
+          },
+          {
+            "group": "input:4:small|lateral",
+            "enemyMaterial": false,
+            "value": -0.006000000052154064
+          }
+        ]
+      },
+      {
+        "id": "4c2d2f4bb8d53482824997ebc31584fa09e41408e578047bb344fe30313a1b4d",
+        "fen": "r3k2r/4bppp/1q2pn2/pbp1N3/P2PP3/1p6/1P2QPPP/R1B2RK1 w kq - 0 18",
+        "wrong": "e2b5",
+        "teacherBest": "a4b5",
+        "scoreGap": 9.489999771118164,
+        "protectedFixedGap": 0.0,
+        "groupGapContributions": [
+          {
+            "group": "relu:-10.62|lateral",
+            "enemyMaterial": false,
+            "value": -10.619999885559082
+          },
+          {
+            "group": "relu:9.9|lateral",
+            "enemyMaterial": false,
+            "value": 9.899999618530273
+          },
+          {
+            "group": "relu:4.72|lateral",
+            "enemyMaterial": false,
+            "value": 4.71999979019165
+          },
+          {
+            "group": "relu:2.596|lateral",
+            "enemyMaterial": false,
+            "value": 2.5959999561309814
+          },
+          {
+            "group": "relu:2.124|lateral",
+            "enemyMaterial": false,
+            "value": 2.124000072479248
+          },
+          {
+            "group": "relu:-1.18|lateral",
+            "enemyMaterial": false,
+            "value": 1.1799999475479126
+          },
+          {
+            "group": "relu:1.1|lateral",
+            "enemyMaterial": false,
+            "value": -1.100000023841858
+          },
+          {
+            "group": "relu:-1.1|lateral",
+            "enemyMaterial": false,
+            "value": 1.100000023841858
+          },
+          {
+            "group": "relu:0.14|lateral",
+            "enemyMaterial": false,
+            "value": -0.14000000059604645
+          },
+          {
+            "group": "input:0:small|lateral",
+            "enemyMaterial": false,
+            "value": -0.14000000059604645
+          },
+          {
+            "group": "relu:-0.13|lateral",
+            "enemyMaterial": false,
+            "value": -0.12999999523162842
+          }
+        ]
+      },
+      {
+        "id": "178cfc28204d71dcb84cd5b75daa05ee1ae1357c75496f2084af09319c5622a4",
+        "fen": "4r2r/pp1nk1pp/2p1Nb2/3B4/7R/8/P1PBKPP1/1R6 w - - 1 22",
+        "wrong": "h4e4",
+        "teacherBest": "e6g7",
+        "scoreGap": 8.883500099182129,
+        "protectedFixedGap": 0.0,
+        "groupGapContributions": [
+          {
+            "group": "relu:5.5|lateral",
+            "enemyMaterial": false,
+            "value": 5.5
+          },
+          {
+            "group": "relu:-3.776|knight",
+            "enemyMaterial": false,
+            "value": 3.7760000228881836
+          },
+          {
+            "group": "relu:3.52|knight",
+            "enemyMaterial": false,
+            "value": -3.5199999809265137
+          },
+          {
+            "group": "relu:-2.42|knight",
+            "enemyMaterial": false,
+            "value": 2.4200000762939453
+          },
+          {
+            "group": "relu:-1.1|knight",
+            "enemyMaterial": false,
+            "value": 1.100000023841858
+          },
+          {
+            "group": "input:6:small|knight",
+            "enemyMaterial": true,
+            "value": -1.0
+          },
+          {
+            "group": "relu:0.3|lateral",
+            "enemyMaterial": false,
+            "value": 0.30000001192092896
+          },
+          {
+            "group": "input:1:small|knight",
+            "enemyMaterial": false,
+            "value": 0.2849999964237213
+          },
+          {
+            "group": "relu:0.18|lateral",
+            "enemyMaterial": false,
+            "value": 0.18000000715255737
+          },
+          {
+            "group": "relu:-0.18|lateral",
+            "enemyMaterial": false,
+            "value": -0.18000000715255737
+          },
+          {
+            "group": "input:3:small|lateral",
+            "enemyMaterial": false,
+            "value": 0.02250000089406967
+          }
+        ]
+      },
+      {
+        "id": "0cd728503a5d683b9365f5b7f5f04da4dcc47f4a54f183b4f74d842730c6fa7d",
+        "fen": "r1b1k2r/1pq1bpp1/p3pn1p/4p3/3Q1P1B/2N5/PPP3PP/2KR1B1R w kq - 0 13",
+        "wrong": "d4e5",
+        "teacherBest": "f4e5",
+        "scoreGap": 8.529998779296875,
+        "protectedFixedGap": 0.0,
+        "groupGapContributions": [
+          {
+            "group": "relu:-10.62|lateral",
+            "enemyMaterial": false,
+            "value": -10.619999885559082
+          },
+          {
+            "group": "relu:9.9|lateral",
+            "enemyMaterial": false,
+            "value": 9.899999618530273
+          },
+          {
+            "group": "relu:4.72|lateral",
+            "enemyMaterial": false,
+            "value": 4.71999979019165
+          },
+          {
+            "group": "relu:2.596|lateral",
+            "enemyMaterial": false,
+            "value": 2.5959999561309814
+          },
+          {
+            "group": "relu:2.124|lateral",
+            "enemyMaterial": false,
+            "value": 2.124000072479248
+          },
+          {
+            "group": "relu:-1.18|lateral",
+            "enemyMaterial": false,
+            "value": 1.1799999475479126
+          },
+          {
+            "group": "relu:1.1|lateral",
+            "enemyMaterial": false,
+            "value": -1.100000023841858
+          },
+          {
+            "group": "input:0:small|lateral",
+            "enemyMaterial": false,
+            "value": -0.14000000059604645
+          },
+          {
+            "group": "relu:-0.13|lateral",
+            "enemyMaterial": false,
+            "value": -0.12999999523162842
+          }
+        ]
+      },
+      {
+        "id": "b5210c78950738eb42eb4f2457d478196fe34fa19b92bbd5999f2118e95f7a2c",
+        "fen": "1r4k1/1p3pbp/1Np1b1p1/p1n1P3/Pq2n3/2N4P/1PP1BQP1/3R1RK1 w - - 1 21",
+        "wrong": "f2d4",
+        "teacherBest": "c3e4",
+        "scoreGap": 6.783999919891357,
+        "protectedFixedGap": 0.0,
+        "groupGapContributions": [
+          {
+            "group": "relu:-10.62|lateral",
+            "enemyMaterial": false,
+            "value": -10.619999885559082
+          },
+          {
+            "group": "relu:9.9|lateral",
+            "enemyMaterial": false,
+            "value": 9.899999618530273
+          },
+          {
+            "group": "relu:4.72|lateral",
+            "enemyMaterial": false,
+            "value": 4.71999979019165
+          },
+          {
+            "group": "relu:-3.776|knight",
+            "enemyMaterial": false,
+            "value": 3.7760000228881836
+          },
+          {
+            "group": "relu:3.52|knight",
+            "enemyMaterial": false,
+            "value": -3.5199999809265137
+          },
+          {
+            "group": "input:7:large|knight",
+            "enemyMaterial": true,
+            "value": -3.200000047683716
+          },
+          {
+            "group": "relu:2.596|lateral",
+            "enemyMaterial": false,
+            "value": 2.5959999561309814
+          },
+          {
+            "group": "relu:-2.42|knight",
+            "enemyMaterial": false,
+            "value": 2.4200000762939453
+          },
+          {
+            "group": "relu:-2.42|lateral",
+            "enemyMaterial": false,
+            "value": -2.4200000762939453
+          },
+          {
+            "group": "relu:2.124|lateral",
+            "enemyMaterial": false,
+            "value": 2.124000072479248
+          },
+          {
+            "group": "relu:1.18|lateral",
+            "enemyMaterial": false,
+            "value": 1.1799999475479126
+          },
+          {
+            "group": "relu:-1.1|knight",
+            "enemyMaterial": false,
+            "value": 1.100000023841858
+          }
+        ]
+      },
+      {
+        "id": "004beaf563ea7fa53efa48f7c8b9871effa1167c7b56c2901fe015e8f9ed13ca",
+        "fen": "2r3k1/pp1R1pbp/4p1p1/2q5/4P3/1P2Q3/5PPP/5BK1 w - - 0 24",
+        "wrong": "d7b7",
+        "teacherBest": "d7d8",
+        "scoreGap": 6.59250020980835,
+        "protectedFixedGap": 0.0,
+        "groupGapContributions": [
+          {
+            "group": "relu:-5.9|straight",
+            "enemyMaterial": false,
+            "value": 5.900000095367432
+          },
+          {
+            "group": "input:6:small|lateral",
+            "enemyMaterial": true,
+            "value": 1.0
+          },
+          {
+            "group": "relu:-0.3|lateral",
+            "enemyMaterial": false,
+            "value": -0.30000001192092896
+          },
+          {
+            "group": "input:3:small|straight",
+            "enemyMaterial": false,
+            "value": 0.1875
+          },
+          {
+            "group": "relu:-0.18|lateral",
+            "enemyMaterial": false,
+            "value": -0.18000000715255737
+          },
+          {
+            "group": "input:3:small|lateral",
+            "enemyMaterial": false,
+            "value": -0.014999999664723873
+          }
+        ]
+      },
+      {
+        "id": "8e170da164ea7b8fe4cd1a2ddb08ee9008a3f77be5fdfa01383f839adeb60cc0",
+        "fen": "r3k1r1/1ppqbp1p/1n6/p2n4/P2Q1B2/1PN2N2/1P5P/R4R1K w q - 0 18",
+        "wrong": "c3d5",
+        "teacherBest": "f4c7",
+        "scoreGap": 6.233000755310059,
+        "protectedFixedGap": 0.0,
+        "groupGapContributions": [
+          {
+            "group": "relu:-3.953|lateral",
+            "enemyMaterial": false,
+            "value": 3.953000068664551
+          },
+          {
+            "group": "relu:-3.776|knight",
+            "enemyMaterial": false,
+            "value": -3.7760000228881836
+          },
+          {
+            "group": "relu:3.685|lateral",
+            "enemyMaterial": false,
+            "value": -3.684999942779541
+          },
+          {
+            "group": "relu:3.52|knight",
+            "enemyMaterial": false,
+            "value": 3.5199999809265137
+          },
+          {
+            "group": "input:7:large|knight",
+            "enemyMaterial": true,
+            "value": 3.200000047683716
+          },
+          {
+            "group": "relu:2.596|knight",
+            "enemyMaterial": false,
+            "value": 2.5959999561309814
+          },
+          {
+            "group": "relu:-2.42|knight",
+            "enemyMaterial": false,
+            "value": -2.4200000762939453
+          },
+          {
+            "group": "relu:-2.42|lateral",
+            "enemyMaterial": false,
+            "value": 2.4200000762939453
+          },
+          {
+            "group": "relu:1.18|knight",
+            "enemyMaterial": false,
+            "value": 1.1799999475479126
+          },
+          {
+            "group": "relu:-1.1|knight",
+            "enemyMaterial": false,
+            "value": -1.100000023841858
+          },
+          {
+            "group": "relu:-1.1|lateral",
+            "enemyMaterial": false,
+            "value": 1.100000023841858
+          },
+          {
+            "group": "input:6:small|lateral",
+            "enemyMaterial": true,
+            "value": -1.0
+          }
+        ]
+      },
+      {
+        "id": "d9e60c5f56f6e5762c5d89aeef28ff8682b5fff892a8206853bdb32019cc7942",
+        "fen": "r3r1k1/5ppp/2q2n2/ppbp4/6b1/1NP3P1/PP3PBP/R1BQ1RK1 w - - 4 17",
+        "wrong": "d1d3",
+        "teacherBest": "b3d4",
+        "scoreGap": 5.976999282836914,
+        "protectedFixedGap": 0.0,
+        "groupGapContributions": [
+          {
+            "group": "relu:9.9|straight",
+            "enemyMaterial": false,
+            "value": 9.899999618530273
+          },
+          {
+            "group": "relu:-3.776|knight",
+            "enemyMaterial": false,
+            "value": 3.7760000228881836
+          },
+          {
+            "group": "relu:2.596|knight",
+            "enemyMaterial": false,
+            "value": -2.5959999561309814
+          },
+          {
+            "group": "relu:-2.42|straight",
+            "enemyMaterial": false,
+            "value": -2.4200000762939453
+          },
+          {
+            "group": "relu:1.18|knight",
+            "enemyMaterial": false,
+            "value": -1.1799999475479126
+          },
+          {
+            "group": "relu:-1.1|straight",
+            "enemyMaterial": false,
+            "value": -1.100000023841858
+          },
+          {
+            "group": "input:1:small|knight",
+            "enemyMaterial": false,
+            "value": -0.2849999964237213
+          },
+          {
+            "group": "relu:-0.13|straight",
+            "enemyMaterial": false,
+            "value": -0.12999999523162842
+          },
+          {
+            "group": "input:4:small|straight",
+            "enemyMaterial": false,
+            "value": 0.012000000104308128
+          }
+        ]
+      },
+      {
+        "id": "e89eecf487197f9efad6857eab593e0e885e0b1e5ee7666d3039eaead07a94ba",
+        "fen": "rn2k2r/pp1bppbp/1q1p2p1/1B2P2n/3N4/2N1BP2/PPP3PP/R2QK2R w KQkq - 3 10",
+        "wrong": "e5e6",
+        "teacherBest": "d4f5",
+        "scoreGap": 5.206000328063965,
+        "protectedFixedGap": 0.0,
+        "groupGapContributions": [
+          {
+            "group": "relu:-3.776|knight",
+            "enemyMaterial": false,
+            "value": 3.7760000228881836
+          },
+          {
+            "group": "relu:3.52|knight",
+            "enemyMaterial": false,
+            "value": -3.5199999809265137
+          },
+          {
+            "group": "relu:-2.42|knight",
+            "enemyMaterial": false,
+            "value": 2.4200000762939453
+          },
+          {
+            "group": "relu:-1.18|straight",
+            "enemyMaterial": false,
+            "value": -1.1799999475479126
+          },
+          {
+            "group": "relu:1.18|straight",
+            "enemyMaterial": false,
+            "value": 1.1799999475479126
+          },
+          {
+            "group": "relu:1.1|straight",
+            "enemyMaterial": false,
+            "value": 1.100000023841858
+          },
+          {
+            "group": "relu:-1.1|knight",
+            "enemyMaterial": false,
+            "value": 1.100000023841858
+          },
+          {
+            "group": "input:0:small|straight",
+            "enemyMaterial": false,
+            "value": 0.23499999940395355
+          },
+          {
+            "group": "input:1:small|knight",
+            "enemyMaterial": false,
+            "value": 0.0949999988079071
+          }
+        ]
+      },
+      {
+        "id": "347e58b93001d16d17714370157088c60bc8cc04171219d36ce4498a22eda0b4",
+        "fen": "rn5r/pp1kBp1p/q2p2p1/1N1Nb2n/1P6/5P2/P1P3PP/R2QK2R w KQ - 2 16",
+        "wrong": "b5c7",
+        "teacherBest": "c2c4",
+        "scoreGap": 4.754999160766602,
+        "protectedFixedGap": 0.0,
+        "groupGapContributions": [
+          {
+            "group": "relu:-3.776|knight",
+            "enemyMaterial": false,
+            "value": -3.7760000228881836
+          },
+          {
+            "group": "relu:3.52|knight",
+            "enemyMaterial": false,
+            "value": 3.5199999809265137
+          },
+          {
+            "group": "relu:2.596|knight",
+            "enemyMaterial": false,
+            "value": 2.5959999561309814
+          },
+          {
+            "group": "relu:1.18|knight",
+            "enemyMaterial": false,
+            "value": 1.1799999475479126
+          },
+          {
+            "group": "relu:0.945|knight",
+            "enemyMaterial": false,
+            "value": 0.9449999928474426
+          },
+          {
+            "group": "relu:0.65|knight",
+            "enemyMaterial": false,
+            "value": 0.6499999761581421
+          },
+          {
+            "group": "relu:0.64|straight",
+            "enemyMaterial": false,
+            "value": -0.6399999856948853
+          },
+          {
+            "group": "relu:0.525|knight",
+            "enemyMaterial": false,
+            "value": 0.5249999761581421
+          },
+          {
+            "group": "input:0:small|straight",
+            "enemyMaterial": false,
+            "value": -0.15000000596046448
+          },
+          {
+            "group": "input:1:small|knight",
+            "enemyMaterial": false,
+            "value": -0.0949999988079071
+          }
+        ]
+      },
+      {
+        "id": "9872c7c6a496b9882d1b9aa75a4890bc98a01224138479af0317b32d206971d6",
+        "fen": "r3k2r/pp1n1ppp/2p1pnP1/4q3/4N2R/1B6/PbPBQPP1/R3K3 w Qkq - 0 16",
+        "wrong": "a1d1",
+        "teacherBest": "g6f7",
+        "scoreGap": 4.382500171661377,
+        "protectedFixedGap": 0.0,
+        "groupGapContributions": [
+          {
+            "group": "relu:5.5|lateral",
+            "enemyMaterial": false,
+            "value": 5.5
+          },
+          {
+            "group": "relu:-1.18|lateral",
+            "enemyMaterial": false,
+            "value": 1.1799999475479126
+          },
+          {
+            "group": "relu:1.1|lateral",
+            "enemyMaterial": false,
+            "value": -1.100000023841858
+          },
+          {
+            "group": "input:6:small|lateral",
+            "enemyMaterial": true,
+            "value": -1.0
+          },
+          {
+            "group": "relu:0.56|lateral",
+            "enemyMaterial": false,
+            "value": -0.5600000023841858
+          },
+          {
+            "group": "relu:0.3|lateral",
+            "enemyMaterial": false,
+            "value": 0.30000001192092896
+          },
+          {
+            "group": "relu:0.18|lateral",
+            "enemyMaterial": false,
+            "value": 0.18000000715255737
+          },
+          {
+            "group": "input:0:small|lateral",
+            "enemyMaterial": false,
+            "value": -0.14000000059604645
+          },
+          {
+            "group": "input:3:small|lateral",
+            "enemyMaterial": false,
+            "value": 0.02250000089406967
+          }
+        ]
+      },
+      {
+        "id": "e7c77f8f84f84d2ff873313b9829462c199e69852a3e6234e1cb214794ced7de",
+        "fen": "r4rk1/pp3p2/2nQ2p1/2p4p/2P1P1B1/2N1P3/Pq5P/3RKR2 w - - 0 19",
+        "wrong": "c3a4",
+        "teacherBest": "d6f6",
+        "scoreGap": 4.301000118255615,
+        "protectedFixedGap": 0.0,
+        "groupGapContributions": [
+          {
+            "group": "relu:3.52|knight",
+            "enemyMaterial": false,
+            "value": 3.5199999809265137
+          },
+          {
+            "group": "relu:0.945|knight",
+            "enemyMaterial": false,
+            "value": 0.9449999928474426
+          },
+          {
+            "group": "input:1:small|knight",
+            "enemyMaterial": false,
+            "value": -0.2750000059604645
+          },
+          {
+            "group": "relu:0.105|knight",
+            "enemyMaterial": false,
+            "value": 0.10499999672174454
+          },
+          {
+            "group": "input:4:small|lateral",
+            "enemyMaterial": false,
+            "value": 0.006000000052154064
+          }
+        ]
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "id": "control",
+      "scales": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "epoch": 0,
+      "metrics": {
+        "train": {
+          "count": 435,
+          "bestmoveCorrect": 110,
+          "top1": 0.25287356321839083,
+          "crossEntropy": 3.1805641271259595,
+          "contrastiveLoss": 3.3816207409932697
+        },
+        "validation": {
+          "count": 207,
+          "bestmoveCorrect": 56,
+          "top1": 0.27053140096618356,
+          "crossEntropy": 3.3105813069044103,
+          "contrastiveLoss": 3.521506736819871
+        }
+      },
+      "status": "control"
+    },
+    {
+      "id": "enemy-protected",
+      "scales": [
+        0.9912713766098022,
+        1.0582751035690308,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9604851007461548,
+        0.8113975524902344,
+        0.8174610733985901,
+        1.1091817617416382,
+        1.2000000476837158,
+        0.800000011920929,
+        1.2000000476837158,
+        0.9932098388671875,
+        1.0173702239990234,
+        1.2000000476837158,
+        1.0180184841156006,
+        0.800000011920929,
+        1.0,
+        1.0,
+        1.0,
+        1.1414204835891724,
+        1.2000000476837158,
+        0.8067693710327148,
+        1.2000000476837158,
+        1.0,
+        1.0,
+        0.800000011920929,
+        1.1423420906066895,
+        1.0066192150115967,
+        1.0869179964065552,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.1886192560195923,
+        0.8240448832511902,
+        1.0491466522216797,
+        0.8749538660049438,
+        1.0090659856796265,
+        0.9572577476501465,
+        1.0,
+        1.0,
+        0.9363051056861877,
+        1.0174084901809692,
+        0.800000011920929,
+        0.9285478591918945,
+        0.800000011920929,
+        1.013039231300354,
+        0.9238047003746033,
+        0.9525018334388733,
+        1.0727213621139526,
+        1.0,
+        1.1791155338287354,
+        1.0,
+        0.8458607196807861,
+        1.0,
+        0.933618426322937,
+        0.9574452638626099,
+        1.1954162120819092,
+        0.9593913555145264,
+        0.962797224521637,
+        0.9587972164154053,
+        0.800000011920929,
+        1.0,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.0,
+        1.2000000476837158,
+        0.8106908202171326,
+        0.800000011920929,
+        0.88154536485672,
+        1.1998987197875977,
+        1.1952433586120605,
+        1.2000000476837158,
+        1.0,
+        0.9393592476844788,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.2000000476837158,
+        1.0,
+        1.0,
+        1.2000000476837158,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.8213185667991638,
+        0.8115145564079285,
+        0.8097627758979797,
+        0.9652951955795288,
+        0.8195620179176331,
+        0.9414560198783875,
+        0.800958514213562,
+        1.0,
+        1.2000000476837158,
+        1.159822940826416,
+        0.800000011920929,
+        1.1925500631332397,
+        1.1849448680877686,
+        1.1942968368530273,
+        0.9214286208152771,
+        0.9830679297447205,
+        0.9759215712547302,
+        1.2000000476837158,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0006479024887085,
+        1.0,
+        0.8734483122825623,
+        1.128602385520935,
+        1.0,
+        0.973983108997345,
+        1.0,
+        1.010131597518921,
+        1.2000000476837158,
+        1.0,
+        1.0,
+        1.0,
+        0.9960171580314636,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.2000000476837158,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "epoch": 12,
+      "history": [
+        {
+          "epoch": 1,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 57,
+            "top1": 0.2753623188405797,
+            "crossEntropy": 3.287539761999379,
+            "contrastiveLoss": 3.5030826825450583
+          }
+        },
+        {
+          "epoch": 2,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 55,
+            "top1": 0.26570048309178745,
+            "crossEntropy": 3.2859269299944818,
+            "contrastiveLoss": 3.5010993227290648
+          }
+        },
+        {
+          "epoch": 3,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 56,
+            "top1": 0.27053140096618356,
+            "crossEntropy": 3.2849108614207467,
+            "contrastiveLoss": 3.4997398571115763
+          }
+        },
+        {
+          "epoch": 4,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 57,
+            "top1": 0.2753623188405797,
+            "crossEntropy": 3.2837571786797564,
+            "contrastiveLoss": 3.498575677042422
+          }
+        },
+        {
+          "epoch": 5,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 55,
+            "top1": 0.26570048309178745,
+            "crossEntropy": 3.2846949699420285,
+            "contrastiveLoss": 3.4990301667780117
+          }
+        },
+        {
+          "epoch": 6,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 58,
+            "top1": 0.28019323671497587,
+            "crossEntropy": 3.2846095671400355,
+            "contrastiveLoss": 3.4987323537540895
+          }
+        },
+        {
+          "epoch": 7,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 57,
+            "top1": 0.2753623188405797,
+            "crossEntropy": 3.284402134913753,
+            "contrastiveLoss": 3.4977191957298683
+          }
+        },
+        {
+          "epoch": 8,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 58,
+            "top1": 0.28019323671497587,
+            "crossEntropy": 3.284888485779509,
+            "contrastiveLoss": 3.498853833779045
+          }
+        },
+        {
+          "epoch": 9,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 55,
+            "top1": 0.26570048309178745,
+            "crossEntropy": 3.2850741533841488,
+            "contrastiveLoss": 3.498732024920735
+          }
+        },
+        {
+          "epoch": 10,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 58,
+            "top1": 0.28019323671497587,
+            "crossEntropy": 3.2857229467751323,
+            "contrastiveLoss": 3.4996251046369617
+          }
+        },
+        {
+          "epoch": 11,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 56,
+            "top1": 0.27053140096618356,
+            "crossEntropy": 3.2855112541125018,
+            "contrastiveLoss": 3.4993275363664123
+          }
+        },
+        {
+          "epoch": 12,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 57,
+            "top1": 0.2753623188405797,
+            "crossEntropy": 3.285392701913769,
+            "contrastiveLoss": 3.4989792264026143
+          }
+        }
+      ],
+      "metrics": {
+        "train": {
+          "count": 435,
+          "bestmoveCorrect": 114,
+          "top1": 0.2620689655172414,
+          "crossEntropy": 3.1510175097262723,
+          "contrastiveLoss": 3.3480940685190004
+        },
+        "validation": {
+          "count": 207,
+          "bestmoveCorrect": 57,
+          "top1": 0.2753623188405797,
+          "crossEntropy": 3.285392701913769,
+          "contrastiveLoss": 3.4989792264026143
+        }
+      },
+      "changedGroups": 84,
+      "freeGroups": 128,
+      "settings": {
+        "epochs": 12,
+        "lr": 0.015,
+        "temperature": 4.0,
+        "margin": 1.0,
+        "regularization": 0.1,
+        "enemyRelaxed": false,
+        "nonEnemyBounds": [
+          0.8,
+          1.2
+        ],
+        "enemyBounds": [
+          0.5,
+          1.5
+        ]
+      },
+      "developmentPredictionChanges": 45,
+      "status": "candidate-not-selected"
+    },
+    {
+      "id": "enemy-relaxed",
+      "scales": [
+        0.9995502233505249,
+        1.058701515197754,
+        1.4881404638290405,
+        1.5,
+        1.5,
+        1.5,
+        1.3942197561264038,
+        1.1073431968688965,
+        0.8053461313247681,
+        1.033105492591858,
+        1.2000000476837158,
+        1.2000000476837158,
+        0.800000011920929,
+        1.2000000476837158,
+        1.020556926727295,
+        1.1477899551391602,
+        1.2000000476837158,
+        1.0077944993972778,
+        0.800000011920929,
+        1.0,
+        1.0,
+        1.0,
+        1.1903550624847412,
+        1.2000000476837158,
+        0.806328535079956,
+        1.2000000476837158,
+        1.0,
+        1.0,
+        0.8214818239212036,
+        1.1016629934310913,
+        1.0145354270935059,
+        1.0877071619033813,
+        1.5,
+        1.5,
+        1.49276864528656,
+        1.5,
+        1.5,
+        1.2000000476837158,
+        0.8098125457763672,
+        0.9824097156524658,
+        0.9746295213699341,
+        1.0087350606918335,
+        1.1080968379974365,
+        1.0,
+        1.0,
+        1.0402438640594482,
+        1.1538077592849731,
+        0.800000011920929,
+        1.0534460544586182,
+        0.8163414001464844,
+        1.2000000476837158,
+        0.9826779961585999,
+        1.093641996383667,
+        1.2000000476837158,
+        1.0,
+        1.1971192359924316,
+        1.0,
+        1.0137375593185425,
+        1.0,
+        0.9327661991119385,
+        0.9568607807159424,
+        1.195391297340393,
+        0.9586186408996582,
+        0.9622377753257751,
+        0.9585183262825012,
+        0.800000011920929,
+        1.0,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.0,
+        1.2000000476837158,
+        0.8112258911132812,
+        0.800000011920929,
+        1.1125164031982422,
+        1.2000000476837158,
+        1.1966326236724854,
+        1.2000000476837158,
+        1.0,
+        0.9341071248054504,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.2000000476837158,
+        1.0,
+        1.0,
+        1.2000000476837158,
+        1.5,
+        1.5,
+        1.5,
+        0.7648418545722961,
+        1.5,
+        1.0431275367736816,
+        0.825089693069458,
+        1.063673973083496,
+        0.9789079427719116,
+        0.8430737853050232,
+        0.972107470035553,
+        0.9207236170768738,
+        1.0,
+        1.2000000476837158,
+        1.160471796989441,
+        0.8292584419250488,
+        1.1875600814819336,
+        1.1776715517044067,
+        1.1944694519042969,
+        0.9246050119400024,
+        0.9833389520645142,
+        0.9770788550376892,
+        1.2000000476837158,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9989553093910217,
+        1.0,
+        0.8869395852088928,
+        1.132124423980713,
+        1.0,
+        0.9737930297851562,
+        1.0,
+        1.0103256702423096,
+        1.2000000476837158,
+        1.0,
+        1.0,
+        1.0,
+        0.9219153523445129,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.2000000476837158,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "epoch": 12,
+      "history": [
+        {
+          "epoch": 1,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 58,
+            "top1": 0.28019323671497587,
+            "crossEntropy": 3.2704619543563918,
+            "contrastiveLoss": 3.4871020236452996
+          }
+        },
+        {
+          "epoch": 2,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 63,
+            "top1": 0.30434782608695654,
+            "crossEntropy": 3.250535892403644,
+            "contrastiveLoss": 3.4706218611215047
+          }
+        },
+        {
+          "epoch": 3,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 63,
+            "top1": 0.30434782608695654,
+            "crossEntropy": 3.237147161350158,
+            "contrastiveLoss": 3.4607094330488195
+          }
+        },
+        {
+          "epoch": 4,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 64,
+            "top1": 0.30917874396135264,
+            "crossEntropy": 3.230004350056395,
+            "contrastiveLoss": 3.4559616604864885
+          }
+        },
+        {
+          "epoch": 5,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 65,
+            "top1": 0.3140096618357488,
+            "crossEntropy": 3.2249934969892826,
+            "contrastiveLoss": 3.453138208043748
+          }
+        },
+        {
+          "epoch": 6,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 65,
+            "top1": 0.3140096618357488,
+            "crossEntropy": 3.221306539963985,
+            "contrastiveLoss": 3.451496283789188
+          }
+        },
+        {
+          "epoch": 7,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 64,
+            "top1": 0.30917874396135264,
+            "crossEntropy": 3.219832630837021,
+            "contrastiveLoss": 3.4494074087787943
+          }
+        },
+        {
+          "epoch": 8,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 64,
+            "top1": 0.30917874396135264,
+            "crossEntropy": 3.218483464729383,
+            "contrastiveLoss": 3.448441869970681
+          }
+        },
+        {
+          "epoch": 9,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 63,
+            "top1": 0.30434782608695654,
+            "crossEntropy": 3.216942478493216,
+            "contrastiveLoss": 3.446387173472971
+          }
+        },
+        {
+          "epoch": 10,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 63,
+            "top1": 0.30434782608695654,
+            "crossEntropy": 3.2162963540657707,
+            "contrastiveLoss": 3.445327245094926
+          }
+        },
+        {
+          "epoch": 11,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 62,
+            "top1": 0.2995169082125604,
+            "crossEntropy": 3.2152349090806527,
+            "contrastiveLoss": 3.4442511779674585
+          }
+        },
+        {
+          "epoch": 12,
+          "validation": {
+            "count": 207,
+            "bestmoveCorrect": 63,
+            "top1": 0.30434782608695654,
+            "crossEntropy": 3.215101324417741,
+            "contrastiveLoss": 3.4439562397878527
+          }
+        }
+      ],
+      "metrics": {
+        "train": {
+          "count": 435,
+          "bestmoveCorrect": 127,
+          "top1": 0.29195402298850576,
+          "crossEntropy": 3.0801915476376984,
+          "contrastiveLoss": 3.2824934020124634
+        },
+        "validation": {
+          "count": 207,
+          "bestmoveCorrect": 63,
+          "top1": 0.30434782608695654,
+          "crossEntropy": 3.215101324417741,
+          "contrastiveLoss": 3.4439562397878527
+        }
+      },
+      "changedGroups": 99,
+      "freeGroups": 143,
+      "settings": {
+        "epochs": 12,
+        "lr": 0.015,
+        "temperature": 4.0,
+        "margin": 1.0,
+        "regularization": 0.1,
+        "enemyRelaxed": true,
+        "nonEnemyBounds": [
+          0.8,
+          1.2
+        ],
+        "enemyBounds": [
+          0.5,
+          1.5
+        ]
+      },
+      "developmentPredictionChanges": 67,
+      "status": "candidate-not-selected"
+    }
+  ],
+  "newV8ValidationOrTestRead": false,
+  "selection": "No epoch/candidate selected; fixed epoch12 and controls handed off"
+}

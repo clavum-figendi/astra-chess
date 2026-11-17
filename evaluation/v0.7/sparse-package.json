@@ -1,0 +1,11 @@
+{
+  "zipSHA256": "f4af2bae2f99d39eab95e9dfea26a023a3192e8ecc1d3a2b40a0bb16eb03ddc9",
+  "bytes": 13049524,
+  "models": [
+    "pocket-plus",
+    "atlas"
+  ],
+  "alias": "pocket -> pocket-plus",
+  "uciPassed": true,
+  "removedIDsRejected": true
+}

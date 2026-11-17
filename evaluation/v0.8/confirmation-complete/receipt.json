@@ -1,0 +1,18 @@
+{
+  "preRunFreezeSHA256": "82a189d509a736f61c1602b4913dc49b9ff484cf0583e6a817dce51bdf1da314",
+  "completedAt": 1794876741.830811,
+  "allSelectedArtifactsAndValidationMetricsIdentical": true,
+  "allHeldoutPredictionsIdentical": true,
+  "allPairedGamesAndDecisionsIdentical": true,
+  "runtimeAndOpponentUnchangedAcrossReplay": true,
+  "runtimeFilesChecked": 13528,
+  "games": 20,
+  "scope": "Original V8 runtime dependency/opponent freeze was incomplete. This binds the later replay only, reuses already-exposed data, does not establish historical immutability or add independent statistical evidence.",
+  "artifacts": {
+    "matches.pgn": "b3fd036892e732ee480de716de15664d5bd60e3389c65fc5d7556fc5a2512366",
+    "pre-run-freeze.json": "82a189d509a736f61c1602b4913dc49b9ff484cf0583e6a817dce51bdf1da314",
+    "final-results.json": "890b87783c3fe23b1b61e4a6831774e024ce90844ca08c7347a0b2f751891bd7",
+    "selection.json": "3d5fe8b69e24e10732bb0d1064683ac25171229c80506e9c51d7469911a52cc4",
+    "validation-results.json": "ddb32a2721007341cfd043dd95b9383107219801c69f2ff60bb7eabbd9861f7c"
+  }
+}

@@ -40,6 +40,9 @@ let result = '*';
 let startFen = null;
 let gameSeed = '';
 let gameBook = true;
+let bookManifest = null;
+let gameBookSource = 'eco';
+let gameBookSHA256 = '';
 const premove = createPremove();
 const sound = createSound();
 function renderPremove(message) {
@@ -178,6 +181,8 @@ function resetPosition(fen = null) {
   active = false; loading = false; cancelRequests(); closeDialogs();
   gameSeed = Array.from(crypto.getRandomValues(new Uint32Array(4)), n => n.toString(16).padStart(8, '0')).join('');
   gameBook = $('book').checked;
+  gameBookSource = $('book-source').value;
+  gameBookSHA256 = bookManifest?.books.find(entry => entry.id === gameBookSource)?.sha256 || '';
   game = next; startFen = fen; result = '*'; lastMove = null; selected = null;
   human = $('color').value; flipped = human === 'b'; focusSquare = human === 'w' ? 'e2' : 'e7';
   clock.reset(config); $('resign').disabled = true; $('new-game').disabled = false;
@@ -222,9 +227,11 @@ async function newGame(fen = null) {
     if (generation !== token) return;
     if (!currentModel()) throw new Error('Selected policy is not available in the manifest.');
     createEngineWorker();
-    const loaded = await request('load', { modelId: $('model').value, book: {enabled:gameBook,seed:gameSeed} });
+    const loaded = await request('load', { modelId: $('model').value, book: {enabled:gameBook,source:gameBookSource,seed:gameSeed} });
     if (generation !== token) return;
     if (loaded.modelId !== $('model').value) throw new Error('Loaded policy does not match the selection.');
+    if (loaded.bookSource !== undefined && loaded.bookSource !== gameBookSource) throw new Error('Loaded opening book does not match the selection.');
+    if (loaded.bookSHA256 !== undefined) gameBookSHA256 = loaded.bookSHA256;
     loading = false; active = true;
     $('new-game').disabled = false; $('new-game').innerHTML = 'New game <span aria-hidden="true">↗</span>';
     $('resign').disabled = false;
@@ -335,7 +342,7 @@ $('cancel-resign').onclick = () => $('resign-dialog').close();
 $('confirm-resign').onclick = () => {
   if (active && !updateClocks().flagged) finish(`${colors[human]} resigned · ${colors[human === 'w' ? 'b' : 'w']} wins`, human === 'w' ? '0-1' : '1-0');
 };
-for (const id of ['color', 'model', 'time-control', 'custom-minutes', 'custom-increment', 'book']) {
+for (const id of ['color', 'model', 'time-control', 'custom-minutes', 'custom-increment', 'book', 'book-source']) {
   $(id).addEventListener('change', () => {
     $('custom-time').hidden = $('time-control').value !== 'custom';
     try { resetPosition(); status('Settings changed · start a new game'); } catch (error) { status(error.message, true); }
@@ -343,7 +350,7 @@ for (const id of ['color', 'model', 'time-control', 'custom-minutes', 'custom-in
 }
 $('fen-form').onsubmit = (event) => { event.preventDefault(); const fen = $('fen').value.trim(); if (!fen) { status('Paste a FEN position first.', true); return; } newGame(fen); };
 $('download-pgn').onclick = () => {
-  game.header('Event', 'Chess Lab game', 'White', human === 'w' ? 'Human' : modelName(), 'Black', human === 'b' ? 'Human' : modelName(), 'Result', result, 'Seed', gameSeed, 'Book', gameBook ? 'on' : 'off');
+  game.header('Event', 'Chess Lab game', 'White', human === 'w' ? 'Human' : modelName(), 'Black', human === 'b' ? 'Human' : modelName(), 'Result', result, 'Seed', gameSeed, 'Book', gameBook ? 'on' : 'off', 'BookSource', gameBookSource, 'BookHash', gameBookSHA256, 'BookHashAlgorithm', 'SHA256');
   if (startFen) game.header('SetUp', '1', 'FEN', startFen);
   const url = URL.createObjectURL(new Blob([game.pgn() + '\n'], { type: 'application/x-chess-pgn' }));
   const link = document.createElement('a'); link.href = url; link.download = 'chess-lab-game.pgn'; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -372,7 +379,29 @@ async function loadManifest() {
   updatePlayers();
   return data;
 }
-const manifestReady = loadManifest();
+async function loadBookManifest() {
+  const response = await fetch(new URL('./books/manifest.json', import.meta.url));
+  if (!response.ok) throw new Error(`Opening-book registry unavailable (HTTP ${response.status}).`);
+  const data = await response.json();
+  if (data?.version !== 1 || data.default !== 'eco' || !Array.isArray(data.books) || !data.books.length) throw new Error('Invalid opening-book registry.');
+  const ids = new Set();
+  for (const entry of data.books) {
+    if (!entry || typeof entry.id !== 'string' || !/^[a-z][a-z0-9-]*$/.test(entry.id) || ids.has(entry.id) || typeof entry.name !== 'string' || !entry.name.trim()) throw new Error('Invalid opening-book registry entry.');
+    ids.add(entry.id);
+    if (entry.id === 'eco' ? entry.file !== '../openings.json' : typeof entry.file !== 'string' || !/^[a-zA-Z0-9][a-zA-Z0-9._-]*\.json$/.test(entry.file)) throw new Error('Invalid opening-book asset path.');
+    if (entry.sha256 !== undefined && (typeof entry.sha256 !== 'string' || !/^[a-f0-9]{64}$/.test(entry.sha256))) throw new Error('Invalid opening-book SHA256.');
+  }
+  if (!ids.has('eco')) throw new Error('Opening-book registry is missing ECO.');
+  bookManifest = data;
+  const selected = $('book-source').value;
+  $('book-source').replaceChildren();
+  for (const entry of data.books) {
+    const option = setNode('option', entry.name); option.value = entry.id; $('book-source').append(option);
+  }
+  $('book-source').value = ids.has(selected) ? selected : 'eco';
+  return data;
+}
+const manifestReady = Promise.all([loadManifest(), loadBookManifest()]);
 manifestReady.catch((error) => { $('model-downloads').textContent = error.message; if (!active && !loading) status(error.message, true); });
 resetPosition();
 status('Ready to play');

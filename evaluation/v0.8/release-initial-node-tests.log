@@ -1,0 +1,260 @@
+
+> chess-lab@0.4.0 test
+> node --test --test-concurrency=1 tests/*.test.mjs
+
+✔ puzzle scoring first applies the opponents prelude, then tests policy rather than solution replay (54.265366ms)
+✔ seeded random and capture baselines choose legal repeatable moves (64.402702ms)
+✔ CLI defaults to book, seed reproduces, and no-book selects actual policy (12799.383501ms)
+✔ UCI reports neutral identity and honest source; repetition never selects book (7580.044189ms)
+﹣ actual browser book works under subpath, neutral UI, fresh seeds, PGN, toggle and policy fallback (1.709466ms) # SKIP
+✔ build produces standalone browser and laptop ESM trees and binaries (290.735061ms)
+﹣ workspace renders 64 accessible squares, neutral identity, and starts only on request (2.366397ms) # SKIP
+﹣ black-side play, keyboard navigation, and reset cancel an outstanding decision (0.409904ms) # SKIP
+﹣ FEN imports allow explicit underpromotions for either color and PGN contains the result (0.353952ms) # SKIP
+﹣ clock loading is untimed, AI thinking is timed, and flag fall rejects a late worker reply (3.134505ms) # SKIP
+﹣ mobile workspace fits without horizontal overflow (0.463646ms) # SKIP
+✔ worker returns request-correlated errors without falling back, and survives subsequent requests (109.189825ms)
+✔ a completed legal turn charges thinking time, credits increment, and starts the opponent (8.326131ms)
+✔ flagging is irreversible and a late move cannot gain increment or restart time (1.208175ms)
+✔ stopping freezes a settled clock and reset starts a fresh inactive game (3.470989ms)
+✔ unlimited clocks preserve null through turns, stop, and resetting a timed clock (1.007562ms)
+✔ only the active side loses actual monotonic elapsed time, even without ticks (1.185954ms)
+✔ Pocket scores free material above quiet play without entering a losing queen exchange (27391.756771ms)
+✔ Pocket attack rays respect blockers and the vacating source (55.073271ms)
+✔ Atlas adds genuine checking-fork and vacated-shield relationships (184.7629ms)
+✔ Atlas encodes protected adjacent queen checks without treating king pseudo-attacks as a free capture (111.988216ms)
+✔ en passant capture reward is encoded from raw pawn relationships (25.16512ms)
+✔ authored phase gate activates the king in pawn endings but not against enemy major pieces (196.869878ms)
+✔ authored rook-file weights distinguish open, semi-open and own-pawn files (217.987458ms)
+✔ both colors promote to a legal queen and castling has encoded value (193.49974ms)
+✔ all stored neurons contribute to policy outputs rather than size padding (125.516946ms)
+✖ downloaded artifacts reproduce byte-for-byte, with topology-inclusive manifest accounting (12.573527ms)
+✔ legal mask, black perspective and deterministic candidate ordering are preserved (26.168443ms)
+✔ specialist distinguishes queen mate, rook mate, and stalemate (113.955927ms)
+✔ specialist is inactive outside exactly own king plus one major versus bare king (24.30317ms)
+✔ specialist terminal signs agree with independent rules over seeded three-man positions (4446.315384ms)
+✔ labels require complete exact same-depth coverage and preserve side-to-move scores (38.354618ms)
+✔ mate targets use an explicitly separate surrogate and reject ambiguous scores (11.068709ms)
+✔ move selection is only network logits plus a legal mask, including lexical ties (150.023826ms)
+✔ parser rejects cycles, invalid sparse rows, nonfinite tensors and invalid outputs (4.123831ms)
+✔ binary network executes affine and ReLU nodes, retaining signed outputs (10.60683ms)
+✔ larger Plus variants carry three-man terminal knowledge and choose legal mating moves (30231.814261ms)
+✔ canonical encoding preserves files and swaps arbitrary piece colors by rank reflection (18.391033ms)
+✔ raw board encoding is twelve canonical one-hot planes for either side (4.368793ms)
+✔ direct engine-regret coordinate passes change bounded weights without touching protected values (12.643386ms)
+✔ bounded engine-label fitting improves validation regret and preserves fixed coefficients (47.078515ms)
+✔ rejects overlap between fitting and validation position identifiers (3.680015ms)
+✔ laptop runner exposes and executes every installed model including larger variants (9728.91319ms)
+✔ UCI applies full move history and returns one supplied legal policy move (16.0619ms)
+✔ UCI history detects repetition and does not ask the policy to move (15.055684ms)
+✔ invalid UCI position cannot leave a stale playable board (3.250486ms)
+✔ model resources accept only local artifacts matching the runtime (3.481703ms)
+✔ artifact integrity requires correct size and digest (30.18727ms)
+✔ packaged family aliases resolve only to listed artifacts (3.604929ms)
+✔ curated artifact has at least 30 fully validated branches with exact position boundaries (3213.104443ms)
+✔ weighted book validates complete lines and samples reproducibly without neural scores (113.119556ms)
+✔ policy labels preserve actual bestmove and MultiPV ranks, rejecting incomplete or inconsistent responses (50.1831ms)
+✔ SMOKE ONLY: v3 scalar data exercises new sparse fitting and binary roundtrip, not policy evidence (1240.048ms)
+✔ rejects impossible MultiPV rank beyond legal move count (4.092136ms)
+✔ rejects malformed sparse rows, teacher labels, nonfinite values and leakage (118.860049ms)
+✔ cold baseline is eligible and no-progress early stopping honors patience (11.681436ms)
+✔ rank distribution contributes a quarter of the direct stable cross entropy (6.397163ms)
+✔ direct bestmove/rank target overrides contrary numerical cp, selects validation and records bounded rounds (22.688527ms)
+✔ frozen policy artifacts reconstruct exactly without fitting or reading final test (5394.649105ms)
+✔ sparse features match float32 serialization for both models, colors and promotions (9696.156499ms)
+✔ shared heads use canonical output while internally used outputs remain untouched (36.678957ms)
+✔ geometry unties actual terminal edges into substantial deterministic capacity (9795.376875ms)
+✔ rebuilds a tuned artifact from pinned base/scales and labels its provenance (28.17144ms)
+✔ static server serves modules, 404 and confines paths to its root (121.908374ms)
+✔ top-K teacher keeps exact ranked alternatives separate from full legal mask (67.872007ms)
+✔ every browser action ID exactly matches the verified Python checkpoint contract (8.105765ms)
+✔ browser FEN tokens match actual Python tokens including promotion and en passant (1.286702ms)
+✔ repetition override preserves full history and rejects mismatched history (82.579824ms)
+✖ UI removes obsolete variant choices and keeps evidence inside technical disclosure (11.280641ms)
+✔ FIXTURE: uses latest complete same-depth MultiPV, not mixed iterations/bounds (159.581011ms)
+{"receipt":"stockfish-multipv","depth":4,"lines":20,"bestmove":"c2c4"}
+{"receipt":"stockfish-history-multipv","depth":6,"lines":29,"bestmove":"b8c6"}
+✔ REAL Stockfish: all legal moves scored at one complete depth-4 iteration (1325.665311ms)
+✔ FIXTURE: malformed or missing scores are never fabricated (137.421534ms)
+✔ FIXTURE: unexpected exit and illegal/null moves reject without fallback (347.520171ms)
+✔ FIXTURE: timeout poisons session and bounds stderr (410.877907ms)
+✔ FIXTURE: concurrent analysis is rejected, later sequential analysis works (295.187941ms)
+✔ FIXTURE: validates FEN, limits and complete standard-start history before sending (144.200199ms)
+✔ FIXTURE: handshake timeout and stale bestmove drainage (453.651602ms)
+✔ HARNESS UNIT: terminal history wins over ply cap; no material adjudication (34.203897ms)
+✔ HARNESS UNIT: engine illegal/null moves are errors, never fallback or a result (4.244414ms)
+{"receipt":"gnuchess-node-budget","limitMode":"reported-nodes-stop","observedNodes":10000,"bestmove":"b1c3"}
+✔ REAL GNU Chess: node budget is bounded explicitly rather than ignored by its adapter (344.657776ms)
+{"receipt":"classic-pocket-game","result":"1/2-1/2","termination":"ply-cap","plies":12,"pgn":"[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"Astra Pocket\"]\n[Black \"GNU Chess 6.2.9\"]\n[Result \"1/2-1/2\"]\n[Termination \"ply-cap\"]\n\n1. e4 e5 2. Nc3 Nc6 3. Nge2 Nf6 4. d4 Bb4 5. Be3 Nxe4 6. d5 Na5 1/2-1/2","modelDecisions":[{"ply":3,"move":"b1c3"},{"ply":5,"move":"g1e2"},{"ply":7,"move":"d2d4"},{"ply":9,"move":"c1e3"},{"ply":11,"move":"d4d5"}],"engineIdentity":{"kind":"gnuchess","path":"/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess","name":"GNU Chess 6.2.9","author":"GNU Chess team"}}
+✔ REAL classic Pocket versus GNU Chess: legal short game and PGN (1057.394588ms)
+{"receipt":"stockfish","identity":{"kind":"stockfish","path":"/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/stockfish","name":"Stockfish 17.1","author":"the Stockfish developers (see AUTHORS file)"},"options":[{"name":"Threads","type":"spin","raw":"option name Threads type spin default 1 min 1 max 1024","default":1,"min":1,"max":1024,"value":1},{"name":"Hash","type":"spin","raw":"option name Hash type spin default 16 min 1 max 33554432","default":16,"min":1,"max":33554432,"value":16},{"name":"Ponder","type":"check","raw":"option name Ponder type check default false","default":false,"value":false},{"name":"MultiPV","type":"spin","raw":"option name MultiPV type spin default 1 min 1 max 256","default":1,"min":1,"max":256,"value":1}],"result":{"bestmove":"b8c6","lines":[{"move":"b8c6","depth":3,"pv":["b8c6","f1b5"],"multipv":1,"nodes":168,"cp":-23}],"depth":3,"complete":true,"expectedLines":1,"positionSource":"history","limitMode":"native-uci","observedNodes":168}}
+✔ REAL stockfish: handshake and legal moves with standard-start history (1128.914325ms)
+{"receipt":"gnuchess","identity":{"kind":"gnuchess","path":"/home/hermes/projects/astra-chess/.cache/engines/root/usr/games/gnuchess","name":"GNU Chess 6.2.9","author":"GNU Chess team"},"options":[{"name":"Hash","type":"spin","raw":"option name Hash type spin default 16 min 4 max 1024","default":16,"min":4,"max":1024,"value":16},{"name":"Ponder","type":"check","raw":"option name Ponder type check default false","default":false,"value":false},{"name":"OwnBook","type":"check","raw":"option name OwnBook type check default true","default":true,"value":false}],"result":{"bestmove":"b8c6","lines":[{"move":"b8c6","depth":3,"pv":["b8c6","b1c3","g8f6"],"multipv":1,"nodes":356,"cp":0}],"depth":3,"complete":true,"expectedLines":1,"positionSource":"history","limitMode":"native-uci","observedNodes":448}}
+✔ REAL gnuchess: handshake and legal moves with standard-start history (335.812926ms)
+✔ UCI quit exits with stdin closed (360.883834ms)
+✔ UCI quit exits with stdin still open (339.697365ms)
+✔ v7 pinned CC0 sources, deduplication and byte-for-byte offline rebuild (4729.826258ms)
+ℹ Full strict trie compile: 4235.2 ms; 1013432 bytes
+✔ v7 full corpus preserves original compile contract and fully validates beyond cutoff (6945.88614ms)
+ℹ Original independent per-line compile: 6933.5 ms
+✔ v7 every stored continuation is legal at its recorded fullmove and depth (3499.57244ms)
+ℹ 8190 legal continuations at 5575 positions
+✔ v7 seeded variety remains weighted and all ECO volumes offer actual book moves (2092.184834ms)
+✔ v7 all 500 ECO codes survive as legal terminal lines or shared prefixes (4876.847128ms)
+ℹ All 3,865 source paths retained directly or as validated prefixes; all 500 ECO codes sampled legally
+✔ v7 imported phantom EP, fullmove, castling, terminal, legal filtering and transpositions (21.637647ms)
+✔ single premove is immutable, replaced, consumed once and legally rechecked after reply (53.313857ms)
+✔ invalid, stale, terminal and flagged premoves are discarded without clock increment (26.823447ms)
+✔ technical details are collapsed and premove and audio have explicit accessible controls (3.349477ms)
+✔ sound is silent by default, persists only explicit preference and immediately stops active voices (6.545502ms)
+✔ UI captures book/seed/SHA per game, cancels pending profile replies and exports actual PGN provenance (195.858294ms)
+✔ packager copies the offline registry/assets to laptop and gates missing registry to legacy ECO trees (7.571106ms)
+✔ packaged CLI selects reproducible profile with SHA provenance and honest policy fallback (955.743283ms)
+✔ CLI rejects unknown profiles, corrupted hashes, and missing flag values (445.271506ms)
+✔ UCI BookSource resets the position and seed, reports provenance, and rejects unknown IDs (386.361721ms)
+✔ worker chooses selected offline profile, reports provenance and reuses validated cache (361.607506ms)
+✔ worker rejects unknown IDs, unsafe asset paths and incorrect SHA without ECO fallback (1006.463209ms)
+✔ valid-shaped cache corruption is rebuilt from verified source bytes (240.633858ms)
+✔ superseded profile loads cannot replace a newer game (297.111956ms)
+✔ game weights preserve observed duplicate paths and both profiles use the same corpus (59.556552ms)
+✔ bounded fetch streams exact response and rejects ignored ranges, overflow and truncation (99.648914ms)
+✔ exclusive-create collision preserves existing partial and completed archive (7.526945ms)
+✔ overlapping acquisition cannot unlink the active first writer partial (12.463233ms)
+✔ real snapshots rebuild byte-identically offline, preserve counts, license and legal runtime contract (35969.50345ms)
+ℹ eco full runtime replay 2815.3ms; 1013432 bytes
+ℹ lichess-2200 full runtime replay 5858.8ms; 1540282 bytes
+ℹ lichess-2200-slow full runtime replay 602.9ms; 182086 bytes
+ℹ Offline source replay + all runtime validators: 35965.2ms
+✔ validator returns the replayed runtime book, not trusted serialized positions (39.806216ms)
+✔ validator rejects malformed, illegal, truncated or tampered payloads (29.692767ms)
+✔ validated books preserve exact ply and EP guards, transpositions, deterministic and injected RNG (507.052524ms)
+✔ raw HTML evidence is preserved as inert text with a digest map, never served as HTML (47.423783ms)
+✔ CLI is read-only with absent decision, regardless of arguments (514.723376ms)
+✔ CLI is read-only with malformed decision, regardless of arguments (449.237015ms)
+✔ CLI is read-only with approved decision, regardless of arguments (406.177236ms)
+✔ public fit receipts reconstruct both serialized relaxed candidates exactly without private caches (5484.239691ms)
+✔ serialized all-legal scores preserve deployed ranking and reject tampering (509.819309ms)
+✔ enemy material is opt-in mutable but every king/mate-scale edge stays fixed (593.604303ms)
+✔ promotion-sized pawn contributions are not tied to small pawn-placement coefficients (6.454314ms)
+✔ rewrites actual stored head weights, preserving backbone and protected capture coefficients (3.373106ms)
+✔ rejects invalid multipliers and changes to protected groups (1.722349ms)
+✔ cached legal-move features reproduce real serialized inference for both colors (2040.659515ms)
+ℹ tests 123
+ℹ suites 0
+ℹ pass 115
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 6
+ℹ todo 0
+ℹ duration_ms 216968.873036
+
+✖ failing tests:
+
+test at tests/engine-circuits.test.mjs:109:1
+✖ downloaded artifacts reproduce byte-for-byte, with topology-inclusive manifest accounting (12.573527ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   'atlas-v8',
+      'pocket',
+      'pocket-plus',
+      'atlas',
+      'atlas-plus'
+    ]
+  
+      at TestContext.<anonymous> (file:///home/hermes/projects/astra-chess/tests/engine-circuits.test.mjs:112:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'atlas-v8', 'pocket', 'pocket-plus', 'atlas', 'atlas-plus' ],
+    expected: [ 'pocket', 'pocket-plus', 'atlas', 'atlas-plus' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/tuned-ui.test.mjs:2:1
+✖ UI removes obsolete variant choices and keeps evidence inside technical disclosure (11.280641ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /href="\.\/evaluation\/v0\.6\/heldout-onnx\.json"/. Input:
+  
+  '<!doctype html>\n' +
+    '<html lang="en">\n' +
+    '<head>\n' +
+    '  <meta charset="utf-8">\n' +
+    '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
+    '  <meta name="theme-color" content="#1c1e20">\n' +
+    '  <meta name="description" content="Play chess locally with a choice of neural policies and varied opening lines.">\n' +
+    '  <title>Chess Lab — Chess workspace</title>\n' +
+    `  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%231c1e20'/%3E%3Cpath d='M12 30h18M15 27l3-8-5-2 10-9 5 6-2 13z' fill='none' stroke='%23e8dfcc' stroke-width='3'/%3E%3C/svg%3E">\n` +
+    '  <link rel="stylesheet" href="./style.css">\n' +
+    '  <script type="module" src="./app.mjs"></script>\n' +
+    '</head>\n' +
+    '<body>\n' +
+    '  <header class="masthead">\n' +
+    '    <a class="wordmark" href="./" aria-label="Chess Lab home"><span class="brand-mark" aria-hidden="true">♞</span> CHESS <span class="brand-divider">/</span> <span class="brand-chess">LAB</span></a>\n' +
+    '    <span class="masthead-caption">Your board. Your move.</span>\n' +
+    '    <label class="sound-control"><input id="sound" type="checkbox"> Sound</label>\n' +
+    '  </header>\n' +
+    '  <main>\n' +
+    '    <div class="workspace-heading"><h1>Play chess</h1><span class="local-note">Local play · no account</span></div>\n' +
+    '\n' +
+    '    <div class="workspace">\n' +
+    '      <section class="board-column" aria-label="Chess game">\n' +
+    '        <div class="player-row" id="opponent-row"><div><span class="player-symbol" aria-hidden="true">◆</span><span id="opponent-name">Pocket</span><small id="opponent-color">Black</small></div><output class="clock" id="opponent-clock" aria-label="Black clock">3:00</output></div>\n' +
+    '        <div id="board" class="board" role="group" aria-label="Chessboard. Select a piece, then a destination. Use arrow keys to navigate and Enter to select."></div>\n' +
+    '        <div class="player-row" id="human-row"><div><span class="player-symbol human-symbol" aria-hidden="true">○</span><span>You</span><small id="human-color">White</small></div><output class="clock" id="human-clock" aria-label="White clock">3:00</output></div>\n' +
+    '        <div class="board-toolbar"><p id="status" role="status" aria-live="polite">Ready to play</p><button id="flip" class="text-button" type="button" title="Flip board">Flip board <span aria-hidden="true">⇅</span></button></div>\n' +
+    '        <div class="premove-bar"><span id="premove-status" role="status" aria-live="polite">Premoves ready</span><button id="cancel-premove" type="button" disabled>Cancel premove</button></div>\n' +
+    '        <p class="board-hint">Tap a piece, then a square · Arrow keys + Enter · Esc / right-click cancels</p>\n' +
+    '      </section>\n' +
+    '      <aside class="console" aria-label="Game controls and policy output">\n' +
+    '        <section class="setup-section" aria-labelledby="setup-heading">\n' +
+    '          <h2 id="setup-heading">Game setup</h2>\n' +
+    '          <div class="field-grid"><label>Play as<select id="color"><option value="w">White</option><option value="b">Black</option></select></label><label>Opponent<select id="model"><option value="pocket" selected>Pocket</option></select></label></div>\n' +
+    '          <label>Time control<select id="time-control"><option value="60,0">1 + 0 · Bullet</option><option value="180,2" selected>3 + 2 · Blitz</option><option value="300,0">5 + 0 · Blitz</option><option value="600,5">10 + 5 · Rapid</option><option value="unlimited">Unlimited</option><option value="custom">Custom…</option></select></label>\n' +
+    '          <div id="custom-time" class="field-grid" hidden><label>Minutes per side<input id="custom-minutes" type="number" min="0.05" max="180" step="0.05" value="5"></label><label>Increment (seconds)<input id="custom-increment" type="number" min="0" max="180" step="1" value="0"></label></div>\n' +
+    '          <label class="book-toggle"><input id="book" type="checkbox" checked> Opening book <span>Varied opening lines</span></label>\n' +
+    '          <label>Book source<select id="book-source" aria-describedby="book-source-help"><option value="eco" selected>ECO repertoire</option></select></label>\n' +
+    '          <p id="book-source-help" class="control-note">Offline snapshots only. A book miss uses the selected policy.</p>\n' +
+    '          <label class="book-toggle"><input id="premove" type="checkbox" checked aria-describedby="premove-help"> Premoves</label>\n' +
+    '          <p id="premove-help" class="control-note">Queue one move while your opponent thinks. Rechecked after their move; queued promotions become queens.</p>\n' +
+    '          <div class="game-actions"><button id="new-game" class="primary" type="button">Start game <span aria-hidden="true">↗</span></button><button id="resign" type="button" disabled>Resign</button></div>\n' +
+    '\n' +
+    '        </section>\n' +
+    '        <section class="notation-section" aria-labelledby="notation-heading"><div class="section-title"><h2 id="notation-heading"><span class="section-number">02</span> Notation</h2><button id="download-pgn" class="text-button" type="button">↓ PGN</button></div><div id="moves" class="moves" aria-label="Move list"><p class="empty-state">The first move is yours.</p></div></section>\n' +
+    '      </aside>\n' +
+    '    </div>\n' +
+    '    <details id="technical-panel"><summary>Analysis, positions &amp; technical details</summary>\n' +
+    '    <p class="control-note"><a href="./docs/RELEASE-V8.md">Current release &amp; weight comparisons ↗</a> · <a href="./docs/BOOK-SOURCES-V8.md">Book choices &amp; CC0 sources ↗</a></p>\n' +
+    '        <section class="policy-section" aria-labelledby="policy-heading"><div class="section-title"><h2 id="policy-heading">Move readout</h2><output id="latency">— ms</output></div><p class="source-line">Source <output id="move-source">—</output></p><div class="readout-labels"><span>Move</span><span id="score-label">Raw score</span></div><ol id="candidates" class="candidates"><li class="empty-state">Awaiting a move.</li></ol></section>\n' +
+    '    <section class="position-section" aria-labelledby="position-heading"><h2 id="position-heading">Position</h2><form id="fen-form"><label class="sr-only" for="fen">FEN position</label><input id="fen" type="text" spellcheck="false" autocomplete="off" aria-describedby="fen-help" placeholder="Paste a FEN position…"><button type="submit">Load FEN</button></form><p id="fen-help">Imports start a new game with the selected settings. Repetition history before the imported position is unknown.</p></section>\n' +
+    '    <section id="method" class="reference-section"><h2>About Chess Lab</h2><p>Opening moves use a weighted, seeded book when enabled. Pocket/Atlas use sparse neural policies; DeepMind 9M scores legal state/action pairs in batches. Neither performs game-tree search. Everything runs on your device.</p><details><summary>Rules & clock conventions</summary><p>Legal moves and terminal positions use chess.js. Threefold repetition and the fifty-move rule are drawn automatically. Thinking and background-tab time count against the clock; increment follows a move made before flag fall. Timeout is a loss unless the whole position has insufficient material. Imported positions use fresh clocks and do not include earlier repetition history. Inference has a 30-second safety timeout, including Unlimited games.</p></details><p><a href="./docs/BROWSER-V6.md">Transformer methods & measured results ↗</a> · <a href="./evaluation/v0.8/final-results.json">Results data ↗</a> · <a href="https://github.com/clavum-figendi/chesslab">Source ↗</a></p></section>\n' +
+    '\n' +
+    '\n' +
+    '    <section class="reference-section" aria-labelledby="weights-heading"><h2 id="weights-heading">Models & downloads</h2><div id="model-downloads" class="model-downloads">Loading model information…</div><a href="./models/manifest.json" download>Model manifest ↓</a><p class="laptop-download"><a href="./downloads/astra-chess-laptop.zip" download>Download laptop runtime + models ↓</a></p><p class="control-note">Laptop: Node.js 22+. Run <code>node laptop/cli.mjs --list-models</code> to list models; use <code>--no-book</code> for pure policy play or <code>--seed example</code> to replay opening choices.</p></section>\n' +
+    '\n' +
+    '    <p class="laptop-download"><a href="https://github.com/clavum-figendi/chesslab/releases/download/v0.7.0/chess-lab-9m-laptop.zip">Download DeepMind 9M laptop bundle ↓</a> · Selected checkpoint, Python/PyTorch UCI runner, instructions and evidence.</p>\n' +
+    '    <details id="size-proposals" class="reference-section"><summary>Larger sizes: proposed, not built.</summary><p>Future model budgets and memory allowances are described in the <a href="./models/sizing-proposals.json">sizing proposals</a>.</p></details>\n' +
+    '    </details>\n' +
+    '  </main>\n' +
+    '  <footer><span>CHESS / LAB</span><span>Local play. Open source.</span><a href="#">Back to board ↑</a></footer>\n' +
+    '  <dialog id="promotion-dialog" aria-labelledby="promotion-title"><h2 id="promotion-title">Choose your promotion</h2><p>A pawn has reached the last rank.</p><div id="promotion-choices" class="promotion-choices"></div><button id="cancel-promotion" type="button">Cancel</button></dialog>\n' +
+    '  <dialog id="resign-dialog" aria-labelledby="resign-title"><h2 id="resign-title">Resign this game?</h2><p>The clock keeps running until you confirm.</p><div class="game-actions"><button id="confirm-resign" type="button" class="primary">Resign game</button><button id="cancel-resign" type="button">Keep playing</button></div></dialog>\n' +
+    '  <noscript>This chess workspace requires JavaScript. All inference runs locally; no external service is used.</noscript>\n' +
+    '</body>\n' +
+    '</html>\n'
+  
+      at TestContext.<anonymous> (file:///home/hermes/projects/astra-chess/tests/tuned-ui.test.mjs:8:114)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: `<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <meta name="theme-color" content="#1c1e20">\n  <meta name="description" content="Play chess locally with a choice of neural policies and varied opening lines.">\n  <title>Chess Lab — Chess workspace</title>\n  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%231c1e20'/%3E%3Cpath d='M12 30h18M15 27l3-8-5-2 10-9 5 6-2 13z' fill='none' stroke='%23e8dfcc' stroke-width='3'/%3E%3C/svg%3E">\n  <link rel="stylesheet" href="./style.css">\n  <script type="module" src="./app.mjs"></script>\n</head>\n<body>\n  <header class="masthead">\n    <a class="wordmark" href="./" aria-label="Chess Lab home"><span class="brand-mark" aria-hidden="true">♞</span> CHESS <span class="brand-divider">/</span> <span class="brand-chess">LAB</span></a>\n    <span class="masthead-caption">Your board. Your move.</span>\n    <label class="sound-control"><input id="sound" type="checkbox"> Sound</label>\n  </header>\n  <main>\n    <div class="workspace-heading"><h1>Play chess</h1><span class="local-note">Local play · no account</span></div>\n\n    <div class="workspace">\n      <section class="board-column" aria-label="Chess game">\n        <div class="player-row" id="opponent-row"><div><span class="player-symbol" aria-hidden="true">◆</span><span id="opponent-name">Pocket</span><small id="opponent-color">Black</small></div><output class="clock" id="opponent-clock" aria-label="Black clock">3:00</output></div>\n        <div id="board" class="board" role="group" aria-label="Chessboard. Select a piece, then a destination. Use arrow keys to navigate and Enter to select."></div>\n        <div class="player-row" id="human-row"><div><span class="player-symbol human-symbol" aria-hidden="true">○</span><span>You</span><small id="human-color">White</small></div><output class="clock" id="human-clock" aria-label="White clock">3:00</output></div>\n        <div class="board-toolbar"><p id="status" role="status" aria-live="polite">Ready to play</p><button id="flip" class="text-button" type="button" title="Flip board">Flip board <span aria-hidden="true">⇅</span></button></div>\n        <div class="premove-bar"><span id="premove-status" role="status" aria-live="polite">Premoves ready</span><button id="cancel-premove" type="button" disabled>Cancel premove</button></div>\n        <p class="board-hint">Tap a piece, then a square · Arrow keys + Enter · Esc / right-click cancels</p>\n      </section>\n      <aside class="console" aria-label="Game controls and policy output">\n        <section class="setup-section" aria-labelledby="setup-heading">\n          <h2 id="setup-heading">Game setup</h2>\n          <div class="field-grid"><label>Play as<select id="color"><option value="w">White</option><option value="b">Black</option></select></label><label>Opponent<select id="model"><option value="pocket" selected>Pocket</option></select></label></div>\n          <label>Time control<select id="time-control"><option value="60,0">1 + 0 · Bullet</option><option value="180,2" selected>3 + 2 · Blitz</option><option value="300,0">5 + 0 · Blitz</option><option value="600,5">10 + 5 · Rapid</option><option value="unlimited">Unlimited</option><option value="custom">Custom…</option></select></label>\n          <div id="custom-time" class="field-grid" hidden><label>Minutes per side<input id="custom-minutes" type="number" min="0.05" max="180" step="0.05" value="5"></label><label>Increment (seconds)<input id="custom-increment" type="number" min="0" max="180" step="1" value="0"></label></div>\n          <label class="book-toggle"><input id="book" type="checkbox" checked> Opening book <span>Varied opening lines</span></label>\n          <label>Book source<select id="book-source" aria-describedby="book-source-help"><option value="eco" selected>ECO repertoire</option></select></label>\n          <p id="book-source-help" class="control-note">Offline snapshots only. A book miss uses the selected policy.</p>\n          <label class="book-toggle"><input id="premove" type="checkbox" checked aria-describedby="premove-help"> Premoves</label>\n          <p id="premove-help" class="control-note">Queue one move while your opponent thinks. Rechecked after their move; queued promotions become queens.</p>\n          <div class="game-actions"><button id="new-game" class="primary" type="button">Start game <span aria-hidden="true">↗</span></button><button id="resign" type="button" disabled>Resign</button></div>\n\n        </section>\n        <section class="notation-section" aria-labelledby="notation-heading"><div class="section-title"><h2 id="notation-heading"><span class="section-number">02</span> Notation</h2><button id="download-pgn" class="text-button" type="button">↓ PGN</button></div><div id="moves" class="moves" aria-label="Move list"><p class="empty-state">The first move is yours.</p></div></section>\n      </aside>\n    </div>\n    <details id="technical-panel"><summary>Analysis, positions &amp; technical details</summary>\n    <p class="control-note"><a href="./docs/RELEASE-V8.md">Current release &amp; weight comparisons ↗</a> · <a href="./docs/BOOK-SOURCES-V8.md">Book choices &amp; CC0 sources ↗</a></p>\n        <section class="policy-section" aria-labelledby="policy-heading"><div class="section-title"><h2 id="policy-heading">Move readout</h2><output id="latency">— ms</output></div><p class="source-line">Source <output id="move-source">—</output></p><div class="readout-labels"><span>Move</span><span id="score-label">Raw score</span></div><ol id="candidates" class="candidates"><li class="empty-state">Awaiting a move.</li></ol></section>\n    <section class="position-section" aria-labelledby="position-heading"><h2 id="position-heading">Position</h2><form id="fen-form"><label class="sr-only" for="fen">FEN position</label><input id="fen" type="text" spellcheck="false" autocomplete="off" aria-describedby="fen-help" placeholder="Paste a FEN position…"><button type="submit">Load FEN</button></form><p id="fen-help">Imports start a new game with the selected settings. Repetition history before the imported position is unknown.</p></section>\n    <section id="method" class="reference-section"><h2>About Chess Lab</h2><p>Opening moves use a weighted, seeded book when enabled. Pocket/Atlas use sparse neural policies; DeepMind 9M scores legal state/action pairs in batches. Neither performs game-tree search. Everything runs on your device.</p><details><summary>Rules & clock conventions</summary><p>Legal moves and terminal positions use chess.js. Threefold repetition and the fifty-move rule are drawn automatically. Thinking and background-tab time count against the clock; increment follows a move made before flag fall. Timeout is a loss unless the whole position has insufficient material. Imported positions use fresh clocks and do not include earlier repetition history. Inference has a 30-second safety timeout, including Unlimited games.</p></details><p><a href="./docs/BROWSER-V6.md">Transformer methods & measured results ↗</a> · <a href="./evaluation/v0.8/final-results.json">Results data ↗</a> · <a href="https://github.com/clavum-figendi/chesslab">Source ↗</a></p></section>\n\n\n    <section class="reference-section" aria-labelledby="weights-heading"><h2 id="weights-heading">Models & downloads</h2><div id="model-downloads" class="model-downloads">Loading model information…</div><a href="./models/manifest.json" download>Model manifest ↓</a><p class="laptop-download"><a href="./downloads/astra-chess-laptop.zip" download>Download laptop runtime + models ↓</a></p><p class="control-note">Laptop: Node.js 22+. Run <code>node laptop/cli.mjs --list-models</code> to list models; use <code>--no-book</code> for pure policy play or <code>--seed example</code> to replay opening choices.</p></section>\n\n    <p class="laptop-download"><a href="https://github.com/clavum-figendi/chesslab/releases/download/v0.7.0/chess-lab-9m-laptop.zip">Download DeepMind 9M laptop bundle ↓</a> · Selected checkpoint, Python/PyTorch UCI runner, instructions and evidence.</p>\n    <details id="size-proposals" class="reference-section"><summary>Larger sizes: proposed, not built.</summary><p>Future model budgets and memory allowances are described in the <a href="./models/sizing-proposals.json">sizing proposals</a>.</p></details>\n    </details>\n  </main>\n  <footer><span>CHESS / LAB</span><span>Local play. Open source.</span><a href="#">Back to board ↑</a></footer>\n  <dialog id="promotion-dialog" aria-labelledby="promotion-title"><h2 id="promotion-title">Choose your promotion</h2><p>A pawn has reached the last rank.</p><div id="promotion-choices" class="promotion-choices"></div><button id="cancel-promotion" type="button">Cancel</button></dialog>\n  <dialog id="resign-dialog" aria-labelledby="resign-title"><h2 id="resign-title">Resign this game?</h2><p>The clock keeps running until you confirm.</p><div class="game-actions"><button id="confirm-resign" type="button" class="primary">Resign game</button><button id="cancel-resign" type="button">Keep playing</button></div></dialog>\n  <noscript>This chess workspace requires JavaScript. All inference runs locally; no external service is used.</noscript>\n</body>\n</html>\n`,
+    expected: /href="\.\/evaluation\/v0\.6\/heldout-onnx\.json"/,
+    operator: 'match',
+    diff: 'simple'
+  }

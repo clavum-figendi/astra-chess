@@ -1,0 +1,15 @@
+{
+  "note": "Raw HTML is preserved byte-for-byte as inert text; originals remain in the source repository.",
+  "files": [
+    {
+      "original": "v0.8/quality-before-fix/public/index.html",
+      "published": "v0.8/quality-before-fix/public/index.html.txt",
+      "sha256": "6a7fe35e89d2160fb76c25ad6c8da939df292425d7c724ee2af8a57ad1b83039"
+    },
+    {
+      "original": "v0.8/review-books-cc0-official.html",
+      "published": "v0.8/review-books-cc0-official.html.txt",
+      "sha256": "b43732f4c1463b087cf10d4daf8d8766514b2bf8f21bc5ef50905f95be227726"
+    }
+  ]
+}

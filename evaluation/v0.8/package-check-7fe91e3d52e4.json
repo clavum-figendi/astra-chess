@@ -1,0 +1,66 @@
+{
+  "archiveSHA256": "7fe91e3d52e40355257c89385c7b4d488189dda3cd500e24b00878851531a2b8",
+  "bytes": 16392325,
+  "scriptSHA256": "0fa89a855ba70f5d765288aabdee04a18817852313c883d6b211c703efe7af60",
+  "node": "v26.8.2",
+  "modelCount": 2,
+  "bookCount": 3,
+  "checks": [
+    {
+      "model": "pocket-plus",
+      "uciIdentity": {
+        "name": "Chess Lab",
+        "author": "Chess Lab contributors"
+      },
+      "noninitialPolicyMove": "b1c3",
+      "book": false
+    },
+    {
+      "model": "pocket-plus",
+      "book": "eco",
+      "move": "d2d4",
+      "sha256": "dc6398f617d58dc5e7697eea46452a465326cac808bc60f34d2439f5deef5d3d"
+    },
+    {
+      "model": "pocket-plus",
+      "book": "lichess-2200",
+      "move": "c2c4",
+      "sha256": "3207537740ffa7420a58d4749489fe32539bc56bc1adb9dfcf9359b9051c1227"
+    },
+    {
+      "model": "pocket-plus",
+      "book": "lichess-2200-slow",
+      "move": "g1f3",
+      "sha256": "fdd9a2409d8993206caf2fc42e42a509d60ca2217e4ba0546672e2572361a43a"
+    },
+    {
+      "model": "atlas-v8",
+      "uciIdentity": {
+        "name": "Chess Lab",
+        "author": "Chess Lab contributors"
+      },
+      "noninitialPolicyMove": "f1b5",
+      "book": false
+    },
+    {
+      "model": "atlas-v8",
+      "book": "eco",
+      "move": "d2d4",
+      "sha256": "dc6398f617d58dc5e7697eea46452a465326cac808bc60f34d2439f5deef5d3d"
+    },
+    {
+      "model": "atlas-v8",
+      "book": "lichess-2200",
+      "move": "c2c4",
+      "sha256": "3207537740ffa7420a58d4749489fe32539bc56bc1adb9dfcf9359b9051c1227"
+    },
+    {
+      "model": "atlas-v8",
+      "book": "lichess-2200-slow",
+      "move": "g1f3",
+      "sha256": "fdd9a2409d8993206caf2fc42e42a509d60ca2217e4ba0546672e2572361a43a"
+    }
+  ],
+  "ambientChessPackageAbsent": true,
+  "scope": "Fresh extraction of this exact ZIP outside the project, no resolvable external chess.js package and no NODE_PATH/options; real UCI and all book profiles. Node prerequisite not bundled; not a DeepMind/PyTorch bundle test."
+}

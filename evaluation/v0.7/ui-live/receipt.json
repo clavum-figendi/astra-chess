@@ -1,0 +1,330 @@
+{
+  "checks": [
+    "default collapsed native details; technical content hidden; premoves on and sound off",
+    "keyboard disclosure opens and closes technical content",
+    "legal premove executes exactly once; elapsed wall time charged, each move adds increment once",
+    "Escape, right-click, explicit cancel and disabling premoves clear the queue",
+    "illegal candidate may queue but is discarded without increment after legal recheck",
+    "model, color and new-game reset cancel queues and stale asynchronous replies",
+    "flag fall preempts queued move and ignores late worker response",
+    "queued promotion autoqueens after opponent reply",
+    "ordinary promotion retains four choices and underpromotion ends drawn game",
+    "opponent checkmate preempts premove",
+    {
+      "realWebAudioSignalPeak": 0.11174654215574265,
+      "muteSilence": true,
+      "persistedOnAndOff": true,
+      "soundDoesNotResetGame": true
+    },
+    "320/390/768/1280 widths have no overflow and visible non-board controls meet 44px target height",
+    {
+      "actual9MQueuedReply": "1.\ne4\nNf6",
+      "latency": "3596.20 ms",
+      "source": "policy"
+    }
+  ],
+  "geometry": [
+    {
+      "width": 320,
+      "board": {
+        "x": 12,
+        "y": 159.390625,
+        "width": 296,
+        "height": 296
+      },
+      "targets": [
+        {
+          "id": "sound-control",
+          "height": 44
+        },
+        {
+          "id": "flip",
+          "height": 44
+        },
+        {
+          "id": "cancel-premove",
+          "height": 44
+        },
+        {
+          "id": "color",
+          "height": 44
+        },
+        {
+          "id": "model",
+          "height": 44
+        },
+        {
+          "id": "time-control",
+          "height": 44
+        },
+        {
+          "id": "book-toggle",
+          "height": 44
+        },
+        {
+          "id": "book-toggle",
+          "height": 44
+        },
+        {
+          "id": "new-game",
+          "height": 44
+        },
+        {
+          "id": "resign",
+          "height": 44
+        },
+        {
+          "id": "download-pgn",
+          "height": 44
+        },
+        {
+          "id": "",
+          "height": 48
+        },
+        {
+          "id": "",
+          "height": 44
+        },
+        {
+          "id": "",
+          "height": 48
+        },
+        {
+          "id": "",
+          "height": 48
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "board": {
+        "x": 12,
+        "y": 159.390625,
+        "width": 366,
+        "height": 366
+      },
+      "targets": [
+        {
+          "id": "sound-control",
+          "height": 44
+        },
+        {
+          "id": "flip",
+          "height": 44
+        },
+        {
+          "id": "cancel-premove",
+          "height": 44
+        },
+        {
+          "id": "color",
+          "height": 44
+        },
+        {
+          "id": "model",
+          "height": 44
+        },
+        {
+          "id": "time-control",
+          "height": 44
+        },
+        {
+          "id": "book-toggle",
+          "height": 44
+        },
+        {
+          "id": "book-toggle",
+          "height": 44
+        },
+        {
+          "id": "new-game",
+          "height": 44
+        },
+        {
+          "id": "resign",
+          "height": 44
+        },
+        {
+          "id": "download-pgn",
+          "height": 44
+        },
+        {
+          "id": "",
+          "height": 48
+        },
+        {
+          "id": "",
+          "height": 44
+        },
+        {
+          "id": "",
+          "height": 48
+        },
+        {
+          "id": "",
+          "height": 48
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "board": {
+        "x": 24,
+        "y": 177.59375,
+        "width": 386,
+        "height": 386
+      },
+      "targets": [
+        {
+          "id": "sound-control",
+          "height": 44
+        },
+        {
+          "id": "flip",
+          "height": 44
+        },
+        {
+          "id": "cancel-premove",
+          "height": 44
+        },
+        {
+          "id": "color",
+          "height": 44
+        },
+        {
+          "id": "model",
+          "height": 44
+        },
+        {
+          "id": "time-control",
+          "height": 44
+        },
+        {
+          "id": "book-toggle",
+          "height": 44
+        },
+        {
+          "id": "book-toggle",
+          "height": 44
+        },
+        {
+          "id": "new-game",
+          "height": 44
+        },
+        {
+          "id": "resign",
+          "height": 44
+        },
+        {
+          "id": "download-pgn",
+          "height": 44
+        },
+        {
+          "id": "",
+          "height": 48
+        },
+        {
+          "id": "",
+          "height": 44
+        },
+        {
+          "id": "",
+          "height": 48
+        },
+        {
+          "id": "",
+          "height": 48
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "board": {
+        "x": 124,
+        "y": 177.59375,
+        "width": 664,
+        "height": 664
+      },
+      "targets": [
+        {
+          "id": "sound-control",
+          "height": 44
+        },
+        {
+          "id": "flip",
+          "height": 44
+        },
+        {
+          "id": "cancel-premove",
+          "height": 44
+        },
+        {
+          "id": "color",
+          "height": 44
+        },
+        {
+          "id": "model",
+          "height": 44
+        },
+        {
+          "id": "time-control",
+          "height": 44
+        },
+        {
+          "id": "book-toggle",
+          "height": 44
+        },
+        {
+          "id": "book-toggle",
+          "height": 44
+        },
+        {
+          "id": "new-game",
+          "height": 44
+        },
+        {
+          "id": "resign",
+          "height": 44
+        },
+        {
+          "id": "download-pgn",
+          "height": 44
+        },
+        {
+          "id": "",
+          "height": 48
+        },
+        {
+          "id": "",
+          "height": 44
+        },
+        {
+          "id": "",
+          "height": 48
+        },
+        {
+          "id": "",
+          "height": 48
+        }
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "sources": {
+    "public/index.html": "15dcd48f2d482e3fef4d7a527a033085ffdb19c69de57252b545d06eba188037",
+    "public/style.css": "f702029c951934e481a5c8f8648b9fba286f62dd66d760528b97f4e3ef88c41a",
+    "public/app.mjs": "e8562e57bfcdb189080c467db21e1a4f3fa09c274d6befd874b8fc2264a82625",
+    "src/premove.mjs": "2544bd78176f6b1192646e6eff0b59ec7b5c73988d4fba7ff746e2315bf0fdc8",
+    "src/sound.mjs": "aef70e82fbd96404fd689d586f0a177ae8309b925b5b0f57aa389fbd37a85c65",
+    "src/clock.mjs": "19355b93e1394a13d55c9a39d8d4a12c78093826b35edf862de7fc0c2128d6b0",
+    "tools/browser-v7-ui.py": "d79d1ca6013fae75e64345ce4e5bd3503d790dd9efdddfd0758606d42c55c53d"
+  },
+  "sourceDrift": false,
+  "previewManifestSHA256": "62e2ce6c00d8215f592c805ecf7cdcf40d1015346e8302db769eaf582523bede",
+  "previewWorkerSHA256": "8da5554a89d2e50e4787f8874e03e4cb5fa29bfedfcc6c69bd5238e029e16819",
+  "screenshots": [
+    "desktop.png",
+    "desktop-queued.png",
+    "mobile-390.png"
+  ]
+}

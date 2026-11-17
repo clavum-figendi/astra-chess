@@ -1,0 +1,24 @@
+Fresh validation features 20
+Fresh validation features 40
+Fresh validation features 60
+Fresh validation features 80
+{"id": "control", "file": ".cache/v7/deepmind-selected.pt", "sha256": "d4d5b25a4f2a01e22ea8945e42e37559e0ce0525177290d49f002c94bda761ea", "changedScalars": 0, "count": 95, "hits": 54, "top4": 84, "crossEntropy": 1.6405121807461363}
+{"id": "rank1-0.5", "file": ".cache/v8/weight-deepmind-rank1-0.5.pt", "sha256": "d6b397b7aa8aa86b383e49449532106f8fb84c943d26ef50f90cdcd8a29cc6a1", "changedScalars": 32768, "count": 95, "hits": 54, "top4": 84, "crossEntropy": 1.6391401575835813}
+Traceback (most recent call last):
+  File "/home/hermes/projects/astra-chess/tools/v8_confirm.py", line 80, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/home/hermes/projects/astra-chess/tools/v8_confirm.py", line 60, in main
+    selector=module('v8_confirm_selector',ROOT/'tools/v8_select.py');setattr(selector,'ROOT',TARGET);selector.main()
+                                                                                                     ~~~~~~~~~~~~~^^
+  File "/home/hermes/projects/astra-chess/tools/v8_select.py", line 52, in main
+    scores=json.loads(subprocess.check_output(['node','tools/v8-score-sparse.mjs'],input=json.dumps(request),text=True,cwd=ROOT))
+  File "/home/hermes/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/home/hermes/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

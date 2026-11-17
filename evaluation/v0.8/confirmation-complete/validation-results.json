@@ -1,0 +1,5508 @@
+{
+  "validationSHA256": "bde5190a493a14ffa2a7239c2ad22160b85636484c1e77e4c3418e704cd2501e",
+  "manifestSHA256": "0e9fb0ec58dda834b112000fb7c0a0c5bc60d96a93cfe44b12282c7cfe378a28",
+  "dataProtocolSHA256": "029d09150aa89279c2926c31b7f95a5d7345c8e35a1bd05d876f274d0d59b1ee",
+  "results": {
+    "deepmind": [
+      {
+        "id": "control",
+        "file": ".cache/v7/deepmind-selected.pt",
+        "sha256": "d4d5b25a4f2a01e22ea8945e42e37559e0ce0525177290d49f002c94bda761ea",
+        "changedScalars": 0,
+        "count": 95,
+        "hits": 54,
+        "top4": 84,
+        "crossEntropy": 1.6405121807461363,
+        "answers": [
+          {
+            "id": "5c5938d47b7485ff90299f2da0d92d73f1168e86b5a61acb2231aae7366d9f91",
+            "move": "c4a2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.7810181122704534
+          },
+          {
+            "id": "820bea1c9970e156110498a3c8764c3ee1ce5eaf307a7eec38948c55e4b61354",
+            "move": "f2f3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.3584903283255796
+          },
+          {
+            "id": "63f7bcd26138a6bf88c26602952f102a7a12c25482b7d8eeb1bf036077fe40a5",
+            "move": "a1b1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.4727773226128779
+          },
+          {
+            "id": "c5115a68301665e1b34f2d9a0f500714f8ac52e6005520685b0ca91a8dde5138",
+            "move": "e1g1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.8453658246014557
+          },
+          {
+            "id": "fbcdafd3632f8ab6a1f23bf81f963f35ab9d018f87dcad931ad4ea53f563c873",
+            "move": "g1h1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.342991545519174
+          },
+          {
+            "id": "8f618fad0b07c87bb2cfe499a10bd675d58e3b12d0ea12292177ec7c384f3d63",
+            "move": "d4c2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.8201335159145846
+          },
+          {
+            "id": "269c4afc59c1f59027ae62e32e31c5dea1a98712098780d144ca9896cc8042c9",
+            "move": "d4b3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.7021377114830591
+          },
+          {
+            "id": "6d98d3204ea612a7467cf80030a0e092bcdaa33b853bca2c6724bde2237eafd6",
+            "move": "c1g5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.1005096713257054
+          },
+          {
+            "id": "b347e9e1a02f48274526cf61612f0149bf3871f6b9931bc2cc5c6186f6de1842",
+            "move": "c3c4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.8612447228519482
+          },
+          {
+            "id": "14dc3eb72982b4a30346cd091c94a0f77eb4543aa3f9d12c8a988130d6d3e808",
+            "move": "e2f1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.430250866467303
+          },
+          {
+            "id": "1c1772541e635ae140e4eaa17d24a44142947d35e301f19ad5b43d2996c2a2db",
+            "move": "c2d1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5390104546900628
+          },
+          {
+            "id": "3a972c6746d7b64fb0502d5ea40acd98029044dba7fe892cca0fcd3014079a10",
+            "move": "f4d2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6547505088073158
+          },
+          {
+            "id": "f6797b28eacbb43dfb95a424f0b25434c241d55d159c813b00730f563045b479",
+            "move": "e2e3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6016207929649648
+          },
+          {
+            "id": "fe360b93961379890ba84348932b2d9e10477590a052845c7f9accb76c7afbff",
+            "move": "d2d4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.1936807898299704
+          },
+          {
+            "id": "dc7b9c07a3fce7417e8e52bceefcd012cd75bebb7a9d3fca2a79ba893c71a4b8",
+            "move": "c3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.255671435004168
+          },
+          {
+            "id": "1dcad4e6eae927bcf2e6d3f0d5cea5a285e69c3e38c8f357c239fe48be583e8b",
+            "move": "d1b3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.9131275340296066
+          },
+          {
+            "id": "22120a007710106bc5db05e3294c94e32e82bb7d0fffc0fea930450d639d4f58",
+            "move": "f1b5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.466944426787351
+          },
+          {
+            "id": "ca95937967270d5c537d6ed4ba7453e2ee470286359e4d6af309bb068e201074",
+            "move": "a4c5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.907362322539421
+          },
+          {
+            "id": "ff7e37fa8f3fe8bf2d201cdf58c659ed92ed49a088efafac292694d218eb7778",
+            "move": "f3d1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.864096502722667
+          },
+          {
+            "id": "5bf3174a5be641f50ab0e925bfcd1b45f690e63d8b4a61851fe17badbb40e055",
+            "move": "f3d5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5385149283933517
+          },
+          {
+            "id": "0b215cfe23fc3cf789efeb75d15ad87c1feb0b68be9cb0435d7ce737f1146d5f",
+            "move": "f1g2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5214933996513454
+          },
+          {
+            "id": "0f2c272ba4fe4c38d9066b80d62bc797783c7bd6c5c8a94a1adee95a06408ae0",
+            "move": "d2b4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.582116547492336
+          },
+          {
+            "id": "5615ab1722a5cdefc1493c83839370b005b84b984651a0940f9118ce0904ae90",
+            "move": "d2b4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.4568248342135628
+          },
+          {
+            "id": "ab08d5bc2bf9965285c14323a739875f35e4ae0a83a597f7f2a6a4ce55b6ae58",
+            "move": "a6a7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.4415200327954467
+          },
+          {
+            "id": "a76886c2a8fe1848d7394a0d9b40b8bc3cfa03ea0c44f8326601aed068c915f8",
+            "move": "e2e3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.647676096108651
+          },
+          {
+            "id": "b62dd796fdff08b1ad99c3931a4622017559f41ea89c9ca790633595f7dbb6c6",
+            "move": "h2h3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.1212135120277145
+          },
+          {
+            "id": "3afb2054a053ecb899e2d60557228a01eebcb59d0ecf31a1cdf73ef30ca074e6",
+            "move": "g4c8",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.1135366639885271
+          },
+          {
+            "id": "dc6237f3a7b3ccb40a3cf996448042e983149b791d9ba49bcfaa54df2677618d",
+            "move": "f2f4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.276067109075923
+          },
+          {
+            "id": "107867b342822723883a49bde33562033b347eb1cd1ef6259cb1b922fed460c9",
+            "move": "d1h5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5166918882441818
+          },
+          {
+            "id": "6dc5f0696bf3f50ce4bf06ddc9fda4fbdfe4dd45e2f0de58ffa3cb6d4679218c",
+            "move": "e1f1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.7764406082074489
+          },
+          {
+            "id": "945a6e50f63aad916900b430651a7ec6389d876aa83db391923fd6c90630a27c",
+            "move": "b2b3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.3607261404510425
+          },
+          {
+            "id": "be7589eca86bbde2928d91a725e1b07d0618f83a241e726ba4acdc9b50a0f228",
+            "move": "d2e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5524768946776778
+          },
+          {
+            "id": "34313d8fa209a969ae585a57b63fd383272b2e130ac66ad5176694124ddbea04",
+            "move": "e3e4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5491901477089867
+          },
+          {
+            "id": "f2260bfbd172c2fe32a52197d922600518de313bd9f795369702f194a8c3942a",
+            "move": "h2h3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6176912543580755
+          },
+          {
+            "id": "6b899676f52c82c448c0d01560dc76ccc9d0c0bd1e3e485d0676f771288907c7",
+            "move": "d5d6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.9157031349111624
+          },
+          {
+            "id": "0c39d317a311f33be005d149937067a42d64a765403be28af5f979c6cf8e4855",
+            "move": "a4a5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.056502825646765
+          },
+          {
+            "id": "3c2d0e798e3aba51aa682610c2ba534058222b866e7b330286f7e47f9bfa19f5",
+            "move": "b4c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5390909923462747
+          },
+          {
+            "id": "d746a47591275aef0c78d7cc9326ecc51e829f40152fef1df03bbdc6108813b0",
+            "move": "e8g8",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.7720467804924653
+          },
+          {
+            "id": "2250b95480d78b6d3fd794db5ab891619c1bf7cb9bf1db91c382456bdd25bd7b",
+            "move": "b7c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.46763054813901195
+          },
+          {
+            "id": "8e2862fb4c78cdb2834ad2db6f308972986d0732911e2c4caeaf1b5055b81086",
+            "move": "c6c5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.3491265427712655
+          },
+          {
+            "id": "7121d2828e3936853cb9b8e459b9dced1a0402a4925b280494fa2c61c185e3f3",
+            "move": "c8b7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.342098050605242
+          },
+          {
+            "id": "af6486e03311614083eeb4a129a925e7e4164f02e46d2013bae9713777dbf926",
+            "move": "d8c8",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.1086189668736472
+          },
+          {
+            "id": "3f6b4f72188a99826d9166c29fdeb951357302e202355c252ccb2dd4ec946a3e",
+            "move": "e6d7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.873977321864235
+          },
+          {
+            "id": "5369f599fc5475aebdf8fe434d5024300b4255267b66fab9ab0b6026ff1aaab3",
+            "move": "c8g4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.4393861822058627
+          },
+          {
+            "id": "4c35f157825a618180414a135b5a86fb987401cf79b3940c83ac3f62bfdd3f0e",
+            "move": "e8e2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5540520400249904
+          },
+          {
+            "id": "aceb677c1e2f13abc6b4fdc40910c07e2fcc5cb07247abdc35f23fd260afde5e",
+            "move": "a8e8",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.598225507792131
+          },
+          {
+            "id": "33ee7d133276a895e03abeb8b154de3256bd241d36d90945fd120086883f2449",
+            "move": "f7g6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.705107349890988
+          },
+          {
+            "id": "0e83738f718937b9cc69796b871e4ed018baa4140f28496151fe3856a81f1476",
+            "move": "f5f2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 1.666479289114376
+          },
+          {
+            "id": "d0647c2bf8721be9123624e7c6eb7ed0b11de69451db851b2d829f7b6d199fac",
+            "move": "a2a3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.7287929025108397
+          },
+          {
+            "id": "a99f0762ed00051f4efe069b6601f9da253f644718eaf35ef1a3ac1531d3d350",
+            "move": "e2d3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.723594316068867
+          },
+          {
+            "id": "7055fbbe0903461165ba1ae2aa42bb64a8717e526cadc0cc935dcb9ee1f31c19",
+            "move": "f4g5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 1.5697013463986467
+          },
+          {
+            "id": "e07be2b49796aab557a757515f54b4203d4d877aedc949bd261ca434349f64b8",
+            "move": "d3e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.7190118619211537
+          },
+          {
+            "id": "07d1a65542ec5fb0cf062228fb919e70c810a013571bdfd3a37d73168a0cde1d",
+            "move": "d1e2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.3062361941333531
+          },
+          {
+            "id": "f2ee8ec17a0935bdc396c6d19be1cec03ee5f947d70620399dffe89379c81e14",
+            "move": "a1e1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.6176691206824751
+          },
+          {
+            "id": "532cc437b6d288c224fc484e3b74842773bfb08a4cea072b5e7769afa38615c7",
+            "move": "g3h4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.0382042920818881
+          },
+          {
+            "id": "9b33482ea3a2a76929d44cbc850c926579d979c48ef3861df278b133f35666a6",
+            "move": "f3h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5684259861926737
+          },
+          {
+            "id": "b805d0349d19ac6c2acfbe73202520cc7f0122e9e497a16c35ea4b5ea9eb0803",
+            "move": "e6c6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.0473979943282443
+          },
+          {
+            "id": "9bba4cca729300f419db830436e76e76d0c09d56d411e365aa4d043a2ae260eb",
+            "move": "f1e1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.8167061106062117
+          },
+          {
+            "id": "f6f5a8bec1e50801e49ede1dd66e29e49253d4189312c180eac8b2a5733b5a71",
+            "move": "d7c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6674671044644226
+          },
+          {
+            "id": "46c59d9c7bc01cd024734d931fd11e6264e28018b2a39a2b47d2a12f3e77eb95",
+            "move": "e1e8",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 10.21872947542586
+          },
+          {
+            "id": "d983b86a63cfa221a5f951ef7312dd8bc5d50862eece468644043d882b97cdb0",
+            "move": "h5g4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 1.6508034370417375
+          },
+          {
+            "id": "f0e22870c9d91512a2b0c11db79cdab02fd56406bb713f6389bf3fd7126e3d9b",
+            "move": "g6h5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6507166586443814
+          },
+          {
+            "id": "20f2142382fc4cc318c640e5a6717f15106120082da56ad18c37aa882a192df6",
+            "move": "g8h6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.7645976632099427
+          },
+          {
+            "id": "05779f8548e229da456f46529fcdc5db3efe1ce0adbb17cb6a310596510bf8a9",
+            "move": "g8h6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.7494737991228095
+          },
+          {
+            "id": "327e31bac2f2099b08836f00f79b1e72c018056630612a6d9a89055cff5f3f90",
+            "move": "g5f4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.984001413759261
+          },
+          {
+            "id": "599c67220d031fc2dce6c4487ebdc2c47a84d6ce842cd6ca69d44112560e6ed2",
+            "move": "g7g8",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.4465276669223726
+          },
+          {
+            "id": "a31975020843c8187e14aaa9096c43b5a3552b951c6d55ae3cec54cf94ed5c87",
+            "move": "h6f5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6793587430419533
+          },
+          {
+            "id": "676eef4290dd60ca59924c5572ad4e3687d67cbbe602b96ea4dd51362e3b652c",
+            "move": "g5h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.0375240321383161
+          },
+          {
+            "id": "10c867ca632741cfdb75de0397b7decc6572d6b1bfbc094f98867b708ad75bd0",
+            "move": "f8g8",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5202275377872758
+          },
+          {
+            "id": "b32b568ced8649e64422a8cc147828afe7b9bf73ffbbd3b8a4e7454755796138",
+            "move": "g8g7",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.0
+          },
+          {
+            "id": "ba6edd21be22456590a30388bcf1d37d277037b5823f8ab5346516dbc0097575",
+            "move": "g7h6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.6463541801506922
+          },
+          {
+            "id": "5291a4b3291c43e303f53c71559b88aa5a6ccea4bb7b5890abb1bcf66869aef0",
+            "move": "c4d6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.6232771497986844
+          },
+          {
+            "id": "9fe32fae939d91e45a2a48dc4d0c2e16b742eb6020eaa74eb8a61c934a7e43e1",
+            "move": "e5f7",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.7128828321373164
+          },
+          {
+            "id": "11d5b7c50d34d3acdae7520a051552f4f7103b924d3de93b97e501075eaad4fd",
+            "move": "g5f3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.450531049086376
+          },
+          {
+            "id": "8dcb11ce8c85930a2702f17b9de9daacdb3cbd3e707da0f8437ae49f131d29a6",
+            "move": "d1f3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.4410034967647584
+          },
+          {
+            "id": "2ec5e83c13419f067a471ae6021adbf18dc66e36c0cb437712dcc8c640a44739",
+            "move": "f1e2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.3137885658958979
+          },
+          {
+            "id": "b193451231671f57fad5b1cac7712586e2081d74f9fe00bd79ea9301be94ba8a",
+            "move": "e1d1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.3656309270052014
+          },
+          {
+            "id": "a0ecdfe3e409b5153360d858e554fa05ee4fa325ee512618735f23ffcde080c7",
+            "move": "b3d5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6602309346246261
+          },
+          {
+            "id": "9c4bace12c3ebb7fc0885b0d0dd3c76dba6d3dd4fa38a291b2f261367c25cd62",
+            "move": "c3e2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.4602483125258784
+          },
+          {
+            "id": "d9b97ed5f4e3c1226aea3eeb6753ac5e35a77498fa0c10715538d04f4e37edeb",
+            "move": "d2e2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.2335125962760933
+          },
+          {
+            "id": "f097bfe7ee5d382e2ebe8edb98c9723c073f480e4cf433016d0b0636bbe4bb1c",
+            "move": "d4b5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 0.9940714515206583
+          },
+          {
+            "id": "1d7a4dc39cff46703c02d107a59775a0e337b3b0b8488ae8e1c0db28b77884c0",
+            "move": "f4e5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.9296289280389457
+          },
+          {
+            "id": "920bad4e84dcc89aebb9fe0d9c520455ad841537aefa86e119646d711d4fe7f9",
+            "move": "f2g3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.110546359924511
+          },
+          {
+            "id": "1660ac78c345e5518383f0d51f907273955d8395b71b26d1dfdc0acf59158d7e",
+            "move": "a1c1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5406348057270751
+          },
+          {
+            "id": "28d327e8686cd81907ec4eb3f490b199a874f331b25923d6421809a3a78e74d5",
+            "move": "b1c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.8350533159160445
+          },
+          {
+            "id": "5fc7ada1c41b051430b114cb8bf497bad8506369affa6993f4ea458faf7ce361",
+            "move": "d2c4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.8322702627193065
+          },
+          {
+            "id": "c2205195571462407a2eac3e498a0eeafdd726d806e786c4b25904aa5587eee0",
+            "move": "d6e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.3841483157982128
+          },
+          {
+            "id": "4bc7aa1d75b0b4749bebf71b4fff97fc907793bc87c73f5a42a658c53f90a829",
+            "move": "f4d2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.47390987454426026
+          },
+          {
+            "id": "a06d1854d238ac4d7508721d3b887f9ebc0087979a9c977e65bac6dba3ef400f",
+            "move": "a1c1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.8926998965053095
+          },
+          {
+            "id": "e6a21e6b0ae978eb53ae0e086afea2318aa942c74e46a1fd1271f78f9d6b2af7",
+            "move": "d2f4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.699338396237601
+          },
+          {
+            "id": "f8489d53b04082eb216813aa0b55908f39f1b2880351084a83d3df1950866e5b",
+            "move": "e1g1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.5133443595753098
+          },
+          {
+            "id": "14f444c811413c1ba8d9d9ada4b205c45d970c2af3f9f53fd3cda4df171a64f0",
+            "move": "c1c6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.450257962087323
+          },
+          {
+            "id": "8680b0099a03d7150627ed7b9ceabb94d5987b0c3572814a4e1ebffa8b0f99db",
+            "move": "e4d6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.500681000665734
+          },
+          {
+            "id": "d959711ced8d3d06f08a908b1ebd357731ffad62f0965eaef962b2e5b4e95a98",
+            "move": "g3d3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 7.235847702202031
+          },
+          {
+            "id": "1ae27f3d10808983888ce411f2a99d5a380ea07a4aef4f687ba1e49162c3d566",
+            "move": "f1e1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.4721868598520658
+          }
+        ]
+      },
+      {
+        "id": "rank1-0.5",
+        "file": ".cache/v8/weight-deepmind-rank1-0.5.pt",
+        "sha256": "d6b397b7aa8aa86b383e49449532106f8fb84c943d26ef50f90cdcd8a29cc6a1",
+        "changedScalars": 32768,
+        "count": 95,
+        "hits": 54,
+        "top4": 84,
+        "crossEntropy": 1.6391401575835813,
+        "answers": [
+          {
+            "id": "5c5938d47b7485ff90299f2da0d92d73f1168e86b5a61acb2231aae7366d9f91",
+            "move": "c4a2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.7774978404613333
+          },
+          {
+            "id": "820bea1c9970e156110498a3c8764c3ee1ce5eaf307a7eec38948c55e4b61354",
+            "move": "f2f3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.3586587112391078
+          },
+          {
+            "id": "63f7bcd26138a6bf88c26602952f102a7a12c25482b7d8eeb1bf036077fe40a5",
+            "move": "a1b1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.4731825017987434
+          },
+          {
+            "id": "c5115a68301665e1b34f2d9a0f500714f8ac52e6005520685b0ca91a8dde5138",
+            "move": "e1g1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.843825270298534
+          },
+          {
+            "id": "fbcdafd3632f8ab6a1f23bf81f963f35ab9d018f87dcad931ad4ea53f563c873",
+            "move": "g1h1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.341652408873254
+          },
+          {
+            "id": "8f618fad0b07c87bb2cfe499a10bd675d58e3b12d0ea12292177ec7c384f3d63",
+            "move": "d4c2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.8193026290217875
+          },
+          {
+            "id": "269c4afc59c1f59027ae62e32e31c5dea1a98712098780d144ca9896cc8042c9",
+            "move": "d4b3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.6998246478176349
+          },
+          {
+            "id": "6d98d3204ea612a7467cf80030a0e092bcdaa33b853bca2c6724bde2237eafd6",
+            "move": "c1g5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.097135875040315
+          },
+          {
+            "id": "b347e9e1a02f48274526cf61612f0149bf3871f6b9931bc2cc5c6186f6de1842",
+            "move": "c3c4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.840608037156089
+          },
+          {
+            "id": "14dc3eb72982b4a30346cd091c94a0f77eb4543aa3f9d12c8a988130d6d3e808",
+            "move": "e2f1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.4282819645181162
+          },
+          {
+            "id": "1c1772541e635ae140e4eaa17d24a44142947d35e301f19ad5b43d2996c2a2db",
+            "move": "c2d1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5378443754443291
+          },
+          {
+            "id": "3a972c6746d7b64fb0502d5ea40acd98029044dba7fe892cca0fcd3014079a10",
+            "move": "f4d2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6659160009550388
+          },
+          {
+            "id": "f6797b28eacbb43dfb95a424f0b25434c241d55d159c813b00730f563045b479",
+            "move": "e2e3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6014041369121067
+          },
+          {
+            "id": "fe360b93961379890ba84348932b2d9e10477590a052845c7f9accb76c7afbff",
+            "move": "d2d4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.1915470271936666
+          },
+          {
+            "id": "dc7b9c07a3fce7417e8e52bceefcd012cd75bebb7a9d3fca2a79ba893c71a4b8",
+            "move": "c3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.25720766544161
+          },
+          {
+            "id": "1dcad4e6eae927bcf2e6d3f0d5cea5a285e69c3e38c8f357c239fe48be583e8b",
+            "move": "d1b3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.9141061190243525
+          },
+          {
+            "id": "22120a007710106bc5db05e3294c94e32e82bb7d0fffc0fea930450d639d4f58",
+            "move": "f1b5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.467598768311725
+          },
+          {
+            "id": "ca95937967270d5c537d6ed4ba7453e2ee470286359e4d6af309bb068e201074",
+            "move": "a4c5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.9029995891976323
+          },
+          {
+            "id": "ff7e37fa8f3fe8bf2d201cdf58c659ed92ed49a088efafac292694d218eb7778",
+            "move": "f3d1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.86293993374955
+          },
+          {
+            "id": "5bf3174a5be641f50ab0e925bfcd1b45f690e63d8b4a61851fe17badbb40e055",
+            "move": "f3d5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5404903951322184
+          },
+          {
+            "id": "0b215cfe23fc3cf789efeb75d15ad87c1feb0b68be9cb0435d7ce737f1146d5f",
+            "move": "f1g2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5193228341302634
+          },
+          {
+            "id": "0f2c272ba4fe4c38d9066b80d62bc797783c7bd6c5c8a94a1adee95a06408ae0",
+            "move": "d2b4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.578007238216703
+          },
+          {
+            "id": "5615ab1722a5cdefc1493c83839370b005b84b984651a0940f9118ce0904ae90",
+            "move": "d2b4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.46017402547350345
+          },
+          {
+            "id": "ab08d5bc2bf9965285c14323a739875f35e4ae0a83a597f7f2a6a4ce55b6ae58",
+            "move": "a6a7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.4347975052428847
+          },
+          {
+            "id": "a76886c2a8fe1848d7394a0d9b40b8bc3cfa03ea0c44f8326601aed068c915f8",
+            "move": "e2e3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6526191147727474
+          },
+          {
+            "id": "b62dd796fdff08b1ad99c3931a4622017559f41ea89c9ca790633595f7dbb6c6",
+            "move": "h2h3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.1153810752028672
+          },
+          {
+            "id": "3afb2054a053ecb899e2d60557228a01eebcb59d0ecf31a1cdf73ef30ca074e6",
+            "move": "g4c8",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.110729975458159
+          },
+          {
+            "id": "dc6237f3a7b3ccb40a3cf996448042e983149b791d9ba49bcfaa54df2677618d",
+            "move": "f2f4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2803893072314154
+          },
+          {
+            "id": "107867b342822723883a49bde33562033b347eb1cd1ef6259cb1b922fed460c9",
+            "move": "d1h5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5175631328263992
+          },
+          {
+            "id": "6dc5f0696bf3f50ce4bf06ddc9fda4fbdfe4dd45e2f0de58ffa3cb6d4679218c",
+            "move": "e1f1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.7768887089602211
+          },
+          {
+            "id": "945a6e50f63aad916900b430651a7ec6389d876aa83db391923fd6c90630a27c",
+            "move": "b2b3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.365423823765442
+          },
+          {
+            "id": "be7589eca86bbde2928d91a725e1b07d0618f83a241e726ba4acdc9b50a0f228",
+            "move": "d2e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5531098018298976
+          },
+          {
+            "id": "34313d8fa209a969ae585a57b63fd383272b2e130ac66ad5176694124ddbea04",
+            "move": "e3e4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.547989767805682
+          },
+          {
+            "id": "f2260bfbd172c2fe32a52197d922600518de313bd9f795369702f194a8c3942a",
+            "move": "h2h3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6157418917093174
+          },
+          {
+            "id": "6b899676f52c82c448c0d01560dc76ccc9d0c0bd1e3e485d0676f771288907c7",
+            "move": "d5d6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.9104482777788798
+          },
+          {
+            "id": "0c39d317a311f33be005d149937067a42d64a765403be28af5f979c6cf8e4855",
+            "move": "a4a5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.0541040944246047
+          },
+          {
+            "id": "3c2d0e798e3aba51aa682610c2ba534058222b866e7b330286f7e47f9bfa19f5",
+            "move": "b4c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5392637457481779
+          },
+          {
+            "id": "d746a47591275aef0c78d7cc9326ecc51e829f40152fef1df03bbdc6108813b0",
+            "move": "e8g8",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.7705612478691801
+          },
+          {
+            "id": "2250b95480d78b6d3fd794db5ab891619c1bf7cb9bf1db91c382456bdd25bd7b",
+            "move": "b7c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.46774739541211985
+          },
+          {
+            "id": "8e2862fb4c78cdb2834ad2db6f308972986d0732911e2c4caeaf1b5055b81086",
+            "move": "c6c5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.3450399215409978
+          },
+          {
+            "id": "7121d2828e3936853cb9b8e459b9dced1a0402a4925b280494fa2c61c185e3f3",
+            "move": "c8b7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.3203733932479
+          },
+          {
+            "id": "af6486e03311614083eeb4a129a925e7e4164f02e46d2013bae9713777dbf926",
+            "move": "d8c8",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.117664099025525
+          },
+          {
+            "id": "3f6b4f72188a99826d9166c29fdeb951357302e202355c252ccb2dd4ec946a3e",
+            "move": "e6d7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.874641228965416
+          },
+          {
+            "id": "5369f599fc5475aebdf8fe434d5024300b4255267b66fab9ab0b6026ff1aaab3",
+            "move": "c8g4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.4219441481273842
+          },
+          {
+            "id": "4c35f157825a618180414a135b5a86fb987401cf79b3940c83ac3f62bfdd3f0e",
+            "move": "e8e2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5541450641602389
+          },
+          {
+            "id": "aceb677c1e2f13abc6b4fdc40910c07e2fcc5cb07247abdc35f23fd260afde5e",
+            "move": "a8e8",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5974429058227154
+          },
+          {
+            "id": "33ee7d133276a895e03abeb8b154de3256bd241d36d90945fd120086883f2449",
+            "move": "f7g6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.70363472549291
+          },
+          {
+            "id": "0e83738f718937b9cc69796b871e4ed018baa4140f28496151fe3856a81f1476",
+            "move": "f5f2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 1.6685240274244146
+          },
+          {
+            "id": "d0647c2bf8721be9123624e7c6eb7ed0b11de69451db851b2d829f7b6d199fac",
+            "move": "a2a3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.7286147076058174
+          },
+          {
+            "id": "a99f0762ed00051f4efe069b6601f9da253f644718eaf35ef1a3ac1531d3d350",
+            "move": "e2d3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.7232271462355055
+          },
+          {
+            "id": "7055fbbe0903461165ba1ae2aa42bb64a8717e526cadc0cc935dcb9ee1f31c19",
+            "move": "f4g5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 1.5700751103656223
+          },
+          {
+            "id": "e07be2b49796aab557a757515f54b4203d4d877aedc949bd261ca434349f64b8",
+            "move": "d3e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.7198827180037934
+          },
+          {
+            "id": "07d1a65542ec5fb0cf062228fb919e70c810a013571bdfd3a37d73168a0cde1d",
+            "move": "d1e2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.3055257832474214
+          },
+          {
+            "id": "f2ee8ec17a0935bdc396c6d19be1cec03ee5f947d70620399dffe89379c81e14",
+            "move": "a1e1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.6138673389535059
+          },
+          {
+            "id": "532cc437b6d288c224fc484e3b74842773bfb08a4cea072b5e7769afa38615c7",
+            "move": "g3h4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.0467660433356514
+          },
+          {
+            "id": "9b33482ea3a2a76929d44cbc850c926579d979c48ef3861df278b133f35666a6",
+            "move": "f3h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5681544933544338
+          },
+          {
+            "id": "b805d0349d19ac6c2acfbe73202520cc7f0122e9e497a16c35ea4b5ea9eb0803",
+            "move": "e6c6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.047652526388026
+          },
+          {
+            "id": "9bba4cca729300f419db830436e76e76d0c09d56d411e365aa4d043a2ae260eb",
+            "move": "f1e1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.8124983174802022
+          },
+          {
+            "id": "f6f5a8bec1e50801e49ede1dd66e29e49253d4189312c180eac8b2a5733b5a71",
+            "move": "d7c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6671103187335878
+          },
+          {
+            "id": "46c59d9c7bc01cd024734d931fd11e6264e28018b2a39a2b47d2a12f3e77eb95",
+            "move": "e1e8",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 10.198234347681154
+          },
+          {
+            "id": "d983b86a63cfa221a5f951ef7312dd8bc5d50862eece468644043d882b97cdb0",
+            "move": "h5g4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 1.6529284886137396
+          },
+          {
+            "id": "f0e22870c9d91512a2b0c11db79cdab02fd56406bb713f6389bf3fd7126e3d9b",
+            "move": "g6h5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.649453660949931
+          },
+          {
+            "id": "20f2142382fc4cc318c640e5a6717f15106120082da56ad18c37aa882a192df6",
+            "move": "g8h6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.7633540459091053
+          },
+          {
+            "id": "05779f8548e229da456f46529fcdc5db3efe1ce0adbb17cb6a310596510bf8a9",
+            "move": "g8h6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.747439341630709
+          },
+          {
+            "id": "327e31bac2f2099b08836f00f79b1e72c018056630612a6d9a89055cff5f3f90",
+            "move": "g5f4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.987409756639693
+          },
+          {
+            "id": "599c67220d031fc2dce6c4487ebdc2c47a84d6ce842cd6ca69d44112560e6ed2",
+            "move": "g7g8",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.4470757696421188
+          },
+          {
+            "id": "a31975020843c8187e14aaa9096c43b5a3552b951c6d55ae3cec54cf94ed5c87",
+            "move": "h6f5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6845473186587291
+          },
+          {
+            "id": "676eef4290dd60ca59924c5572ad4e3687d67cbbe602b96ea4dd51362e3b652c",
+            "move": "g5h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.9897732567567717
+          },
+          {
+            "id": "10c867ca632741cfdb75de0397b7decc6572d6b1bfbc094f98867b708ad75bd0",
+            "move": "f8g8",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.5214725958774447
+          },
+          {
+            "id": "b32b568ced8649e64422a8cc147828afe7b9bf73ffbbd3b8a4e7454755796138",
+            "move": "g8g7",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.0
+          },
+          {
+            "id": "ba6edd21be22456590a30388bcf1d37d277037b5823f8ab5346516dbc0097575",
+            "move": "g7h6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.6463864039760314
+          },
+          {
+            "id": "5291a4b3291c43e303f53c71559b88aa5a6ccea4bb7b5890abb1bcf66869aef0",
+            "move": "c4d6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.6223688178403792
+          },
+          {
+            "id": "9fe32fae939d91e45a2a48dc4d0c2e16b742eb6020eaa74eb8a61c934a7e43e1",
+            "move": "e5f7",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.7054522269398972
+          },
+          {
+            "id": "11d5b7c50d34d3acdae7520a051552f4f7103b924d3de93b97e501075eaad4fd",
+            "move": "g5f3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.4500544765158332
+          },
+          {
+            "id": "8dcb11ce8c85930a2702f17b9de9daacdb3cbd3e707da0f8437ae49f131d29a6",
+            "move": "d1f3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.43708983912011
+          },
+          {
+            "id": "2ec5e83c13419f067a471ae6021adbf18dc66e36c0cb437712dcc8c640a44739",
+            "move": "f1e2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.3086828682186786
+          },
+          {
+            "id": "b193451231671f57fad5b1cac7712586e2081d74f9fe00bd79ea9301be94ba8a",
+            "move": "e1d1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.3736644022438265
+          },
+          {
+            "id": "a0ecdfe3e409b5153360d858e554fa05ee4fa325ee512618735f23ffcde080c7",
+            "move": "b3d5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6580096743192395
+          },
+          {
+            "id": "9c4bace12c3ebb7fc0885b0d0dd3c76dba6d3dd4fa38a291b2f261367c25cd62",
+            "move": "c3e2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.46046877180560475
+          },
+          {
+            "id": "d9b97ed5f4e3c1226aea3eeb6753ac5e35a77498fa0c10715538d04f4e37edeb",
+            "move": "d2e2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.2345452316299153
+          },
+          {
+            "id": "f097bfe7ee5d382e2ebe8edb98c9723c073f480e4cf433016d0b0636bbe4bb1c",
+            "move": "d4b5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 0.9944648599011491
+          },
+          {
+            "id": "1d7a4dc39cff46703c02d107a59775a0e337b3b0b8488ae8e1c0db28b77884c0",
+            "move": "f4e5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.9300533099426364
+          },
+          {
+            "id": "920bad4e84dcc89aebb9fe0d9c520455ad841537aefa86e119646d711d4fe7f9",
+            "move": "f2g3",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.1109019585535203
+          },
+          {
+            "id": "1660ac78c345e5518383f0d51f907273955d8395b71b26d1dfdc0acf59158d7e",
+            "move": "a1c1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.540430100886697
+          },
+          {
+            "id": "28d327e8686cd81907ec4eb3f490b199a874f331b25923d6421809a3a78e74d5",
+            "move": "b1c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.834270602215645
+          },
+          {
+            "id": "5fc7ada1c41b051430b114cb8bf497bad8506369affa6993f4ea458faf7ce361",
+            "move": "d2c4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.8354514279987116
+          },
+          {
+            "id": "c2205195571462407a2eac3e498a0eeafdd726d806e786c4b25904aa5587eee0",
+            "move": "d6e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.3837782340112445
+          },
+          {
+            "id": "4bc7aa1d75b0b4749bebf71b4fff97fc907793bc87c73f5a42a658c53f90a829",
+            "move": "f4d2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.4756231501560123
+          },
+          {
+            "id": "a06d1854d238ac4d7508721d3b887f9ebc0087979a9c977e65bac6dba3ef400f",
+            "move": "a1c1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.894339931370539
+          },
+          {
+            "id": "e6a21e6b0ae978eb53ae0e086afea2318aa942c74e46a1fd1271f78f9d6b2af7",
+            "move": "d2f4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.6993780657986273
+          },
+          {
+            "id": "f8489d53b04082eb216813aa0b55908f39f1b2880351084a83d3df1950866e5b",
+            "move": "e1g1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.517405805263091
+          },
+          {
+            "id": "14f444c811413c1ba8d9d9ada4b205c45d970c2af3f9f53fd3cda4df171a64f0",
+            "move": "c1c6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.4508451622657983
+          },
+          {
+            "id": "8680b0099a03d7150627ed7b9ceabb94d5987b0c3572814a4e1ebffa8b0f99db",
+            "move": "e4d6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.5009405146815484
+          },
+          {
+            "id": "d959711ced8d3d06f08a908b1ebd357731ffad62f0965eaef962b2e5b4e95a98",
+            "move": "g3d3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 7.238958713654367
+          },
+          {
+            "id": "1ae27f3d10808983888ce411f2a99d5a380ea07a4aef4f687ba1e49162c3d566",
+            "move": "f1e1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.4739909598150494
+          }
+        ]
+      }
+    ],
+    "pocket": [
+      {
+        "id": "control",
+        "file": ".cache/v8/weight-pocket-control.bin",
+        "sha256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+        "changedScalars": 0,
+        "count": 95,
+        "hits": 21,
+        "top4": 47,
+        "crossEntropy": 3.0989345007487366,
+        "answers": [
+          {
+            "id": "5c5938d47b7485ff90299f2da0d92d73f1168e86b5a61acb2231aae7366d9f91",
+            "move": "c4d3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.510407494996927
+          },
+          {
+            "id": "820bea1c9970e156110498a3c8764c3ee1ce5eaf307a7eec38948c55e4b61354",
+            "move": "e2d4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.377622289716479
+          },
+          {
+            "id": "63f7bcd26138a6bf88c26602952f102a7a12c25482b7d8eeb1bf036077fe40a5",
+            "move": "a1b1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.625468554268387
+          },
+          {
+            "id": "c5115a68301665e1b34f2d9a0f500714f8ac52e6005520685b0ca91a8dde5138",
+            "move": "e1g1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.48101615501752
+          },
+          {
+            "id": "fbcdafd3632f8ab6a1f23bf81f963f35ab9d018f87dcad931ad4ea53f563c873",
+            "move": "f1d1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5264942512395145
+          },
+          {
+            "id": "8f618fad0b07c87bb2cfe499a10bd675d58e3b12d0ea12292177ec7c384f3d63",
+            "move": "c3c4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.593826861652825
+          },
+          {
+            "id": "269c4afc59c1f59027ae62e32e31c5dea1a98712098780d144ca9896cc8042c9",
+            "move": "c1d2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.760212254492473
+          },
+          {
+            "id": "6d98d3204ea612a7467cf80030a0e092bcdaa33b853bca2c6724bde2237eafd6",
+            "move": "c1d2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.515907410001871
+          },
+          {
+            "id": "b347e9e1a02f48274526cf61612f0149bf3871f6b9931bc2cc5c6186f6de1842",
+            "move": "a1b3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.5342252198672295
+          },
+          {
+            "id": "14dc3eb72982b4a30346cd091c94a0f77eb4543aa3f9d12c8a988130d6d3e808",
+            "move": "e2f1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.8956923579130218
+          },
+          {
+            "id": "1c1772541e635ae140e4eaa17d24a44142947d35e301f19ad5b43d2996c2a2db",
+            "move": "f1d1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.6833069571907577
+          },
+          {
+            "id": "3a972c6746d7b64fb0502d5ea40acd98029044dba7fe892cca0fcd3014079a10",
+            "move": "a1b3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.290378977035839
+          },
+          {
+            "id": "f6797b28eacbb43dfb95a424f0b25434c241d55d159c813b00730f563045b479",
+            "move": "d2d4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.8534759931301434
+          },
+          {
+            "id": "fe360b93961379890ba84348932b2d9e10477590a052845c7f9accb76c7afbff",
+            "move": "d2d4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.97286039247873
+          },
+          {
+            "id": "dc7b9c07a3fce7417e8e52bceefcd012cd75bebb7a9d3fca2a79ba893c71a4b8",
+            "move": "c3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3964578843484707
+          },
+          {
+            "id": "1dcad4e6eae927bcf2e6d3f0d5cea5a285e69c3e38c8f357c239fe48be583e8b",
+            "move": "a1c1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.3897335486158338
+          },
+          {
+            "id": "22120a007710106bc5db05e3294c94e32e82bb7d0fffc0fea930450d639d4f58",
+            "move": "c3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.273203041633744
+          },
+          {
+            "id": "ca95937967270d5c537d6ed4ba7453e2ee470286359e4d6af309bb068e201074",
+            "move": "a4c3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1399555476910437
+          },
+          {
+            "id": "ff7e37fa8f3fe8bf2d201cdf58c659ed92ed49a088efafac292694d218eb7778",
+            "move": "b6d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.365886080281531
+          },
+          {
+            "id": "5bf3174a5be641f50ab0e925bfcd1b45f690e63d8b4a61851fe17badbb40e055",
+            "move": "f3d5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.5448484771225526
+          },
+          {
+            "id": "0b215cfe23fc3cf789efeb75d15ad87c1feb0b68be9cb0435d7ce737f1146d5f",
+            "move": "f1g2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.03343617826053
+          },
+          {
+            "id": "0f2c272ba4fe4c38d9066b80d62bc797783c7bd6c5c8a94a1adee95a06408ae0",
+            "move": "d4d5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.103293185377046
+          },
+          {
+            "id": "5615ab1722a5cdefc1493c83839370b005b84b984651a0940f9118ce0904ae90",
+            "move": "b2b4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.047307537701538
+          },
+          {
+            "id": "ab08d5bc2bf9965285c14323a739875f35e4ae0a83a597f7f2a6a4ce55b6ae58",
+            "move": "f1g1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.8834450300242156
+          },
+          {
+            "id": "a76886c2a8fe1848d7394a0d9b40b8bc3cfa03ea0c44f8326601aed068c915f8",
+            "move": "d5d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2996043343335417
+          },
+          {
+            "id": "b62dd796fdff08b1ad99c3931a4622017559f41ea89c9ca790633595f7dbb6c6",
+            "move": "e4c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.590861316810719
+          },
+          {
+            "id": "3afb2054a053ecb899e2d60557228a01eebcb59d0ecf31a1cdf73ef30ca074e6",
+            "move": "g4h5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.7182167913482482
+          },
+          {
+            "id": "dc6237f3a7b3ccb40a3cf996448042e983149b791d9ba49bcfaa54df2677618d",
+            "move": "g4h3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.786514875423208
+          },
+          {
+            "id": "107867b342822723883a49bde33562033b347eb1cd1ef6259cb1b922fed460c9",
+            "move": "e1f1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3661931445134576
+          },
+          {
+            "id": "6dc5f0696bf3f50ce4bf06ddc9fda4fbdfe4dd45e2f0de58ffa3cb6d4679218c",
+            "move": "e1f1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.3292807408399283
+          },
+          {
+            "id": "945a6e50f63aad916900b430651a7ec6389d876aa83db391923fd6c90630a27c",
+            "move": "d2c4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.119578777590432
+          },
+          {
+            "id": "be7589eca86bbde2928d91a725e1b07d0618f83a241e726ba4acdc9b50a0f228",
+            "move": "d2e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.9433457146393027
+          },
+          {
+            "id": "34313d8fa209a969ae585a57b63fd383272b2e130ac66ad5176694124ddbea04",
+            "move": "d5d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.0951171125185115
+          },
+          {
+            "id": "f2260bfbd172c2fe32a52197d922600518de313bd9f795369702f194a8c3942a",
+            "move": "g4e6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.9326037135774574
+          },
+          {
+            "id": "6b899676f52c82c448c0d01560dc76ccc9d0c0bd1e3e485d0676f771288907c7",
+            "move": "h3h4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.8901399147125026
+          },
+          {
+            "id": "0c39d317a311f33be005d149937067a42d64a765403be28af5f979c6cf8e4855",
+            "move": "d6d7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.972200377163555
+          },
+          {
+            "id": "3c2d0e798e3aba51aa682610c2ba534058222b866e7b330286f7e47f9bfa19f5",
+            "move": "b4c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.10590917718494
+          },
+          {
+            "id": "d746a47591275aef0c78d7cc9326ecc51e829f40152fef1df03bbdc6108813b0",
+            "move": "e8g8",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.339219404345436
+          },
+          {
+            "id": "2250b95480d78b6d3fd794db5ab891619c1bf7cb9bf1db91c382456bdd25bd7b",
+            "move": "d8e8",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.8836466841205186
+          },
+          {
+            "id": "8e2862fb4c78cdb2834ad2db6f308972986d0732911e2c4caeaf1b5055b81086",
+            "move": "c8e6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.431254630747676
+          },
+          {
+            "id": "7121d2828e3936853cb9b8e459b9dced1a0402a4925b280494fa2c61c185e3f3",
+            "move": "c5b4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.1571622740075678
+          },
+          {
+            "id": "af6486e03311614083eeb4a129a925e7e4164f02e46d2013bae9713777dbf926",
+            "move": "a6b8",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2489723764201712
+          },
+          {
+            "id": "3f6b4f72188a99826d9166c29fdeb951357302e202355c252ccb2dd4ec946a3e",
+            "move": "b4b3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.559289288834833
+          },
+          {
+            "id": "5369f599fc5475aebdf8fe434d5024300b4255267b66fab9ab0b6026ff1aaab3",
+            "move": "a8b8",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2615543587197147
+          },
+          {
+            "id": "4c35f157825a618180414a135b5a86fb987401cf79b3940c83ac3f62bfdd3f0e",
+            "move": "a8d8",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 4.00752753732126
+          },
+          {
+            "id": "aceb677c1e2f13abc6b4fdc40910c07e2fcc5cb07247abdc35f23fd260afde5e",
+            "move": "c7c6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.183972856250136
+          },
+          {
+            "id": "33ee7d133276a895e03abeb8b154de3256bd241d36d90945fd120086883f2449",
+            "move": "g2f2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.3909808984799326
+          },
+          {
+            "id": "0e83738f718937b9cc69796b871e4ed018baa4140f28496151fe3856a81f1476",
+            "move": "f5f2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.41524128623685
+          },
+          {
+            "id": "d0647c2bf8721be9123624e7c6eb7ed0b11de69451db851b2d829f7b6d199fac",
+            "move": "f3g5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.539813360567247
+          },
+          {
+            "id": "a99f0762ed00051f4efe069b6601f9da253f644718eaf35ef1a3ac1531d3d350",
+            "move": "f3g5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.5611201207473324
+          },
+          {
+            "id": "7055fbbe0903461165ba1ae2aa42bb64a8717e526cadc0cc935dcb9ee1f31c19",
+            "move": "f4d2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.046451960396915
+          },
+          {
+            "id": "e07be2b49796aab557a757515f54b4203d4d877aedc949bd261ca434349f64b8",
+            "move": "d3e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.6509928498947843
+          },
+          {
+            "id": "07d1a65542ec5fb0cf062228fb919e70c810a013571bdfd3a37d73168a0cde1d",
+            "move": "f3e5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3609250920332787
+          },
+          {
+            "id": "f2ee8ec17a0935bdc396c6d19be1cec03ee5f947d70620399dffe89379c81e14",
+            "move": "a1d1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.4252562371178374
+          },
+          {
+            "id": "532cc437b6d288c224fc484e3b74842773bfb08a4cea072b5e7769afa38615c7",
+            "move": "g3h4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5290790956784024
+          },
+          {
+            "id": "9b33482ea3a2a76929d44cbc850c926579d979c48ef3861df278b133f35666a6",
+            "move": "a1d1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5627761479025724
+          },
+          {
+            "id": "b805d0349d19ac6c2acfbe73202520cc7f0122e9e497a16c35ea4b5ea9eb0803",
+            "move": "e6c6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.27430938026876
+          },
+          {
+            "id": "9bba4cca729300f419db830436e76e76d0c09d56d411e365aa4d043a2ae260eb",
+            "move": "f1e1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.0381892063379627
+          },
+          {
+            "id": "f6f5a8bec1e50801e49ede1dd66e29e49253d4189312c180eac8b2a5733b5a71",
+            "move": "d7c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.1965854673265186
+          },
+          {
+            "id": "46c59d9c7bc01cd024734d931fd11e6264e28018b2a39a2b47d2a12f3e77eb95",
+            "move": "a3a4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 4.679169584777185
+          },
+          {
+            "id": "d983b86a63cfa221a5f951ef7312dd8bc5d50862eece468644043d882b97cdb0",
+            "move": "b8d7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2790514393422283
+          },
+          {
+            "id": "f0e22870c9d91512a2b0c11db79cdab02fd56406bb713f6389bf3fd7126e3d9b",
+            "move": "b8d7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.286386548829911
+          },
+          {
+            "id": "20f2142382fc4cc318c640e5a6717f15106120082da56ad18c37aa882a192df6",
+            "move": "e7h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.0940703492368433
+          },
+          {
+            "id": "05779f8548e229da456f46529fcdc5db3efe1ce0adbb17cb6a310596510bf8a9",
+            "move": "g5f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.265153424448017
+          },
+          {
+            "id": "327e31bac2f2099b08836f00f79b1e72c018056630612a6d9a89055cff5f3f90",
+            "move": "b8d7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.282536465129306
+          },
+          {
+            "id": "599c67220d031fc2dce6c4487ebdc2c47a84d6ce842cd6ca69d44112560e6ed2",
+            "move": "b8d7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2104709965753297
+          },
+          {
+            "id": "a31975020843c8187e14aaa9096c43b5a3552b951c6d55ae3cec54cf94ed5c87",
+            "move": "h6f5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.9793697070426264
+          },
+          {
+            "id": "676eef4290dd60ca59924c5572ad4e3687d67cbbe602b96ea4dd51362e3b652c",
+            "move": "g5h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.179564928835736
+          },
+          {
+            "id": "10c867ca632741cfdb75de0397b7decc6572d6b1bfbc094f98867b708ad75bd0",
+            "move": "f6e5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1105659893749746
+          },
+          {
+            "id": "b32b568ced8649e64422a8cc147828afe7b9bf73ffbbd3b8a4e7454755796138",
+            "move": "g8g7",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.0
+          },
+          {
+            "id": "ba6edd21be22456590a30388bcf1d37d277037b5823f8ab5346516dbc0097575",
+            "move": "a8g8",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.0081106008998577
+          },
+          {
+            "id": "5291a4b3291c43e303f53c71559b88aa5a6ccea4bb7b5890abb1bcf66869aef0",
+            "move": "c4b2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.9798823051197343
+          },
+          {
+            "id": "9fe32fae939d91e45a2a48dc4d0c2e16b742eb6020eaa74eb8a61c934a7e43e1",
+            "move": "f1f2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2424852580784846
+          },
+          {
+            "id": "11d5b7c50d34d3acdae7520a051552f4f7103b924d3de93b97e501075eaad4fd",
+            "move": "c3b5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1372626329745943
+          },
+          {
+            "id": "8dcb11ce8c85930a2702f17b9de9daacdb3cbd3e707da0f8437ae49f131d29a6",
+            "move": "f1e1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.0862065250540414
+          },
+          {
+            "id": "2ec5e83c13419f067a471ae6021adbf18dc66e36c0cb437712dcc8c640a44739",
+            "move": "f1e1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6834732555884648
+          },
+          {
+            "id": "b193451231671f57fad5b1cac7712586e2081d74f9fe00bd79ea9301be94ba8a",
+            "move": "f3f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1444264104375974
+          },
+          {
+            "id": "a0ecdfe3e409b5153360d858e554fa05ee4fa325ee512618735f23ffcde080c7",
+            "move": "c3b5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.171651871653722
+          },
+          {
+            "id": "9c4bace12c3ebb7fc0885b0d0dd3c76dba6d3dd4fa38a291b2f261367c25cd62",
+            "move": "c3e2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.3793148191450673
+          },
+          {
+            "id": "d9b97ed5f4e3c1226aea3eeb6753ac5e35a77498fa0c10715538d04f4e37edeb",
+            "move": "d4e6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.8427885543068068
+          },
+          {
+            "id": "f097bfe7ee5d382e2ebe8edb98c9723c073f480e4cf433016d0b0636bbe4bb1c",
+            "move": "d4f5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.655202084485284
+          },
+          {
+            "id": "1d7a4dc39cff46703c02d107a59775a0e337b3b0b8488ae8e1c0db28b77884c0",
+            "move": "c2c3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.620972055710281
+          },
+          {
+            "id": "920bad4e84dcc89aebb9fe0d9c520455ad841537aefa86e119646d711d4fe7f9",
+            "move": "f2e1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 1.8122449009985766
+          },
+          {
+            "id": "1660ac78c345e5518383f0d51f907273955d8395b71b26d1dfdc0acf59158d7e",
+            "move": "a1f1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.3309013622309362
+          },
+          {
+            "id": "28d327e8686cd81907ec4eb3f490b199a874f331b25923d6421809a3a78e74d5",
+            "move": "b1c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.8348652221873032
+          },
+          {
+            "id": "5fc7ada1c41b051430b114cb8bf497bad8506369affa6993f4ea458faf7ce361",
+            "move": "g5f4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.3474379061970696
+          },
+          {
+            "id": "c2205195571462407a2eac3e498a0eeafdd726d806e786c4b25904aa5587eee0",
+            "move": "g5f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.6255749145562897
+          },
+          {
+            "id": "4bc7aa1d75b0b4749bebf71b4fff97fc907793bc87c73f5a42a658c53f90a829",
+            "move": "f3d2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.6695617411384571
+          },
+          {
+            "id": "a06d1854d238ac4d7508721d3b887f9ebc0087979a9c977e65bac6dba3ef400f",
+            "move": "e1c1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.86697031929368
+          },
+          {
+            "id": "e6a21e6b0ae978eb53ae0e086afea2318aa942c74e46a1fd1271f78f9d6b2af7",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.6853206137341483
+          },
+          {
+            "id": "f8489d53b04082eb216813aa0b55908f39f1b2880351084a83d3df1950866e5b",
+            "move": "e1g1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.562933374854735
+          },
+          {
+            "id": "14f444c811413c1ba8d9d9ada4b205c45d970c2af3f9f53fd3cda4df171a64f0",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.6120096466757667
+          },
+          {
+            "id": "8680b0099a03d7150627ed7b9ceabb94d5987b0c3572814a4e1ebffa8b0f99db",
+            "move": "e4d6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.478893454491689
+          },
+          {
+            "id": "d959711ced8d3d06f08a908b1ebd357731ffad62f0965eaef962b2e5b4e95a98",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 4.082411171632884
+          },
+          {
+            "id": "1ae27f3d10808983888ce411f2a99d5a380ea07a4aef4f687ba1e49162c3d566",
+            "move": "g3h5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.159188951622636
+          }
+        ]
+      },
+      {
+        "id": "enemy-protected",
+        "file": ".cache/v8/weight-pocket-enemy-protected.bin",
+        "sha256": "dd18fab366db2206906ec41c0bc9467d6fd77e12582df87abbc490105e86ba00",
+        "changedScalars": 55903,
+        "count": 95,
+        "hits": 21,
+        "top4": 47,
+        "crossEntropy": 3.0943084389235467,
+        "answers": [
+          {
+            "id": "5c5938d47b7485ff90299f2da0d92d73f1168e86b5a61acb2231aae7366d9f91",
+            "move": "c4d3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.56514141449252
+          },
+          {
+            "id": "820bea1c9970e156110498a3c8764c3ee1ce5eaf307a7eec38948c55e4b61354",
+            "move": "e2d4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.374775817323891
+          },
+          {
+            "id": "63f7bcd26138a6bf88c26602952f102a7a12c25482b7d8eeb1bf036077fe40a5",
+            "move": "a1b1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.633684886270384
+          },
+          {
+            "id": "c5115a68301665e1b34f2d9a0f500714f8ac52e6005520685b0ca91a8dde5138",
+            "move": "e1g1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.4987702768996116
+          },
+          {
+            "id": "fbcdafd3632f8ab6a1f23bf81f963f35ab9d018f87dcad931ad4ea53f563c873",
+            "move": "f1d1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5416224378505836
+          },
+          {
+            "id": "8f618fad0b07c87bb2cfe499a10bd675d58e3b12d0ea12292177ec7c384f3d63",
+            "move": "c3c4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.607889594301591
+          },
+          {
+            "id": "269c4afc59c1f59027ae62e32e31c5dea1a98712098780d144ca9896cc8042c9",
+            "move": "c1d2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.7360156163252762
+          },
+          {
+            "id": "6d98d3204ea612a7467cf80030a0e092bcdaa33b853bca2c6724bde2237eafd6",
+            "move": "c1d2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.523686738930941
+          },
+          {
+            "id": "b347e9e1a02f48274526cf61612f0149bf3871f6b9931bc2cc5c6186f6de1842",
+            "move": "a4a3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.565408646259823
+          },
+          {
+            "id": "14dc3eb72982b4a30346cd091c94a0f77eb4543aa3f9d12c8a988130d6d3e808",
+            "move": "e2d3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.9531104214475907
+          },
+          {
+            "id": "1c1772541e635ae140e4eaa17d24a44142947d35e301f19ad5b43d2996c2a2db",
+            "move": "f1d1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.702121738597406
+          },
+          {
+            "id": "3a972c6746d7b64fb0502d5ea40acd98029044dba7fe892cca0fcd3014079a10",
+            "move": "a1b3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2251767412370485
+          },
+          {
+            "id": "f6797b28eacbb43dfb95a424f0b25434c241d55d159c813b00730f563045b479",
+            "move": "e2e4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.878754476548474
+          },
+          {
+            "id": "fe360b93961379890ba84348932b2d9e10477590a052845c7f9accb76c7afbff",
+            "move": "d2d4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.969458398443781
+          },
+          {
+            "id": "dc7b9c07a3fce7417e8e52bceefcd012cd75bebb7a9d3fca2a79ba893c71a4b8",
+            "move": "c3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3868549626738265
+          },
+          {
+            "id": "1dcad4e6eae927bcf2e6d3f0d5cea5a285e69c3e38c8f357c239fe48be583e8b",
+            "move": "a1c1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.3837972871637563
+          },
+          {
+            "id": "22120a007710106bc5db05e3294c94e32e82bb7d0fffc0fea930450d639d4f58",
+            "move": "c3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2854961685152606
+          },
+          {
+            "id": "ca95937967270d5c537d6ed4ba7453e2ee470286359e4d6af309bb068e201074",
+            "move": "a4c3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.147760735140976
+          },
+          {
+            "id": "ff7e37fa8f3fe8bf2d201cdf58c659ed92ed49a088efafac292694d218eb7778",
+            "move": "b6d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3790090532072217
+          },
+          {
+            "id": "5bf3174a5be641f50ab0e925bfcd1b45f690e63d8b4a61851fe17badbb40e055",
+            "move": "f3d5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.546694075742068
+          },
+          {
+            "id": "0b215cfe23fc3cf789efeb75d15ad87c1feb0b68be9cb0435d7ce737f1146d5f",
+            "move": "f1g2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.9313242012943523
+          },
+          {
+            "id": "0f2c272ba4fe4c38d9066b80d62bc797783c7bd6c5c8a94a1adee95a06408ae0",
+            "move": "d4d5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.1115593742044774
+          },
+          {
+            "id": "5615ab1722a5cdefc1493c83839370b005b84b984651a0940f9118ce0904ae90",
+            "move": "b2b4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1031650516302176
+          },
+          {
+            "id": "ab08d5bc2bf9965285c14323a739875f35e4ae0a83a597f7f2a6a4ce55b6ae58",
+            "move": "a6c6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.879852764797564
+          },
+          {
+            "id": "a76886c2a8fe1848d7394a0d9b40b8bc3cfa03ea0c44f8326601aed068c915f8",
+            "move": "c3e4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.29840393267688
+          },
+          {
+            "id": "b62dd796fdff08b1ad99c3931a4622017559f41ea89c9ca790633595f7dbb6c6",
+            "move": "e4c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5987065926950934
+          },
+          {
+            "id": "3afb2054a053ecb899e2d60557228a01eebcb59d0ecf31a1cdf73ef30ca074e6",
+            "move": "g4h5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.5747067432428983
+          },
+          {
+            "id": "dc6237f3a7b3ccb40a3cf996448042e983149b791d9ba49bcfaa54df2677618d",
+            "move": "g4h3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.929064428550965
+          },
+          {
+            "id": "107867b342822723883a49bde33562033b347eb1cd1ef6259cb1b922fed460c9",
+            "move": "e1f1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.382675149852463
+          },
+          {
+            "id": "6dc5f0696bf3f50ce4bf06ddc9fda4fbdfe4dd45e2f0de58ffa3cb6d4679218c",
+            "move": "e1f1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.343955080900681
+          },
+          {
+            "id": "945a6e50f63aad916900b430651a7ec6389d876aa83db391923fd6c90630a27c",
+            "move": "d2c4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.055345970259169
+          },
+          {
+            "id": "be7589eca86bbde2928d91a725e1b07d0618f83a241e726ba4acdc9b50a0f228",
+            "move": "d2e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.9508641500721784
+          },
+          {
+            "id": "34313d8fa209a969ae585a57b63fd383272b2e130ac66ad5176694124ddbea04",
+            "move": "d5d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1063581746252105
+          },
+          {
+            "id": "f2260bfbd172c2fe32a52197d922600518de313bd9f795369702f194a8c3942a",
+            "move": "g4e6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.078389132304202
+          },
+          {
+            "id": "6b899676f52c82c448c0d01560dc76ccc9d0c0bd1e3e485d0676f771288907c7",
+            "move": "h3h4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.948532263620241
+          },
+          {
+            "id": "0c39d317a311f33be005d149937067a42d64a765403be28af5f979c6cf8e4855",
+            "move": "d6d7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.9992107605010165
+          },
+          {
+            "id": "3c2d0e798e3aba51aa682610c2ba534058222b866e7b330286f7e47f9bfa19f5",
+            "move": "b4c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.117952321838779
+          },
+          {
+            "id": "d746a47591275aef0c78d7cc9326ecc51e829f40152fef1df03bbdc6108813b0",
+            "move": "e8g8",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.3252419528899955
+          },
+          {
+            "id": "2250b95480d78b6d3fd794db5ab891619c1bf7cb9bf1db91c382456bdd25bd7b",
+            "move": "d8d7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.894272410632966
+          },
+          {
+            "id": "8e2862fb4c78cdb2834ad2db6f308972986d0732911e2c4caeaf1b5055b81086",
+            "move": "d6e7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.447223803759369
+          },
+          {
+            "id": "7121d2828e3936853cb9b8e459b9dced1a0402a4925b280494fa2c61c185e3f3",
+            "move": "c5b4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.0841631451014306
+          },
+          {
+            "id": "af6486e03311614083eeb4a129a925e7e4164f02e46d2013bae9713777dbf926",
+            "move": "a6b8",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1929825363697444
+          },
+          {
+            "id": "3f6b4f72188a99826d9166c29fdeb951357302e202355c252ccb2dd4ec946a3e",
+            "move": "b4a3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.413228200007381
+          },
+          {
+            "id": "5369f599fc5475aebdf8fe434d5024300b4255267b66fab9ab0b6026ff1aaab3",
+            "move": "a8b8",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2701021925723235
+          },
+          {
+            "id": "4c35f157825a618180414a135b5a86fb987401cf79b3940c83ac3f62bfdd3f0e",
+            "move": "g4h5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.905646666698997
+          },
+          {
+            "id": "aceb677c1e2f13abc6b4fdc40910c07e2fcc5cb07247abdc35f23fd260afde5e",
+            "move": "c7c6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.20687909669576
+          },
+          {
+            "id": "33ee7d133276a895e03abeb8b154de3256bd241d36d90945fd120086883f2449",
+            "move": "g2f2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.3937856979536685
+          },
+          {
+            "id": "0e83738f718937b9cc69796b871e4ed018baa4140f28496151fe3856a81f1476",
+            "move": "f5f2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.4171119229553955
+          },
+          {
+            "id": "d0647c2bf8721be9123624e7c6eb7ed0b11de69451db851b2d829f7b6d199fac",
+            "move": "d4c5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.566378356360793
+          },
+          {
+            "id": "a99f0762ed00051f4efe069b6601f9da253f644718eaf35ef1a3ac1531d3d350",
+            "move": "e3e4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.5720188540971876
+          },
+          {
+            "id": "7055fbbe0903461165ba1ae2aa42bb64a8717e526cadc0cc935dcb9ee1f31c19",
+            "move": "f4d2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.9646051455884597
+          },
+          {
+            "id": "e07be2b49796aab557a757515f54b4203d4d877aedc949bd261ca434349f64b8",
+            "move": "d3e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.674949136163972
+          },
+          {
+            "id": "07d1a65542ec5fb0cf062228fb919e70c810a013571bdfd3a37d73168a0cde1d",
+            "move": "d3c4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3984975169215836
+          },
+          {
+            "id": "f2ee8ec17a0935bdc396c6d19be1cec03ee5f947d70620399dffe89379c81e14",
+            "move": "a1a2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2853022496814064
+          },
+          {
+            "id": "532cc437b6d288c224fc484e3b74842773bfb08a4cea072b5e7769afa38615c7",
+            "move": "g3h4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.403856160343205
+          },
+          {
+            "id": "9b33482ea3a2a76929d44cbc850c926579d979c48ef3861df278b133f35666a6",
+            "move": "a1a2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.435346859348323
+          },
+          {
+            "id": "b805d0349d19ac6c2acfbe73202520cc7f0122e9e497a16c35ea4b5ea9eb0803",
+            "move": "e6c6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2830344459818463
+          },
+          {
+            "id": "9bba4cca729300f419db830436e76e76d0c09d56d411e365aa4d043a2ae260eb",
+            "move": "f1e1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.0367570221272864
+          },
+          {
+            "id": "f6f5a8bec1e50801e49ede1dd66e29e49253d4189312c180eac8b2a5733b5a71",
+            "move": "d7c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.1212727689358135
+          },
+          {
+            "id": "46c59d9c7bc01cd024734d931fd11e6264e28018b2a39a2b47d2a12f3e77eb95",
+            "move": "a3a4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 4.5816188068756825
+          },
+          {
+            "id": "d983b86a63cfa221a5f951ef7312dd8bc5d50862eece468644043d882b97cdb0",
+            "move": "h5g4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2927352164308026
+          },
+          {
+            "id": "f0e22870c9d91512a2b0c11db79cdab02fd56406bb713f6389bf3fd7126e3d9b",
+            "move": "g6h5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.2540364282518044
+          },
+          {
+            "id": "20f2142382fc4cc318c640e5a6717f15106120082da56ad18c37aa882a192df6",
+            "move": "e7h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.153153860038067
+          },
+          {
+            "id": "05779f8548e229da456f46529fcdc5db3efe1ce0adbb17cb6a310596510bf8a9",
+            "move": "g5f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2912094274410526
+          },
+          {
+            "id": "327e31bac2f2099b08836f00f79b1e72c018056630612a6d9a89055cff5f3f90",
+            "move": "g5f4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.3005832357833182
+          },
+          {
+            "id": "599c67220d031fc2dce6c4487ebdc2c47a84d6ce842cd6ca69d44112560e6ed2",
+            "move": "g5f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2399817234929085
+          },
+          {
+            "id": "a31975020843c8187e14aaa9096c43b5a3552b951c6d55ae3cec54cf94ed5c87",
+            "move": "h6f5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.995216479890503
+          },
+          {
+            "id": "676eef4290dd60ca59924c5572ad4e3687d67cbbe602b96ea4dd51362e3b652c",
+            "move": "g5h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.0945999642477946
+          },
+          {
+            "id": "10c867ca632741cfdb75de0397b7decc6572d6b1bfbc094f98867b708ad75bd0",
+            "move": "f6e5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.117380589470701
+          },
+          {
+            "id": "b32b568ced8649e64422a8cc147828afe7b9bf73ffbbd3b8a4e7454755796138",
+            "move": "g8g7",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.0
+          },
+          {
+            "id": "ba6edd21be22456590a30388bcf1d37d277037b5823f8ab5346516dbc0097575",
+            "move": "a8g8",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.0222767795434198
+          },
+          {
+            "id": "5291a4b3291c43e303f53c71559b88aa5a6ccea4bb7b5890abb1bcf66869aef0",
+            "move": "c4b2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.9879445517998713
+          },
+          {
+            "id": "9fe32fae939d91e45a2a48dc4d0c2e16b742eb6020eaa74eb8a61c934a7e43e1",
+            "move": "f1f2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.265631719084021
+          },
+          {
+            "id": "11d5b7c50d34d3acdae7520a051552f4f7103b924d3de93b97e501075eaad4fd",
+            "move": "c3b5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.181164344189349
+          },
+          {
+            "id": "8dcb11ce8c85930a2702f17b9de9daacdb3cbd3e707da0f8437ae49f131d29a6",
+            "move": "f1e1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.227203752059558
+          },
+          {
+            "id": "2ec5e83c13419f067a471ae6021adbf18dc66e36c0cb437712dcc8c640a44739",
+            "move": "f1e1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6815536570880438
+          },
+          {
+            "id": "b193451231671f57fad5b1cac7712586e2081d74f9fe00bd79ea9301be94ba8a",
+            "move": "f3f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1737843231804894
+          },
+          {
+            "id": "a0ecdfe3e409b5153360d858e554fa05ee4fa325ee512618735f23ffcde080c7",
+            "move": "c3b5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.184840026984772
+          },
+          {
+            "id": "9c4bace12c3ebb7fc0885b0d0dd3c76dba6d3dd4fa38a291b2f261367c25cd62",
+            "move": "c3e2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.3314889753734565
+          },
+          {
+            "id": "d9b97ed5f4e3c1226aea3eeb6753ac5e35a77498fa0c10715538d04f4e37edeb",
+            "move": "d4e6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.853440798493546
+          },
+          {
+            "id": "f097bfe7ee5d382e2ebe8edb98c9723c073f480e4cf433016d0b0636bbe4bb1c",
+            "move": "d4f5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.7011016944598425
+          },
+          {
+            "id": "1d7a4dc39cff46703c02d107a59775a0e337b3b0b8488ae8e1c0db28b77884c0",
+            "move": "c2c3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.520092461080099
+          },
+          {
+            "id": "920bad4e84dcc89aebb9fe0d9c520455ad841537aefa86e119646d711d4fe7f9",
+            "move": "f2e1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 1.8163824807944622
+          },
+          {
+            "id": "1660ac78c345e5518383f0d51f907273955d8395b71b26d1dfdc0acf59158d7e",
+            "move": "a1f1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.220458988894532
+          },
+          {
+            "id": "28d327e8686cd81907ec4eb3f490b199a874f331b25923d6421809a3a78e74d5",
+            "move": "b1c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.83709535006336
+          },
+          {
+            "id": "5fc7ada1c41b051430b114cb8bf497bad8506369affa6993f4ea458faf7ce361",
+            "move": "g5f4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.4343178787202593
+          },
+          {
+            "id": "c2205195571462407a2eac3e498a0eeafdd726d806e786c4b25904aa5587eee0",
+            "move": "g5f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.698570545380629
+          },
+          {
+            "id": "4bc7aa1d75b0b4749bebf71b4fff97fc907793bc87c73f5a42a658c53f90a829",
+            "move": "d1d2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.725088723243437
+          },
+          {
+            "id": "a06d1854d238ac4d7508721d3b887f9ebc0087979a9c977e65bac6dba3ef400f",
+            "move": "e1c1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.6722396392056704
+          },
+          {
+            "id": "e6a21e6b0ae978eb53ae0e086afea2318aa942c74e46a1fd1271f78f9d6b2af7",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.67869009467923
+          },
+          {
+            "id": "f8489d53b04082eb216813aa0b55908f39f1b2880351084a83d3df1950866e5b",
+            "move": "e1g1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.5348052826231515
+          },
+          {
+            "id": "14f444c811413c1ba8d9d9ada4b205c45d970c2af3f9f53fd3cda4df171a64f0",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.6162619634687014
+          },
+          {
+            "id": "8680b0099a03d7150627ed7b9ceabb94d5987b0c3572814a4e1ebffa8b0f99db",
+            "move": "e4d6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.472930531248533
+          },
+          {
+            "id": "d959711ced8d3d06f08a908b1ebd357731ffad62f0965eaef962b2e5b4e95a98",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 4.029371154028534
+          },
+          {
+            "id": "1ae27f3d10808983888ce411f2a99d5a380ea07a4aef4f687ba1e49162c3d566",
+            "move": "g3h5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1640985285019703
+          }
+        ]
+      },
+      {
+        "id": "enemy-relaxed",
+        "file": ".cache/v8/weight-pocket-enemy-relaxed.bin",
+        "sha256": "be57790e21e0ed51a44a18aed3272c7f1cbc780b68fb218a0d8c3f24d4da9e73",
+        "changedScalars": 65303,
+        "count": 95,
+        "hits": 23,
+        "top4": 48,
+        "crossEntropy": 3.0279637603866005,
+        "answers": [
+          {
+            "id": "5c5938d47b7485ff90299f2da0d92d73f1168e86b5a61acb2231aae7366d9f91",
+            "move": "c4d3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.554852886443131
+          },
+          {
+            "id": "820bea1c9970e156110498a3c8764c3ee1ce5eaf307a7eec38948c55e4b61354",
+            "move": "e2d4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.363679376736271
+          },
+          {
+            "id": "63f7bcd26138a6bf88c26602952f102a7a12c25482b7d8eeb1bf036077fe40a5",
+            "move": "a1b1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.2623413688070144
+          },
+          {
+            "id": "c5115a68301665e1b34f2d9a0f500714f8ac52e6005520685b0ca91a8dde5138",
+            "move": "e1g1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.4817643791211568
+          },
+          {
+            "id": "fbcdafd3632f8ab6a1f23bf81f963f35ab9d018f87dcad931ad4ea53f563c873",
+            "move": "b3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.5173386997163423
+          },
+          {
+            "id": "8f618fad0b07c87bb2cfe499a10bd675d58e3b12d0ea12292177ec7c384f3d63",
+            "move": "b3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.590494547743978
+          },
+          {
+            "id": "269c4afc59c1f59027ae62e32e31c5dea1a98712098780d144ca9896cc8042c9",
+            "move": "c1d2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.7196015835737786
+          },
+          {
+            "id": "6d98d3204ea612a7467cf80030a0e092bcdaa33b853bca2c6724bde2237eafd6",
+            "move": "c1d2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.4991981046152967
+          },
+          {
+            "id": "b347e9e1a02f48274526cf61612f0149bf3871f6b9931bc2cc5c6186f6de1842",
+            "move": "a4a3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.534206291529936
+          },
+          {
+            "id": "14dc3eb72982b4a30346cd091c94a0f77eb4543aa3f9d12c8a988130d6d3e808",
+            "move": "e2f1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.970372286984984
+          },
+          {
+            "id": "1c1772541e635ae140e4eaa17d24a44142947d35e301f19ad5b43d2996c2a2db",
+            "move": "f1d1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.2679729945305525
+          },
+          {
+            "id": "3a972c6746d7b64fb0502d5ea40acd98029044dba7fe892cca0fcd3014079a10",
+            "move": "a1b3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.16721405485826
+          },
+          {
+            "id": "f6797b28eacbb43dfb95a424f0b25434c241d55d159c813b00730f563045b479",
+            "move": "e2e4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.8657397315417037
+          },
+          {
+            "id": "fe360b93961379890ba84348932b2d9e10477590a052845c7f9accb76c7afbff",
+            "move": "d2d4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.9506914075882285
+          },
+          {
+            "id": "dc7b9c07a3fce7417e8e52bceefcd012cd75bebb7a9d3fca2a79ba893c71a4b8",
+            "move": "c3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3664515059204705
+          },
+          {
+            "id": "1dcad4e6eae927bcf2e6d3f0d5cea5a285e69c3e38c8f357c239fe48be583e8b",
+            "move": "a1c1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.3540089612255017
+          },
+          {
+            "id": "22120a007710106bc5db05e3294c94e32e82bb7d0fffc0fea930450d639d4f58",
+            "move": "c3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2650853106465223
+          },
+          {
+            "id": "ca95937967270d5c537d6ed4ba7453e2ee470286359e4d6af309bb068e201074",
+            "move": "a4c3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.148690746718496
+          },
+          {
+            "id": "ff7e37fa8f3fe8bf2d201cdf58c659ed92ed49a088efafac292694d218eb7778",
+            "move": "b6d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3431676715026013
+          },
+          {
+            "id": "5bf3174a5be641f50ab0e925bfcd1b45f690e63d8b4a61851fe17badbb40e055",
+            "move": "f3d5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.1897999460945834
+          },
+          {
+            "id": "0b215cfe23fc3cf789efeb75d15ad87c1feb0b68be9cb0435d7ce737f1146d5f",
+            "move": "f1g2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.5683068893103727
+          },
+          {
+            "id": "0f2c272ba4fe4c38d9066b80d62bc797783c7bd6c5c8a94a1adee95a06408ae0",
+            "move": "d4d5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.0859645738559034
+          },
+          {
+            "id": "5615ab1722a5cdefc1493c83839370b005b84b984651a0940f9118ce0904ae90",
+            "move": "b2b4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1510136649607445
+          },
+          {
+            "id": "ab08d5bc2bf9965285c14323a739875f35e4ae0a83a597f7f2a6a4ce55b6ae58",
+            "move": "b2b4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.8392163553354344
+          },
+          {
+            "id": "a76886c2a8fe1848d7394a0d9b40b8bc3cfa03ea0c44f8326601aed068c915f8",
+            "move": "c3e4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.276869277417104
+          },
+          {
+            "id": "b62dd796fdff08b1ad99c3931a4622017559f41ea89c9ca790633595f7dbb6c6",
+            "move": "e4c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5793613504591506
+          },
+          {
+            "id": "3afb2054a053ecb899e2d60557228a01eebcb59d0ecf31a1cdf73ef30ca074e6",
+            "move": "g4h5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.448250458968007
+          },
+          {
+            "id": "dc6237f3a7b3ccb40a3cf996448042e983149b791d9ba49bcfaa54df2677618d",
+            "move": "g4h3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 4.027687458583661
+          },
+          {
+            "id": "107867b342822723883a49bde33562033b347eb1cd1ef6259cb1b922fed460c9",
+            "move": "e1f1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.4029278735870943
+          },
+          {
+            "id": "6dc5f0696bf3f50ce4bf06ddc9fda4fbdfe4dd45e2f0de58ffa3cb6d4679218c",
+            "move": "e1f1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.9939381641111638
+          },
+          {
+            "id": "945a6e50f63aad916900b430651a7ec6389d876aa83db391923fd6c90630a27c",
+            "move": "d2c4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.0291091063091864
+          },
+          {
+            "id": "be7589eca86bbde2928d91a725e1b07d0618f83a241e726ba4acdc9b50a0f228",
+            "move": "d2e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.8182317105822685
+          },
+          {
+            "id": "34313d8fa209a969ae585a57b63fd383272b2e130ac66ad5176694124ddbea04",
+            "move": "d5d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.091438401632412
+          },
+          {
+            "id": "f2260bfbd172c2fe32a52197d922600518de313bd9f795369702f194a8c3942a",
+            "move": "g4e6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.036640674916935
+          },
+          {
+            "id": "6b899676f52c82c448c0d01560dc76ccc9d0c0bd1e3e485d0676f771288907c7",
+            "move": "h3h4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.91695660836486
+          },
+          {
+            "id": "0c39d317a311f33be005d149937067a42d64a765403be28af5f979c6cf8e4855",
+            "move": "d6d7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.9619108539930297
+          },
+          {
+            "id": "3c2d0e798e3aba51aa682610c2ba534058222b866e7b330286f7e47f9bfa19f5",
+            "move": "b4c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.094294954090719
+          },
+          {
+            "id": "d746a47591275aef0c78d7cc9326ecc51e829f40152fef1df03bbdc6108813b0",
+            "move": "e8g8",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.3008726022056956
+          },
+          {
+            "id": "2250b95480d78b6d3fd794db5ab891619c1bf7cb9bf1db91c382456bdd25bd7b",
+            "move": "d8d7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.5265800550268764
+          },
+          {
+            "id": "8e2862fb4c78cdb2834ad2db6f308972986d0732911e2c4caeaf1b5055b81086",
+            "move": "d6e7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.414172262831625
+          },
+          {
+            "id": "7121d2828e3936853cb9b8e459b9dced1a0402a4925b280494fa2c61c185e3f3",
+            "move": "c5b4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.968070593346223
+          },
+          {
+            "id": "af6486e03311614083eeb4a129a925e7e4164f02e46d2013bae9713777dbf926",
+            "move": "a6b8",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.071501959896318
+          },
+          {
+            "id": "3f6b4f72188a99826d9166c29fdeb951357302e202355c252ccb2dd4ec946a3e",
+            "move": "b4a3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.225148064626379
+          },
+          {
+            "id": "5369f599fc5475aebdf8fe434d5024300b4255267b66fab9ab0b6026ff1aaab3",
+            "move": "a7a5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.255961003659898
+          },
+          {
+            "id": "4c35f157825a618180414a135b5a86fb987401cf79b3940c83ac3f62bfdd3f0e",
+            "move": "a8d8",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.6727951360097384
+          },
+          {
+            "id": "aceb677c1e2f13abc6b4fdc40910c07e2fcc5cb07247abdc35f23fd260afde5e",
+            "move": "c7c6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.172863803707381
+          },
+          {
+            "id": "33ee7d133276a895e03abeb8b154de3256bd241d36d90945fd120086883f2449",
+            "move": "g2f2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.368764857954986
+          },
+          {
+            "id": "0e83738f718937b9cc69796b871e4ed018baa4140f28496151fe3856a81f1476",
+            "move": "f5f2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.405722956765106
+          },
+          {
+            "id": "d0647c2bf8721be9123624e7c6eb7ed0b11de69451db851b2d829f7b6d199fac",
+            "move": "d4c5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5312786039738944
+          },
+          {
+            "id": "a99f0762ed00051f4efe069b6601f9da253f644718eaf35ef1a3ac1531d3d350",
+            "move": "e3e4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.5417860187157895
+          },
+          {
+            "id": "7055fbbe0903461165ba1ae2aa42bb64a8717e526cadc0cc935dcb9ee1f31c19",
+            "move": "f4d2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.9273008140517756
+          },
+          {
+            "id": "e07be2b49796aab557a757515f54b4203d4d877aedc949bd261ca434349f64b8",
+            "move": "d3e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.316365838981988
+          },
+          {
+            "id": "07d1a65542ec5fb0cf062228fb919e70c810a013571bdfd3a37d73168a0cde1d",
+            "move": "d3c4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3609243719250252
+          },
+          {
+            "id": "f2ee8ec17a0935bdc396c6d19be1cec03ee5f947d70620399dffe89379c81e14",
+            "move": "a1a2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.259487038573984
+          },
+          {
+            "id": "532cc437b6d288c224fc484e3b74842773bfb08a4cea072b5e7769afa38615c7",
+            "move": "g3h4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.211216347059196
+          },
+          {
+            "id": "9b33482ea3a2a76929d44cbc850c926579d979c48ef3861df278b133f35666a6",
+            "move": "a1a2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2645547713392107
+          },
+          {
+            "id": "b805d0349d19ac6c2acfbe73202520cc7f0122e9e497a16c35ea4b5ea9eb0803",
+            "move": "e6c6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2722932069155837
+          },
+          {
+            "id": "9bba4cca729300f419db830436e76e76d0c09d56d411e365aa4d043a2ae260eb",
+            "move": "f1e1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.0069498759539783
+          },
+          {
+            "id": "f6f5a8bec1e50801e49ede1dd66e29e49253d4189312c180eac8b2a5733b5a71",
+            "move": "d7c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.0258508159610984
+          },
+          {
+            "id": "46c59d9c7bc01cd024734d931fd11e6264e28018b2a39a2b47d2a12f3e77eb95",
+            "move": "a3a4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 4.705529910854159
+          },
+          {
+            "id": "d983b86a63cfa221a5f951ef7312dd8bc5d50862eece468644043d882b97cdb0",
+            "move": "h5g4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.267098357779859
+          },
+          {
+            "id": "f0e22870c9d91512a2b0c11db79cdab02fd56406bb713f6389bf3fd7126e3d9b",
+            "move": "g6h5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.080842135175233
+          },
+          {
+            "id": "20f2142382fc4cc318c640e5a6717f15106120082da56ad18c37aa882a192df6",
+            "move": "e7h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.102964445540496
+          },
+          {
+            "id": "05779f8548e229da456f46529fcdc5db3efe1ce0adbb17cb6a310596510bf8a9",
+            "move": "g5f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.284943096905358
+          },
+          {
+            "id": "327e31bac2f2099b08836f00f79b1e72c018056630612a6d9a89055cff5f3f90",
+            "move": "g5f4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2847576943371584
+          },
+          {
+            "id": "599c67220d031fc2dce6c4487ebdc2c47a84d6ce842cd6ca69d44112560e6ed2",
+            "move": "g5f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.223622008324414
+          },
+          {
+            "id": "a31975020843c8187e14aaa9096c43b5a3552b951c6d55ae3cec54cf94ed5c87",
+            "move": "e6f5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.9010646929634665
+          },
+          {
+            "id": "676eef4290dd60ca59924c5572ad4e3687d67cbbe602b96ea4dd51362e3b652c",
+            "move": "g5h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.629036405739697
+          },
+          {
+            "id": "10c867ca632741cfdb75de0397b7decc6572d6b1bfbc094f98867b708ad75bd0",
+            "move": "f6e5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1189728240299406
+          },
+          {
+            "id": "b32b568ced8649e64422a8cc147828afe7b9bf73ffbbd3b8a4e7454755796138",
+            "move": "g8g7",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.0
+          },
+          {
+            "id": "ba6edd21be22456590a30388bcf1d37d277037b5823f8ab5346516dbc0097575",
+            "move": "a8g8",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.015627965997538
+          },
+          {
+            "id": "5291a4b3291c43e303f53c71559b88aa5a6ccea4bb7b5890abb1bcf66869aef0",
+            "move": "c4b2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.9748721597455896
+          },
+          {
+            "id": "9fe32fae939d91e45a2a48dc4d0c2e16b742eb6020eaa74eb8a61c934a7e43e1",
+            "move": "f1f2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.1840435172159025
+          },
+          {
+            "id": "11d5b7c50d34d3acdae7520a051552f4f7103b924d3de93b97e501075eaad4fd",
+            "move": "c3b5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1439012079738125
+          },
+          {
+            "id": "8dcb11ce8c85930a2702f17b9de9daacdb3cbd3e707da0f8437ae49f131d29a6",
+            "move": "f1e1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.327077474183108
+          },
+          {
+            "id": "2ec5e83c13419f067a471ae6021adbf18dc66e36c0cb437712dcc8c640a44739",
+            "move": "f1e1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6815536570880438
+          },
+          {
+            "id": "b193451231671f57fad5b1cac7712586e2081d74f9fe00bd79ea9301be94ba8a",
+            "move": "f3f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.14399582415257
+          },
+          {
+            "id": "a0ecdfe3e409b5153360d858e554fa05ee4fa325ee512618735f23ffcde080c7",
+            "move": "c3b5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.166938095605679
+          },
+          {
+            "id": "9c4bace12c3ebb7fc0885b0d0dd3c76dba6d3dd4fa38a291b2f261367c25cd62",
+            "move": "c3e2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.013298189265555
+          },
+          {
+            "id": "d9b97ed5f4e3c1226aea3eeb6753ac5e35a77498fa0c10715538d04f4e37edeb",
+            "move": "d4e6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.8398869154327087
+          },
+          {
+            "id": "f097bfe7ee5d382e2ebe8edb98c9723c073f480e4cf433016d0b0636bbe4bb1c",
+            "move": "d4f5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.6685168104379575
+          },
+          {
+            "id": "1d7a4dc39cff46703c02d107a59775a0e337b3b0b8488ae8e1c0db28b77884c0",
+            "move": "c2c3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3601253299371936
+          },
+          {
+            "id": "920bad4e84dcc89aebb9fe0d9c520455ad841537aefa86e119646d711d4fe7f9",
+            "move": "f2e1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 1.8163824807944622
+          },
+          {
+            "id": "1660ac78c345e5518383f0d51f907273955d8395b71b26d1dfdc0acf59158d7e",
+            "move": "a1c1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.209307779162516
+          },
+          {
+            "id": "28d327e8686cd81907ec4eb3f490b199a874f331b25923d6421809a3a78e74d5",
+            "move": "b1c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.8352408319265592
+          },
+          {
+            "id": "5fc7ada1c41b051430b114cb8bf497bad8506369affa6993f4ea458faf7ce361",
+            "move": "g5f4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.402464494791966
+          },
+          {
+            "id": "c2205195571462407a2eac3e498a0eeafdd726d806e786c4b25904aa5587eee0",
+            "move": "g5f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.6751450423984298
+          },
+          {
+            "id": "4bc7aa1d75b0b4749bebf71b4fff97fc907793bc87c73f5a42a658c53f90a829",
+            "move": "d1d2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.7514557349879154
+          },
+          {
+            "id": "a06d1854d238ac4d7508721d3b887f9ebc0087979a9c977e65bac6dba3ef400f",
+            "move": "f3e5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.492288800913218
+          },
+          {
+            "id": "e6a21e6b0ae978eb53ae0e086afea2318aa942c74e46a1fd1271f78f9d6b2af7",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.6615638611244594
+          },
+          {
+            "id": "f8489d53b04082eb216813aa0b55908f39f1b2880351084a83d3df1950866e5b",
+            "move": "e1g1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.520385113547671
+          },
+          {
+            "id": "14f444c811413c1ba8d9d9ada4b205c45d970c2af3f9f53fd3cda4df171a64f0",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.60562521323011
+          },
+          {
+            "id": "8680b0099a03d7150627ed7b9ceabb94d5987b0c3572814a4e1ebffa8b0f99db",
+            "move": "e4d6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.4423424500711253
+          },
+          {
+            "id": "d959711ced8d3d06f08a908b1ebd357731ffad62f0965eaef962b2e5b4e95a98",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 4.217740062417833
+          },
+          {
+            "id": "1ae27f3d10808983888ce411f2a99d5a380ea07a4aef4f687ba1e49162c3d566",
+            "move": "g3h5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.0726954208167294
+          }
+        ]
+      }
+    ],
+    "atlas": [
+      {
+        "id": "control",
+        "file": ".cache/v8/weight-atlas-control.bin",
+        "sha256": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85",
+        "changedScalars": 0,
+        "count": 95,
+        "hits": 22,
+        "top4": 53,
+        "crossEntropy": 3.0988055006848145,
+        "answers": [
+          {
+            "id": "5c5938d47b7485ff90299f2da0d92d73f1168e86b5a61acb2231aae7366d9f91",
+            "move": "c4d3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.5301192595445885
+          },
+          {
+            "id": "820bea1c9970e156110498a3c8764c3ee1ce5eaf307a7eec38948c55e4b61354",
+            "move": "d1d4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2869998327598653
+          },
+          {
+            "id": "63f7bcd26138a6bf88c26602952f102a7a12c25482b7d8eeb1bf036077fe40a5",
+            "move": "a1b1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.6303333690881914
+          },
+          {
+            "id": "c5115a68301665e1b34f2d9a0f500714f8ac52e6005520685b0ca91a8dde5138",
+            "move": "e2e5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.500062858300104
+          },
+          {
+            "id": "fbcdafd3632f8ab6a1f23bf81f963f35ab9d018f87dcad931ad4ea53f563c873",
+            "move": "c1g5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5297546810949196
+          },
+          {
+            "id": "8f618fad0b07c87bb2cfe499a10bd675d58e3b12d0ea12292177ec7c384f3d63",
+            "move": "e2c4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.5858169433924707
+          },
+          {
+            "id": "269c4afc59c1f59027ae62e32e31c5dea1a98712098780d144ca9896cc8042c9",
+            "move": "c1g5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.763488569409178
+          },
+          {
+            "id": "6d98d3204ea612a7467cf80030a0e092bcdaa33b853bca2c6724bde2237eafd6",
+            "move": "c1g5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5245967468533457
+          },
+          {
+            "id": "b347e9e1a02f48274526cf61612f0149bf3871f6b9931bc2cc5c6186f6de1842",
+            "move": "a1b3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.5440002680673257
+          },
+          {
+            "id": "14dc3eb72982b4a30346cd091c94a0f77eb4543aa3f9d12c8a988130d6d3e808",
+            "move": "e2f1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.918582842560984
+          },
+          {
+            "id": "1c1772541e635ae140e4eaa17d24a44142947d35e301f19ad5b43d2996c2a2db",
+            "move": "f1d1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.6770051315745556
+          },
+          {
+            "id": "3a972c6746d7b64fb0502d5ea40acd98029044dba7fe892cca0fcd3014079a10",
+            "move": "a1b3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2967003303631084
+          },
+          {
+            "id": "f6797b28eacbb43dfb95a424f0b25434c241d55d159c813b00730f563045b479",
+            "move": "d2d4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.865846562014885
+          },
+          {
+            "id": "fe360b93961379890ba84348932b2d9e10477590a052845c7f9accb76c7afbff",
+            "move": "d2d4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.9845271162724623
+          },
+          {
+            "id": "dc7b9c07a3fce7417e8e52bceefcd012cd75bebb7a9d3fca2a79ba893c71a4b8",
+            "move": "c3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.406365078167517
+          },
+          {
+            "id": "1dcad4e6eae927bcf2e6d3f0d5cea5a285e69c3e38c8f357c239fe48be583e8b",
+            "move": "f1b5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.399900447937487
+          },
+          {
+            "id": "22120a007710106bc5db05e3294c94e32e82bb7d0fffc0fea930450d639d4f58",
+            "move": "c3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2703819834378036
+          },
+          {
+            "id": "ca95937967270d5c537d6ed4ba7453e2ee470286359e4d6af309bb068e201074",
+            "move": "d2a5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.1387364844508423
+          },
+          {
+            "id": "ff7e37fa8f3fe8bf2d201cdf58c659ed92ed49a088efafac292694d218eb7778",
+            "move": "b6d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3667697375503987
+          },
+          {
+            "id": "5bf3174a5be641f50ab0e925bfcd1b45f690e63d8b4a61851fe17badbb40e055",
+            "move": "f3d5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.433531783783054
+          },
+          {
+            "id": "0b215cfe23fc3cf789efeb75d15ad87c1feb0b68be9cb0435d7ce737f1146d5f",
+            "move": "f1g2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.0092275611950514
+          },
+          {
+            "id": "0f2c272ba4fe4c38d9066b80d62bc797783c7bd6c5c8a94a1adee95a06408ae0",
+            "move": "b3b6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.9704593413777114
+          },
+          {
+            "id": "5615ab1722a5cdefc1493c83839370b005b84b984651a0940f9118ce0904ae90",
+            "move": "a6a7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.014447700355662
+          },
+          {
+            "id": "ab08d5bc2bf9965285c14323a739875f35e4ae0a83a597f7f2a6a4ce55b6ae58",
+            "move": "a6c6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.937154004394805
+          },
+          {
+            "id": "a76886c2a8fe1848d7394a0d9b40b8bc3cfa03ea0c44f8326601aed068c915f8",
+            "move": "d5d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.308929895410266
+          },
+          {
+            "id": "b62dd796fdff08b1ad99c3931a4622017559f41ea89c9ca790633595f7dbb6c6",
+            "move": "e4c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.549336349242023
+          },
+          {
+            "id": "3afb2054a053ecb899e2d60557228a01eebcb59d0ecf31a1cdf73ef30ca074e6",
+            "move": "g4h5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.7251933748304893
+          },
+          {
+            "id": "dc6237f3a7b3ccb40a3cf996448042e983149b791d9ba49bcfaa54df2677618d",
+            "move": "g4h3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.7924158821874068
+          },
+          {
+            "id": "107867b342822723883a49bde33562033b347eb1cd1ef6259cb1b922fed460c9",
+            "move": "e1f1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.280507594924236
+          },
+          {
+            "id": "6dc5f0696bf3f50ce4bf06ddc9fda4fbdfe4dd45e2f0de58ffa3cb6d4679218c",
+            "move": "e1f1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.3292807408399283
+          },
+          {
+            "id": "945a6e50f63aad916900b430651a7ec6389d876aa83db391923fd6c90630a27c",
+            "move": "d2c4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.119578777590432
+          },
+          {
+            "id": "be7589eca86bbde2928d91a725e1b07d0618f83a241e726ba4acdc9b50a0f228",
+            "move": "d2e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.952481534362042
+          },
+          {
+            "id": "34313d8fa209a969ae585a57b63fd383272b2e130ac66ad5176694124ddbea04",
+            "move": "g4e6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1185940470426106
+          },
+          {
+            "id": "f2260bfbd172c2fe32a52197d922600518de313bd9f795369702f194a8c3942a",
+            "move": "g4e6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.9326037135774574
+          },
+          {
+            "id": "6b899676f52c82c448c0d01560dc76ccc9d0c0bd1e3e485d0676f771288907c7",
+            "move": "h3h4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.8915370399327798
+          },
+          {
+            "id": "0c39d317a311f33be005d149937067a42d64a765403be28af5f979c6cf8e4855",
+            "move": "d6d7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.9735209122336133
+          },
+          {
+            "id": "3c2d0e798e3aba51aa682610c2ba534058222b866e7b330286f7e47f9bfa19f5",
+            "move": "b4c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.1154719689301107
+          },
+          {
+            "id": "d746a47591275aef0c78d7cc9326ecc51e829f40152fef1df03bbdc6108813b0",
+            "move": "e8g8",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.3533893259909178
+          },
+          {
+            "id": "2250b95480d78b6d3fd794db5ab891619c1bf7cb9bf1db91c382456bdd25bd7b",
+            "move": "d8e8",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.862956282005144
+          },
+          {
+            "id": "8e2862fb4c78cdb2834ad2db6f308972986d0732911e2c4caeaf1b5055b81086",
+            "move": "d8f6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.279391167313866
+          },
+          {
+            "id": "7121d2828e3936853cb9b8e459b9dced1a0402a4925b280494fa2c61c185e3f3",
+            "move": "c5b4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.0405982868949164
+          },
+          {
+            "id": "af6486e03311614083eeb4a129a925e7e4164f02e46d2013bae9713777dbf926",
+            "move": "a6b8",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1788666491559963
+          },
+          {
+            "id": "3f6b4f72188a99826d9166c29fdeb951357302e202355c252ccb2dd4ec946a3e",
+            "move": "b4b3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 4.115317752799182
+          },
+          {
+            "id": "5369f599fc5475aebdf8fe434d5024300b4255267b66fab9ab0b6026ff1aaab3",
+            "move": "c8g4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.1511080632883366
+          },
+          {
+            "id": "4c35f157825a618180414a135b5a86fb987401cf79b3940c83ac3f62bfdd3f0e",
+            "move": "g4e4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 4.012188240935037
+          },
+          {
+            "id": "aceb677c1e2f13abc6b4fdc40910c07e2fcc5cb07247abdc35f23fd260afde5e",
+            "move": "c7c6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.06906922123272
+          },
+          {
+            "id": "33ee7d133276a895e03abeb8b154de3256bd241d36d90945fd120086883f2449",
+            "move": "g2f2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.3412094502462444
+          },
+          {
+            "id": "0e83738f718937b9cc69796b871e4ed018baa4140f28496151fe3856a81f1476",
+            "move": "f5f2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3242593652833667
+          },
+          {
+            "id": "d0647c2bf8721be9123624e7c6eb7ed0b11de69451db851b2d829f7b6d199fac",
+            "move": "f3g5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.54489243530302
+          },
+          {
+            "id": "a99f0762ed00051f4efe069b6601f9da253f644718eaf35ef1a3ac1531d3d350",
+            "move": "f3g5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.5419490458370215
+          },
+          {
+            "id": "7055fbbe0903461165ba1ae2aa42bb64a8717e526cadc0cc935dcb9ee1f31c19",
+            "move": "f4g5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.048268302799632
+          },
+          {
+            "id": "e07be2b49796aab557a757515f54b4203d4d877aedc949bd261ca434349f64b8",
+            "move": "d3e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.569096870051735
+          },
+          {
+            "id": "07d1a65542ec5fb0cf062228fb919e70c810a013571bdfd3a37d73168a0cde1d",
+            "move": "f1e1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2239460637566717
+          },
+          {
+            "id": "f2ee8ec17a0935bdc396c6d19be1cec03ee5f947d70620399dffe89379c81e14",
+            "move": "a1d1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.4260820011572726
+          },
+          {
+            "id": "532cc437b6d288c224fc484e3b74842773bfb08a4cea072b5e7769afa38615c7",
+            "move": "g3h4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5401201535126186
+          },
+          {
+            "id": "9b33482ea3a2a76929d44cbc850c926579d979c48ef3861df278b133f35666a6",
+            "move": "a1d1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5733414306180937
+          },
+          {
+            "id": "b805d0349d19ac6c2acfbe73202520cc7f0122e9e497a16c35ea4b5ea9eb0803",
+            "move": "e6c6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2875310802554476
+          },
+          {
+            "id": "9bba4cca729300f419db830436e76e76d0c09d56d411e365aa4d043a2ae260eb",
+            "move": "d7b7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.042088988090776
+          },
+          {
+            "id": "f6f5a8bec1e50801e49ede1dd66e29e49253d4189312c180eac8b2a5733b5a71",
+            "move": "d7c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.87492192508762
+          },
+          {
+            "id": "46c59d9c7bc01cd024734d931fd11e6264e28018b2a39a2b47d2a12f3e77eb95",
+            "move": "a3a4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 4.692416836333627
+          },
+          {
+            "id": "d983b86a63cfa221a5f951ef7312dd8bc5d50862eece468644043d882b97cdb0",
+            "move": "f8b4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.288743786492979
+          },
+          {
+            "id": "f0e22870c9d91512a2b0c11db79cdab02fd56406bb713f6389bf3fd7126e3d9b",
+            "move": "f8b4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2964964602975027
+          },
+          {
+            "id": "20f2142382fc4cc318c640e5a6717f15106120082da56ad18c37aa882a192df6",
+            "move": "e7h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.1038971687024146
+          },
+          {
+            "id": "05779f8548e229da456f46529fcdc5db3efe1ce0adbb17cb6a310596510bf8a9",
+            "move": "g5f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.274037872743918
+          },
+          {
+            "id": "327e31bac2f2099b08836f00f79b1e72c018056630612a6d9a89055cff5f3f90",
+            "move": "b8d7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.287129735073201
+          },
+          {
+            "id": "599c67220d031fc2dce6c4487ebdc2c47a84d6ce842cd6ca69d44112560e6ed2",
+            "move": "b8d7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1899287640711425
+          },
+          {
+            "id": "a31975020843c8187e14aaa9096c43b5a3552b951c6d55ae3cec54cf94ed5c87",
+            "move": "h6f5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.9623326615737433
+          },
+          {
+            "id": "676eef4290dd60ca59924c5572ad4e3687d67cbbe602b96ea4dd51362e3b652c",
+            "move": "g5h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.0633768829872112
+          },
+          {
+            "id": "10c867ca632741cfdb75de0397b7decc6572d6b1bfbc094f98867b708ad75bd0",
+            "move": "f6e5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.115449260301248
+          },
+          {
+            "id": "b32b568ced8649e64422a8cc147828afe7b9bf73ffbbd3b8a4e7454755796138",
+            "move": "g8g7",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.0
+          },
+          {
+            "id": "ba6edd21be22456590a30388bcf1d37d277037b5823f8ab5346516dbc0097575",
+            "move": "a8g8",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.0109375488808428
+          },
+          {
+            "id": "5291a4b3291c43e303f53c71559b88aa5a6ccea4bb7b5890abb1bcf66869aef0",
+            "move": "c4b2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.981306994517158
+          },
+          {
+            "id": "9fe32fae939d91e45a2a48dc4d0c2e16b742eb6020eaa74eb8a61c934a7e43e1",
+            "move": "f1f2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.258471467538095
+          },
+          {
+            "id": "11d5b7c50d34d3acdae7520a051552f4f7103b924d3de93b97e501075eaad4fd",
+            "move": "d1f3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.146873083672978
+          },
+          {
+            "id": "8dcb11ce8c85930a2702f17b9de9daacdb3cbd3e707da0f8437ae49f131d29a6",
+            "move": "f1e1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.0862065250540414
+          },
+          {
+            "id": "2ec5e83c13419f067a471ae6021adbf18dc66e36c0cb437712dcc8c640a44739",
+            "move": "f1e1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6834732555884648
+          },
+          {
+            "id": "b193451231671f57fad5b1cac7712586e2081d74f9fe00bd79ea9301be94ba8a",
+            "move": "f3f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.147187733136491
+          },
+          {
+            "id": "a0ecdfe3e409b5153360d858e554fa05ee4fa325ee512618735f23ffcde080c7",
+            "move": "c3b5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.1504722498865436
+          },
+          {
+            "id": "9c4bace12c3ebb7fc0885b0d0dd3c76dba6d3dd4fa38a291b2f261367c25cd62",
+            "move": "c3e2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.3803172016222325
+          },
+          {
+            "id": "d9b97ed5f4e3c1226aea3eeb6753ac5e35a77498fa0c10715538d04f4e37edeb",
+            "move": "d4e6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.8427885543068068
+          },
+          {
+            "id": "f097bfe7ee5d382e2ebe8edb98c9723c073f480e4cf433016d0b0636bbe4bb1c",
+            "move": "d4f5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.6606472543156054
+          },
+          {
+            "id": "1d7a4dc39cff46703c02d107a59775a0e337b3b0b8488ae8e1c0db28b77884c0",
+            "move": "c2c3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.62851241143555
+          },
+          {
+            "id": "920bad4e84dcc89aebb9fe0d9c520455ad841537aefa86e119646d711d4fe7f9",
+            "move": "f2e1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 1.8122449009985766
+          },
+          {
+            "id": "1660ac78c345e5518383f0d51f907273955d8395b71b26d1dfdc0acf59158d7e",
+            "move": "a1c1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.2628945269579774
+          },
+          {
+            "id": "28d327e8686cd81907ec4eb3f490b199a874f331b25923d6421809a3a78e74d5",
+            "move": "b1c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.8348652221873032
+          },
+          {
+            "id": "5fc7ada1c41b051430b114cb8bf497bad8506369affa6993f4ea458faf7ce361",
+            "move": "g5f4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.3402583155357033
+          },
+          {
+            "id": "c2205195571462407a2eac3e498a0eeafdd726d806e786c4b25904aa5587eee0",
+            "move": "g5d2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.616208651676892
+          },
+          {
+            "id": "4bc7aa1d75b0b4749bebf71b4fff97fc907793bc87c73f5a42a658c53f90a829",
+            "move": "f3d2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.6695617411384571
+          },
+          {
+            "id": "a06d1854d238ac4d7508721d3b887f9ebc0087979a9c977e65bac6dba3ef400f",
+            "move": "b3c3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.8904493832164917
+          },
+          {
+            "id": "e6a21e6b0ae978eb53ae0e086afea2318aa942c74e46a1fd1271f78f9d6b2af7",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.697492178688655
+          },
+          {
+            "id": "f8489d53b04082eb216813aa0b55908f39f1b2880351084a83d3df1950866e5b",
+            "move": "e1g1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.5706397021970404
+          },
+          {
+            "id": "14f444c811413c1ba8d9d9ada4b205c45d970c2af3f9f53fd3cda4df171a64f0",
+            "move": "f3c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5996781815468277
+          },
+          {
+            "id": "8680b0099a03d7150627ed7b9ceabb94d5987b0c3572814a4e1ebffa8b0f99db",
+            "move": "e4d6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.498656226313402
+          },
+          {
+            "id": "d959711ced8d3d06f08a908b1ebd357731ffad62f0965eaef962b2e5b4e95a98",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 4.097096344952277
+          },
+          {
+            "id": "1ae27f3d10808983888ce411f2a99d5a380ea07a4aef4f687ba1e49162c3d566",
+            "move": "g3h5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1706209144506015
+          }
+        ]
+      },
+      {
+        "id": "enemy-protected",
+        "file": ".cache/v8/weight-atlas-enemy-protected.bin",
+        "sha256": "ee8c3052ca49b36a421f3eac9e06d3f06bfdaeb479b0bfd8fd55cdb42e61cb4a",
+        "changedScalars": 806029,
+        "count": 95,
+        "hits": 23,
+        "top4": 54,
+        "crossEntropy": 3.0896659806834714,
+        "answers": [
+          {
+            "id": "5c5938d47b7485ff90299f2da0d92d73f1168e86b5a61acb2231aae7366d9f91",
+            "move": "c4d3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.58898513196911
+          },
+          {
+            "id": "820bea1c9970e156110498a3c8764c3ee1ce5eaf307a7eec38948c55e4b61354",
+            "move": "d1d4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2690126000002966
+          },
+          {
+            "id": "63f7bcd26138a6bf88c26602952f102a7a12c25482b7d8eeb1bf036077fe40a5",
+            "move": "a1b1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.6431126009908623
+          },
+          {
+            "id": "c5115a68301665e1b34f2d9a0f500714f8ac52e6005520685b0ca91a8dde5138",
+            "move": "e2e5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.512088595184346
+          },
+          {
+            "id": "fbcdafd3632f8ab6a1f23bf81f963f35ab9d018f87dcad931ad4ea53f563c873",
+            "move": "c1g5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5515477455341458
+          },
+          {
+            "id": "8f618fad0b07c87bb2cfe499a10bd675d58e3b12d0ea12292177ec7c384f3d63",
+            "move": "e2c4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.6041140975254797
+          },
+          {
+            "id": "269c4afc59c1f59027ae62e32e31c5dea1a98712098780d144ca9896cc8042c9",
+            "move": "c1g5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.712136365227762
+          },
+          {
+            "id": "6d98d3204ea612a7467cf80030a0e092bcdaa33b853bca2c6724bde2237eafd6",
+            "move": "c1g5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.535914212175135
+          },
+          {
+            "id": "b347e9e1a02f48274526cf61612f0149bf3871f6b9931bc2cc5c6186f6de1842",
+            "move": "a4a3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.6050526000543233
+          },
+          {
+            "id": "14dc3eb72982b4a30346cd091c94a0f77eb4543aa3f9d12c8a988130d6d3e808",
+            "move": "e2d3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.023141159804552
+          },
+          {
+            "id": "1c1772541e635ae140e4eaa17d24a44142947d35e301f19ad5b43d2996c2a2db",
+            "move": "f1d1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.689466785772569
+          },
+          {
+            "id": "3a972c6746d7b64fb0502d5ea40acd98029044dba7fe892cca0fcd3014079a10",
+            "move": "a1b3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.216884778467247
+          },
+          {
+            "id": "f6797b28eacbb43dfb95a424f0b25434c241d55d159c813b00730f563045b479",
+            "move": "e2e4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.8813046718818067
+          },
+          {
+            "id": "fe360b93961379890ba84348932b2d9e10477590a052845c7f9accb76c7afbff",
+            "move": "d2d4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.950820317698745
+          },
+          {
+            "id": "dc7b9c07a3fce7417e8e52bceefcd012cd75bebb7a9d3fca2a79ba893c71a4b8",
+            "move": "c3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.381534966839906
+          },
+          {
+            "id": "1dcad4e6eae927bcf2e6d3f0d5cea5a285e69c3e38c8f357c239fe48be583e8b",
+            "move": "f1b5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.380617616351465
+          },
+          {
+            "id": "22120a007710106bc5db05e3294c94e32e82bb7d0fffc0fea930450d639d4f58",
+            "move": "c3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2766771387422993
+          },
+          {
+            "id": "ca95937967270d5c537d6ed4ba7453e2ee470286359e4d6af309bb068e201074",
+            "move": "d2a5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.1420789718696303
+          },
+          {
+            "id": "ff7e37fa8f3fe8bf2d201cdf58c659ed92ed49a088efafac292694d218eb7778",
+            "move": "b6d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3874115385665737
+          },
+          {
+            "id": "5bf3174a5be641f50ab0e925bfcd1b45f690e63d8b4a61851fe17badbb40e055",
+            "move": "f3d5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.4562588125489206
+          },
+          {
+            "id": "0b215cfe23fc3cf789efeb75d15ad87c1feb0b68be9cb0435d7ce737f1146d5f",
+            "move": "f1g2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.8825320173478266
+          },
+          {
+            "id": "0f2c272ba4fe4c38d9066b80d62bc797783c7bd6c5c8a94a1adee95a06408ae0",
+            "move": "d4d5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.9651664746743305
+          },
+          {
+            "id": "5615ab1722a5cdefc1493c83839370b005b84b984651a0940f9118ce0904ae90",
+            "move": "a6a7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.0428601556141013
+          },
+          {
+            "id": "ab08d5bc2bf9965285c14323a739875f35e4ae0a83a597f7f2a6a4ce55b6ae58",
+            "move": "a6c6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.9146162710373162
+          },
+          {
+            "id": "a76886c2a8fe1848d7394a0d9b40b8bc3cfa03ea0c44f8326601aed068c915f8",
+            "move": "d5d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2808648507070917
+          },
+          {
+            "id": "b62dd796fdff08b1ad99c3931a4622017559f41ea89c9ca790633595f7dbb6c6",
+            "move": "e4c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5832566175206844
+          },
+          {
+            "id": "3afb2054a053ecb899e2d60557228a01eebcb59d0ecf31a1cdf73ef30ca074e6",
+            "move": "g4h5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.587836807572954
+          },
+          {
+            "id": "dc6237f3a7b3ccb40a3cf996448042e983149b791d9ba49bcfaa54df2677618d",
+            "move": "g4h3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.9838112226557882
+          },
+          {
+            "id": "107867b342822723883a49bde33562033b347eb1cd1ef6259cb1b922fed460c9",
+            "move": "e1f1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3020682511260673
+          },
+          {
+            "id": "6dc5f0696bf3f50ce4bf06ddc9fda4fbdfe4dd45e2f0de58ffa3cb6d4679218c",
+            "move": "e1f1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.3547770951570355
+          },
+          {
+            "id": "945a6e50f63aad916900b430651a7ec6389d876aa83db391923fd6c90630a27c",
+            "move": "e6g4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.0490207051243656
+          },
+          {
+            "id": "be7589eca86bbde2928d91a725e1b07d0618f83a241e726ba4acdc9b50a0f228",
+            "move": "d2e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.969034520373448
+          },
+          {
+            "id": "34313d8fa209a969ae585a57b63fd383272b2e130ac66ad5176694124ddbea04",
+            "move": "g4e6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.132604679374269
+          },
+          {
+            "id": "f2260bfbd172c2fe32a52197d922600518de313bd9f795369702f194a8c3942a",
+            "move": "g4e6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.1076471766079816
+          },
+          {
+            "id": "6b899676f52c82c448c0d01560dc76ccc9d0c0bd1e3e485d0676f771288907c7",
+            "move": "h3h4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.948208707315323
+          },
+          {
+            "id": "0c39d317a311f33be005d149937067a42d64a765403be28af5f979c6cf8e4855",
+            "move": "d6d7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.9979997198764217
+          },
+          {
+            "id": "3c2d0e798e3aba51aa682610c2ba534058222b866e7b330286f7e47f9bfa19f5",
+            "move": "b4c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.1136665585947534
+          },
+          {
+            "id": "d746a47591275aef0c78d7cc9326ecc51e829f40152fef1df03bbdc6108813b0",
+            "move": "e8g8",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.3452305937767393
+          },
+          {
+            "id": "2250b95480d78b6d3fd794db5ab891619c1bf7cb9bf1db91c382456bdd25bd7b",
+            "move": "d8e8",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.8534445303676055
+          },
+          {
+            "id": "8e2862fb4c78cdb2834ad2db6f308972986d0732911e2c4caeaf1b5055b81086",
+            "move": "d8f6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.279288562615707
+          },
+          {
+            "id": "7121d2828e3936853cb9b8e459b9dced1a0402a4925b280494fa2c61c185e3f3",
+            "move": "c5b4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.9668485861748284
+          },
+          {
+            "id": "af6486e03311614083eeb4a129a925e7e4164f02e46d2013bae9713777dbf926",
+            "move": "a6b8",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.148484573952564
+          },
+          {
+            "id": "3f6b4f72188a99826d9166c29fdeb951357302e202355c252ccb2dd4ec946a3e",
+            "move": "e8e7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.8229735765289834
+          },
+          {
+            "id": "5369f599fc5475aebdf8fe434d5024300b4255267b66fab9ab0b6026ff1aaab3",
+            "move": "c8g4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.1762501714167652
+          },
+          {
+            "id": "4c35f157825a618180414a135b5a86fb987401cf79b3940c83ac3f62bfdd3f0e",
+            "move": "g4e4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.936760292859267
+          },
+          {
+            "id": "aceb677c1e2f13abc6b4fdc40910c07e2fcc5cb07247abdc35f23fd260afde5e",
+            "move": "c7c6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.063399683909995
+          },
+          {
+            "id": "33ee7d133276a895e03abeb8b154de3256bd241d36d90945fd120086883f2449",
+            "move": "g2f2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.3353363338552406
+          },
+          {
+            "id": "0e83738f718937b9cc69796b871e4ed018baa4140f28496151fe3856a81f1476",
+            "move": "f5f2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.303991701337236
+          },
+          {
+            "id": "d0647c2bf8721be9123624e7c6eb7ed0b11de69451db851b2d829f7b6d199fac",
+            "move": "d4c5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5786888379889334
+          },
+          {
+            "id": "a99f0762ed00051f4efe069b6601f9da253f644718eaf35ef1a3ac1531d3d350",
+            "move": "e3e4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.5605687847557137
+          },
+          {
+            "id": "7055fbbe0903461165ba1ae2aa42bb64a8717e526cadc0cc935dcb9ee1f31c19",
+            "move": "f4g5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.976836639443385
+          },
+          {
+            "id": "e07be2b49796aab557a757515f54b4203d4d877aedc949bd261ca434349f64b8",
+            "move": "d3e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.6164765562583105
+          },
+          {
+            "id": "07d1a65542ec5fb0cf062228fb919e70c810a013571bdfd3a37d73168a0cde1d",
+            "move": "f3e5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.274565580166148
+          },
+          {
+            "id": "f2ee8ec17a0935bdc396c6d19be1cec03ee5f947d70620399dffe89379c81e14",
+            "move": "a1a2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2585251020053323
+          },
+          {
+            "id": "532cc437b6d288c224fc484e3b74842773bfb08a4cea072b5e7769afa38615c7",
+            "move": "g3h4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.394001294602997
+          },
+          {
+            "id": "9b33482ea3a2a76929d44cbc850c926579d979c48ef3861df278b133f35666a6",
+            "move": "a1a2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.4212264624427062
+          },
+          {
+            "id": "b805d0349d19ac6c2acfbe73202520cc7f0122e9e497a16c35ea4b5ea9eb0803",
+            "move": "e6c6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2931939776541443
+          },
+          {
+            "id": "9bba4cca729300f419db830436e76e76d0c09d56d411e365aa4d043a2ae260eb",
+            "move": "d7b7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.031639724386952
+          },
+          {
+            "id": "f6f5a8bec1e50801e49ede1dd66e29e49253d4189312c180eac8b2a5733b5a71",
+            "move": "d7c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.8652143895256907
+          },
+          {
+            "id": "46c59d9c7bc01cd024734d931fd11e6264e28018b2a39a2b47d2a12f3e77eb95",
+            "move": "a3a4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 4.610362658302844
+          },
+          {
+            "id": "d983b86a63cfa221a5f951ef7312dd8bc5d50862eece468644043d882b97cdb0",
+            "move": "f8b4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.310783479045932
+          },
+          {
+            "id": "f0e22870c9d91512a2b0c11db79cdab02fd56406bb713f6389bf3fd7126e3d9b",
+            "move": "g6h5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.238914620651299
+          },
+          {
+            "id": "20f2142382fc4cc318c640e5a6717f15106120082da56ad18c37aa882a192df6",
+            "move": "e7h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.1450007497184425
+          },
+          {
+            "id": "05779f8548e229da456f46529fcdc5db3efe1ce0adbb17cb6a310596510bf8a9",
+            "move": "g5f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.304253134620281
+          },
+          {
+            "id": "327e31bac2f2099b08836f00f79b1e72c018056630612a6d9a89055cff5f3f90",
+            "move": "b8d7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.3133964813514596
+          },
+          {
+            "id": "599c67220d031fc2dce6c4487ebdc2c47a84d6ce842cd6ca69d44112560e6ed2",
+            "move": "b8d7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2273692061785892
+          },
+          {
+            "id": "a31975020843c8187e14aaa9096c43b5a3552b951c6d55ae3cec54cf94ed5c87",
+            "move": "h6f5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.979478167431852
+          },
+          {
+            "id": "676eef4290dd60ca59924c5572ad4e3687d67cbbe602b96ea4dd51362e3b652c",
+            "move": "g5h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.7932650421642977
+          },
+          {
+            "id": "10c867ca632741cfdb75de0397b7decc6572d6b1bfbc094f98867b708ad75bd0",
+            "move": "f6e5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.126286992119984
+          },
+          {
+            "id": "b32b568ced8649e64422a8cc147828afe7b9bf73ffbbd3b8a4e7454755796138",
+            "move": "g8g7",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.0
+          },
+          {
+            "id": "ba6edd21be22456590a30388bcf1d37d277037b5823f8ab5346516dbc0097575",
+            "move": "a8g8",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.0292071532262086
+          },
+          {
+            "id": "5291a4b3291c43e303f53c71559b88aa5a6ccea4bb7b5890abb1bcf66869aef0",
+            "move": "c4b2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.992202598936424
+          },
+          {
+            "id": "9fe32fae939d91e45a2a48dc4d0c2e16b742eb6020eaa74eb8a61c934a7e43e1",
+            "move": "f1f2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.27757252931011
+          },
+          {
+            "id": "11d5b7c50d34d3acdae7520a051552f4f7103b924d3de93b97e501075eaad4fd",
+            "move": "c3b5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.209040088318526
+          },
+          {
+            "id": "8dcb11ce8c85930a2702f17b9de9daacdb3cbd3e707da0f8437ae49f131d29a6",
+            "move": "f1e1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.232563167914403
+          },
+          {
+            "id": "2ec5e83c13419f067a471ae6021adbf18dc66e36c0cb437712dcc8c640a44739",
+            "move": "f1e1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6815536570880438
+          },
+          {
+            "id": "b193451231671f57fad5b1cac7712586e2081d74f9fe00bd79ea9301be94ba8a",
+            "move": "f3f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1932173263742416
+          },
+          {
+            "id": "a0ecdfe3e409b5153360d858e554fa05ee4fa325ee512618735f23ffcde080c7",
+            "move": "c3b5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.1784399516345414
+          },
+          {
+            "id": "9c4bace12c3ebb7fc0885b0d0dd3c76dba6d3dd4fa38a291b2f261367c25cd62",
+            "move": "c3e2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.312867513764345
+          },
+          {
+            "id": "d9b97ed5f4e3c1226aea3eeb6753ac5e35a77498fa0c10715538d04f4e37edeb",
+            "move": "d4e6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.862938378238793
+          },
+          {
+            "id": "f097bfe7ee5d382e2ebe8edb98c9723c073f480e4cf433016d0b0636bbe4bb1c",
+            "move": "d4f5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.6982170078581973
+          },
+          {
+            "id": "1d7a4dc39cff46703c02d107a59775a0e337b3b0b8488ae8e1c0db28b77884c0",
+            "move": "c2c3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.5018224707203762
+          },
+          {
+            "id": "920bad4e84dcc89aebb9fe0d9c520455ad841537aefa86e119646d711d4fe7f9",
+            "move": "f2e1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 1.8163824807944622
+          },
+          {
+            "id": "1660ac78c345e5518383f0d51f907273955d8395b71b26d1dfdc0acf59158d7e",
+            "move": "a1c1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.162985235695205
+          },
+          {
+            "id": "28d327e8686cd81907ec4eb3f490b199a874f331b25923d6421809a3a78e74d5",
+            "move": "b1c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.8316254214789878
+          },
+          {
+            "id": "5fc7ada1c41b051430b114cb8bf497bad8506369affa6993f4ea458faf7ce361",
+            "move": "g5f4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.43389773833613
+          },
+          {
+            "id": "c2205195571462407a2eac3e498a0eeafdd726d806e786c4b25904aa5587eee0",
+            "move": "g5d2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.6633881005460665
+          },
+          {
+            "id": "4bc7aa1d75b0b4749bebf71b4fff97fc907793bc87c73f5a42a658c53f90a829",
+            "move": "d1d2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.7059749042301466
+          },
+          {
+            "id": "a06d1854d238ac4d7508721d3b887f9ebc0087979a9c977e65bac6dba3ef400f",
+            "move": "b3c3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.6515571436663463
+          },
+          {
+            "id": "e6a21e6b0ae978eb53ae0e086afea2318aa942c74e46a1fd1271f78f9d6b2af7",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.6936635663179493
+          },
+          {
+            "id": "f8489d53b04082eb216813aa0b55908f39f1b2880351084a83d3df1950866e5b",
+            "move": "e1g1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.546417907793427
+          },
+          {
+            "id": "14f444c811413c1ba8d9d9ada4b205c45d970c2af3f9f53fd3cda4df171a64f0",
+            "move": "f3c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.608643495995108
+          },
+          {
+            "id": "8680b0099a03d7150627ed7b9ceabb94d5987b0c3572814a4e1ebffa8b0f99db",
+            "move": "e4d6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.4731747308881085
+          },
+          {
+            "id": "d959711ced8d3d06f08a908b1ebd357731ffad62f0965eaef962b2e5b4e95a98",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 4.019465239145331
+          },
+          {
+            "id": "1ae27f3d10808983888ce411f2a99d5a380ea07a4aef4f687ba1e49162c3d566",
+            "move": "g3h5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.16526133116317
+          }
+        ]
+      },
+      {
+        "id": "enemy-relaxed",
+        "file": ".cache/v8/weight-atlas-enemy-relaxed.bin",
+        "sha256": "c183d35facdf6c831331e7b9a82ca9b0b58c87e8f32f334a4c76df7a3d97ef66",
+        "changedScalars": 815429,
+        "count": 95,
+        "hits": 23,
+        "top4": 53,
+        "crossEntropy": 3.0222385380772088,
+        "answers": [
+          {
+            "id": "5c5938d47b7485ff90299f2da0d92d73f1168e86b5a61acb2231aae7366d9f91",
+            "move": "c4d3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.5782703992573253
+          },
+          {
+            "id": "820bea1c9970e156110498a3c8764c3ee1ce5eaf307a7eec38948c55e4b61354",
+            "move": "d1d4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2591780802664423
+          },
+          {
+            "id": "63f7bcd26138a6bf88c26602952f102a7a12c25482b7d8eeb1bf036077fe40a5",
+            "move": "a1b1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.273760877907241
+          },
+          {
+            "id": "c5115a68301665e1b34f2d9a0f500714f8ac52e6005520685b0ca91a8dde5138",
+            "move": "e2e5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.4984595090960364
+          },
+          {
+            "id": "fbcdafd3632f8ab6a1f23bf81f963f35ab9d018f87dcad931ad4ea53f563c873",
+            "move": "b3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.53024776541959
+          },
+          {
+            "id": "8f618fad0b07c87bb2cfe499a10bd675d58e3b12d0ea12292177ec7c384f3d63",
+            "move": "e2c4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.5876451219720225
+          },
+          {
+            "id": "269c4afc59c1f59027ae62e32e31c5dea1a98712098780d144ca9896cc8042c9",
+            "move": "c1g5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.6916988226661105
+          },
+          {
+            "id": "6d98d3204ea612a7467cf80030a0e092bcdaa33b853bca2c6724bde2237eafd6",
+            "move": "c1g5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5141735132224188
+          },
+          {
+            "id": "b347e9e1a02f48274526cf61612f0149bf3871f6b9931bc2cc5c6186f6de1842",
+            "move": "a4a3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.579702785205944
+          },
+          {
+            "id": "14dc3eb72982b4a30346cd091c94a0f77eb4543aa3f9d12c8a988130d6d3e808",
+            "move": "e2f1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.005991145014122
+          },
+          {
+            "id": "1c1772541e635ae140e4eaa17d24a44142947d35e301f19ad5b43d2996c2a2db",
+            "move": "f1d1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.311158606724762
+          },
+          {
+            "id": "3a972c6746d7b64fb0502d5ea40acd98029044dba7fe892cca0fcd3014079a10",
+            "move": "a1b3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.1830169294474593
+          },
+          {
+            "id": "f6797b28eacbb43dfb95a424f0b25434c241d55d159c813b00730f563045b479",
+            "move": "e2e4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.8730207612761127
+          },
+          {
+            "id": "fe360b93961379890ba84348932b2d9e10477590a052845c7f9accb76c7afbff",
+            "move": "d2d4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.936666323802844
+          },
+          {
+            "id": "dc7b9c07a3fce7417e8e52bceefcd012cd75bebb7a9d3fca2a79ba893c71a4b8",
+            "move": "c3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3641211074346824
+          },
+          {
+            "id": "1dcad4e6eae927bcf2e6d3f0d5cea5a285e69c3e38c8f357c239fe48be583e8b",
+            "move": "f1b5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.353084665251092
+          },
+          {
+            "id": "22120a007710106bc5db05e3294c94e32e82bb7d0fffc0fea930450d639d4f58",
+            "move": "c3d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.257483415825602
+          },
+          {
+            "id": "ca95937967270d5c537d6ed4ba7453e2ee470286359e4d6af309bb068e201074",
+            "move": "d2a5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.14712898253381
+          },
+          {
+            "id": "ff7e37fa8f3fe8bf2d201cdf58c659ed92ed49a088efafac292694d218eb7778",
+            "move": "b6d5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3539667446987504
+          },
+          {
+            "id": "5bf3174a5be641f50ab0e925bfcd1b45f690e63d8b4a61851fe17badbb40e055",
+            "move": "f3d5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.102554341194126
+          },
+          {
+            "id": "0b215cfe23fc3cf789efeb75d15ad87c1feb0b68be9cb0435d7ce737f1146d5f",
+            "move": "f1g2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.520754723167228
+          },
+          {
+            "id": "0f2c272ba4fe4c38d9066b80d62bc797783c7bd6c5c8a94a1adee95a06408ae0",
+            "move": "d4d5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.9378090878904355
+          },
+          {
+            "id": "5615ab1722a5cdefc1493c83839370b005b84b984651a0940f9118ce0904ae90",
+            "move": "a6a7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.0714721215839984
+          },
+          {
+            "id": "ab08d5bc2bf9965285c14323a739875f35e4ae0a83a597f7f2a6a4ce55b6ae58",
+            "move": "a6c6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.878478576131331
+          },
+          {
+            "id": "a76886c2a8fe1848d7394a0d9b40b8bc3cfa03ea0c44f8326601aed068c915f8",
+            "move": "d5d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.262503371986716
+          },
+          {
+            "id": "b62dd796fdff08b1ad99c3931a4622017559f41ea89c9ca790633595f7dbb6c6",
+            "move": "e4c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.564928551308736
+          },
+          {
+            "id": "3afb2054a053ecb899e2d60557228a01eebcb59d0ecf31a1cdf73ef30ca074e6",
+            "move": "g4h5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.4610889591825473
+          },
+          {
+            "id": "dc6237f3a7b3ccb40a3cf996448042e983149b791d9ba49bcfaa54df2677618d",
+            "move": "g4h3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 4.028212387409896
+          },
+          {
+            "id": "107867b342822723883a49bde33562033b347eb1cd1ef6259cb1b922fed460c9",
+            "move": "e1f1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.317734326917648
+          },
+          {
+            "id": "6dc5f0696bf3f50ce4bf06ddc9fda4fbdfe4dd45e2f0de58ffa3cb6d4679218c",
+            "move": "e1f1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.0024605099044326
+          },
+          {
+            "id": "945a6e50f63aad916900b430651a7ec6389d876aa83db391923fd6c90630a27c",
+            "move": "d2c4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.037928365724345
+          },
+          {
+            "id": "be7589eca86bbde2928d91a725e1b07d0618f83a241e726ba4acdc9b50a0f228",
+            "move": "d2e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.834183724865331
+          },
+          {
+            "id": "34313d8fa209a969ae585a57b63fd383272b2e130ac66ad5176694124ddbea04",
+            "move": "g4e6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1163773292661148
+          },
+          {
+            "id": "f2260bfbd172c2fe32a52197d922600518de313bd9f795369702f194a8c3942a",
+            "move": "g4e6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.06736711783377
+          },
+          {
+            "id": "6b899676f52c82c448c0d01560dc76ccc9d0c0bd1e3e485d0676f771288907c7",
+            "move": "h3h4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.914736995564912
+          },
+          {
+            "id": "0c39d317a311f33be005d149937067a42d64a765403be28af5f979c6cf8e4855",
+            "move": "d6d7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.953365263800365
+          },
+          {
+            "id": "3c2d0e798e3aba51aa682610c2ba534058222b866e7b330286f7e47f9bfa19f5",
+            "move": "b4c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.0829602562674547
+          },
+          {
+            "id": "d746a47591275aef0c78d7cc9326ecc51e829f40152fef1df03bbdc6108813b0",
+            "move": "e8g8",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.3215469743277266
+          },
+          {
+            "id": "2250b95480d78b6d3fd794db5ab891619c1bf7cb9bf1db91c382456bdd25bd7b",
+            "move": "d8e8",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.497047043267967
+          },
+          {
+            "id": "8e2862fb4c78cdb2834ad2db6f308972986d0732911e2c4caeaf1b5055b81086",
+            "move": "d8f6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2579446830146694
+          },
+          {
+            "id": "7121d2828e3936853cb9b8e459b9dced1a0402a4925b280494fa2c61c185e3f3",
+            "move": "c5b4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.8515606166175345
+          },
+          {
+            "id": "af6486e03311614083eeb4a129a925e7e4164f02e46d2013bae9713777dbf926",
+            "move": "a6b8",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.0155430808727157
+          },
+          {
+            "id": "3f6b4f72188a99826d9166c29fdeb951357302e202355c252ccb2dd4ec946a3e",
+            "move": "b4a3",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.6503092085540696
+          },
+          {
+            "id": "5369f599fc5475aebdf8fe434d5024300b4255267b66fab9ab0b6026ff1aaab3",
+            "move": "c8g4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.1612843508431907
+          },
+          {
+            "id": "4c35f157825a618180414a135b5a86fb987401cf79b3940c83ac3f62bfdd3f0e",
+            "move": "g4e4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.7224422336786693
+          },
+          {
+            "id": "aceb677c1e2f13abc6b4fdc40910c07e2fcc5cb07247abdc35f23fd260afde5e",
+            "move": "c7c6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.032989510729626
+          },
+          {
+            "id": "33ee7d133276a895e03abeb8b154de3256bd241d36d90945fd120086883f2449",
+            "move": "g2f2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.3120581321707636
+          },
+          {
+            "id": "0e83738f718937b9cc69796b871e4ed018baa4140f28496151fe3856a81f1476",
+            "move": "f5f2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2951396177504373
+          },
+          {
+            "id": "d0647c2bf8721be9123624e7c6eb7ed0b11de69451db851b2d829f7b6d199fac",
+            "move": "d4c5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.5460887429905172
+          },
+          {
+            "id": "a99f0762ed00051f4efe069b6601f9da253f644718eaf35ef1a3ac1531d3d350",
+            "move": "e3e4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.529618707709773
+          },
+          {
+            "id": "7055fbbe0903461165ba1ae2aa42bb64a8717e526cadc0cc935dcb9ee1f31c19",
+            "move": "f4g5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.942932634594044
+          },
+          {
+            "id": "e07be2b49796aab557a757515f54b4203d4d877aedc949bd261ca434349f64b8",
+            "move": "d3e4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.257937059166682
+          },
+          {
+            "id": "07d1a65542ec5fb0cf062228fb919e70c810a013571bdfd3a37d73168a0cde1d",
+            "move": "f3e5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.241859813858021
+          },
+          {
+            "id": "f2ee8ec17a0935bdc396c6d19be1cec03ee5f947d70620399dffe89379c81e14",
+            "move": "a1a2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2340786038818203
+          },
+          {
+            "id": "532cc437b6d288c224fc484e3b74842773bfb08a4cea072b5e7769afa38615c7",
+            "move": "g3h4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.216293031533008
+          },
+          {
+            "id": "9b33482ea3a2a76929d44cbc850c926579d979c48ef3861df278b133f35666a6",
+            "move": "a1a2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.2278420041929117
+          },
+          {
+            "id": "b805d0349d19ac6c2acfbe73202520cc7f0122e9e497a16c35ea4b5ea9eb0803",
+            "move": "e6c6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.2838636493576128
+          },
+          {
+            "id": "9bba4cca729300f419db830436e76e76d0c09d56d411e365aa4d043a2ae260eb",
+            "move": "d7b7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.005173355024131
+          },
+          {
+            "id": "f6f5a8bec1e50801e49ede1dd66e29e49253d4189312c180eac8b2a5733b5a71",
+            "move": "d7c6",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.705212911389173
+          },
+          {
+            "id": "46c59d9c7bc01cd024734d931fd11e6264e28018b2a39a2b47d2a12f3e77eb95",
+            "move": "a3a4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 4.7289949117294325
+          },
+          {
+            "id": "d983b86a63cfa221a5f951ef7312dd8bc5d50862eece468644043d882b97cdb0",
+            "move": "h5g4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.284204665372492
+          },
+          {
+            "id": "f0e22870c9d91512a2b0c11db79cdab02fd56406bb713f6389bf3fd7126e3d9b",
+            "move": "g6h5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.0595995183087314
+          },
+          {
+            "id": "20f2142382fc4cc318c640e5a6717f15106120082da56ad18c37aa882a192df6",
+            "move": "e7h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.0714226528022635
+          },
+          {
+            "id": "05779f8548e229da456f46529fcdc5db3efe1ce0adbb17cb6a310596510bf8a9",
+            "move": "g5f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.296180940337357
+          },
+          {
+            "id": "327e31bac2f2099b08836f00f79b1e72c018056630612a6d9a89055cff5f3f90",
+            "move": "b8d7",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.292704174803766
+          },
+          {
+            "id": "599c67220d031fc2dce6c4487ebdc2c47a84d6ce842cd6ca69d44112560e6ed2",
+            "move": "b8d7",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.205505016170284
+          },
+          {
+            "id": "a31975020843c8187e14aaa9096c43b5a3552b951c6d55ae3cec54cf94ed5c87",
+            "move": "e6f5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.887080418814958
+          },
+          {
+            "id": "676eef4290dd60ca59924c5572ad4e3687d67cbbe602b96ea4dd51362e3b652c",
+            "move": "g5h4",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.2657495968171135
+          },
+          {
+            "id": "10c867ca632741cfdb75de0397b7decc6572d6b1bfbc094f98867b708ad75bd0",
+            "move": "f6e5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1276360885405183
+          },
+          {
+            "id": "b32b568ced8649e64422a8cc147828afe7b9bf73ffbbd3b8a4e7454755796138",
+            "move": "g8g7",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.0
+          },
+          {
+            "id": "ba6edd21be22456590a30388bcf1d37d277037b5823f8ab5346516dbc0097575",
+            "move": "a8g8",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.022363439614418
+          },
+          {
+            "id": "5291a4b3291c43e303f53c71559b88aa5a6ccea4bb7b5890abb1bcf66869aef0",
+            "move": "c4b2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.981655050572047
+          },
+          {
+            "id": "9fe32fae939d91e45a2a48dc4d0c2e16b742eb6020eaa74eb8a61c934a7e43e1",
+            "move": "f1f2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.1987983631199004
+          },
+          {
+            "id": "11d5b7c50d34d3acdae7520a051552f4f7103b924d3de93b97e501075eaad4fd",
+            "move": "c3b5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.1802703164451023
+          },
+          {
+            "id": "8dcb11ce8c85930a2702f17b9de9daacdb3cbd3e707da0f8437ae49f131d29a6",
+            "move": "f1e1",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 2.319902679113398
+          },
+          {
+            "id": "2ec5e83c13419f067a471ae6021adbf18dc66e36c0cb437712dcc8c640a44739",
+            "move": "f1e1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 0.6815536570880438
+          },
+          {
+            "id": "b193451231671f57fad5b1cac7712586e2081d74f9fe00bd79ea9301be94ba8a",
+            "move": "f3f4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.166937475355371
+          },
+          {
+            "id": "a0ecdfe3e409b5153360d858e554fa05ee4fa325ee512618735f23ffcde080c7",
+            "move": "c3b5",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.1634488583137985
+          },
+          {
+            "id": "9c4bace12c3ebb7fc0885b0d0dd3c76dba6d3dd4fa38a291b2f261367c25cd62",
+            "move": "c3e2",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 1.9906576278380965
+          },
+          {
+            "id": "d9b97ed5f4e3c1226aea3eeb6753ac5e35a77498fa0c10715538d04f4e37edeb",
+            "move": "d4e6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.8493672353941153
+          },
+          {
+            "id": "f097bfe7ee5d382e2ebe8edb98c9723c073f480e4cf433016d0b0636bbe4bb1c",
+            "move": "d4f5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 2.6654326596019575
+          },
+          {
+            "id": "1d7a4dc39cff46703c02d107a59775a0e337b3b0b8488ae8e1c0db28b77884c0",
+            "move": "c2c4",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.3407619843137146
+          },
+          {
+            "id": "920bad4e84dcc89aebb9fe0d9c520455ad841537aefa86e119646d711d4fe7f9",
+            "move": "f2e1",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 1.8163824807944622
+          },
+          {
+            "id": "1660ac78c345e5518383f0d51f907273955d8395b71b26d1dfdc0acf59158d7e",
+            "move": "a1c1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 2.1590201419040915
+          },
+          {
+            "id": "28d327e8686cd81907ec4eb3f490b199a874f331b25923d6421809a3a78e74d5",
+            "move": "b1c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.8352309378893747
+          },
+          {
+            "id": "5fc7ada1c41b051430b114cb8bf497bad8506369affa6993f4ea458faf7ce361",
+            "move": "g5f4",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.4068111003412347
+          },
+          {
+            "id": "c2205195571462407a2eac3e498a0eeafdd726d806e786c4b25904aa5587eee0",
+            "move": "g5d2",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.643034338147563
+          },
+          {
+            "id": "4bc7aa1d75b0b4749bebf71b4fff97fc907793bc87c73f5a42a658c53f90a829",
+            "move": "d1d2",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 1.7157392366759092
+          },
+          {
+            "id": "a06d1854d238ac4d7508721d3b887f9ebc0087979a9c977e65bac6dba3ef400f",
+            "move": "f3e5",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.4524620065173766
+          },
+          {
+            "id": "e6a21e6b0ae978eb53ae0e086afea2318aa942c74e46a1fd1271f78f9d6b2af7",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.6766770039242607
+          },
+          {
+            "id": "f8489d53b04082eb216813aa0b55908f39f1b2880351084a83d3df1950866e5b",
+            "move": "e1g1",
+            "hit": true,
+            "top4": true,
+            "crossEntropy": 3.5323182162732993
+          },
+          {
+            "id": "14f444c811413c1ba8d9d9ada4b205c45d970c2af3f9f53fd3cda4df171a64f0",
+            "move": "f3c3",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.59814257406992
+          },
+          {
+            "id": "8680b0099a03d7150627ed7b9ceabb94d5987b0c3572814a4e1ebffa8b0f99db",
+            "move": "e4d6",
+            "hit": false,
+            "top4": true,
+            "crossEntropy": 3.449021221676891
+          },
+          {
+            "id": "d959711ced8d3d06f08a908b1ebd357731ffad62f0965eaef962b2e5b4e95a98",
+            "move": "e4d6",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 4.203906596415657
+          },
+          {
+            "id": "1ae27f3d10808983888ce411f2a99d5a380ea07a4aef4f687ba1e49162c3d566",
+            "move": "g3h5",
+            "hit": false,
+            "top4": false,
+            "crossEntropy": 3.0812303996911123
+          }
+        ]
+      }
+    ]
+  },
+  "selected": {
+    "deepmind": {
+      "winner": {
+        "id": "control",
+        "file": ".cache/v7/deepmind-selected.pt",
+        "sha256": "d4d5b25a4f2a01e22ea8945e42e37559e0ce0525177290d49f002c94bda761ea",
+        "changedScalars": 0,
+        "count": 95,
+        "hits": 54,
+        "top4": 84,
+        "crossEntropy": 1.6405121807461363
+      },
+      "control": {
+        "id": "control",
+        "file": ".cache/v7/deepmind-selected.pt",
+        "sha256": "d4d5b25a4f2a01e22ea8945e42e37559e0ce0525177290d49f002c94bda761ea",
+        "changedScalars": 0,
+        "count": 95,
+        "hits": 54,
+        "top4": 84,
+        "crossEntropy": 1.6405121807461363
+      }
+    },
+    "pocket": {
+      "winner": {
+        "id": "enemy-relaxed",
+        "file": ".cache/v8/weight-pocket-enemy-relaxed.bin",
+        "sha256": "be57790e21e0ed51a44a18aed3272c7f1cbc780b68fb218a0d8c3f24d4da9e73",
+        "changedScalars": 65303,
+        "count": 95,
+        "hits": 23,
+        "top4": 48,
+        "crossEntropy": 3.0279637603866005
+      },
+      "control": {
+        "id": "control",
+        "file": ".cache/v8/weight-pocket-control.bin",
+        "sha256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+        "changedScalars": 0,
+        "count": 95,
+        "hits": 21,
+        "top4": 47,
+        "crossEntropy": 3.0989345007487366
+      }
+    },
+    "atlas": {
+      "winner": {
+        "id": "enemy-relaxed",
+        "file": ".cache/v8/weight-atlas-enemy-relaxed.bin",
+        "sha256": "c183d35facdf6c831331e7b9a82ca9b0b58c87e8f32f334a4c76df7a3d97ef66",
+        "changedScalars": 815429,
+        "count": 95,
+        "hits": 23,
+        "top4": 53,
+        "crossEntropy": 3.0222385380772088
+      },
+      "control": {
+        "id": "control",
+        "file": ".cache/v8/weight-atlas-control.bin",
+        "sha256": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85",
+        "changedScalars": 0,
+        "count": 95,
+        "hits": 22,
+        "top4": 53,
+        "crossEntropy": 3.0988055006848145
+      }
+    }
+  },
+  "sourceHashes": {
+    "tools/v8_select.py": "6da71283bd12c445f825bce80301b9f64798f7dfb40020832d7884376d2a9188",
+    "tools/v8_evaluate.py": "9b72617eb40853bf94f6dffbd99d8b92ac0412284b738e1157bfa3395267ee8d",
+    "tools/v8-score-sparse.mjs": "26010b9ffcbb537c5ae5d0f6a12c3e13822c35a6068c08b77cef0c3db7660642",
+    "evaluation/v0.8/PROTOCOL.md": "e4c53f6e8c4a21d9de3fa41666d293f2fb5fbffd3e899f97123a8fc2ca92a2f5",
+    "src/engine.mjs": "5a381f2ca3b0c4a0d99115b6fef616ae8a6239cc3e802d27e7f26d0edbfe57b7",
+    "src/network.mjs": "f46d3a8fe19809c8780d69bc323707f3287de90582b66eba0ece30c4cbc5fd28",
+    "spikes/deepmind-9m/action_value.py": "3f4c1b5242e238cdfa7322512697867eaf8243849ce21c217c228c5fe42b0057",
+    "spikes/deepmind-9m/model.py": "d560ab216cc0b932f6ed84c22fc0cd1b32b34b467feddc3f1fe5886077534c8e",
+    "spikes/deepmind-9m/engine_cleanup.py": "07eb537d593600ce41080ccf81a03c0bf8871fccb2666bd299fdc00abac9d353"
+  }
+}

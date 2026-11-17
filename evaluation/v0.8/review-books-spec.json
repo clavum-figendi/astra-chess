@@ -1,0 +1,35 @@
+{
+  "verdict": "PASS",
+  "scope": "Independent source-bound SPEC review of offline opening books, acquisition, provenance and validator only; not quality, neural-strength, UI, packaging, deployment or release certification.",
+  "sourceBinding": "review-books-independent.json:sourceHashes",
+  "executed": [
+    {"command":"node --max-old-space-size=128 --test --test-concurrency=1 tests/v8-books-*.test.mjs", "passed":6, "failed":0, "skipped":0, "durationMs":34191.104745},
+    {"command":"python tests/test_v8_books_extract.py", "passed":1, "failed":0},
+    {"command":"node --max-old-space-size=128 evaluation/v0.8/review-books-independent.mjs", "passed":true, "games":3000, "strictlyReplayedRetainedPlies":71697, "receipt":"review-books-independent.json"}
+  ],
+  "checks": {
+    "choices": "Exactly eco, lichess-2200, lichess-2200-slow; eco remains unchanged default. Masters explicitly unavailable after preserved anonymous 401, redistribution rights unestablished.",
+    "actualSelectedSource": {"distinctGames":3000,"bothRatingsAtLeast":2200,"blitz":2747,"rapid":244,"classical":9,"slowSameCorpusSubset":253,"maximumRetainedPlies":24},
+    "mainRuntime": {"positions":12332,"continuations":15635,"bytes":1540282,"uniquePaths":2705,"maxPlies":12},
+    "slowRuntime": {"positions":1556,"continuations":1834,"bytes":182086,"uniquePaths":243,"maxPlies":12},
+    "weighting": "Independently replayed every selected game using strict Chess moves, not compileBook, and compared every runtime FEN, UCI move, absolute ply and integer game-frequency weight for both profiles. All match.",
+    "offlineRebuild": "Actual test rebuilt in memory, verifying retained source/evidence hashes and byte-identical artifacts/manifest/stats, without writing frozen book files or fetching source data.",
+    "validator": "Observed malformed/illegal/truncated/tampered rejection, complete SAN replay including beyond cutoff, bounded schema, exact serialized-position comparison and compatible runtime values for all three books.",
+    "selection": "Observed exact-ply and noncapturable-EP misses, transposition merge, deterministic/injected RNG, cutoff and terminal rejection. Existing candidate filtering checks legal moves.",
+    "sourceRights": "Preserved primary database.lichess.org grant explicitly covers CC0 commercial publication, modification and redistribution and links the exact monthly export. Parent separately reported fresh confirmation; this reviewer inspected preserved source, not a new grant-page fetch.",
+    "license": "Full 7048-byte shipped CC0 text matches preserved original hash; separately fetched official legalcode.en HTTP 200 and independently verified Statement of Purpose plus every substantive section 1-4 against shipped body. Did not refetch denied legalcode.txt.",
+    "boundedAcquisition": "Inspected fixed official URL, pre-network 200000000-byte cap, exact 206/Content-Range, streaming backpressure/hash/count, 120s AbortController timeout retained through full body consumption, partial cleanup and no explorer/auth path. Tests exercise ignored ranges, overflow, truncation and oversize rejection.",
+    "localCompressedReceipt": "Hashed existing ignored 100000000-byte prefix; SHA-256 10786e08ae7308ab12e3463154a66b061548d6610e5428b61c04a8b8e0807888 equals SOURCE and retained HTTP 206 bytes 0-99999999/29224520887. No reacquisition performed.",
+    "completeness": "Extractor requires explicit completed movetext result matching header and rejects unfinished, below-threshold, bullet and setup games. Prefix decompressor premature-end is not implicit game completion. Published encounter/completion/qualification counts remain receipt evidence, not independently re-extracted in this review."
+  },
+  "limitations": [
+    "Chronological compressed prefix and first 3000 qualifying games; not representative population or full-database popularity. Slow is a subset, not an independent database.",
+    "No Masters access, no Masters rights, no credentials, no endpoint retries, no paid calls.",
+    "Only retained initial 24 SAN plies replayed; no claim to validate unretained original complete games.",
+    "No full-body timeout elapsed-time injection or new live acquisition exercised in this review; timeout verified by source inspection.",
+    "Rating threshold is Lichess rating, not FIDE strength or title. Neither corpus choice nor game counts establish playing quality.",
+    "No UI/browser/build/CLI certification; parallel reviewers own those gates."
+  ],
+  "nonblockingNotes": ["data/book-sources/HANDOFF.md still names obsolete newtests paths; normative docs and actual tests use tests/. Keep handoff historical or update separately after unfreezing."],
+  "evidence": ["review-books-independent.mjs","review-books-independent.json","review-books-license-check.json","review-books-cc0-official.html"]
+}

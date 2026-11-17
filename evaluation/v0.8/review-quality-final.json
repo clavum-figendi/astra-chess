@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "verdict": "PASS",
+  "scope": "Independent source-bound code-quality/security approval of offline-book UI, worker, CLI, build and acquisition scope after first QUALITY-1 fix cycle. Carries forward original 19-file review only after validating the preserved originals and exact two-file fix delta. Not model-evaluation provenance, weight/promotion confirmation, deployment, final delivery or whole-release approval.",
+  "baseCommit": "c6dc9647f7a0537322ffd71f784f0a696be97413",
+  "fixCycle": 1,
+  "fixAuthorReported": "Independent third context sa-0-98b9fd78; reviewer made no production edits.",
+  "reviewedFileCount": 19,
+  "desiredBehaviorProbe": {
+    "path": "evaluation/v0.8/review-quality-final-probes.mjs",
+    "sha256": "20ec494780e2f21de2f1d54ae701de9f7d4237d0f03e5845b174e194c0b809d3",
+    "acceptance": "Fails against archived buggy fetcher; passes against current fetcher while preserving partial and archive bytes."
+  },
+  "sourceHashes": {
+    "laptop/cli.mjs": "43de227f357d9d12c5ba4c9d528aa14676a3e471dec620aa87038fcc87587dc1",
+    "public/app.mjs": "f8d1d680710a5e5e4c355878489c40cff079afc93a610e9e2d2488b74c1c7d64",
+    "public/index.html": "6a7fe35e89d2160fb76c25ad6c8da939df292425d7c724ee2af8a57ad1b83039",
+    "public/worker.mjs": "f970299643760048b0669f7e118aacdbe6a1def4f777e38efa035725da4c893e",
+    "src/book-sources.mjs": "f575c12bf3f6d9717c923545949a9dd8e29e264f9752ea6dc0c35094b1980df7",
+    "tests/test_v8_books_extract.py": "04826bee0c2b4b82a4fa5c3e9ac63b1adaf2bf04cbf0312c0dff0504d7096448",
+    "tests/v8-book-ui-app.test.mjs": "9ccb5691c69ec053a49f14574a340b9f32910406d8923c377d9b9183e94ebb88",
+    "tests/v8-book-ui-build.test.mjs": "beb6c9d5676572df5ed8de4cdae4d3de91e8ca7e759d6d9f407ce659318ea4bd",
+    "tests/v8-book-ui-cli.test.mjs": "8cd8129400f597c3eadcd59a1e384947722638a5da01bd7fb5a9b79b7182ecbf",
+    "tests/v8-book-ui-worker.test.mjs": "c1727633950b236314db29c95bc5e11daa892bf0adc86790543c5db0a7861fc0",
+    "tests/v8-books-build.test.mjs": "7fb6e3b78d201e192771a9775861f794dfe4a2a360577fd07764a7e713ccea44",
+    "tests/v8-books-fetch.test.mjs": "70cdac72fa3414213d51796606fb88c2252383ad85b8a66c20102ada2c8674a3",
+    "tests/v8-books-snapshots.test.mjs": "7e47f2a2ddf9764ad7a2c04dd8bd05060e0dd9f4e6f98235fb8dca9a9a57bc3b",
+    "tests/v8-books-validator.test.mjs": "8bcc9be0a9d22252f498c062c07f273d21219fee2316ddb377aa67ec3dd3b579",
+    "tools/build.mjs": "e94de1a83c6c29c82475f3181061658cb07312d9cbbeb02e58659c722181cf93",
+    "tools/v8-books-build.mjs": "49f07dcfac0a702a7964e3a7597af5f2cc3b7a550143e9ca0ada874812180691",
+    "tools/v8-books-extract.py": "1c05faf9f19c5b508e0deeb99f2c4d291700e8e92fd45ce1616e3de90c11e1cd",
+    "tools/v8-books-fetch.mjs": "2f33de59a0ff7c55919e865e4af767a833ce818d2c47355c590874971e25d1e0",
+    "tools/v8-books-receipt.mjs": "d67e93e4eaff0742742fd115e97cd1ee0503dce242280b3ad0a2a07e899f81bd"
+  },
+  "security_concerns": [],
+  "logic_errors": [],
+  "resolvedFindings": [
+    {
+      "id": "QUALITY-1",
+      "status": "resolved",
+      "file": "tools/v8-books-fetch.mjs",
+      "lines": "21-36",
+      "review": "The exclusive write stream is now created first and its open handler is installed synchronously before awaiting pipeline. ownsPartial becomes true only after successful exclusive open. EEXIST never grants ownership; error cleanup is gated by ownsPartial. Pipeline completion precedes exact-size verification and rename. Successful downloads, bounded streaming and owned failure cleanup retain their prior behavior.",
+      "acceptanceEvidence": "Independent desired-behavior probe fails against preserved pre-fix fetcher and passes against current fetcher. Scoped/focused tests also preserve a pre-existing partial and completed archive, allow an overlapping first writer to finish and rename after second-writer EEXIST, and verify owned .download cleanup on overflow/truncation."
+    }
+  ],
+  "preservation": {
+    "archive": "evaluation/v0.8/quality-before-fix",
+    "archivedSourceHashesVerified": 19,
+    "archiveMismatches": [],
+    "changedScopedFiles": ["tests/v8-books-fetch.test.mjs", "tools/v8-books-fetch.mjs"],
+    "unchangedScopedFiles": 17,
+    "originalArtifactsByteEqualToArchive": ["review-quality.json", "review-quality.md", "review-quality-probes.mjs"],
+    "historicalVerdict": "Original FAIL verdict and bug-confirming probe remain unchanged. Their old exit-0 bug reproduction is not used as acceptance evidence.",
+    "sourceReceipt": "data/book-sources/SOURCE.json",
+    "sourceReceiptSha256": "11dcdcc1c4c049e37361679e12379e66e06f86db553b5629b517f849a75289eb",
+    "sourceReceiptBindsFetchScript": false,
+    "lineage": "No retained corpus/evidence receipt rebaseline was needed or performed. SOURCE does not bind the fetch script. Original quality/static-scan source maps remain historical; this new receipt binds the reviewed fix."
+  },
+  "executedCommands": [
+    {"command":"git rev-parse HEAD && node --test --test-concurrency=1 tests/v8-book*.test.mjs && python -m unittest discover -s tests -p test_v8_books_extract.py -v", "exitCode":0,"node":{"passed":17,"failed":0,"skipped":0,"durationMs":45942.731225},"python":{"passed":1,"failed":0}},
+    {"command":"node evaluation/v0.8/review-quality-final-probes.mjs evaluation/v0.8/quality-before-fix/tools/v8-books-fetch.mjs", "exitCode":1,"expected":"RED against preserved original fetcher", "observed":{"errorCode":"EEXIST","existingPartialSurvived":false,"existingPartialUnchanged":false,"existingArchiveUnchanged":true}},
+    {"command":"node evaluation/v0.8/review-quality-final-probes.mjs && node --test tests/v8-books-fetch.test.mjs", "exitCode":0,"expected":"GREEN desired behavior against fixed source", "observed":{"errorCode":"EEXIST","existingPartialSurvived":true,"existingPartialUnchanged":true,"existingArchiveUnchanged":true},"focusedNode":{"passed":3,"failed":0,"skipped":0,"durationMs":312.46161}}
+  ],
+  "inspectionChecks": {
+    "actualDelta": "Generated and reviewed unified before/after diffs from verified archived files: only cleanup ownership handling and associated regression tests changed. All 19 archive files match original review hashes and all other 17 current source hashes remain unchanged.",
+    "security": "No new secret, dynamic-execution, shell, unsafe-deserialization or unsafe-path behavior appears in the two-file delta. Fixed RegExp.exec findings remain false positives. The older static-scan receipt is not relabeled current for changed files.",
+    "boundedAcquisition": "200000000-byte pre-network cap, exact 206/Content-Range, streaming backpressure/hash/count, and 120000ms AbortController through transfer remain unchanged. Runtime tests exercise ignored ranges, overflow, truncation, oversize, collision and overlap. No network or elapsed 120-second test was performed.",
+    "sourceJSON": "Malformed SOURCE.json throws closed in buildSnapshots via unguarded JSON.parse; this remains inspection evidence from unchanged reviewed code.",
+    "scopedRegression": "Fresh 17-test suite exercises actual offline three-book rebuild and strict runtime validation, source/evidence hashes and weights, legal/FEN/ply guards, real app-code PGN/loadPgn roundtrip, cancellation and cache/provenance contracts. UI/worker/CLI policy and platform fixtures use doubles; build test is a source-pattern gate, not package execution.",
+    "browserEvidence": "No browser launched. Original source-bound browser evidence remains historical parent evidence; unchanged UI/worker bytes are carried forward by source comparison, not represented as a new browser run."
+  },
+  "suggestions": [
+    {"file":"public/app.mjs, public/worker.mjs, laptop/cli.mjs", "note":"Nonblocking original suggestion unchanged: consolidate pure registry validation to prevent drift; build top-level-only preflight could be strengthened in a later change."},
+    {"file":"tools/v8-books-extract.py:45-78", "note":"Nonblocking original suggestion unchanged: harden exceptional child cleanup and oversized physical-line allocation. No new malformed-output/child-lifetime experiment performed."},
+    {"file":"tests/v8-book-ui-build.test.mjs", "note":"Keep source-pattern checks separate from actual parent-owned package/build evidence."},
+    {"file":"public/worker.mjs:50-61", "note":"Cache body/header checksum is accidental-corruption detection, not authentication against arbitrary same-origin code able to replace both."}
+  ],
+  "limitations": [
+    "No production edit, network request, build, browser, heavy ML, commit or push by reviewer.",
+    "No full broader Node suite or extracted release/package certification; fresh execution is the scoped 17 Node tests, one Python test, focused 3 Node tests and new desired-behavior RED/GREEN probe.",
+    "No claim of full original-game replay, playing strength or representative corpus sampling.",
+    "Model-evaluation provenance, final weight confirmation/meta promotion and broader final delivery are outside this approval."
+  ],
+  "summary": "PASS for this 19-file code-quality/security scope after independently resolving QUALITY-1 in fix cycle 1; both blocker lists are empty and fresh desired-behavior RED/GREEN plus scoped regression tests support approval."
+}

@@ -1,0 +1,86 @@
+{
+  "frozenAt": 1794872391.1477213,
+  "selected": {
+    "deepmind": {
+      "winner": {
+        "id": "control",
+        "file": ".cache/v7/deepmind-selected.pt",
+        "sha256": "d4d5b25a4f2a01e22ea8945e42e37559e0ce0525177290d49f002c94bda761ea",
+        "changedScalars": 0,
+        "count": 95,
+        "hits": 54,
+        "top4": 84,
+        "crossEntropy": 1.6405121807461363
+      },
+      "control": {
+        "id": "control",
+        "file": ".cache/v7/deepmind-selected.pt",
+        "sha256": "d4d5b25a4f2a01e22ea8945e42e37559e0ce0525177290d49f002c94bda761ea",
+        "changedScalars": 0,
+        "count": 95,
+        "hits": 54,
+        "top4": 84,
+        "crossEntropy": 1.6405121807461363
+      }
+    },
+    "pocket": {
+      "winner": {
+        "id": "enemy-relaxed",
+        "file": ".cache/v8/weight-pocket-enemy-relaxed.bin",
+        "sha256": "be57790e21e0ed51a44a18aed3272c7f1cbc780b68fb218a0d8c3f24d4da9e73",
+        "changedScalars": 65303,
+        "count": 95,
+        "hits": 23,
+        "top4": 48,
+        "crossEntropy": 3.0279637603866005
+      },
+      "control": {
+        "id": "control",
+        "file": ".cache/v8/weight-pocket-control.bin",
+        "sha256": "038ed43c7ab65497633289a24a66e9a28de58fe782faa470ef82dbbc448aaf3f",
+        "changedScalars": 0,
+        "count": 95,
+        "hits": 21,
+        "top4": 47,
+        "crossEntropy": 3.0989345007487366
+      }
+    },
+    "atlas": {
+      "winner": {
+        "id": "enemy-relaxed",
+        "file": ".cache/v8/weight-atlas-enemy-relaxed.bin",
+        "sha256": "c183d35facdf6c831331e7b9a82ca9b0b58c87e8f32f334a4c76df7a3d97ef66",
+        "changedScalars": 815429,
+        "count": 95,
+        "hits": 23,
+        "top4": 53,
+        "crossEntropy": 3.0222385380772088
+      },
+      "control": {
+        "id": "control",
+        "file": ".cache/v8/weight-atlas-control.bin",
+        "sha256": "45b639b0d0584b93aa472cef413c104b174d488ebc922d1c1b774c4b23cdcb85",
+        "changedScalars": 0,
+        "count": 95,
+        "hits": 22,
+        "top4": 53,
+        "crossEntropy": 3.0988055006848145
+      }
+    }
+  },
+  "validationSHA256": "bde5190a493a14ffa2a7239c2ad22160b85636484c1e77e4c3418e704cd2501e",
+  "dataProtocolSHA256": "029d09150aa89279c2926c31b7f95a5d7345c8e35a1bd05d876f274d0d59b1ee",
+  "manifestSHA256": "0e9fb0ec58dda834b112000fb7c0a0c5bc60d96a93cfe44b12282c7cfe378a28",
+  "reportSHA256": "ddb32a2721007341cfd043dd95b9383107219801c69f2ff60bb7eabbd9861f7c",
+  "sourceHashes": {
+    "tools/v8_select.py": "6da71283bd12c445f825bce80301b9f64798f7dfb40020832d7884376d2a9188",
+    "tools/v8_evaluate.py": "9b72617eb40853bf94f6dffbd99d8b92ac0412284b738e1157bfa3395267ee8d",
+    "tools/v8-score-sparse.mjs": "26010b9ffcbb537c5ae5d0f6a12c3e13822c35a6068c08b77cef0c3db7660642",
+    "evaluation/v0.8/PROTOCOL.md": "e4c53f6e8c4a21d9de3fa41666d293f2fb5fbffd3e899f97123a8fc2ca92a2f5",
+    "src/engine.mjs": "5a381f2ca3b0c4a0d99115b6fef616ae8a6239cc3e802d27e7f26d0edbfe57b7",
+    "src/network.mjs": "f46d3a8fe19809c8780d69bc323707f3287de90582b66eba0ece30c4cbc5fd28",
+    "spikes/deepmind-9m/action_value.py": "3f4c1b5242e238cdfa7322512697867eaf8243849ce21c217c228c5fe42b0057",
+    "spikes/deepmind-9m/model.py": "d560ab216cc0b932f6ed84c22fc0cd1b32b34b467feddc3f1fe5886077534c8e",
+    "spikes/deepmind-9m/engine_cleanup.py": "07eb537d593600ce41080ccf81a03c0bf8871fccb2666bd299fdc00abac9d353"
+  }
+}
